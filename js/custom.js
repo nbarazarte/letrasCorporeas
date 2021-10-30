@@ -363,6 +363,11 @@ function letraCorporeaForm(divForm){
     if( divForm == "aluminioForm") {
         
         document.getElementById('selectGrosorAluminio').style.display = "inline";
+        document.getElementById("grosorAluminio").disabled = true;
+
+        var x = document.getElementById("grosorAluminio").selectedIndex;
+        var y = document.getElementById("grosorAluminio").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
 
         var opcionesAluminio = document.getElementsByName("opcionesAluminio");
         var txt = "";
@@ -460,6 +465,6 @@ function grosorForm(tipo,select){
 }
 
 window.addEventListener('load', function () {
-   //alert('hoola');
+   document.getElementById("grosorAluminio").disabled = true;
 
 });
