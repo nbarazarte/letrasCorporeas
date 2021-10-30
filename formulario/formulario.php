@@ -31,7 +31,7 @@
         
         <div style="font-size: 10px;"> ENVÍO GRATUITO</div>
 
-        <h3 style="font-size: 24px;font-family: 'Open Sans', sans-serif;">Letras de Neón Personalizadas</h3>
+        <h3 style="font-size: 24px;font-family: 'Open Sans', sans-serif;">Letras Corpóreas Personalizadas</h3>
         <p style="text-align: justify;">
           Neones Flexibles personalizados a tu medida: Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner. Mismo precio para cualquier color.
         </p>

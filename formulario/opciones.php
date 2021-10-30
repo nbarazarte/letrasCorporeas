@@ -74,8 +74,92 @@
 
   </div>
 
+
+  <div class="col-sm-4">
+
+    <label for="letraCorporea">Letra Corpórea de:</label>
+    <select form="letrasCorporeas" class="form-select" id="letraCorporea" onchange="letraCorporeaForm(this.value);" style="height: 50px;padding: 3% 0;
+  border-radius: 14px;
+  border: 3px #ffffff solid;">  <!-- browser.js ln 274-->  
+      <option style="font-size: 20px"value="aluminioForm">Aluminio Hueca</option>
+      <option style="font-size: 20px"value="aceroForm">Acero Inoxidable Hueca</option>
+      <option style="font-size: 20px"value="latonForm">Latón Hueca</option>
+      <option style="font-size: 20px"value="metacrilatoForm">Metacrilato Hueca</option>
+      <option style="font-size: 20px"value="pvcForm">PVC</option>
+
+    </select>
+
+  </div>  
+
+  <div class="col-sm-4">
+
+    <div id="selectGrosorAluminio">
+
+      <label for="grosor">Grosor:</label>
+      <select form="" class="form-select" id="grosorAluminio" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;">
+
+        <option style="font-size: 20px"value="No Aplica">No Aplica</option>
+        <option style="font-size: 20px"value="Metacrilato 3 mm">Metacrilato 3 mm</option>
+        <option style="font-size: 20px"value="Metacrilato 10 mm">Metacrilato 10 mm</option>
+
+      </select>
+
+    </div>
+
+    <div id="selectGrosorAcero">
+
+      <label for="grosor">Grosor:</label>
+      <select form="" class="form-select" id="grosorAcero" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;">
+        
+        <option style="font-size: 20px"value="30 mm">30 mm</option>
+        <option style="font-size: 20px"value="50 mm">50 mm</option>
+        <option style="font-size: 20px"value="100 mm">100 mm</option>
+
+      </select>
+
+    </div>
+
+    <div id="selectGrosorLaton">
+
+      <label for="grosor">Grosor:</label>
+      <select form="" class="form-select" id="grosorLaton" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;">
+        
+        <option style="font-size: 20px"value="30 mm">30 mm</option>
+        <option style="font-size: 20px"value="50 mm">50 mm</option>
+        <option style="font-size: 20px"value="100 mm">100 mm</option>
+
+      </select>
+
+    </div>
+
+    <div id="selectGrosorMetacrilato">
+
+      <label for="grosor">Grosor:</label>
+      <select form="" class="form-select" id="grosorMetacrilato" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;">
+
+        <option style="font-size: 20px"value="Metacrilato 3 mm">Metacrilato 3 mm</option>
+
+      </select>
+
+    </div>
+
+    <div id="selectGrosorPVC">
+
+      <label for="grosor">Grosor:</label>
+      <select form="" class="form-select" id="grosorPVC" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;">
+
+        <option style="font-size: 20px"value="5 mm">5 mm</option>
+        <option style="font-size: 20px"value="10 mm">10 mm</option>
+        <option style="font-size: 20px"value="19 mm">19 mm</option>
+
+      </select>
+
+    </div>
+
+
+  </div>
+
 </div>
 
 <br/>
   <div id="errorAltoAncho" style="color: red; text-align: center;"></div>
-

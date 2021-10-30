@@ -10250,12 +10250,18 @@
 }
 
 @keyframes neon5 {/*Amarillo*/
+  
+
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFE700, 0 0 35px #FFE700, 0 0 40px #FFE700, 0 0 50px #FFE700, 0 0 75px #FFE700;
+    text-shadow: 0 0 5px #FFE700;
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFE700, 0 0 35px #FFE700, 0 0 40px #FFE700, 0 0 50px #FFE700, 0 0 75px #FFE700;*/
   }
+  
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFE700, 0 0 9px #FFE700, 0 0 15px #FFE700, 0 0 20px #FFE700, 0 0 25px #FFE700;
-  }	
+    text-shadow: 0 0 5px #FFE700;
+    /*text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFE700, 0 0 9px #FFE700, 0 0 15px #FFE700, 0 0 20px #FFE700, 0 0 25px #FFE700;*/
+  }
+  
 }
 
 @keyframes neon6 {/*Verde*/
@@ -10319,6 +10325,11 @@
   to {
     text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFEB, 0 0 9px #FFFFEB, 0 0 15px #FFFFEB, 0 0 20px #FFFFEB, 0 0 25px #FFFFEB;
   }
+}
+
+/*acabado*/
+.acabado{
+  background-image: url("../imagenes/trasera/metacrilato.png");
 }
 
 
@@ -10508,10 +10519,6 @@
   
 }
 
-
-
-
-
 /* Extras */
 a:visited{color:#888}
 a{color:#444;text-decoration:none;}
@@ -10526,4 +10533,15 @@ label.c {
   padding: 5px;
   font-size: 8px;
   position: relative;    
+}
+
+#aceroForm,
+#latonForm,
+#pvcForm,
+#metacrilatoForm,
+#selectGrosorAcero,
+#selectGrosorLaton,
+#selectGrosorMetacrilato,
+#selectGrosorPVC{
+  display: none;
 }

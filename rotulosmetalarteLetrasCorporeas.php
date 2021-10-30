@@ -496,11 +496,11 @@ function iconic_output_engraving_field_LetrasCorporeas() {
 
       global $product;
 
-      $cn_id_producto_personalizado = get_option( 'cn_id_producto_personalizado' ) ;
+      $cn_id_producto_personalizado_letras = get_option( 'cn_id_producto_personalizado_letras' ) ;
 
-      //echo $cn_id_producto_personalizado; die();
+      //echo $cn_id_producto_personalizado_letras; die();
 
-      if ( $product->get_id() != $cn_id_producto_personalizado ) {
+      if ( $product->get_id() != $cn_id_producto_personalizado_letras ) {
         return;
       }
 
@@ -527,7 +527,7 @@ function iconic_output_engraving_field_LetrasCorporeas() {
 
 }
 
-//add_action( 'woocommerce_before_single_product', 'iconic_output_engraving_field_LetrasCorporeas', 10 );
+add_action( 'woocommerce_before_single_product', 'iconic_output_engraving_field_LetrasCorporeas', 10 );
 
 //woocommerce_single_product_summary
 //woocommerce_before_single_product
@@ -542,11 +542,11 @@ function campos_ocultos_letrasCorporeas() {
 
       global $product;
 
-      $cn_id_producto_personalizado = get_option( 'cn_id_producto_personalizado' ) ;
+      $cn_id_producto_personalizado_letras = get_option( 'cn_id_producto_personalizado_letras' ) ;
 
-      //echo $cn_id_producto_personalizado; die();
+      //echo $cn_id_producto_personalizado_letras; die();
 
-      if ( $product->get_id() != $cn_id_producto_personalizado ) {
+      if ( $product->get_id() != $cn_id_producto_personalizado_letras ) {
         return;
       }
 

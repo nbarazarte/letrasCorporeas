@@ -30,16 +30,32 @@ function jQueryDoSomethingAJAX() {
     var tiemposEntregaText = y[x].text;
     var tiemposEntrega = y[x].value;
 
-    var contornos = document.getElementsByName("contornos");
+
+
+    var acabadoAluminio = document.getElementsByName("acabadoAluminio");
     var txt = "";
     var i;
-    for (i = 0; i < contornos.length; i++) {
-        if (contornos[i].checked) {
-          txt = contornos[i].value;
+    for (i = 0; i < acabadoAluminio.length; i++) {
+        if (acabadoAluminio[i].checked) {
+          txt = acabadoAluminio[i].value;
         }
     }
 
-    var contorno = txt;
+    var acabado = txt;
+
+
+   var separacionAluminio = document.getElementsByName("separacionAluminio");
+    var txt = "";
+    var i;
+    for (i = 0; i < separacionAluminio.length; i++) {
+        if (separacionAluminio[i].checked) {
+          txt = separacionAluminio[i].value;
+        }
+    }
+
+    var separacion = txt;
+
+
 
     var traseraneon = document.getElementsByName("traseraneon");
     var txt = "";
@@ -322,3 +338,128 @@ function miToolTipOut(div){
     document.getElementById('toolTip_'+div).style.visibility = "hidden";
 
 }
+
+function letraCorporeaForm(divForm){
+
+    //alert(divForm);
+    /*Para desplegar la seccion del formulario de la letra corporea seleccionada*/
+    document.getElementById('aluminioForm').style.display = "none";
+    document.getElementById('aceroForm').style.display = "none";
+    document.getElementById('metacrilatoForm').style.display = "none";
+    document.getElementById('latonForm').style.display = "none";
+    document.getElementById('pvcForm').style.display = "none";
+    document.getElementById('coloresFormAluminio').style.display = "none";
+
+    document.getElementById(divForm).style.display = "inline";
+
+    /*Para los select de los grosores*/
+    document.getElementById('selectGrosorAluminio').style.display = "none";
+    document.getElementById('selectGrosorAcero').style.display = "none";
+    document.getElementById('selectGrosorLaton').style.display = "none";
+    document.getElementById('selectGrosorMetacrilato').style.display = "none";
+    document.getElementById('selectGrosorPVC').style.display = "none";
+
+
+    if( divForm == "aluminioForm") {
+        
+        document.getElementById('selectGrosorAluminio').style.display = "inline";
+
+        var opcionesAluminio = document.getElementsByName("opcionesAluminio");
+        var txt = "";
+        var i;
+        for (i = 0; i < opcionesAluminio.length; i++) {
+            if (opcionesAluminio[i].checked) {
+
+              if(opcionesAluminio[i].value == 'sinLuz'){
+
+                document.getElementById('coloresFormAluminio').style.display = "inline";
+
+              }else{
+                document.getElementById('coloresFormAluminio').style.display = "none";
+              }
+
+            }
+        }
+
+    }
+
+    if( divForm == "aceroForm") {
+
+        document.getElementById('selectGrosorAcero').style.display = "inline";
+    }
+
+    if( divForm == "latonForm") {
+
+        document.getElementById('selectGrosorLaton').style.display = "inline";
+    }
+
+    if( divForm == "metacrilatoForm") {
+
+        document.getElementById('selectGrosorMetacrilato').style.display = "inline";
+    }
+
+    if( divForm == "pvcForm") {
+
+        document.getElementById('selectGrosorPVC').style.display = "inline";
+
+        var acabadoPvc = document.getElementsByName("acabadoPvc");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoPvc.length; i++) {
+            if (acabadoPvc[i].checked) {
+              if( (acabadoPvc[i].value == 'pintadoMate') || (acabadoPvc[i].value == 'pintadoBrillo') ){
+                document.getElementById('coloresFormPvc').style.display = "inline";
+              }else{
+                document.getElementById('coloresFormPvc').style.display = "none";
+              }
+            }
+        }
+
+    }    
+
+}
+
+function coloresForm(divForm, flag){
+
+    //alert(divForm+'--'+ flag);
+    if(flag == 'true'){
+        document.getElementById(divForm).style.display = "inline";
+    }else{
+        document.getElementById(divForm).style.display = "none";
+    }
+}
+
+function grosorForm(tipo,select){
+
+    //opcionesAluminio
+    //alert(tipo)
+    var opciones = document.getElementsByName(tipo);
+    var txt = "";
+    var i;
+
+    for (i = 0; i < opciones.length; i++) {
+        if (opciones[i].checked) {
+
+          if(opciones[i].value == 'retroiluminado'){
+
+            document.getElementById(select).getElementsByTagName('option')[1].selected = 'selected'
+ 
+          }else if(opciones[i].value == 'iluminacionFrontal'){
+            
+            document.getElementById(select).getElementsByTagName('option')[2].selected = 'selected'
+              
+          }else if(opciones[i].value == 'sinLuz'){
+
+            document.getElementById(select).getElementsByTagName('option')[0].selected = 'selected'
+
+          }
+
+        }
+    }
+
+}
+
+window.addEventListener('load', function () {
+   //alert('hoola');
+
+});
