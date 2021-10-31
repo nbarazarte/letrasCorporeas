@@ -30,8 +30,24 @@ function jQueryDoSomethingAJAX() {
     var tiemposEntregaText = y[x].text;
     var tiemposEntrega = y[x].value;
 
+    var x = document.getElementById("letraCorporea").selectedIndex;
+    var y = document.getElementById("letraCorporea").options;
+    //alert("Index: " + y[x].index + " is " + y[x].text);
+    var letraCorporeaText = y[x].text;
+    var letraCorporea = y[x].value;
 
+    var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    var alturacm = document.getElementById("altura").value;
 
+    //ancho del SVG:
+    var anchoSVG = document.getElementById('anchoSVG').value;
+    var anchoSVGCorreccion = anchoSVG * 0.76;
+   
+    document.getElementById('impuesto').value = document.getElementById('iva_letras').value;
+
+    
+
+    //Valores que selecciona el usuario:
     var acabadoAluminio = document.getElementsByName("acabadoAluminio");
     var txt = "";
     var i;
@@ -42,7 +58,6 @@ function jQueryDoSomethingAJAX() {
     }
 
     var acabado = txt;
-
 
    var separacionAluminio = document.getElementsByName("separacionAluminio");
     var txt = "";
@@ -55,92 +70,16 @@ function jQueryDoSomethingAJAX() {
 
     var separacion = txt;
 
-
-
-    var traseraneon = document.getElementsByName("traseraneon");
+   var opcionesAluminio = document.getElementsByName("opcionesAluminio");
     var txt = "";
     var i;
-    for (i = 0; i < traseraneon.length; i++) {
-        if (traseraneon[i].checked) {
-          txt = traseraneon[i].value;
+    for (i = 0; i < opcionesAluminio.length; i++) {
+        if (opcionesAluminio[i].checked) {
+          txt = opcionesAluminio[i].value;
         }
     }
 
-    var textoCorrecto;
-    switch (document.getElementById("tipoTrasera").value) {
-      case 'maderadepino':
-        textoCorrecto = "madera de pino";
-        break;
-
-        default:
-            textoCorrecto = document.getElementById("tipoTrasera").value;
-        break;
-    }
-
-    var tipoTrasera = textoCorrecto;
-    var trasera = txt;
-
-    var sujecion = document.getElementsByName("sujecion");
-    var txt = "";
-    var i;
-    for (i = 0; i < sujecion.length; i++) {
-        if (sujecion[i].checked) {
-          txt = sujecion[i].value;
-        }
-    }
-
-    var textoCorrecto;
-    switch (document.getElementById("tipoSujecion").value) {
-      case 'ancladoalapared':
-        textoCorrecto = "anclado a la pared";
-        break;
-
-      case 'colgadoaltecho':
-        textoCorrecto = "colgado al techo";
-        break;
-
-      case 'colgadocomouncuadro':
-        textoCorrecto = "colgado como un cuadro";
-        break;
-
-      case 'sinsujecion':
-        textoCorrecto = "sin sujeción";
-        break;                          
-
-        default:
-            textoCorrecto = document.getElementById("tipoSujecion").value;
-        break;
-    }
-
-    var tipoSujecion = textoCorrecto;
-    var sujecionNeon = txt;
-
-    var dimmer = document.getElementsByName("dimmer");
-    var txt = "";
-    var i;
-    for (i = 0; i < dimmer.length; i++) {
-        if (dimmer[i].checked) {
-          txt = dimmer[i].value;
-        }
-    }
-
-    var textoCorrecto;
-    switch (document.getElementById("tipoDimmer").value) {
-      case 'condimmer':
-        textoCorrecto = "con dimmer";
-        break;
-
-      case 'sindimmer':
-        textoCorrecto = "sin dimmer";
-        break;
-
-        default:
-            textoCorrecto = document.getElementById("tipoDimmer").value;
-        break;
-    }
-
-    var tipoDimmer = textoCorrecto;
-    var dimmerNeon = txt;       
+    var opciones = txt;
 
     var colores = document.getElementsByName("colores");
     var txt = "";
@@ -153,88 +92,80 @@ function jQueryDoSomethingAJAX() {
 
     var color = txt;
 
+    //alert(letraCorporea);
+    //alert(opciones);
+    //Para calcular el precio segun la letra corporea:
 
-    var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    if(letraCorporea == "aluminioForm"){
 
-    var alturacm = document.getElementById("altura").value;
+        //Aluminio Sin Iluminar:
+        var $a = Number(document.getElementById("precio_aluminio").value);
+        var $b = Number(document.getElementById("precio_aluminio_mano_de_obra").value);
+        var $c = Number(document.getElementById("precio_aluminio_pintura").value);
+        //Aluminio retroiluminadas:
+        var $d = Number(document.getElementById('precio_aluminio_retroiluminado').value);
+        var $e = Number(document.getElementById('precio_aluminio_retroiluminado_mano_de_obra').value);
+        var $f = Number(document.getElementById('precio_aluminio_retroiluminado_pintura').value);
+        var $g = Number(document.getElementById('precio_aluminio_retroiluminado_metacrilato10mm').value);
+        var $h = Number(document.getElementById('precio_aluminio_retroiluminado_led').value);
+        var $i = Number(document.getElementById('precio_aluminio_retroiluminado_transformador').value);
+        var $j = Number(document.getElementById('precio_aluminio_retroiluminado_corte_cnc').value);
+        //Aluminio Iluminadas frontalmente:
+        var $k = Number(document.getElementById('precio_aluminio_iluminado_frontal').value);
+        var $l = Number(document.getElementById('precio_aluminio_iluminado_frontal_mano_de_obra').value);
+        var $m = Number(document.getElementById('precio_aluminio_iluminado_frontal_pintura').value);
+        var $n = Number(document.getElementById('precio_aluminio_iluminado_frontal_metacrilato3mm').value);
+        var $o = Number(document.getElementById('precio_aluminio_iluminado_frontal_junquillo').value);
+        var $p = Number(document.getElementById('precio_aluminio_iluminado_frontal_led').value);
+        var $q = Number(document.getElementById('precio_aluminio_iluminado_frontal_transformador').value);
+        var $r = Number(document.getElementById('precio_aluminio_iluminado_frontal_corte_cnc').value);
 
+        if(opciones == "Sin Luz" ){
 
-    //ancho del SVG:
-    var anchoSVG = document.getElementById('anchoSVG').value;
-    var anchoSVGCorreccion = anchoSVG * 0.76;
-    var costoTransformador = Number(document.getElementById('costoTransformador').value);
+            var subTotalprecio  = Number(($a + $b + $c ) * 4);
+        }
 
-    document.getElementById('impuesto').value = document.getElementById('iva').value;
-    //Calculo el precio del rótulo y lo envío al campo oculto en el formulario del carrito:
+        if(opciones == "Retroiluminado" ){
+            
+            var subTotalprecio  = ($d + $e + $f + $g + $h + $i + $j) * 4;
+        }
 
-    /*console.log("Ancho SVG Path A en cm: " + anchoSVG);
-    console.log("Ancho SVG Path B en cm: " + anchoSVGCorreccion.toFixed(3));
-    console.log("Ancho en cm: " + anchocm);
-    console.log("Altura en cm: " + alturacm);
-    console.log("Tamaño de letra: " + alto);
-    //console.log("Alto en px: " + altopx);
-    console.log("Trasera Neon: " +trasera);
-    console.log("Sujecion Neon: " + sujecionNeon);
-    console.log("dimmerNeon: "+ dimmerNeon);
-    console.log("Tiempo entrega: "+ tiemposEntrega);
-    console.log("Costo Transformador: "+ costoTransformador);*/
+        if(opciones == "Iluminación Frontal" ){
 
+            var subTotalprecio  = ($k + $l + $m + $n + $o + $p + $q + $r) * 4;
+        }
 
+        var iva     = Number(document.getElementById('iva_letras').value / 100);
+        precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
-    //console.log("-----------------------------------------------");
+    }
 
-    var cn_precio_metro_neon    = document.getElementById("cn_precio_metro_neon").value;
+    if(letraCorporea == "aceroForm"){
+        precioFinal = 100;
+    }
 
-    traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
-    sujecionNeon    = Number(sujecionNeon);
-    dimmerNeon      = Number(dimmerNeon);
-    tiemposEntrega  = Number(tiemposEntrega);
-    tipoLetra       = (Number(anchoSVGCorreccion) / 100) * Number(cn_precio_metro_neon);
-    
-    /*console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
-    console.log("Total sujecion Neon: " + sujecionNeon);
-    console.log("Total dimmer Neon: " + dimmerNeon);
-    console.log("Total tiempos de entrega: " + tiemposEntrega);
-    console.log("Tipo de letra: ("+anchoSVGCorreccion +"/100) x 7 = "+ tipoLetra.toFixed(3));*/
+    if(letraCorporea == "latonForm"){
+        precioFinal = 200;
+    }
 
-    //((Tipo de letra + trasera de neón + sujeción del neón + dimmer ) * 3) + tiempo de entrega
+    if(letraCorporea == "metacrilatoForm"){
+        precioFinal = 300;
+    }
 
-    subTotalprecio     = ((tipoLetra + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
-
-    //console.log("Sub total precio: "+ subTotalprecio);
-    var iva = Number(document.getElementById('iva').value / 100);
-
-    //precioFinal     = subTotalprecio;//(subTotalprecio * iva) + subTotalprecio;
-
-    precioFinal     = (subTotalprecio * iva) + subTotalprecio;
-
-    //console.log("Precio: (("+tipoLetra.toFixed(3)+" + "+traseraNeon.toFixed(3)+" + "+sujecionNeon+" + "+dimmerNeon+" + "+costoTransformador+") x 3 ) + "+tiemposEntrega+" = "+precioFinal.toFixed(3));
-
+    if(letraCorporea == "pvcForm"){
+        precioFinal = 400;
+    }    
 
     if(document.getElementById("altura").value == 0){
         precioFinal = 0;
     }
 
     var data = {
-        'action': 'jnjtest',
-        'rotulo': rotulo,
-        'alto': alto,
-        'ancho': ancho,    
+        'action': 'jnjtest_LetrasCorporeas',
         'fuenteLetras': fuenteLetras,
-        'tiemposEntrega': tiemposEntrega,
-        'contorno': contorno,
-        'trasera': trasera,
-        'tipoTrasera': tipoTrasera,
-        'sujecionNeon': sujecionNeon,
-        'tipoSujecion': tipoSujecion,
-        'dimmerNeon': dimmerNeon,
         'color': color,
-        'anchocm': anchocm,
-        'fuenteLetrasText': fuenteLetrasText,
-        'tiemposEntregaText': tiemposEntregaText,
-        'subTotalprecio': subTotalprecio.toFixed(2),
         'precioFinal': precioFinal.toFixed(2),
-
+        'rotulo': rotulo,
     };
 
     var protocolo = window.location.protocol;
@@ -278,53 +209,34 @@ function jQueryDoSomethingAJAX() {
 
         document.getElementById('precioOtraVez').innerHTML = precioFinal.toFixed(2) + "&euro; <div style='font-size: 10px; color: #870D00'> IVA incluido</div><span>Envío Gratuito</span>";
 
+        document.getElementById('precio_final_rotulo').value    = precioFinal.toFixed(2);
+        document.getElementById('subTotalPrecio').value         = subTotalprecio.toFixed(2);
+        document.getElementById('texto_rotulo').value           = rotulo;
+        document.getElementById('fuenteLetrasText').value       = fuenteLetrasText;
+        document.getElementById('anchocm').value                = anchocm;
+        document.getElementById('alturacm').value               = alturacm;
+        document.getElementById('altocm').value                 = alto;
 
-        document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
-        document.getElementById('subTotalPrecio').value          = subTotalprecio.toFixed(2);
-        document.getElementById('texto_rotulo').value            = rotulo;
-        document.getElementById('fuenteLetrasText').value        = fuenteLetrasText;
-        document.getElementById('anchocm').value                 = anchocm;
-        
-        document.getElementById('alturacm').value                 = alturacm;
+        //Aluminio:
+        document.getElementById('acabado').value                = acabado;
+        document.getElementById('separacion').value             = separacion;
+        document.getElementById('opciones').value               = opciones;
 
-        document.getElementById('altocm').value                  = alto;
-        document.getElementById('tipoTraseraSumario').value      = tipoTrasera;
-        document.getElementById('tipoSujecionSumario').value     = tipoSujecion;
-        document.getElementById('tipoDimmerSumario').value       = tipoDimmer;
-        document.getElementById('tiempoEntregaSumario').value    = tiemposEntregaText;
-        document.getElementById('tipoContornoSumario').value     = contorno;
-        document.getElementById('colorSumario').value            = color;
-        document.getElementById('pathA').value                   = anchoSVG;
-        document.getElementById('pathB').value                   = anchoSVGCorreccion.toFixed(3);
+
+        document.getElementById('tiempoEntregaSumario').value   = tiemposEntregaText;
+        document.getElementById('colorSumario').value           = color;
+        document.getElementById('pathA').value                  = anchoSVG;
+        document.getElementById('pathB').value                  = anchoSVGCorreccion.toFixed(3);
 
         document.getElementsByName("add-to-cart")[0].style.visibility = 'visible';
     });
 
 }
 
-/*
-window.addEventListener("load", function() {
-  //Texto
-  var cadena = prompt('Dibuja aquí lo que desees', '');
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  var posInicial = { x: 10, y: 50 };
-
-  ctx.font = "30px Arial";
-  ctx.fillText(cadena, posInicial.x, posInicial.y);
-
-  //Obtenemos el acho:
-  var ancho = ctx.measureText(cadena).width;
-  console.log('Ancho:', ancho, 'píxeles.');
-
-});
-*/
-
 function textoRadio(input,name){
 
     document.getElementById(input).value = name;
 }
-
 
 function miToolTip(div,valor){
 
@@ -358,7 +270,6 @@ function letraCorporeaForm(divForm){
     document.getElementById('selectGrosorLaton').style.display = "none";
     document.getElementById('selectGrosorMetacrilato').style.display = "none";
     document.getElementById('selectGrosorPVC').style.display = "none";
-
 
     if( divForm == "aluminioForm") {
         
@@ -445,15 +356,15 @@ function grosorForm(tipo,select){
     for (i = 0; i < opciones.length; i++) {
         if (opciones[i].checked) {
 
-          if(opciones[i].value == 'retroiluminado'){
+          if(opciones[i].value == 'Retroiluminado'){
 
             document.getElementById(select).getElementsByTagName('option')[1].selected = 'selected'
  
-          }else if(opciones[i].value == 'iluminacionFrontal'){
+          }else if(opciones[i].value == 'Iluminación Frontal'){
             
             document.getElementById(select).getElementsByTagName('option')[2].selected = 'selected'
               
-          }else if(opciones[i].value == 'sinLuz'){
+          }else if(opciones[i].value == 'Sin Luz'){
 
             document.getElementById(select).getElementsByTagName('option')[0].selected = 'selected'
 

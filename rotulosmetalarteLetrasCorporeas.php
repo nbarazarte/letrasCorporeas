@@ -267,7 +267,7 @@ function cn_guardar_ga_LetrasCorporeas() {
     //Limpiar valor, para prevenir problemas de seguridad
     $cn_id_producto_personalizado_letras                  = sanitize_text_field( $_POST['cn_id_producto_personalizado_letras'] );
     $iva_letras                                           = sanitize_text_field( $_POST['iva_letras'] );
-    //Aluminio:
+    //Aluminio Sin Iluminar:
     $precio_aluminio                                      = sanitize_text_field( $_POST['precio_aluminio'] );
     $precio_aluminio_mano_de_obra                         = sanitize_text_field( $_POST['precio_aluminio_mano_de_obra'] );
     $precio_aluminio_pintura                              = sanitize_text_field( $_POST['precio_aluminio_pintura'] );
@@ -359,73 +359,7 @@ function cn_guardar_ga_LetrasCorporeas() {
     );
     exit;
 }
-/*
-//Crear un filtro para modificar el contenido del articulo....
-add_filter( 'the_content', 'cn_agregar_anuncio' );
 
-function cn_agregar_anuncio ( $the_content ) {
-
-    global $wpdb;
-
-    $cn_pagina = get_option( 'cn_pagina' ) ;
-
-    $sql = "SELECT id FROM {$wpdb->prefix}posts WHERE post_title = '".$cn_pagina."' ";
-    $results = $wpdb->get_results( $sql, OBJECT );
-
-    foreach ($results as $key ) {
-
-      $id_pagina[] = $key->id;
-
-    }
-    //echo "--->".$id_pagina[0];
-    //die();
-
-    $pagina = $id_pagina[0];
-
-    if(!empty($pagina) ){
-
-
-    //Creamos una variable que contenga todo el contenido
-    //del articulo
-    //$articulo = $the_content;
-
-    //Solo inyectar el anuncio en los articulos
-    //if (is_singular() && is_main_query() && in_the_loop()){
-    //if (is_page() && is_main_query() && in_the_loop()){
-    //if (is_home() && is_main_query() && in_the_loop()){
-    if (is_page($pagina) && is_main_query() && in_the_loop()){
-      // Al final del articulo agregar el codigo del anuncio....
-      //$articulo .= '<div class="ads"> *** Aquí va el formulario *** </div>';
-
-
-      // Conseguir el valor del Precio base de todos los elementos:
-      $cn_id_producto_personalizado   = get_option( 'cn_id_producto_personalizado' ) ;
-      $cn_pagina                      = get_option( 'cn_pagina' ) ;
-      $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
-      $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
-      $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
-      $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
-      $cn_precio_pvc                  = get_option( 'cn_precio_pvc' ) ;
-      $cn_precio_contraenchapado      = get_option( 'cn_precio_contraenchapado' ) ;
-      $cn_precio_maderadepino         = get_option( 'cn_precio_maderadepino' ) ;
-      $cn_precio_ancladoalapared      = get_option( 'cn_precio_ancladoalapared' ) ;
-      $cn_precio_colgadoaltecho       = get_option( 'cn_precio_colgadoaltecho' ) ;
-      $cn_precio_colgadocomouncuadro  = get_option( 'cn_precio_colgadocomouncuadro' ) ;
-      $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
-      $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
-      $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
-
-      require('formularioCustomizer.php');
-    }
-
-
-  }
-    // siempre debe regresar el contenido que se desea mostrar
-    //return $articulo;
-    return;
-
-    wp_die();
-}*/
 
 add_action('wp_ajax_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorporeas');
 add_action('wp_ajax_nopriv_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorporeas');
@@ -434,34 +368,6 @@ add_action('wp_ajax_nopriv_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorpo
 // en el formato que queramos..
 function jnj_mi_funcion_LetrasCorporeas()
 {
-
-  /*global $wpdb;
-  //echo '<pre style="color: #fff">'; print_r($_POST); echo '</pre>';
-  //$sql = "SELECT * FROM {$wpdb->prefix}options WHERE option_name = 'cn_precio_base'";
-  $sql = "SELECT option_name, option_value FROM {$wpdb->prefix}options WHERE option_name LIKE '%cn_precio%'";
-  $results = $wpdb->get_results( $sql, OBJECT );
-
-  foreach ($results as $key => $valor) {
-
-    $res[$valor->option_name] = $valor->option_value;
-
-  }*/
-
-    //echo '<pre>'.print_r($res).'</pre><br/>';
-    //echo "Precio Base: ".$res['cn_precio_base']."<br/>";
-     
-
-    /*
-      echo "<b>Fuente de Letra: </b>". $_POST['fuenteLetrasText']."<br/>";
-      echo "<b>Ancho:</b> ". number_format($_POST['anchocm'],2,",",".")." cm <br/>";
-      echo "<b>Alto:</b> ".$_POST['alto']." cm <br/>";
-      echo "<b>Trasera del Neon:</b> ".$_POST['tipoTrasera']." ".number_format($traseraNeon,2,",",".")."&euro;<br/>";
-      echo "<b>Sujeción del Neon:</b> ".$_POST['tipoSujecion']." ".number_format($_POST['sujecionNeon'],2,",",".")."&euro;<br/>";
-      echo "<b>Dimmer (controlador de luz):</b> ".number_format($_POST['dimmerNeon'],2,",",".")."&euro;<br/>";
-      echo "<b>Tiempo de Entrega:</b> ".$_POST['tiemposEntregaText']." ".number_format($_POST['tiemposEntrega'],2,",",".")."&euro;<br/>";
-      echo "<b>Forma del Contorno: </b>". $_POST['contorno']."<br/>";
-      echo "<b>Color: </b>". $_POST['color']."<br/>";
-    */
 
     $fuente = $_POST['fuenteLetras'];
     $color = $_POST['color'];
@@ -505,23 +411,46 @@ function iconic_output_engraving_field_LetrasCorporeas() {
       }
 
       // Conseguir el valor del Precio base de todos los elementos:
-      $cn_pagina                      = get_option( 'cn_pagina' ) ;
-      $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
-      $iva                            = get_option( 'iva' ) ;
-      $costoTransformador             = get_option( 'costoTransformador' ) ;
-      $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
-      $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
-      $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
-      $cn_precio_pvc                  = get_option( 'cn_precio_pvc' ) ;
-      $cn_precio_contraenchapado      = get_option( 'cn_precio_contraenchapado' ) ;
-      $cn_precio_maderadepino         = get_option( 'cn_precio_maderadepino' ) ;
-      $cn_precio_ancladoalapared      = get_option( 'cn_precio_ancladoalapared' ) ;
-      $cn_precio_colgadoaltecho       = get_option( 'cn_precio_colgadoaltecho' ) ;
-      $cn_precio_colgadocomouncuadro  = get_option( 'cn_precio_colgadocomouncuadro' ) ;
-      $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
-      $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
-      $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
-      $cn_precio_metro_neon           = get_option( 'cn_precio_metro_neon' ) ;
+
+        $iva_letras                                           = get_option( 'iva_letras' ) ;
+
+        //Aluminio:
+        $precio_aluminio                                      = get_option( 'precio_aluminio' ) ;
+        $precio_aluminio_mano_de_obra                         = get_option( 'precio_aluminio_mano_de_obra' ) ;
+        $precio_aluminio_pintura                              = get_option( 'precio_aluminio_pintura' ) ;
+        $precio_aluminio_corte_cnc                            = get_option( 'precio_aluminio_corte_cnc' ) ;
+        //Aluminio retroiluminadas:
+        $precio_aluminio_retroiluminado                       = get_option( 'precio_aluminio_retroiluminado' ) ;
+        $precio_aluminio_retroiluminado_mano_de_obra          = get_option( 'precio_aluminio_retroiluminado_mano_de_obra' ) ;
+        $precio_aluminio_retroiluminado_pintura               = get_option( 'precio_aluminio_retroiluminado_pintura' ) ;
+        $precio_aluminio_retroiluminado_metacrilato10mm       = get_option( 'precio_aluminio_retroiluminado_metacrilato10mm' ) ;
+        $precio_aluminio_retroiluminado_led                   = get_option( 'precio_aluminio_retroiluminado_led' ) ;
+        $precio_aluminio_retroiluminado_transformador         = get_option( 'precio_aluminio_retroiluminado_transformador' ) ;
+        $precio_aluminio_retroiluminado_corte_cnc             = get_option( 'precio_aluminio_retroiluminado_corte_cnc' ) ;
+        //Aluminio Iluminadas frontalmente:
+        $precio_aluminio_iluminado_frontal                    = get_option( 'precio_aluminio_iluminado_frontal' ) ;
+        $precio_aluminio_iluminado_frontal_mano_de_obra       = get_option( 'precio_aluminio_iluminado_frontal_mano_de_obra' ) ;
+        $precio_aluminio_iluminado_frontal_pintura            = get_option( 'precio_aluminio_iluminado_frontal_pintura' ) ;
+        $precio_aluminio_iluminado_frontal_metacrilato3mm     = get_option( 'precio_aluminio_iluminado_frontal_metacrilato3mm' ) ;
+        $precio_aluminio_iluminado_frontal_junquillo          = get_option( 'precio_aluminio_iluminado_frontal_junquillo' ) ;
+        $precio_aluminio_iluminado_frontal_led                = get_option( 'precio_aluminio_iluminado_frontal_led' ) ;
+        $precio_aluminio_iluminado_frontal_transformador      = get_option( 'precio_aluminio_iluminado_frontal_transformador' ) ;
+        $precio_aluminio_iluminado_frontal_corte_cnc          = get_option( 'precio_aluminio_iluminado_frontal_corte_cnc' ) ;
+        //Letras corporeas PVC:
+        $precio_pvc_5mm                                       = get_option( 'precio_pvc_5mm' ) ;
+        $precio_pvc_10mm                                      = get_option( 'precio_pvc_10mm' ) ;
+        $precio_pvc_19mm                                      = get_option( 'precio_pvc_19mm' ) ;
+        $precio_pvc_mano_de_obra                              = get_option( 'precio_pvc_mano_de_obra' ) ;
+        $precio_pvc_pintura                                   = get_option( 'precio_pvc_pintura' ) ;
+        $precio_pvc_led                                       = get_option( 'precio_pvc_led' ) ;
+        $precio_pvc_transformador                             = get_option( 'precio_pvc_transformador' ) ;
+        $precio_pvc_corte_cnc                                 = get_option( 'precio_pvc_corte_cnc' ) ;
+        //Letras Corporeas de metacrilatos huecas:
+        $precio_metacrilato_huecas_mano_de_obra               = get_option( 'precio_metacrilato_huecas_mano_de_obra' ) ;
+        $precio_metacrilato_huecas_metacrilato3mm             = get_option( 'precio_metacrilato_huecas_metacrilato3mm' ) ;
+        $precio_metacrilato_huecas_led                        = get_option( 'precio_metacrilato_huecas_led' ) ;
+        $precio_metacrilato_huecas_transformador              = get_option( 'precio_metacrilato_huecas_transformador' ) ;
+        $precio_metacrilato_huecas_corte_cnc                  = get_option( 'precio_metacrilato_huecas_corte_cnc' ) ;
 
       require('formularioCustomizer.php');
 
@@ -585,15 +514,15 @@ function campos_ocultos_letrasCorporeas() {
       <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="" readonly="yes">
       <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="" readonly="yes">
       <input type="hidden" id="anchocm" name="anchocm" value="" readonly="yes">
-
       <input type="hidden" id="alturacm" name="alturacm" value="" readonly="yes">
-
       <input type="hidden" id="altocm" name="altocm" value="" readonly="yes">
-      <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="" readonly="yes">
-      <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="" readonly="yes">   
-      <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="" readonly="yes">
+
+      <!-- Aluminio Sin Iluminar -->
+      <input type="hidden" id="acabado" name="acabado" value="" readonly="yes">
+      <input type="hidden" id="separacion" name="separacion" value="" readonly="yes">   
+      <input type="hidden" id="opciones" name="opciones" value="" readonly="yes">
+      
       <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="" readonly="yes">
-      <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="" readonly="yes">
       <input type="hidden" id="colorSumario" name="colorSumario" value="" readonly="yes">
       <input type="hidden" id="impuesto" name="impuesto" value="" readonly="yes">
       <input type="hidden" id="subTotalPrecio" name="subTotalPrecio" value="" readonly="yes">

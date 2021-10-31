@@ -78,7 +78,7 @@
   <div class="col-sm-4">
 
     <label for="letraCorporea">Letra Corpórea de:</label>
-    <select form="letrasCorporeas" class="form-select" id="letraCorporea" onchange="letraCorporeaForm(this.value);" style="height: 50px;padding: 3% 0;
+    <select form="letrasCorporeas" class="form-select" id="letraCorporea" onchange="letraCorporeaForm(this.value);deshabiltarBotonCart();" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;">  <!-- browser.js ln 274-->  
       <option style="font-size: 20px"value="aluminioForm">Aluminio Hueca</option>

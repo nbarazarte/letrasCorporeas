@@ -66,11 +66,53 @@
         </div>        
 
       </div>
-      <input type="hidden" class="form-control" id="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="iva" value="<?php echo esc_html($iva);?>" readonly="yes"> 
-      <input type="hidden" class="form-control" id="cn_precio_metro_neon" value="<?php echo esc_html($cn_precio_metro_neon);?>" readonly="yes">
+      
+      <input type="hidden" class="form-control" id="iva_letras" value="<?php echo esc_html($iva_letras);?>" readonly="yes">
 
- <div class="card" style="">
+      <!-- Aluminio Sin Iluminar -->
+      <input type="hidden" class="form-control" id="precio_aluminio" value="<?php echo esc_html($precio_aluminio);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_mano_de_obra" value="<?php echo esc_html($precio_aluminio_mano_de_obra);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_pintura" value="<?php echo esc_html($precio_aluminio_pintura);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_corte_cnc" value="<?php echo esc_html($precio_aluminio_corte_cnc);?>" readonly="yes">
+
+      <!-- Aluminio Retroiluminadas -->
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado" value="<?php echo esc_html($precio_aluminio_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_mano_de_obra" value="<?php echo esc_html($precio_aluminio_retroiluminado_mano_de_obra);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_pintura" value="<?php echo esc_html($precio_aluminio_retroiluminado_pintura);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_metacrilato10mm" value="<?php echo esc_html($precio_aluminio_retroiluminado_metacrilato10mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_led" value="<?php echo esc_html($precio_aluminio_retroiluminado_led);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_transformador" value="<?php echo esc_html($precio_aluminio_retroiluminado_transformador);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_corte_cnc" value="<?php echo esc_html($precio_aluminio_retroiluminado_corte_cnc);?>" readonly="yes">
+
+      <!-- Aluminio Iluminadas frontalmente -->
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal" value="<?php echo esc_html($precio_aluminio_iluminado_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_mano_de_obra" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_mano_de_obra);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_pintura" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_pintura);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_metacrilato3mm" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_metacrilato3mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_junquillo" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_junquillo);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_led" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_led);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_transformador" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_transformador);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_corte_cnc" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_corte_cnc);?>" readonly="yes">
+
+      <!-- Letras corporeas PVC -->
+      <input type="hidden" class="form-control" id="precio_pvc_5mm" value="<?php echo esc_html($precio_pvc_5mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_10mm" value="<?php echo esc_html($precio_pvc_10mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_19mm" value="<?php echo esc_html($precio_pvc_19mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_mano_de_obra" value="<?php echo esc_html($precio_pvc_mano_de_obra);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_pintura" value="<?php echo esc_html($precio_pvc_pintura);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_led" value="<?php echo esc_html($precio_pvc_led);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_transformador" value="<?php echo esc_html($precio_pvc_transformador);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_pvc_corte_cnc" value="<?php echo esc_html($precio_pvc_corte_cnc);?>" readonly="yes">
+
+      <!-- Letras Corporeas de metacrilatos huecas -->
+      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_mano_de_obra" value="<?php echo esc_html($precio_metacrilato_huecas_mano_de_obra);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_metacrilato3mm" value="<?php echo esc_html($precio_metacrilato_huecas_metacrilato3mm);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_led" value="<?php echo esc_html($precio_metacrilato_huecas_led);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_transformador" value="<?php echo esc_html($precio_metacrilato_huecas_transformador);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_corte_cnc" value="<?php echo esc_html($precio_metacrilato_huecas_corte_cnc);?>" readonly="yes">
+
+
+      <div class="card" style="">
 
         <div class="card-header">
           <center> <i class="fas fa-cogs"></i> Personaliza tu rótulo</center>
@@ -81,10 +123,12 @@
           <?php
 
             require 'opciones.php';
-		?>
+		      ?>
 		
-		<p style="font-size:12px;"><i>Medida de referencia, esta medida puede sufrir algún cambio a la hora de diseñar el neón flexible final. Sin embargo, esto será consultado antes de fabricar y se enviará un previsualización final del neón y no se fabricara hasta recibir aprobación de vuestra parte</i></p>
-<?php
+		      <p style="font-size:12px;"><i>Medida de referencia, esta medida puede sufrir algún cambio a la hora de diseñar el neón flexible final. Sin embargo, esto será consultado antes de fabricar y se enviará un previsualización final del neón y no se fabricara hasta recibir aprobación de vuestra parte</i></p>
+
+          <?php
+
             require 'formaContorno.php';
                       
            /* 
@@ -98,6 +142,7 @@
 
           */
           ?>
+
         </div>
       
       </div>

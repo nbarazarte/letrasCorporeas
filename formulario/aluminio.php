@@ -12,7 +12,7 @@
               <!-- Aluminio -->
               <figure class="figure">
 
-                <input onclick="" type="radio" name="acabadoAluminio" id="pintado" value="pintado" checked onchange="deshabiltarBotonCart()">   
+                <input onclick="" type="radio" name="acabadoAluminio" id="pintado" value="Pintado" checked onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="pintado"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO</figcaption>
@@ -37,7 +37,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionAluminio" id="sinSeparacion1" value="sinSeparacion" checked onchange="deshabiltarBotonCart()" > 
+                <input onclick="" type="radio" name="separacionAluminio" id="sinSeparacion1" value="Sin Separacion" checked onchange="deshabiltarBotonCart()" > 
                 <label class="drinkcard-cc rectangular" for="sinSeparacion1"></label> 
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
@@ -46,7 +46,7 @@
 
               <figure class="figure">
 
-                <input  onclick="" type="radio" name="separacionAluminio" id="a1cm1" value="a1cm" onchange="deshabiltarBotonCart()"> 
+                <input  onclick="" type="radio" name="separacionAluminio" id="a1cm1" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc redondo" for="a1cm1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
@@ -55,7 +55,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionAluminio" id="a3cm1" value="a3cm" onchange="deshabiltarBotonCart()"> 
+                <input onclick="" type="radio" name="separacionAluminio" id="a3cm1" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc personalizado" for="a3cm1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
@@ -81,7 +81,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormAluminio','true');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="sinLuz" checked onchange="deshabiltarBotonCart()">
+                <input onclick="coloresForm('coloresFormAluminio','true');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc metacrilato" for="sinLuz1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
@@ -91,7 +91,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormAluminio','false');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="retroiluminado" onchange="deshabiltarBotonCart()">  
+                <input onclick="coloresForm('coloresFormAluminio','false');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
                 <label class="drinkcard-cc metacrilato" for="retroiluminado1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADO</figcaption>
@@ -101,7 +101,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormAluminio','false');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="iluminacionFrontal" onchange="deshabiltarBotonCart()">
+                <input onclick="coloresForm('coloresFormAluminio','false');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc metacrilato" for="iluminacionFrontal1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
