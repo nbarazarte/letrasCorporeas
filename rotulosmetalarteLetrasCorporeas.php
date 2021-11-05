@@ -3,7 +3,7 @@
 Plugin Name: Rotulos Metalarte Letras Corporeas
 Plugin URI: https://www.rotulosmetalarte.es
 Description: Personalizador de Letras Corporeas
-Version: 1.1
+Version: 1.0
 Author: Neil Barazarte
 Author URI: https://www.ploshshop.com
 License: GPLv2
@@ -13,8 +13,8 @@ License: GPLv2
 //include(plugin_dir_url(__FILE__).'funciones.php');
 
 //echo $_SERVER['REQUEST_URI'];
-if( $_SERVER['REQUEST_URI'] == '/rotulosmetalarte/producto/letras-corporeas-personalizadas-custom/'){
-//if( $_SERVER['REQUEST_URI'] == '/producto/neon-flexible-personalizado-custom-neon-flex/'){    
+if( $_SERVER['REQUEST_URI'] == '/proyecto/producto/letras-corporeas/'){
+//if( $_SERVER['REQUEST_URI'] == '/producto/letras-corporeas-personalizadas-custom/'){ 
 
     add_action( 'wp_enqueue_scripts', 'custom_styles_letras',10 );
     add_action( 'wp_enqueue_scripts', 'custom_scripts_letras' );
@@ -384,11 +384,23 @@ function jnj_mi_funcion_LetrasCorporeas()
       Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
     </p>';
 
-    echo '<div id="caja">
-            <div class="neon_effect '.$fuente.' '.$color.' ">
+        echo '<div class="container">
+          <div id="caja" class="row justify-content-md-center">
+
+            <div id="muestra" class="col-md-auto neon_effect '.$fuente.' '.$color.' ">
               '.$_POST['rotulo'].'
             </div>
-          </div>';  
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              
+              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="5" onchange="ajustarTamano(this.value)">
+            </div>
+          </div>
+        </div>';
 
   wp_die();
 }
@@ -483,26 +495,18 @@ function campos_ocultos_letrasCorporeas() {
 
   <div class="bsnamespace" style=""> 
 
-
       <div class="col-12 text-center">
 
-          <div class="fabify-button" style="cursor: pointer;">
-
-            <a id="myButton2" style="color: #fff;" onclick="jQueryDoSomethingAJAX()">
-              <i class="fas fa-magic"></i> Aplicar cambios
+          <div class="gem-button-container gem-button-position-center thegem-button-61835271a9da17668 lazy-loading  lazy-loading-end-animation">
+            <a id="myButton2" title="" class="gem-button gem-button-size-small gem-button-style-flat gem-button-text-weight-normal lazy-loading-item lazy-loading-item-drop-right" data-ll-effect="drop-right-without-wrap" style="text-decoration:none;border-radius: 0px; background-color: rgb(153, 34, 51); color: rgb(255, 255, 255);cursor: pointer;" onmouseleave="this.style.backgroundColor='#992233';this.style.color='#ffffff';" onmouseenter="this.style.backgroundColor='#172b3c';this.style.color='#ffffff';"  >
+            <i class="fas fa-magic"></i> APLICAR CAMBIOS
             </a>
-
           </div>
           <br/>
           <div id="precioOtraVez" style="position: relative; left: 30px;">
            
           </div>
           
-
-        <!--<a id="myButton2" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
-          <i class="fas fa-magic"></i> 
-          Aplicar cambios
-        </a>-->
 
         <div id="myDIV">
           <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
@@ -517,11 +521,17 @@ function campos_ocultos_letrasCorporeas() {
       <input type="hidden" id="alturacm" name="alturacm" value="" readonly="yes">
       <input type="hidden" id="altocm" name="altocm" value="" readonly="yes">
 
-      <!-- Aluminio Sin Iluminar -->
+      <input type="hidden" id="tipoletraCorporea" name="tipoletraCorporea" value="" readonly="yes">
+      <input type="hidden" id="tipoGrosor" name="tipoGrosor" value="" readonly="yes">
+      
+      <!-- Aluminio, Acero y Latón -->
       <input type="hidden" id="acabado" name="acabado" value="" readonly="yes">
       <input type="hidden" id="separacion" name="separacion" value="" readonly="yes">   
       <input type="hidden" id="opciones" name="opciones" value="" readonly="yes">
       
+      <!-- Metacrilato Huecas y PVC-->
+      <input type="hidden" id="sujecion" name="sujecion" value="" readonly="yes">
+
       <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="" readonly="yes">
       <input type="hidden" id="colorSumario" name="colorSumario" value="" readonly="yes">
       <input type="hidden" id="impuesto" name="impuesto" value="" readonly="yes">
@@ -553,16 +563,19 @@ function iconic_add_engraving_text_to_cart_item_LetrasCorporeas( $cart_item_data
   $texto_rotulo         = filter_input( INPUT_POST, 'texto_rotulo' );
   $fuenteLetrasText     = filter_input( INPUT_POST, 'fuenteLetrasText' );
   $anchocm              = filter_input( INPUT_POST, 'anchocm' );
-
-  $alturacm              = filter_input( INPUT_POST, 'alturacm' );
-
-
+  $alturacm             = filter_input( INPUT_POST, 'alturacm' );
   $altocm               = filter_input( INPUT_POST, 'altocm' );
-  $tipoTraseraSumario   = filter_input( INPUT_POST, 'tipoTraseraSumario' );
-  $tipoSujecionSumario  = filter_input( INPUT_POST, 'tipoSujecionSumario' );
-  $tipoDimmerSumario    = filter_input( INPUT_POST, 'tipoDimmerSumario' );  
+
+
+  $tipoletraCorporea    = filter_input( INPUT_POST, 'tipoletraCorporea' );
+  $tipoGrosor           = filter_input( INPUT_POST, 'tipoGrosor' );
+  $acabado              = filter_input( INPUT_POST, 'acabado' );  
+  $separacion           = filter_input( INPUT_POST, 'separacion'  ); 
+  $opciones             = filter_input( INPUT_POST, 'opciones'  );
+  $sujecion             = filter_input( INPUT_POST, 'sujecion'  ); 
+  
+
   $tiempoEntregaSumario = filter_input( INPUT_POST, 'tiempoEntregaSumario' ); 
-  $tipoContornoSumario  = filter_input( INPUT_POST, 'tipoContornoSumario'  ); 
   $colorSumario         = filter_input( INPUT_POST, 'colorSumario'         );
   $impuesto             = filter_input( INPUT_POST, 'impuesto'         );
   $subTotalPrecio       = filter_input( INPUT_POST, 'subTotalPrecio'         );
@@ -593,19 +606,20 @@ function iconic_add_engraving_text_to_cart_item_LetrasCorporeas( $cart_item_data
 
   */
 
-  
   $cart_item_data['texto_rotulo']         = $texto_rotulo;
   $cart_item_data['fuenteLetrasText']     = $fuenteLetrasText;
   $cart_item_data['anchocm']              = number_format($_POST['anchocm'],3,",",".");
-
-  $cart_item_data['alturacm']              = number_format($_POST['alturacm'],3,",",".");
-
+  $cart_item_data['alturacm']             = number_format($_POST['alturacm'],3,",",".");
   $cart_item_data['altocm']               = $altocm;
-  $cart_item_data['tipoTraseraSumario']   = $tipoTraseraSumario;
-  $cart_item_data['tipoSujecionSumario']  = $tipoSujecionSumario;
-  $cart_item_data['tipoDimmerSumario']    = $tipoDimmerSumario;
+
+  $cart_item_data['tipoletraCorporea']    = $tipoletraCorporea;
+  $cart_item_data['tipoGrosor']           = $tipoGrosor;
+  $cart_item_data['acabado']              = $acabado;  
+  $cart_item_data['separacion']           = $separacion;
+  $cart_item_data['opciones']             = $opciones;  
+  $cart_item_data['sujecion']             = $sujecion;
+
   $cart_item_data['tiempoEntregaSumario'] = $tiempoEntregaSumario;
-  $cart_item_data['tipoContornoSumario']  = $tipoContornoSumario;
   $cart_item_data['colorSumario']         = $colorSumario;
   $cart_item_data['impuesto']             = $impuesto;
   $cart_item_data['subTotalPrecio']       = $subTotalPrecio;
@@ -627,10 +641,38 @@ add_filter( 'woocommerce_add_cart_item_data', 'iconic_add_engraving_text_to_cart
  * @return array
  */
 function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_item ) {
-  if ( empty( $cart_item['texto_rotulo'] ) ) {
-    return $item_data;
-  }
 
+    if ( empty( $cart_item['texto_rotulo'] ) ) {
+    return $item_data;
+    }
+
+    //echo "<pre>".var_dump($cart_item)."</pre>";
+    //echo $cart_item['product_id'];
+
+    $id_letras = get_option( 'cn_id_producto_personalizado_letras' );
+
+    if($id_letras == $cart_item['product_id']){
+
+      $item_data[] = array(
+        'key'     => __( '', 'iconic' ),
+        'value'   => '',
+        'display' => '<b>Texto:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
+                     '<b>Fuente:</b><br/>'.wc_clean( $cart_item['fuenteLetrasText']).'<br/>'.
+                     '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
+                     '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
+                     '<b>Letra Corpórea de:</b><br/>'.wc_clean( $cart_item['tipoletraCorporea']).'<br/>'.
+                     '<b>Grosor:</b><br/>'.wc_clean( $cart_item['tipoGrosor']).'<br/>'.
+                     '<b>Acabado:</b><br/>'.wc_clean( $cart_item['acabado']).'<br/>'.
+                     '<b>Separación:</b><br/>'.wc_clean( $cart_item['separacion']).'<br/>'.                     
+                     '<b>Opciones:</b><br/>'.wc_clean( $cart_item['opciones']).'<br/>'.
+                     '<b>Sujeción:</b><br/>'.wc_clean( $cart_item['sujecion']).'<br/>'. 
+                     '<b>Color:</b><br/>'.wc_clean( $cart_item['colorSumario']).'<br/>'.
+                     '<b>Tiempos de Entrega:</b><br/>'.wc_clean( $cart_item['tiempoEntregaSumario']).'<br/>'.
+                     '<b>Sub Total:</b><br/>'.wc_clean( $cart_item['subTotalPrecio'])
+      ); 
+    }
+
+/*
   $item_data[] = array(
     'key'     => __( 'Texto rótulo', 'iconic' ),
     'value'   => wc_clean( $cart_item['texto_rotulo'] ),
@@ -638,7 +680,7 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
   ); 
 
   $item_data[] = array(
-    'key'     => __( 'Fuente de letras', 'iconic' ),
+    'key'     => __( 'Fuente', 'iconic' ),
     'value'   => wc_clean( $cart_item['fuenteLetrasText'] ),
     'display' => '',
   );   
@@ -655,76 +697,64 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
     'display' => '',
   );
   
-  /*
-    $item_data[] = array(
-      'key'     => __( 'Tamaño de letra', 'iconic' ),
-      'value'   => wc_clean( $cart_item['altocm'] ),
-      'display' => '',
-    );
-  */
+
 
   $item_data[] = array(
-    'key'     => __( 'Trasera del Neon', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoTraseraSumario'] ),
+    'key'     => __( 'Letra Corpórea', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoletraCorporea'] ),
     'display' => '',
   );
 
   $item_data[] = array(
-    'key'     => __( 'Sujeción del Neon', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoSujecionSumario'] ),
+    'key'     => __( 'Grosor', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tipoGrosor'] ),
     'display' => '',
   );
 
   $item_data[] = array(
-    'key'     => __( 'Dimmer', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoDimmerSumario'] ),
+    'key'     => __( 'Acabado', 'iconic' ),
+    'value'   => wc_clean( $cart_item['acabado'] ),
     'display' => '',
   );     
 
-  $item_data[] = array(
-    'key'     => __( 'Tiempo de Entrega', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tiempoEntregaSumario'] ),
-    'display' => '',
-  ); 
 
   $item_data[] = array(
-    'key'     => __( 'Forma del Contorno', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoContornoSumario'] ),
+    'key'     => __( 'Separación', 'iconic' ),
+    'value'   => wc_clean( $cart_item['separacion'] ),
     'display' => '',
   );   
  
+  $item_data[] = array(
+    'key'     => __( 'Opciones', 'iconic' ),
+    'value'   => wc_clean( $cart_item['opciones'] ),
+    'display' => '',
+  );     
+
+
+  $item_data[] = array(
+    'key'     => __( 'Sujeción', 'iconic' ),
+    'value'   => wc_clean( $cart_item['sujecion'] ),
+    'display' => '',
+  );  
+
    $item_data[] = array(
     'key'     => __( 'Color', 'iconic' ),
     'value'   => wc_clean( $cart_item['colorSumario'] ),
     'display' => '',
   ); 
   
-  /*
-     $item_data[] = array(
-      'key'     => __( 'Longitud Path A', 'iconic' ),
-      'value'   => wc_clean( $cart_item['pathA'] ),
-      'display' => '',
-    ); 
-
-     $item_data[] = array(
-      'key'     => __( 'Longitud Path B', 'iconic' ),
-      'value'   => wc_clean( $cart_item['pathB'] ),
-      'display' => '',
-    );
-     
-     $item_data[] = array(
-      'key'     => __( 'Impuesto (gastos de envío)', 'iconic' ),
-      'value'   => wc_clean( $cart_item['impuesto'] ."%"),
-      'display' => '',
-    ); 
-  */
+    $item_data[] = array(
+    'key'     => __( 'Tiempo de Entrega', 'iconic' ),
+    'value'   => wc_clean( $cart_item['tiempoEntregaSumario'] ),
+    'display' => '',
+  ); 
 
    $item_data[] = array(
     'key'     => __( 'Sub Total', 'iconic' ),
     'value'   => wc_clean( $cart_item['subTotalPrecio'] ." &euro;"),
     'display' => '',
   );       
-
+*/
   return $item_data;
 }
 
@@ -761,7 +791,7 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
  );
 
  $item->add_meta_data(
-  __( 'Fuente de letras', 'iconic' ),
+  __( 'Fuente', 'iconic' ),
   $values['fuenteLetrasText'],
   true
  );
@@ -778,33 +808,49 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
   true
  );
 
+
+
+
+
  $item->add_meta_data(
-  __( 'Trasera del Neon', 'iconic' ),
-  $values['tipoTraseraSumario'],
+  __( 'Letra Corporea', 'iconic' ),
+  $values['tipoletraCorporea'],
   true
  );
 
  $item->add_meta_data(
-  __( 'Sujeción del Neon', 'iconic' ),
-  $values['tipoSujecionSumario'],
+  __( 'Grosor', 'iconic' ),
+  $values['tipoGrosor'],
   true
  );
 
  $item->add_meta_data(
-  __( 'Dimmer', 'iconic' ),
-  $values['tipoDimmerSumario'],
+  __( 'Acabado', 'iconic' ),
+  $values['acabado'],
   true
  );
 
   $item->add_meta_data(
-  __( 'Tiempo de Entrega', 'iconic' ),
-  $values['tiempoEntregaSumario'],
+  __( 'Separación', 'iconic' ),
+  $values['separacion'],
+  true
+ ); 
+
+ $item->add_meta_data(
+  __( 'Opciones', 'iconic' ),
+  $values['opciones'],
+  true
+ );
+
+  $item->add_meta_data(
+  __( 'Sujeción', 'iconic' ),
+  $values['sujecion'],
   true
  ); 
 
   $item->add_meta_data(
-  __( 'Forma del Contorno', 'iconic' ),
-  $values['tipoContornoSumario'],
+  __( 'Tiempo de Entrega', 'iconic' ),
+  $values['tiempoEntregaSumario'],
   true
  ); 
 

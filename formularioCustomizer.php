@@ -11,6 +11,10 @@
 
 <style type="text/css">
   
+  .single-product-content-left{
+    visibility: hidden;
+  }
+    
   .woocommerce-product-gallery,
   .price {
     display:none;
@@ -40,9 +44,13 @@
 </style>
 
 <div class="bsnamespace">
-
-<?php
-  require('formulario/formulario.php');
-?>
-
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-10">
+        <?php
+          require('formulario/formulario.php');
+        ?>
+      </div>
+    </div>
+  </div>
 </div>

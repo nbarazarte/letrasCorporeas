@@ -12,7 +12,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="sujecionPvc" id="sinSujecion2" value="sinSujecion" checked onchange="deshabiltarBotonCart()">
+                <input onclick="" type="radio" name="sujecionPvc" id="sinSujecion2" value="Sin Sujeción" checked onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc metacrilato" for="sinSujecion2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN SUJECIÓN</figcaption>
@@ -22,7 +22,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="sujecionPvc" id="letraAdhesiva2" value="letraAdhesiva" onchange="deshabiltarBotonCart()">  
+                <input onclick="" type="radio" name="sujecionPvc" id="letraAdhesiva2" value="Letra Adhesiva" onchange="deshabiltarBotonCart()">  
                 <label class="drinkcard-cc metacrilato" for="letraAdhesiva2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">LETRA ADHESIVA</figcaption>
@@ -31,7 +31,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="sujecionPvc" id="tornilleria1" value="tornilleria" onchange="deshabiltarBotonCart()">  
+                <input onclick="" type="radio" name="sujecionPvc" id="tornilleria1" value="Tornillería" onchange="deshabiltarBotonCart()">  
                 <label class="drinkcard-cc metacrilato" for="tornilleria1"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">TORNILLERÍA</figcaption>
@@ -57,7 +57,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionPvc" id="sinSeparacion4" value="sinSeparacion" checked onchange="deshabiltarBotonCart()" > 
+                <input onclick="" type="radio" name="separacionPvc" id="sinSeparacion4" value="Sin Separación" checked onchange="deshabiltarBotonCart()" > 
                 <label class="drinkcard-cc rectangular" for="sinSeparacion4"></label> 
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
@@ -66,7 +66,7 @@
 
               <figure class="figure">
 
-                <input  onclick="" type="radio" name="separacionPvc" id="a1cm4" value="a1cm" onchange="deshabiltarBotonCart()"> 
+                <input  onclick="" type="radio" name="separacionPvc" id="a1cm4" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc redondo" for="a1cm4"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
@@ -75,7 +75,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionPvc" id="a3cm4" value="a3cm" onchange="deshabiltarBotonCart()"> 
+                <input onclick="" type="radio" name="separacionPvc" id="a3cm4" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc personalizado" for="a3cm4"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
@@ -102,7 +102,7 @@
               <!-- PVC -->
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="naturalBlanco2" value="naturalBlanco" checked onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="naturalBlanco2" value="Natural Blanco" checked onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="naturalBlanco2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NATURAL BLANCO</figcaption>
@@ -111,7 +111,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="negroMate2" value="negroMate" onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="negroMate2" value="Negro Mate" onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="negroMate2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NEGRO MATE</figcaption>
@@ -120,7 +120,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoMate2" value="pintadoMate"  onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoMate2" value="Pintado Mate"  onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="pintadoMate2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO MATE</figcaption>
@@ -129,7 +129,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoBrillo2" value="pintadoBrillo" onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoBrillo2" value="Pintado Brillo" onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="pintadoBrillo2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO BRILLO</figcaption>
@@ -157,7 +157,7 @@
 
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="amarillo" id="amarilloColor2" checked onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="amarillo" id="amarilloColor2" checked onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
@@ -166,7 +166,7 @@
 
                 <figure class="figure">
 
-                  <input  type="radio" name="colores" value="rojo" id="rojoColor2"  onchange="deshabiltarBotonCart()">
+                  <input  type="radio" name="coloresPvc" value="rojo" id="rojoColor2"  onchange="deshabiltarBotonCart()">
                   <label class="drinkcard-cc-colores rojoColor" for="rojoColor2"></label>
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROJO</figcaption>
@@ -175,7 +175,7 @@
 
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="durazno" id="duraznoColor2" onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="durazno" id="duraznoColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores duraznoColor" for="duraznoColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">DURAZNO</figcaption>
@@ -184,7 +184,7 @@
 
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="ambar" id="ambarColor2" onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="ambar" id="ambarColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores ambarColor" for="ambarColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMBAR</figcaption>
@@ -193,7 +193,7 @@
 
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="limon" id="limonColor2" onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="limon" id="limonColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores limonColor" for="limonColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">LIMÓN</figcaption>
@@ -202,7 +202,7 @@
             
                <figure class="figure">
 
-                  <input  type="radio" name="colores" value="verde" id="verdeColor2" onchange="deshabiltarBotonCart()">
+                  <input  type="radio" name="coloresPvc" value="verde" id="verdeColor2" onchange="deshabiltarBotonCart()">
                   <label class="drinkcard-cc-colores verdeColor" for="verdeColor2"></label>
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">VERDE</figcaption>
@@ -211,7 +211,7 @@
 
                 <figure class="figure">
 
-                  <input  type="radio" name="colores" value="azul" id="azulColor2" onchange="deshabiltarBotonCart()">
+                  <input  type="radio" name="coloresPvc" value="azul" id="azulColor2" onchange="deshabiltarBotonCart()">
                   <label class="drinkcard-cc-colores azulColor" for="azulColor2"></label>
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AZUL</figcaption>
@@ -221,7 +221,7 @@
 
                 <figure class="figure">
 
-                  <input  type="radio" name="colores" value="morado" id="moradoColor2" onchange="deshabiltarBotonCart()">
+                  <input  type="radio" name="coloresPvc" value="morado" id="moradoColor2" onchange="deshabiltarBotonCart()">
                   <label class="drinkcard-cc-colores moradoColor" for="moradoColor2"></label>
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">MORADO</figcaption>
@@ -231,7 +231,7 @@
 
                 <figure class="figure">
 
-                  <input  type="radio" name="colores" value="turquesa" id="turquesaColor2" onchange="deshabiltarBotonCart()">
+                  <input  type="radio" name="coloresPvc" value="turquesa" id="turquesaColor2" onchange="deshabiltarBotonCart()">
                   <label class="drinkcard-cc-colores turquesaColor" for="turquesaColor2"></label>
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">TURQUESA</figcaption>
@@ -240,7 +240,7 @@
 
                 <figure class="figure">
 
-                  <input  type="radio" name="colores" value="rosa" id="rosaColor2" onchange="deshabiltarBotonCart()"> 
+                  <input  type="radio" name="coloresPvc" value="rosa" id="rosaColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores rosaColor" for="rosaColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROSA</figcaption>
@@ -249,7 +249,7 @@
 
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="blanco" id="blancoColor2" onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="blanco" id="blancoColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores blancoColor" for="blancoColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO</figcaption>
@@ -258,7 +258,7 @@
           
                 <figure class="figure">
 
-                  <input type="radio" name="colores" value="calido" id="calidoColor2" onchange="deshabiltarBotonCart()"> 
+                  <input type="radio" name="coloresPvc" value="calido" id="calidoColor2" onchange="deshabiltarBotonCart()"> 
                   <label class="drinkcard-cc-colores calidoColor" for="calidoColor2"></label> 
 
                   <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">CÁLIDO</figcaption>

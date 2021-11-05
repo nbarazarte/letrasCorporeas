@@ -12,7 +12,7 @@
               <!-- Laton -->
               <figure class="figure">
 
-                <input onclick="" type="radio" name="acabadoLaton" id="satinado3" value="satinado" checked onchange="deshabiltarBotonCart()">   
+                <input onclick="" type="radio" name="acabadoLaton" id="satinado3" value="Satinado" checked onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="satinado3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SATINADO</figcaption>
@@ -21,7 +21,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="acabadoLaton" id="pulido3" value="pulido" onchange="deshabiltarBotonCart()">   
+                <input onclick="" type="radio" name="acabadoLaton" id="pulido3" value="Pulido" onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc metacrilato" for="pulido3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PULIDO</figcaption>
@@ -47,7 +47,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionLaton" id="sinSeparacion3" value="sinSeparacion" checked onchange="deshabiltarBotonCart()" > 
+                <input onclick="" type="radio" name="separacionLaton" id="sinSeparacion3" value="Sin Separacion" checked onchange="deshabiltarBotonCart()" > 
                 <label class="drinkcard-cc rectangular" for="sinSeparacion3"></label> 
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
@@ -56,7 +56,7 @@
 
               <figure class="figure">
 
-                <input  onclick="" type="radio" name="separacionLaton" id="a1cm3" value="a1cm" onchange="deshabiltarBotonCart()"> 
+                <input  onclick="" type="radio" name="separacionLaton" id="a1cm3" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc redondo" for="a1cm3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
@@ -65,7 +65,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="separacionLaton" id="a3cm3" value="a3cm" onchange="deshabiltarBotonCart()"> 
+                <input onclick="" type="radio" name="separacionLaton" id="a3cm3" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
                 <label class="drinkcard-cc personalizado" for="a3cm3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
@@ -91,7 +91,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesLaton" id="sinLuz3" value="sinLuz" checked onchange="deshabiltarBotonCart()">
+                <input onclick="" type="radio" name="opcionesLaton" id="sinLuz3" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc metacrilato" for="sinLuz3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
@@ -101,25 +101,21 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesLaton" id="retroiluminado3" value="retroiluminado" onchange="deshabiltarBotonCart()">  
+                <input onclick="" type="radio" name="opcionesLaton" id="retroiluminado3" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
                 <label class="drinkcard-cc metacrilato" for="retroiluminado3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADO</figcaption>
 
               </figure>
 
-
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesLaton" id="iluminacionFrontal3" value="iluminacionFrontal" onchange="deshabiltarBotonCart()">
+                <input onclick="" type="radio" name="opcionesLaton" id="iluminacionFrontal3" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc metacrilato" for="iluminacionFrontal3"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
 
               </figure>
-
-
-
 
             </div>
 

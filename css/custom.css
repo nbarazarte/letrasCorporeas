@@ -9764,17 +9764,23 @@
 
 #caja {
     background:
-	radial-gradient(black 15%, transparent 16%) 0 0,
-	radial-gradient(black 15%, transparent 16%) 8px 8px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-	background-color:#282828;
-	background-size:16px 16px;
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+
+  height: 200px;
+
 }
 
 .neon_effect {
-  text-align: center;
-  font-size: 5em;
+  position: relative;
+
+  top: 50%;
+text-align: center;
+  font-size: 3em;
   /*
   font-size: 8vw;
   margin: 50px;*/
@@ -10214,38 +10220,41 @@
 
 @keyframes neon1 {/*Rojo*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FC0200, 0 0 35px #FC0200, 0 0 40px #FC0200, 0 0 50px #FC0200, 0 0 75px #FC0200;
+    text-shadow: 0 0 5px #FC0200;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FC0200, 0 0 9px #FC0200, 0 0 15px #FC0200, 0 0 20px #FC0200, 0 0 25px #FC0200;
+    text-shadow: 0 0 5px #FC0200;
   }
 }
 
 @keyframes neon2 {/*Durazno*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF8B43, 0 0 35px #FF8B43, 0 0 40px #FF8B43, 0 0 50px #FF8B43, 0 0 75px #FF8B43;
+    text-shadow: 0 0 5px #FF8B43;
+
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF8B43, 0 0 9px #FF8B43, 0 0 15px #FF8B43, 0 0 20px #FF8B43, 0 0 25px #FF8B43;
+    text-shadow: 0 0 5px #FF8B43;
   }
 
 }
 
 @keyframes neon3 {/*Ambar*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FBB03B, 0 0 35px #FBB03B, 0 0 40px #FBB03B, 0 0 50px #FBB03B, 0 0 75px #FBB03B;
+    text-shadow: 0 0 5px #FBB03B;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FBB03B, 0 0 9px #FBB03B, 0 0 15px #FBB03B, 0 0 20px #FBB03B, 0 0 25px #FBB03B;
+    text-shadow: 0 0 5px #FBB03B;
   }
 }
 
 @keyframes neon4 {/*Limón*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #DFFB02, 0 0 35px #DFFB02, 0 0 40px #DFFB02, 0 0 50px #DFFB02, 0 0 75px #DFFB02;
+    text-shadow: 0 0 5px #DFFB02;
+
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #DFFB02, 0 0 9px #DFFB02, 0 0 15px #DFFB02, 0 0 20px #DFFB02, 0 0 25px #DFFB02;
+    text-shadow: 0 0 5px #DFFB02;
   }
 }
 
@@ -10254,76 +10263,85 @@
 
   from {
     text-shadow: 0 0 5px #FFE700;
-    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFE700, 0 0 35px #FFE700, 0 0 40px #FFE700, 0 0 50px #FFE700, 0 0 75px #FFE700;*/
+  
   }
   
   to {
     text-shadow: 0 0 5px #FFE700;
-    /*text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFE700, 0 0 9px #FFE700, 0 0 15px #FFE700, 0 0 20px #FFE700, 0 0 25px #FFE700;*/
+    
   }
   
 }
 
 @keyframes neon6 {/*Verde*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #13DD00, 0 0 35px #13DD00, 0 0 40px #13DD00, 0 0 50px #13DD00, 0 0 75px #13DD00;
+    text-shadow: 0 0 5px #13DD00;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #13DD00, 0 0 9px #13DD00, 0 0 15px #13DD00, 0 0 20px #13DD00, 0 0 25px #13DD00;
+    text-shadow: 0 0 5px #13DD00;
+    
   }	
 }
 
 @keyframes neon7 {/*Azul*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #173FFF, 0 0 35px #173FFF, 0 0 40px #173FFF, 0 0 50px #173FFF, 0 0 75px #173FFF;
+     text-shadow: 0 0 5px #173FFF;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #173FFF, 0 0 9px #173FFF, 0 0 15px #173FFF, 0 0 20px #173FFF, 0 0 25px #173FFF;
+    text-shadow: 0 0 5px #173FFF;
   }
 }
 
 @keyframes neon8 {/*Morado*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #AA15F6, 0 0 35px #AA15F6, 0 0 40px #AA15F6, 0 0 50px #AA15F6, 0 0 75px #AA15F6;
+    text-shadow: 0 0 5px #AA15F6;
+
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #AA15F6, 0 0 9px #AA15F6, 0 0 15px #AA15F6, 0 0 20px #AA15F6, 0 0 25px #AA15F6;
+    text-shadow: 0 0 5px #AA15F6;
+    
   }
 }
 
 @keyframes neon9 {/*Turquesa*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00A8FF, 0 0 35px #00A8FF, 0 0 40px #00A8FF, 0 0 50px #00A8FF, 0 0 75px #00A8FF;
+    text-shadow: 0 0 5px #00A8FF;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #00A8FF, 0 0 9px #00A8FF, 0 0 15px #00A8FF, 0 0 20px #00A8FF, 0 0 25px #00A8FF;
+    text-shadow: 0 0 5px #00A8FF;
   }
 }
 
 @keyframes neon10 {/*Rosa*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF68B0, 0 0 35px #FF68B0, 0 0 40px #FF68B0, 0 0 50px #FF68B0, 0 0 75px #FF68B0;
+    text-shadow: 0 0 5px #FF68B0;
+
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF68B0, 0 0 9px #FF68B0, 0 0 15px #FF68B0, 0 0 20px #FF68B0, 0 0 25px #FF68B0;
+    text-shadow: 0 0 5px #FF68B0;
   }
 }
 
 @keyframes neon11 {/*Blanco*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFFF, 0 0 9px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #FFFFFF, 0 0 25px #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF;
   }
 }
 
-@keyframes neon12 {/*Cálido*/
+@keyframes neon12 {/*FFFFEB*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFEB, 0 0 35px #FFFFEB, 0 0 40px #FFFFEB, 0 0 50px #FFFFEB, 0 0 75px #FFFFEB;
+    text-shadow: 0 0 5px #FFFFFF;
+    
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFEB, 0 0 9px #FFFFEB, 0 0 15px #FFFFEB, 0 0 20px #FFFFEB, 0 0 25px #FFFFEB;
+    text-shadow: 0 0 5px #FFFFFF;
   }
 }
 

@@ -45,58 +45,52 @@ function jQueryDoSomethingAJAX() {
    
     document.getElementById('impuesto').value = document.getElementById('iva_letras').value;
 
-    
-
-    //Valores que selecciona el usuario:
-    var acabadoAluminio = document.getElementsByName("acabadoAluminio");
-    var txt = "";
-    var i;
-    for (i = 0; i < acabadoAluminio.length; i++) {
-        if (acabadoAluminio[i].checked) {
-          txt = acabadoAluminio[i].value;
-        }
-    }
-
-    var acabado = txt;
-
-   var separacionAluminio = document.getElementsByName("separacionAluminio");
-    var txt = "";
-    var i;
-    for (i = 0; i < separacionAluminio.length; i++) {
-        if (separacionAluminio[i].checked) {
-          txt = separacionAluminio[i].value;
-        }
-    }
-
-    var separacion = txt;
-
-   var opcionesAluminio = document.getElementsByName("opcionesAluminio");
-    var txt = "";
-    var i;
-    for (i = 0; i < opcionesAluminio.length; i++) {
-        if (opcionesAluminio[i].checked) {
-          txt = opcionesAluminio[i].value;
-        }
-    }
-
-    var opciones = txt;
-
-    var colores = document.getElementsByName("colores");
-    var txt = "";
-    var i;
-    for (i = 0; i < colores.length; i++) {
-        if (colores[i].checked) {
-          txt = colores[i].value;
-        }
-    }
-
-    var color = txt;
-
     //alert(letraCorporea);
     //alert(opciones);
     //Para calcular el precio segun la letra corporea:
 
     if(letraCorporea == "aluminioForm"){
+
+        var x = document.getElementById("grosorAluminio").selectedIndex;
+        var y = document.getElementById("grosorAluminio").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var grosorText = y[x].text;
+        var grosor = y[x].value;
+
+        //Valores que selecciona el usuario:
+        var acabadoAluminio = document.getElementsByName("acabadoAluminio");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoAluminio.length; i++) {
+            if (acabadoAluminio[i].checked) {
+              txt = acabadoAluminio[i].value;
+            }
+        }
+
+        var acabado = txt;
+
+       var separacionAluminio = document.getElementsByName("separacionAluminio");
+        var txt = "";
+        var i;
+        for (i = 0; i < separacionAluminio.length; i++) {
+            if (separacionAluminio[i].checked) {
+              txt = separacionAluminio[i].value;
+            }
+        }
+
+        var separacion = txt;
+
+       var opcionesAluminio = document.getElementsByName("opcionesAluminio");
+        var txt = "";
+        var i;
+        for (i = 0; i < opcionesAluminio.length; i++) {
+            if (opcionesAluminio[i].checked) {
+              txt = opcionesAluminio[i].value;
+            }
+        }
+
+        var opciones = txt;
+        var sujecion = 'No Aplica';
 
         //Aluminio Sin Iluminar:
         var $a = Number(document.getElementById("precio_aluminio").value);
@@ -123,37 +117,239 @@ function jQueryDoSomethingAJAX() {
         if(opciones == "Sin Luz" ){
 
             var subTotalprecio  = Number(($a + $b + $c ) * 4);
+
+            var colores = document.getElementsByName("colores");
+            var txt = "";
+            var i;
+            for (i = 0; i < colores.length; i++) {
+                if (colores[i].checked) {
+                  txt = colores[i].value;
+                }
+            }
+
+            var color = txt;            
         }
 
         if(opciones == "Retroiluminado" ){
             
             var subTotalprecio  = ($d + $e + $f + $g + $h + $i + $j) * 4;
+            var color = 'No Aplica';  
         }
 
         if(opciones == "Iluminación Frontal" ){
 
             var subTotalprecio  = ($k + $l + $m + $n + $o + $p + $q + $r) * 4;
+            var color = 'No Aplica';  
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
         precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
+        letraCorporea = "Aluminio Hueca";
+
     }
 
     if(letraCorporea == "aceroForm"){
+
+        var x = document.getElementById("grosorAcero").selectedIndex;
+        var y = document.getElementById("grosorAcero").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var grosorText = y[x].text;
+        var grosor = y[x].value;
+
+        //Valores que selecciona el usuario:
+        var acabadoAcero = document.getElementsByName("acabadoAcero");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoAcero.length; i++) {
+            if (acabadoAcero[i].checked) {
+              txt = acabadoAcero[i].value;
+            }
+        }
+
+        var acabado = txt;
+
+       var separacionAcero = document.getElementsByName("separacionAcero");
+        var txt = "";
+        var i;
+        for (i = 0; i < separacionAcero.length; i++) {
+            if (separacionAcero[i].checked) {
+              txt = separacionAcero[i].value;
+            }
+        }
+
+        var separacion = txt;
+
+       var opcionesAcero = document.getElementsByName("opcionesAcero");
+        var txt = "";
+        var i;
+        for (i = 0; i < opcionesAcero.length; i++) {
+            if (opcionesAcero[i].checked) {
+              txt = opcionesAcero[i].value;
+            }
+        }
+
+        var opciones = txt;
+        var sujecion = 'No Aplica';
+        var color = 'No Aplica';
+        var subTotalprecio = 10;     
         precioFinal = 100;
+
+        letraCorporea = "Acero Inoxidable Hueca";
     }
 
     if(letraCorporea == "latonForm"){
+
+        var x = document.getElementById("grosorLaton").selectedIndex;
+        var y = document.getElementById("grosorLaton").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var grosorText = y[x].text;
+        var grosor = y[x].value;
+
+        //Valores que selecciona el usuario:
+        var acabadoLaton = document.getElementsByName("acabadoLaton");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoLaton.length; i++) {
+            if (acabadoLaton[i].checked) {
+              txt = acabadoLaton[i].value;
+            }
+        }
+
+        var acabado = txt;
+
+       var separacionLaton = document.getElementsByName("separacionLaton");
+        var txt = "";
+        var i;
+        for (i = 0; i < separacionLaton.length; i++) {
+            if (separacionLaton[i].checked) {
+              txt = separacionLaton[i].value;
+            }
+        }
+
+        var separacion = txt;
+
+       var opcionesLaton = document.getElementsByName("opcionesLaton");
+        var txt = "";
+        var i;
+        for (i = 0; i < opcionesLaton.length; i++) {
+            if (opcionesLaton[i].checked) {
+              txt = opcionesLaton[i].value;
+            }
+        }
+
+        var opciones = txt;
+        var sujecion = 'No Aplica';
+        var color = 'No Aplica';  
+        var subTotalprecio = 20;            
         precioFinal = 200;
+
+        letraCorporea = "Latón Hueca";
     }
 
     if(letraCorporea == "metacrilatoForm"){
+
+        var x = document.getElementById("grosorMetacrilato").selectedIndex;
+        var y = document.getElementById("grosorMetacrilato").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var grosorText = y[x].text;
+        var grosor = y[x].value;
+
+        //Valores que selecciona el usuario:
+        var sujecionMetacrilato = document.getElementsByName("sujecionMetacrilato");
+        var txt = "";
+        var i;
+        for (i = 0; i < sujecionMetacrilato.length; i++) {
+            if (sujecionMetacrilato[i].checked) {
+              txt = sujecionMetacrilato[i].value;
+            }
+        }
+
+        var sujecion = txt;
+
+        var acabadoMetacrilato = document.getElementsByName("acabadoMetacrilato");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoMetacrilato.length; i++) {
+            if (acabadoMetacrilato[i].checked) {
+              txt = acabadoMetacrilato[i].value;
+            }
+        }
+
+        var acabado = txt;
+        var opciones = 'No Aplica';
+        var separacion = 'No Aplica';
+        var color = 'No Aplica';
+
+        var subTotalprecio = 30;   
         precioFinal = 300;
+
+        letraCorporea = "Metacrilato Hueca";
     }
 
     if(letraCorporea == "pvcForm"){
+
+        var x = document.getElementById("grosorPVC").selectedIndex;
+        var y = document.getElementById("grosorPVC").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var grosorText = y[x].text;
+        var grosor = y[x].value;
+
+        //Valores que selecciona el usuario:
+        var sujecionPvc = document.getElementsByName("sujecionPvc");
+        var txt = "";
+        var i;
+        for (i = 0; i < sujecionPvc.length; i++) {
+            if (sujecionPvc[i].checked) {
+              txt = sujecionPvc[i].value;
+            }
+        }
+
+        var sujecion = txt;
+
+        var acabadoPvc = document.getElementsByName("acabadoPvc");
+        var txt = "";
+        var i;
+        for (i = 0; i < acabadoPvc.length; i++) {
+            if (acabadoPvc[i].checked) {
+              txt = acabadoPvc[i].value;
+            }
+        }
+
+        var acabado = txt;
+
+        var separacionPvc = document.getElementsByName("separacionPvc");
+        var txt = "";
+        var i;
+        for (i = 0; i < separacionPvc.length; i++) {
+            if (separacionPvc[i].checked) {
+              txt = separacionPvc[i].value;
+            }
+        }
+
+        var separacion = txt;
+        var opciones = 'No Aplica';
+        
+        if( (acabado == "Pintado Mate") || (acabado == 'Pintado Brillo') ){
+
+            var colores = document.getElementsByName("coloresPvc");
+            var txt = "";
+            var i;
+            for (i = 0; i < colores.length; i++) {
+                if (colores[i].checked) {
+                  txt = colores[i].value;
+                }
+            }
+
+            var color = txt;            
+        }else{
+            var color = 'No Aplica';  
+        }
+
+        var subTotalprecio = 40;   
         precioFinal = 400;
+
+        letraCorporea = "PVC";
     }    
 
     if(document.getElementById("altura").value == 0){
@@ -217,11 +413,16 @@ function jQueryDoSomethingAJAX() {
         document.getElementById('alturacm').value               = alturacm;
         document.getElementById('altocm').value                 = alto;
 
-        //Aluminio:
+        document.getElementById('tipoletraCorporea').value      = letraCorporea;
+        document.getElementById('tipoGrosor').value             = grosor;
+
+        //Aluminio, Acero y Laton:
         document.getElementById('acabado').value                = acabado;
         document.getElementById('separacion').value             = separacion;
         document.getElementById('opciones').value               = opciones;
 
+        //Metacrilato Huecas y PVC:
+        document.getElementById('sujecion').value               = sujecion;
 
         document.getElementById('tiempoEntregaSumario').value   = tiemposEntregaText;
         document.getElementById('colorSumario').value           = color;
@@ -286,7 +487,7 @@ function letraCorporeaForm(divForm){
         for (i = 0; i < opcionesAluminio.length; i++) {
             if (opcionesAluminio[i].checked) {
 
-              if(opcionesAluminio[i].value == 'sinLuz'){
+              if(opcionesAluminio[i].value == 'Sin Luz'){
 
                 document.getElementById('coloresFormAluminio').style.display = "inline";
 
@@ -379,3 +580,9 @@ window.addEventListener('load', function () {
    document.getElementById("grosorAluminio").disabled = true;
 
 });
+
+
+function ajustarTamano(valor){
+
+    document.getElementById('muestra').style.fontSize = valor+"em";
+}
