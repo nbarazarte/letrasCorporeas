@@ -118,14 +118,71 @@
 
       </div>  
 
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pantone</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #D3D3D3">
+                <?php include('pantone.php')?>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>        
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="coloresFormAluminio">
         <div class="col-sm-12">
 
           <div class="card" style="border: 0;">
             <div class="card-body" style="background-color: #D3D3D3">
               
-              <label>Colores</label>
+              <label>Elige una paleta de colores</label>
 
+                <div class="cc-selector">
+                  
+                  <!-- Pantone -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="deshabiltarBotonCart()">
+                      PANTONE
+                    </button>
+
+                  </figure>
+
+                  <!-- NCS -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      NCS
+                    </button>
+
+                  </figure>
+
+                  <!-- RAL -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      RAL
+                    </button>
+
+                  </figure>                            
+
+                </div>
+
+                <input type="hidden" id="colorPaleta" name="colorPaleta" value="Pantone Yellow C" readonly="yes">
+                <div id="colorSeleccionado"></div>
+
+            <!--
               <div class="cc-selector">
                 <center>
 
@@ -242,6 +299,8 @@
                 </center>
 
               </div>
+
+            -->
             </div>
           </div>            
 

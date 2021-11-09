@@ -118,7 +118,7 @@ function jQueryDoSomethingAJAX() {
 
             var subTotalprecio  = Number(($a + $b + $c ) * 4);
 
-            var colores = document.getElementsByName("colores");
+            /*var colores = document.getElementsByName("colores");
             var txt = "";
             var i;
             for (i = 0; i < colores.length; i++) {
@@ -127,7 +127,14 @@ function jQueryDoSomethingAJAX() {
                 }
             }
 
-            var color = txt;            
+            var color = txt;*/
+
+            if(document.getElementById('colorSumario').value == ""){
+                var color = "Pantone Yellow C";
+            }else{                
+                var color = document.getElementById('colorPaleta').value
+            }
+            
         }
 
         if(opciones == "Retroiluminado" ){
@@ -581,8 +588,16 @@ window.addEventListener('load', function () {
 
 });
 
-
 function ajustarTamano(valor){
 
     document.getElementById('muestra').style.fontSize = valor+"em";
+}
+
+function paleta(tipo, color){
+
+    //alert(tipo+'--'+color);
+    document.getElementById('colorSeleccionado').innerHTML = tipo +' '+ color;
+
+    document.getElementById('colorPaleta').value = tipo +' '+ color;
+    document.getElementById('colorSumario').value = tipo +' '+ color;
 }
