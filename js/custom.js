@@ -596,8 +596,8 @@ function ajustarTamano(valor){
 function paleta(tipo, color){
 
     //alert(tipo+'--'+color);
-    document.getElementById('colorSeleccionado').innerHTML = tipo +' '+ color;
+    document.getElementById('colorSeleccionado').innerHTML = tipo +': '+ color;
 
-    document.getElementById('colorPaleta').value = tipo +' '+ color;
-    document.getElementById('colorSumario').value = tipo +' '+ color;
+    document.getElementById('colorPaleta').value = tipo +': '+ color;
+    document.getElementById('colorSumario').value = tipo +': '+ color;
 }

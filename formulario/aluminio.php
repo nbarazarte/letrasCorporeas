@@ -78,7 +78,6 @@
             <div class="cc-selector">
               <!-- el campo oculto esta en formaContorno-->
 
-
               <figure class="figure">
 
                 <input onclick="coloresForm('coloresFormAluminio','true');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
@@ -87,7 +86,6 @@
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
 
               </figure>
-
 
               <figure class="figure">
 
@@ -98,7 +96,6 @@
 
               </figure>
 
-
               <figure class="figure">
 
                 <input onclick="coloresForm('coloresFormAluminio','false');grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
@@ -108,9 +105,6 @@
 
               </figure>
 
-
-
-
             </div>
 
           </div>
@@ -118,13 +112,12 @@
 
       </div>  
 
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal Pantone -->
+      <div class="modal fade" id="pantone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Pantone</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Pantone: Pantone Matching System</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="background-color: #D3D3D3">
@@ -136,6 +129,42 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal NCS -->
+      <div class="modal fade" id="ncs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">NCS: Natural Colour System</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #D3D3D3">
+                <?php include('ncs.php')?>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>        
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal RAL -->
+      <div class="modal fade" id="ral" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">RAL: Reichsausschuß für Lieferbedingungen und Gütesicherung</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #D3D3D3">
+                <?php include('ral.php')?>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>        
+            </div>
+          </div>
+        </div>
+      </div>            
 
       <div id="coloresFormAluminio">
         <div class="col-sm-12">
@@ -151,8 +180,8 @@
                   <figure class="figure">
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="deshabiltarBotonCart()">
-                      PANTONE
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#pantone" onclick="deshabiltarBotonCart()">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/pantone.png'?>" width="75" title="Pantone"/>
                     </button>
 
                   </figure>
@@ -161,8 +190,8 @@
                   <figure class="figure">
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      NCS
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ncs">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ncs.png'?>" width="75" title="NCS"/>
                     </button>
 
                   </figure>
@@ -171,8 +200,8 @@
                   <figure class="figure">
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      RAL
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ral">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
                     </button>
 
                   </figure>                            

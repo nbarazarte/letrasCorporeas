@@ -133,17 +133,7 @@
           <?php
 
             require 'formaContorno.php';
-                      
-           /* 
-            require 'traseraNeon.php';
-
-            require 'sujecionNeon.php';
-
-            require 'dimmer.php';
           
-            require 'colores.php';
-
-          */
           ?>
 
         </div>
