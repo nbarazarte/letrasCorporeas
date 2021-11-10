@@ -118,6 +118,7 @@ function jQueryDoSomethingAJAX() {
 
             var subTotalprecio  = Number(($a + $b + $c ) * 4);
 
+ document.getElementById('colorPaletaSeleccionada').style.display = "inline";
             /*var colores = document.getElementsByName("colores");
             var txt = "";
             var i;
@@ -130,7 +131,7 @@ function jQueryDoSomethingAJAX() {
             var color = txt;*/
 
             if(document.getElementById('colorSumario').value == ""){
-                var color = "Pantone Yellow C";
+                var color = "Pantone: Yellow C";
             }else{                
                 var color = document.getElementById('colorPaleta').value
             }
@@ -138,13 +139,13 @@ function jQueryDoSomethingAJAX() {
         }
 
         if(opciones == "Retroiluminado" ){
-            
+             document.getElementById('colorPaletaSeleccionada').style.display = "none";
             var subTotalprecio  = ($d + $e + $f + $g + $h + $i + $j) * 4;
             var color = 'No Aplica';  
         }
 
         if(opciones == "Iluminación Frontal" ){
-
+ document.getElementById('colorPaletaSeleccionada').style.display = "none";
             var subTotalprecio  = ($k + $l + $m + $n + $o + $p + $q + $r) * 4;
             var color = 'No Aplica';  
         }
@@ -339,6 +340,8 @@ function jQueryDoSomethingAJAX() {
         
         if( (acabado == "Pintado Mate") || (acabado == 'Pintado Brillo') ){
 
+            document.getElementById('colorPaletaSeleccionada').style.display = "inline";
+            /*
             var colores = document.getElementsByName("coloresPvc");
             var txt = "";
             var i;
@@ -348,8 +351,16 @@ function jQueryDoSomethingAJAX() {
                 }
             }
 
-            var color = txt;            
+            var color = txt;  */
+
+            if(document.getElementById('colorSumario').value == ""){
+                var color = "Pantone: Yellow C";
+            }else{                
+                var color = document.getElementById('colorPaleta').value
+            }
+
         }else{
+            document.getElementById('colorPaletaSeleccionada').style.display = "none";
             var color = 'No Aplica';  
         }
 
@@ -481,6 +492,10 @@ function letraCorporeaForm(divForm){
 
     if( divForm == "aluminioForm") {
         
+        document.getElementById('colorSeleccionado').innerHTML = 'Pantone: Yellow C';
+        document.getElementById('colorPaleta').value = 'Pantone: Yellow C';
+        document.getElementById('colorSumario').value = '';
+
         document.getElementById('selectGrosorAluminio').style.display = "inline";
         document.getElementById("grosorAluminio").disabled = true;
 
@@ -497,9 +512,11 @@ function letraCorporeaForm(divForm){
               if(opcionesAluminio[i].value == 'Sin Luz'){
 
                 document.getElementById('coloresFormAluminio').style.display = "inline";
+                document.getElementById('colorPaletaSeleccionada').style.display = "inline";
 
               }else{
                 document.getElementById('coloresFormAluminio').style.display = "none";
+                document.getElementById('colorPaletaSeleccionada').style.display = "none";
               }
 
             }
@@ -509,32 +526,46 @@ function letraCorporeaForm(divForm){
 
     if( divForm == "aceroForm") {
 
+        document.getElementById('colorPaletaSeleccionada').style.display = "none";
         document.getElementById('selectGrosorAcero').style.display = "inline";
     }
 
     if( divForm == "latonForm") {
 
+        document.getElementById('colorPaletaSeleccionada').style.display = "none";
         document.getElementById('selectGrosorLaton').style.display = "inline";
     }
 
     if( divForm == "metacrilatoForm") {
 
+        document.getElementById('colorPaletaSeleccionada').style.display = "none";
         document.getElementById('selectGrosorMetacrilato').style.display = "inline";
     }
 
     if( divForm == "pvcForm") {
 
+        document.getElementById('colorSeleccionado').innerHTML = 'Pantone: Yellow C';
+        document.getElementById('colorPaleta').value = 'Pantone: Yellow C';
+        document.getElementById('colorSumario').value = '';
+                
         document.getElementById('selectGrosorPVC').style.display = "inline";
 
         var acabadoPvc = document.getElementsByName("acabadoPvc");
         var txt = "";
         var i;
         for (i = 0; i < acabadoPvc.length; i++) {
+
+            //alert(acabadoPvc[i].value)
             if (acabadoPvc[i].checked) {
-              if( (acabadoPvc[i].value == 'pintadoMate') || (acabadoPvc[i].value == 'pintadoBrillo') ){
+                
+              if( (acabadoPvc[i].value == 'Pintado Mate') || (acabadoPvc[i].value == 'Pintado Brillo') ){
+
                 document.getElementById('coloresFormPvc').style.display = "inline";
+                document.getElementById('colorPaletaSeleccionada').style.display = "inline";
               }else{
+                
                 document.getElementById('coloresFormPvc').style.display = "none";
+                document.getElementById('colorPaletaSeleccionada').style.display = "none";
               }
             }
         }
@@ -548,8 +579,10 @@ function coloresForm(divForm, flag){
     //alert(divForm+'--'+ flag);
     if(flag == 'true'){
         document.getElementById(divForm).style.display = "inline";
+        document.getElementById('colorPaletaSeleccionada').style.display = "inline";
     }else{
         document.getElementById(divForm).style.display = "none";
+        document.getElementById('colorPaletaSeleccionada').style.display = "none";
     }
 }
 

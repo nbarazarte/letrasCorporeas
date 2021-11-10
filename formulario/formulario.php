@@ -129,12 +129,19 @@
 		      ?>
 		
 		      <p style="font-size:12px;"><i>Medida de referencia, esta medida puede sufrir algún cambio a la hora de diseñar el neón flexible final. Sin embargo, esto será consultado antes de fabricar y se enviará un previsualización final del neón y no se fabricara hasta recibir aprobación de vuestra parte</i></p>
-
+ 
           <?php
 
+            require 'paletasModales.php';
             require 'formaContorno.php';
           
           ?>
+
+          <div id="colorPaletaSeleccionada">
+            <input type="hidden" id="colorPaleta" name="colorPaleta" value="Pantone: Yellow C" readonly="yes">
+            <div id="colorSeleccionado">Pantone: Yellow C</div>
+          </div>
+
 
         </div>
       

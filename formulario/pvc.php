@@ -143,6 +143,7 @@
 
       </div>
 
+      
 
       <div id="coloresFormPvc">
         <div class="col-sm-12">
@@ -150,6 +151,45 @@
           <div class="card" style="border: 0;">
             <div class="card-body" style="background-color: #D3D3D3">
               
+
+              <label>Elige una paleta de colores</label>
+
+                <div class="cc-selector">
+                  
+                  <!-- Pantone -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#pantone" onclick="deshabiltarBotonCart()">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/pantone.png'?>" width="75" title="Pantone"/>
+                    </button>
+
+                  </figure>
+
+                  <!-- NCS -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ncs">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ncs.png'?>" width="75" title="NCS"/>
+                    </button>
+
+                  </figure>
+
+                  <!-- RAL -->
+                  <figure class="figure">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ral">
+                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
+                    </button>
+
+                  </figure>                            
+
+                </div>
+
+          
+              <!--
               <label>Colores</label>
 
               <div class="cc-selector">
@@ -268,6 +308,7 @@
                 </center>
 
               </div>
+            -->
             </div>
           </div>            
 
