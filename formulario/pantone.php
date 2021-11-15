@@ -2,7 +2,7 @@
 
 <label for="rotulo">Escríbe el color:</label>&nbsp;
 	<label for="usr">
-		<input type="text" id="myInput" class="" placeholder="Ejemplo: Yellow" title="Escriba el nombre o indicio del color" style="height: 50px;padding: 3% 0;
+		<input type="text" id="myInput" class="" placeholder="Ejemplo: Yellow C" title="Escriba el nombre o indicio del color" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;">  
 	</label>
