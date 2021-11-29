@@ -1,17 +1,19 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/slide1.jpg'; ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/Envios-con-texto-1600x600px.jpg'; ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/slide2.jpg'; ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/Web-slider-corporeas-1600x600px.jpg'; ?>" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/slide3.jpg'; ?>" class="d-block w-100" alt="...">
+      <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/Web-slider-personaliza-corporeas.jpg'; ?>" class="d-block w-100" alt="...">
     </div>
+<!--
     <div class="carousel-item">
       <img src="<?php echo plugin_dir_url( __FILE__ ). '../imagenes/galeria/slide2.jpg'; ?>" class="d-block w-100" alt="...">
     </div>    
+  -->
   </div>
 </div>
 
@@ -33,7 +35,22 @@
 
         <h3 style="font-size: 24px;font-family: 'Open Sans', sans-serif;">Letras Corpóreas Personalizadas</h3>
         <p style="text-align: justify;">
-          Neones Flexibles personalizados a tu medida: Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner. Mismo precio para cualquier color.
+          Te ofrecemos la posibilidad de personalizar tus letras corpóreas para exterior o interior. Puedes escoger el tipo de material entre Aluminio, PVC, Metacrilato, Latón o Acero Inoxidable, seleccionar el grosor del material, el alto y ancho de la letra, la tipografía de letra que más os guste, seleccionar si las quieres iluminar, retroiluminar, pintadas o sin pintar, acabado mate o brillo.
+        </p>
+
+        <p style="text-align: justify;">
+          Nuestro servicio incluye:
+          <ol>
+            <li>Corte profesional mediante fresado CNC</li>
+            <li>Distintos tamaños de letra, tanto en grosor como en altura</li>
+            <li>Fuente de letra o tipografía a elegir con posibilidad de hacerlo en tu propia fuente</li>
+            <li>Material acto para ser instalado en interiores y exteriores</li>
+            <li>Letras lacado al horno</li>
+          </ol>
+        </p>
+
+        <p style="text-align: justify;">
+          También podemos fabricar en base a tu logo o tu marca, puedes enviarnos un correo a <a href="mailto:consultas@rotulosmetalarte.es">consultas@rotulosmetalarte.es</a> o escribirnos al WhatsApp <a href="https://wa.link/vvyfn2" target="_blank">647002464</a>, con gusto te atenderemos, Si deseas ver nuestros trabajos realizados visita nuestro Instagram  <a href="https://www.instagram.com/rotulosmetalarte/" target="_blank">@rotulosmetalarte</a>          
         </p>
 
         <div class="container">
@@ -48,7 +65,7 @@
           <div class="row">
             <div class="col-md-12">
               
-              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <label for="customRange1" class="form-label">Acercar/alejar texto (Este control no altera las medidas) Es una referencia del orden de las palabras por línea.</label>
               <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="3" onchange="ajustarTamano(this.value)">
             </div>
           </div>
@@ -71,6 +88,8 @@
       </div>
       
       <input type="hidden" class="form-control" id="iva_letras" value="<?php echo esc_html($iva_letras);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_sietediaslaboralesLetras" value="<?php echo esc_html($cn_precio_sietediaslaboralesLetras);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_4872Letras" value="<?php echo esc_html($cn_precio_4872Letras);?>" readonly="yes">
 
       <!-- Aluminio Sin Iluminar -->
       <input type="hidden" class="form-control" id="precio_aluminio" value="<?php echo esc_html($precio_aluminio);?>" readonly="yes">
@@ -138,10 +157,44 @@
           ?>
 
           <div id="colorPaletaSeleccionada">
-            <input type="hidden" id="colorPaleta" name="colorPaleta" value="Pantone: Yellow C" readonly="yes">
-            <div id="colorSeleccionado">Pantone: Yellow C</div>
+            <input type="hidden" id="colorPaleta" name="colorPaleta" value="RAL: RAL 1000" readonly="yes">
+            <div id="colorSeleccionado">RAL: RAL 1000</div>
           </div>
 
+          <div class="col-sm-10">
+            
+            <div class="card" style="border: 0;">
+              <div class="card-body" style="background-color: #D3D3D3">
+                
+               <label>Tiempos de entrega</label>
+                <div class="cc-selector">
+                  <!-- el campo oculto esta en formaContorno-->
+
+                  <figure class="figure">
+
+                    <input onclick="" type="radio" name="opcionesTiempos" id="dias" value="7 días laborables" checked onchange="deshabiltarBotonCart()">
+                    <label class="drinkcard-cc metacrilato" for="dias"></label>
+
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">7 días laborables</figcaption>
+
+                  </figure>
+
+                  <figure class="figure">
+
+                    <input onclick="" type="radio" name="opcionesTiempos" id="horas" value="48 a 72 horas" onchange="deshabiltarBotonCart()">  
+                    <label class="drinkcard-cc metacrilato" for="horas"></label>
+
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">48 a 72 horas</figcaption>
+
+                  </figure>
+
+
+                </div>
+
+              </div>
+            </div>              
+
+          </div>  
 
         </div>
       

@@ -1,41 +1,5 @@
     <div class="row">
 
-      <div class="col-sm-4">
-        
-        <div class="card" style="border: 0;">
-          <div class="card-body" style="background-color: #D3D3D3">
-            
-           <label>Sujeción</label>
-            <div class="cc-selector">
-              <!-- el campo oculto esta en formaContorno-->
-
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="sujecionMetacrilato" id="sinSujecion1" value="Sin Sujeción" checked onchange="deshabiltarBotonCart()">
-                <label class="drinkcard-cc metacrilato" for="sinSujecion1"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN SUJECIÓN</figcaption>
-
-              </figure>
-
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="sujecionMetacrilato" id="letraAdhesiva1" value="Letra Adhesiva" onchange="deshabiltarBotonCart()">  
-                <label class="drinkcard-cc metacrilato" for="letraAdhesiva1"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">LETRA ADHESIVA</figcaption>
-
-              </figure>
-
-            </div>
-
-          </div>
-        </div>                      
-
-      </div>  
-
       <div class="col-sm-12">
 
         <div class="card" style="border: 0;">
@@ -48,10 +12,19 @@
               <!-- METACRILATO -->
               <figure class="figure">
 
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="transparente" value="Transparente" checked onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="transparente"></label>
+                <input onclick="" type="radio" name="acabadoMetacrilato" id="sinPintar" value="Sin Pintar" checked onchange="deshabiltarBotonCart()">   
+                <label class="drinkcard-cc metacrilato" for="sinPintar"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">TRANSPARENTE</figcaption>
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN PINTAR</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input onclick="" type="radio" name="acabadoMetacrilato" id="color360" value="Color 360" onchange="deshabiltarBotonCart()">   
+                <label class="drinkcard-cc metacrilato" for="color360"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">COLOR 360</figcaption>
 
               </figure>
 
@@ -64,113 +37,7 @@
 
               </figure>
 
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="negro" value="Negro" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="negro"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NEGRO</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="espejoPlata" value="Espejo Plata" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="espejoPlata"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ESPEJO PLATA</figcaption>
-
-              </figure>  
-              
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="doradoEspejo" value="Dorado Espejo"  onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="doradoEspejo"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">DORADO ESPEJO</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="6C02" value="6C02" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="6C02"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">6c02</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="2c01" value="2c01"  onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="2c01"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">2c01</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="210036" value="210036" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="210036"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">210036</figcaption>
-
-              </figure> 
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="610036" value="610036" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="610036"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">610036</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="3c02" value="3c02"  onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="3c02"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">3c02</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="410033" value="410033" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="410033"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">410033</figcaption>
-
-              </figure>   
-              
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="pintadoMate" value="Pintado Mate"  onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="pintadoMate"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO MATE</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="pintadoBrillo" value="Pintado Brillo" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="pintadoBrillo"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO BRILLO</figcaption>
-
-              </figure> 
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="acabadoMetacrilato" id="impreso" value="Impreso" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="impreso"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">IMPRESO</figcaption>
-
-              </figure>                                                                                  
+                                                                               
 
             </div>
             
@@ -178,5 +45,134 @@
         </div>          
 
       </div>
+
+      <div class="col-sm-12">
+
+        <div class="card" style="border: 0;">
+          <div class="card-body" style="background-color: #D3D3D3">
+            
+            <label>Elige el color</label>
+
+            <div class="cc-selector">
+              <center>
+
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="amarillo" id="amarilloColor" checked onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
+
+              </figure>                
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="rojo" id="rojoColor"  onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc-colores rojoColor" for="rojoColor"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROJO</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="durazno" id="duraznoColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores duraznoColor" for="duraznoColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">DURAZNO</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="ambar" id="ambarColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores ambarColor" for="ambarColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMBAR</figcaption>
+
+              </figure>              
+
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="limon" id="limonColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores limonColor" for="limonColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">LIMÓN</figcaption>
+
+              </figure>
+          
+             <figure class="figure">
+
+                <input  type="radio" name="colores" value="verde" id="verdeColor" onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc-colores verdeColor" for="verdeColor"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">VERDE</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="azul" id="azulColor" onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc-colores azulColor" for="azulColor"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AZUL</figcaption>
+
+              </figure>
+
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="morado" id="moradoColor" onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc-colores moradoColor" for="moradoColor"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">MORADO</figcaption>
+
+              </figure>
+
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="turquesa" id="turquesaColor" onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc-colores turquesaColor" for="turquesaColor"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">TURQUESA</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="rosa" id="rosaColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores rosaColor" for="rosaColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROSA</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="blanco" id="blancoColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores blancoColor" for="blancoColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO</figcaption>
+
+              </figure>      
+        
+              <figure class="figure">
+
+                <input type="radio" name="colores" value="calido" id="calidoColor" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores calidoColor" for="calidoColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">CÁLIDO</figcaption>
+
+              </figure>
+
+    
+              </center>
+
+            </div>
+          </div>
+        </div>            
+
+      </div>         
 
     </div>

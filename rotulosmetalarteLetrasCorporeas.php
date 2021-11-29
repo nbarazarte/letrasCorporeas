@@ -58,6 +58,14 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'iva_letras', '21' );
     }
 
+    if ( get_option( 'cn_precio_sietediaslaboralesLetras' ) === false ) {
+        add_option( 'cn_precio_sietediaslaboralesLetras', '00.00' );
+    }
+
+    if ( get_option( 'cn_precio_4872Letras' ) === false ) {
+        add_option( 'cn_precio_4872Letras', '50.00' );
+    }
+
     //Aluminio:
     if ( get_option( 'precio_aluminio' ) === false ) {
         add_option( 'precio_aluminio', '124' );
@@ -207,6 +215,8 @@ function cn_genera_pagina_letrasCorporeas() {
   // Conseguir el valor del Precio base de todos los elementos:
   $cn_id_producto_personalizado_letras                  = get_option( 'cn_id_producto_personalizado_letras' ) ;
   $iva_letras                                           = get_option( 'iva_letras' ) ;
+  $cn_precio_sietediaslaboralesLetras                         = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
+  $cn_precio_4872Letras                                       = get_option( 'cn_precio_4872Letras' ) ;
 
   //Aluminio:
   $precio_aluminio                                      = get_option( 'precio_aluminio' );
@@ -267,6 +277,9 @@ function cn_guardar_ga_LetrasCorporeas() {
     //Limpiar valor, para prevenir problemas de seguridad
     $cn_id_producto_personalizado_letras                  = sanitize_text_field( $_POST['cn_id_producto_personalizado_letras'] );
     $iva_letras                                           = sanitize_text_field( $_POST['iva_letras'] );
+    $cn_precio_sietediaslaboralesLetras                         = sanitize_text_field( $_POST['cn_precio_sietediaslaboralesLetras'] );
+    $cn_precio_4872Letras                                       = sanitize_text_field( $_POST['cn_precio_4872Letras'] );
+
     //Aluminio Sin Iluminar:
     $precio_aluminio                                      = sanitize_text_field( $_POST['precio_aluminio'] );
     $precio_aluminio_mano_de_obra                         = sanitize_text_field( $_POST['precio_aluminio_mano_de_obra'] );
@@ -309,6 +322,8 @@ function cn_guardar_ga_LetrasCorporeas() {
     // Guardar en la base de datos
     update_option( 'cn_id_producto_personalizado_letras', $cn_id_producto_personalizado_letras );
     update_option( 'iva_letras', $iva_letras );
+    update_option( 'cn_precio_sietediaslaboralesLetras', $cn_precio_sietediaslaboralesLetras );
+    update_option( 'cn_precio_4872Letras', $cn_precio_4872Letras );    
     //Aluminio:
     update_option( 'precio_aluminio', $precio_aluminio );
     update_option( 'precio_aluminio_mano_de_obra', $precio_aluminio_mano_de_obra );
@@ -380,9 +395,23 @@ function jnj_mi_funcion_LetrasCorporeas()
     <div style="font-size: 10px;">ENVÍO GRATUITO</div>
     <h3 style="font-size: 24px;font-family: "Open Sans", sans-serif;">Letras de Neón Personalizadas</h3>
     <p style="text-align: justify;">
-      Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
-      Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
-    </p>';
+          Te ofrecemos la posibilidad de personalizar tus letras corpóreas para exterior o interior. Puedes escoger el tipo de material entre Aluminio, PVC, Metacrilato, Latón o Acero Inoxidable, seleccionar el grosor del material, el alto y ancho de la letra, la tipografía de letra que más os guste, seleccionar si las quieres iluminar, retroiluminar, pintadas o sin pintar, acabado mate o brillo.
+        </p>
+
+        <p style="text-align: justify;">
+          Nuestro servicio incluye:
+          <ol>
+            <li>Corte profesional mediante fresado CNC</li>
+            <li>Distintos tamaños de letra, tanto en grosor como en altura</li>
+            <li>Fuente de letra o tipografía a elegir con posibilidad de hacerlo en tu propia fuente</li>
+            <li>Material acto para ser instalado en interiores y exteriores</li>
+            <li>Letras lacado al horno</li>
+          </ol>
+        </p>
+
+        <p style="text-align: justify;">
+          También podemos fabricar en base a tu logo o tu marca, puedes enviarnos un correo a <a href="mailto:consultas@rotulosmetalarte.es">consultas@rotulosmetalarte.es</a> o escribirnos al WhatsApp <a href="https://wa.link/vvyfn2" target="_blank">647002464</a>, con gusto te atenderemos, Si deseas ver nuestros trabajos realizados visita nuestro Instagram  <a href="https://www.instagram.com/rotulosmetalarte/" target="_blank">@rotulosmetalarte</a>          
+        </p>';
 
         echo '<div class="container">
           <div id="caja" class="row justify-content-md-center">
@@ -396,7 +425,7 @@ function jnj_mi_funcion_LetrasCorporeas()
           <div class="row">
             <div class="col-md-12">
               
-              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <label for="customRange1" class="form-label">Acercar/alejar texto (Este control no altera las medidas) Es una referencia del orden de las palabras por línea.</label>
               <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="5" onchange="ajustarTamano(this.value)">
             </div>
           </div>
@@ -425,6 +454,8 @@ function iconic_output_engraving_field_LetrasCorporeas() {
       // Conseguir el valor del Precio base de todos los elementos:
 
         $iva_letras                                           = get_option( 'iva_letras' ) ;
+        $cn_precio_sietediaslaboralesLetras                   = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
+        $cn_precio_4872Letras                                 = get_option( 'cn_precio_4872Letras' ) ;
 
         //Aluminio:
         $precio_aluminio                                      = get_option( 'precio_aluminio' ) ;
@@ -661,7 +692,7 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
                      '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
                      '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
                      '<b>Letra Corpórea de:</b><br/>'.wc_clean( $cart_item['tipoletraCorporea']).'<br/>'.
-                     '<b>Grosor:</b><br/>'.wc_clean( $cart_item['tipoGrosor']).'<br/>'.
+                     '<b>Profundidad:</b><br/>'.wc_clean( $cart_item['tipoGrosor']).'<br/>'.
                      '<b>Acabado:</b><br/>'.wc_clean( $cart_item['acabado']).'<br/>'.
                      '<b>Separación:</b><br/>'.wc_clean( $cart_item['separacion']).'<br/>'.                     
                      '<b>Opciones:</b><br/>'.wc_clean( $cart_item['opciones']).'<br/>'.
@@ -672,89 +703,6 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
       ); 
     }
 
-/*
-  $item_data[] = array(
-    'key'     => __( 'Texto rótulo', 'iconic' ),
-    'value'   => wc_clean( $cart_item['texto_rotulo'] ),
-    'display' => '',
-  ); 
-
-  $item_data[] = array(
-    'key'     => __( 'Fuente', 'iconic' ),
-    'value'   => wc_clean( $cart_item['fuenteLetrasText'] ),
-    'display' => '',
-  );   
-
-  $item_data[] = array(
-    'key'     => __( 'Altura (cm)', 'iconic' ),
-    'value'   => wc_clean( $cart_item['alturacm'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Ancho (cm)', 'iconic' ),
-    'value'   => wc_clean( $cart_item['anchocm'] ),
-    'display' => '',
-  );
-  
-
-
-  $item_data[] = array(
-    'key'     => __( 'Letra Corpórea', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoletraCorporea'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Grosor', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoGrosor'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Acabado', 'iconic' ),
-    'value'   => wc_clean( $cart_item['acabado'] ),
-    'display' => '',
-  );     
-
-
-  $item_data[] = array(
-    'key'     => __( 'Separación', 'iconic' ),
-    'value'   => wc_clean( $cart_item['separacion'] ),
-    'display' => '',
-  );   
- 
-  $item_data[] = array(
-    'key'     => __( 'Opciones', 'iconic' ),
-    'value'   => wc_clean( $cart_item['opciones'] ),
-    'display' => '',
-  );     
-
-
-  $item_data[] = array(
-    'key'     => __( 'Sujeción', 'iconic' ),
-    'value'   => wc_clean( $cart_item['sujecion'] ),
-    'display' => '',
-  );  
-
-   $item_data[] = array(
-    'key'     => __( 'Color', 'iconic' ),
-    'value'   => wc_clean( $cart_item['colorSumario'] ),
-    'display' => '',
-  ); 
-  
-    $item_data[] = array(
-    'key'     => __( 'Tiempo de Entrega', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tiempoEntregaSumario'] ),
-    'display' => '',
-  ); 
-
-   $item_data[] = array(
-    'key'     => __( 'Sub Total', 'iconic' ),
-    'value'   => wc_clean( $cart_item['subTotalPrecio'] ." &euro;"),
-    'display' => '',
-  );       
-*/
   return $item_data;
 }
 
@@ -808,10 +756,6 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
   true
  );
 
-
-
-
-
  $item->add_meta_data(
   __( 'Letra Corporea', 'iconic' ),
   $values['tipoletraCorporea'],
@@ -819,7 +763,7 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
  );
 
  $item->add_meta_data(
-  __( 'Grosor', 'iconic' ),
+  __( 'Profundidad', 'iconic' ),
   $values['tipoGrosor'],
   true
  );
@@ -868,26 +812,3 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
 
 }
 add_action( 'woocommerce_checkout_create_order_line_item', 'plugin_republic_checkout_create_order_line_item_LetrasCorporeas', 10, 5 );
-
-
-/**
- * Add custom cart item data to emails
- */
-
-/*
-function plugin_republic_order_item_name( $product_name, $item ) {
- if( isset( $item['pr_field'] ) ) {
-
-   $product_name .= sprintf(
-   '<ul><li>%s: %s</li></ul>',
-   __( 'Your name', 'plugin_republic' ),
-   esc_html( $item['pr_field'] )
-   );
-
- }
- return $product_name;
-
-}
-
-add_filter( 'woocommerce_order_item_name', 'plugin_republic_order_item_name', 10, 2 );
-*/

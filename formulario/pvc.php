@@ -1,318 +1,357 @@
-    <div class="row">
+<div class="row">
 
-      <div class="col-sm-5">
+  <div class="col-sm-5">
+    
+    <div class="card" style="border: 0;">
+      <div class="card-body" style="background-color: #D3D3D3">
         
-        <div class="card" style="border: 0;">
-          <div class="card-body" style="background-color: #D3D3D3">
-            
-           <label>Sujeción</label>
-            <div class="cc-selector">
-              <!-- el campo oculto esta en formaContorno-->
+       <label>Sujeción</label>
+        <div class="cc-selector">
+          <!-- el campo oculto esta en formaContorno-->
 
 
-              <figure class="figure">
+          <figure class="figure">
 
-                <input onclick="" type="radio" name="sujecionPvc" id="sinSujecion2" value="Sin Sujeción" checked onchange="deshabiltarBotonCart()">
-                <label class="drinkcard-cc metacrilato" for="sinSujecion2"></label>
+            <input onclick="" type="radio" name="sujecionPvc" id="sinSujecion2" value="Sin Sujeción" checked onchange="deshabiltarBotonCart()">
+            <label class="drinkcard-cc metacrilato" for="sinSujecion2"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN SUJECIÓN</figcaption>
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN SUJECIÓN</figcaption>
 
-              </figure>
-
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="sujecionPvc" id="letraAdhesiva2" value="Letra Adhesiva" onchange="deshabiltarBotonCart()">  
-                <label class="drinkcard-cc metacrilato" for="letraAdhesiva2"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">LETRA ADHESIVA</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="sujecionPvc" id="tornilleria1" value="Tornillería" onchange="deshabiltarBotonCart()">  
-                <label class="drinkcard-cc metacrilato" for="tornilleria1"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">TORNILLERÍA</figcaption>
-
-              </figure>              
-
-            </div>
-
-          </div>
-        </div>                      
-
-      </div>
+          </figure>
 
 
-      <div class="col-sm-5">
+          <figure class="figure">
 
-        <div class="card" style="border: 0;">
-          <div class="card-body" style="background-color: #D3D3D3">
-            
-            <label>Separación de la Pared</label>             
-            <div class="cc-selector">
+            <input onclick="" type="radio" name="sujecionPvc" id="letraAdhesiva2" value="Letra Adhesiva" onchange="deshabiltarBotonCart()">  
+            <label class="drinkcard-cc metacrilato" for="letraAdhesiva2"></label>
 
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">CINTA DOBLE CARA</figcaption>
 
-              <figure class="figure">
+          </figure>
 
-                <input onclick="" type="radio" name="separacionPvc" id="sinSeparacion4" value="Sin Separación" checked onchange="deshabiltarBotonCart()" > 
-                <label class="drinkcard-cc rectangular" for="sinSeparacion4"></label> 
+          <figure id="tornilleriaPVC" class="figure">
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
+            <input onclick="" type="radio" name="sujecionPvc" id="tornilleria1" value="Tornillería" onchange="deshabiltarBotonCart()">  
+            <label class="drinkcard-cc metacrilato" for="tornilleria1"></label>
 
-              </figure>
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">TORNILLERÍA</figcaption>
 
-              <figure class="figure">
+          </figure>              
 
-                <input  onclick="" type="radio" name="separacionPvc" id="a1cm4" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
-                <label class="drinkcard-cc redondo" for="a1cm4"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
-
-              </figure>
-
-              <figure class="figure">
-
-                <input onclick="" type="radio" name="separacionPvc" id="a3cm4" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
-                <label class="drinkcard-cc personalizado" for="a3cm4"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
-
-              </figure>
-
-            </div>
-
-          </div>
         </div>
 
       </div>
+    </div>                      
 
+  </div>
 
-      <div class="col-sm-12">
+  <div id="opcionesFormPVC" class="col-sm-5">
+    
+    <div class="card" style="border: 0;">
+      <div class="card-body" style="background-color: #D3D3D3">
+        
+       <label>Opciones</label>
+        <div class="cc-selector">
+          <!-- el campo oculto esta en formaContorno-->
 
-        <div class="card" style="border: 0;">
-          <div class="card-body" style="background-color: #D3D3D3">
-          
-          <label>Acabado</label>
-            
-            <div class="cc-selector">
-              
-              <!-- PVC -->
-              <figure class="figure">
+          <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="naturalBlanco2" value="Natural Blanco" checked onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="naturalBlanco2"></label>
+            <input onclick="" type="radio" name="opcionesPVC" id="sinLuz4" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
+            <label class="drinkcard-cc metacrilato" for="sinLuz4"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NATURAL BLANCO</figcaption>
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
 
-              </figure>
+          </figure>
 
-              <figure class="figure">
+          <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="negroMate2" value="Negro Mate" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="negroMate2"></label>
+            <input onclick="" type="radio" name="opcionesPVC" id="retroiluminado4" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
+            <label class="drinkcard-cc metacrilato" for="retroiluminado4"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NEGRO MATE</figcaption>
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADO</figcaption>
 
-              </figure>
+          </figure>
 
-              <figure class="figure">
+          <figure class="figure">
 
-                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoMate2" value="Pintado Mate"  onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="pintadoMate2"></label>
+            <input onclick="" type="radio" name="opcionesPVC" id="iluminacionFrontal4" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
+            <label class="drinkcard-cc metacrilato" for="iluminacionFrontal4"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO MATE</figcaption>
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
 
-              </figure>
+          </figure>
 
-              <figure class="figure">
-
-                <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoBrillo2" value="Pintado Brillo" onchange="deshabiltarBotonCart()">   
-                <label class="drinkcard-cc metacrilato" for="pintadoBrillo2"></label>
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO BRILLO</figcaption>
-
-              </figure>                                                                                   
-
-            </div>
-            
-          </div>
-        </div>          
+        </div>
 
       </div>
+    </div>                      
+
+  </div>  
+
+  <div id="separacionFormPVC" class="col-sm-5">
+
+    <div class="card" style="border: 0;">
+      <div class="card-body" style="background-color: #D3D3D3">
+        
+        <label>Separación de la Pared</label>             
+        <div class="cc-selector">
+
+
+          <figure class="figure">
+
+            <input onclick="" type="radio" name="separacionPvc" id="sinSeparacion4" value="Sin Separación" checked onchange="deshabiltarBotonCart()" > 
+            <label class="drinkcard-cc rectangular" for="sinSeparacion4"></label> 
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input  onclick="" type="radio" name="separacionPvc" id="a1cm4" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
+            <label class="drinkcard-cc redondo" for="a1cm4"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input onclick="" type="radio" name="separacionPvc" id="a3cm4" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
+            <label class="drinkcard-cc personalizado" for="a3cm4"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-12">
+
+    <div class="card" style="border: 0;">
+      <div class="card-body" style="background-color: #D3D3D3">
+      
+      <label>Acabado</label>
+        
+        <div class="cc-selector">
+          
+          <!-- PVC -->
+          <figure class="figure">
+
+            <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="naturalBlanco2" value="Natural Blanco" checked onchange="deshabiltarBotonCart()">   
+            <label class="drinkcard-cc metacrilato" for="naturalBlanco2"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NATURAL BLANCO</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="negroMate2" value="Negro Mate" onchange="deshabiltarBotonCart()">   
+            <label class="drinkcard-cc metacrilato" for="negroMate2"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NEGRO MATE</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoMate2" value="Pintado Mate"  onchange="deshabiltarBotonCart()">   
+            <label class="drinkcard-cc metacrilato" for="pintadoMate2"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO MATE</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoBrillo2" value="Pintado Brillo" onchange="deshabiltarBotonCart()">   
+            <label class="drinkcard-cc metacrilato" for="pintadoBrillo2"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO BRILLO</figcaption>
+
+          </figure>                                                                                   
+
+        </div>
+        
+      </div>
+    </div>          
+
+  </div>
+
+  <div id="coloresFormPvc">
+    <div class="col-sm-12">
+
+      <div class="card" style="border: 0;">
+        <div class="card-body" style="background-color: #D3D3D3">
+          
+
+          <label>Elige una paleta de colores</label>
+
+            <div class="cc-selector">
+              
+              <!-- Pantone -->
+              <figure class="figure">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#pantone" onclick="deshabiltarBotonCart()">
+                  <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/pantone.png'?>" width="75" title="Pantone"/>
+                </button>
+
+              </figure>
+
+              <!-- NCS -->
+              <figure class="figure">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ncs">
+                  <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ncs.png'?>" width="75" title="NCS"/>
+                </button>
+
+              </figure>
+
+              <!-- RAL -->
+              <figure class="figure">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ral">
+                  <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
+                </button>
+
+              </figure>                            
+
+            </div>
 
       
+          <!--
+          <label>Colores</label>
 
-      <div id="coloresFormPvc">
-        <div class="col-sm-12">
+          <div class="cc-selector">
+            <center>
 
-          <div class="card" style="border: 0;">
-            <div class="card-body" style="background-color: #D3D3D3">
-              
+            <figure class="figure">
 
-              <label>Elige una paleta de colores</label>
+              <input type="radio" name="coloresPvc" value="amarillo" id="amarilloColor2" checked onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor2"></label> 
 
-                <div class="cc-selector">
-                  
-                  <!-- Pantone -->
-                  <figure class="figure">
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#pantone" onclick="deshabiltarBotonCart()">
-                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/pantone.png'?>" width="75" title="Pantone"/>
-                    </button>
+            </figure>                
 
-                  </figure>
+            <figure class="figure">
 
-                  <!-- NCS -->
-                  <figure class="figure">
+              <input  type="radio" name="coloresPvc" value="rojo" id="rojoColor2"  onchange="deshabiltarBotonCart()">
+              <label class="drinkcard-cc-colores rojoColor" for="rojoColor2"></label>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ncs">
-                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ncs.png'?>" width="75" title="NCS"/>
-                    </button>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROJO</figcaption>
 
-                  </figure>
+            </figure>
 
-                  <!-- RAL -->
-                  <figure class="figure">
+            <figure class="figure">
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ral">
-                      <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
-                    </button>
+              <input type="radio" name="coloresPvc" value="durazno" id="duraznoColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores duraznoColor" for="duraznoColor2"></label> 
 
-                  </figure>                            
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">DURAZNO</figcaption>
 
-                </div>
+            </figure>
 
-          
-              <!--
-              <label>Colores</label>
+            <figure class="figure">
 
-              <div class="cc-selector">
-                <center>
+              <input type="radio" name="coloresPvc" value="ambar" id="ambarColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores ambarColor" for="ambarColor2"></label> 
 
-                <figure class="figure">
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMBAR</figcaption>
 
-                  <input type="radio" name="coloresPvc" value="amarillo" id="amarilloColor2" checked onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor2"></label> 
+            </figure>              
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
+            <figure class="figure">
 
-                </figure>                
+              <input type="radio" name="coloresPvc" value="limon" id="limonColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores limonColor" for="limonColor2"></label> 
 
-                <figure class="figure">
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">LIMÓN</figcaption>
 
-                  <input  type="radio" name="coloresPvc" value="rojo" id="rojoColor2"  onchange="deshabiltarBotonCart()">
-                  <label class="drinkcard-cc-colores rojoColor" for="rojoColor2"></label>
+            </figure>
+        
+           <figure class="figure">
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROJO</figcaption>
+              <input  type="radio" name="coloresPvc" value="verde" id="verdeColor2" onchange="deshabiltarBotonCart()">
+              <label class="drinkcard-cc-colores verdeColor" for="verdeColor2"></label>
 
-                </figure>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">VERDE</figcaption>
 
-                <figure class="figure">
+            </figure>
 
-                  <input type="radio" name="coloresPvc" value="durazno" id="duraznoColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores duraznoColor" for="duraznoColor2"></label> 
+            <figure class="figure">
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">DURAZNO</figcaption>
+              <input  type="radio" name="coloresPvc" value="azul" id="azulColor2" onchange="deshabiltarBotonCart()">
+              <label class="drinkcard-cc-colores azulColor" for="azulColor2"></label>
 
-                </figure>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AZUL</figcaption>
 
-                <figure class="figure">
+            </figure>
 
-                  <input type="radio" name="coloresPvc" value="ambar" id="ambarColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores ambarColor" for="ambarColor2"></label> 
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMBAR</figcaption>
+            <figure class="figure">
 
-                </figure>              
+              <input  type="radio" name="coloresPvc" value="morado" id="moradoColor2" onchange="deshabiltarBotonCart()">
+              <label class="drinkcard-cc-colores moradoColor" for="moradoColor2"></label>
 
-                <figure class="figure">
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">MORADO</figcaption>
 
-                  <input type="radio" name="coloresPvc" value="limon" id="limonColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores limonColor" for="limonColor2"></label> 
+            </figure>
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">LIMÓN</figcaption>
 
-                </figure>
-            
-               <figure class="figure">
+            <figure class="figure">
 
-                  <input  type="radio" name="coloresPvc" value="verde" id="verdeColor2" onchange="deshabiltarBotonCart()">
-                  <label class="drinkcard-cc-colores verdeColor" for="verdeColor2"></label>
+              <input  type="radio" name="coloresPvc" value="turquesa" id="turquesaColor2" onchange="deshabiltarBotonCart()">
+              <label class="drinkcard-cc-colores turquesaColor" for="turquesaColor2"></label>
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">VERDE</figcaption>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">TURQUESA</figcaption>
 
-                </figure>
+            </figure>
 
-                <figure class="figure">
+            <figure class="figure">
 
-                  <input  type="radio" name="coloresPvc" value="azul" id="azulColor2" onchange="deshabiltarBotonCart()">
-                  <label class="drinkcard-cc-colores azulColor" for="azulColor2"></label>
+              <input  type="radio" name="coloresPvc" value="rosa" id="rosaColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores rosaColor" for="rosaColor2"></label> 
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AZUL</figcaption>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROSA</figcaption>
 
-                </figure>
+            </figure>
 
+            <figure class="figure">
 
-                <figure class="figure">
+              <input type="radio" name="coloresPvc" value="blanco" id="blancoColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores blancoColor" for="blancoColor2"></label> 
 
-                  <input  type="radio" name="coloresPvc" value="morado" id="moradoColor2" onchange="deshabiltarBotonCart()">
-                  <label class="drinkcard-cc-colores moradoColor" for="moradoColor2"></label>
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO</figcaption>
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">MORADO</figcaption>
+            </figure>      
+      
+            <figure class="figure">
 
-                </figure>
+              <input type="radio" name="coloresPvc" value="calido" id="calidoColor2" onchange="deshabiltarBotonCart()"> 
+              <label class="drinkcard-cc-colores calidoColor" for="calidoColor2"></label> 
 
+              <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">CÁLIDO</figcaption>
 
-                <figure class="figure">
+            </figure>
 
-                  <input  type="radio" name="coloresPvc" value="turquesa" id="turquesaColor2" onchange="deshabiltarBotonCart()">
-                  <label class="drinkcard-cc-colores turquesaColor" for="turquesaColor2"></label>
+            </center>
 
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">TURQUESA</figcaption>
+          </div>
+        -->
+        </div>
+      </div>            
 
-                </figure>
+    </div>            
+  </div>      
 
-                <figure class="figure">
-
-                  <input  type="radio" name="coloresPvc" value="rosa" id="rosaColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores rosaColor" for="rosaColor2"></label> 
-
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROSA</figcaption>
-
-                </figure>
-
-                <figure class="figure">
-
-                  <input type="radio" name="coloresPvc" value="blanco" id="blancoColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores blancoColor" for="blancoColor2"></label> 
-
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO</figcaption>
-
-                </figure>      
-          
-                <figure class="figure">
-
-                  <input type="radio" name="coloresPvc" value="calido" id="calidoColor2" onchange="deshabiltarBotonCart()"> 
-                  <label class="drinkcard-cc-colores calidoColor" for="calidoColor2"></label> 
-
-                  <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">CÁLIDO</figcaption>
-
-                </figure>
-
-                </center>
-
-              </div>
-            -->
-            </div>
-          </div>            
-
-        </div>            
-      </div>      
-
-    </div>
+</div>

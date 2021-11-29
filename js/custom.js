@@ -24,11 +24,30 @@ function jQueryDoSomethingAJAX() {
     var fuenteLetrasText = y[x].text;
     var fuenteLetras = y[x].value;
 
-    var x = document.getElementById("tiempos").selectedIndex;
-    var y = document.getElementById("tiempos").options;
-    //alert("Index: " + y[x].index + " is " + y[x].text);
-    var tiemposEntregaText = y[x].text;
-    var tiemposEntrega = y[x].value;
+    /*
+        var x = document.getElementById("tiempos").selectedIndex;
+        var y = document.getElementById("tiempos").options;
+        //alert("Index: " + y[x].index + " is " + y[x].text);
+        var tiemposEntregaText = y[x].text;
+        var tiemposEntrega = y[x].value;
+    */
+
+   var opcionesTiempos = document.getElementsByName("opcionesTiempos");
+    var txt = "";
+    var i;
+    for (i = 0; i < opcionesTiempos.length; i++) {
+        if (opcionesTiempos[i].checked) {
+          txt = opcionesTiempos[i].value;
+        }
+    }
+
+    var tiemposEntrega = txt;
+
+    if(tiemposEntregaText == "7 días laborables"){
+        var tiemposEntrega = document.getElementById('cn_precio_sietediaslaboralesLetras').value;
+    }else{
+        var tiemposEntrega = document.getElementById('cn_precio_4872Letras').value;
+    }    
 
     var x = document.getElementById("letraCorporea").selectedIndex;
     var y = document.getElementById("letraCorporea").options;
@@ -118,7 +137,7 @@ function jQueryDoSomethingAJAX() {
 
             var subTotalprecio  = Number(($a + $b + $c ) * 4);
 
- document.getElementById('colorPaletaSeleccionada').style.display = "inline";
+            document.getElementById('colorPaletaSeleccionada').style.display = "inline";
             /*var colores = document.getElementsByName("colores");
             var txt = "";
             var i;
@@ -131,7 +150,7 @@ function jQueryDoSomethingAJAX() {
             var color = txt;*/
 
             if(document.getElementById('colorSumario').value == ""){
-                var color = "Pantone: Yellow C";
+                var color = "RAL: RAL 1000";
             }else{                
                 var color = document.getElementById('colorPaleta').value
             }
@@ -145,7 +164,7 @@ function jQueryDoSomethingAJAX() {
         }
 
         if(opciones == "Iluminación Frontal" ){
- document.getElementById('colorPaletaSeleccionada').style.display = "none";
+            document.getElementById('colorPaletaSeleccionada').style.display = "none";
             var subTotalprecio  = ($k + $l + $m + $n + $o + $p + $q + $r) * 4;
             var color = 'No Aplica';  
         }
@@ -264,7 +283,7 @@ function jQueryDoSomethingAJAX() {
         var grosor = y[x].value;
 
         //Valores que selecciona el usuario:
-        var sujecionMetacrilato = document.getElementsByName("sujecionMetacrilato");
+        /*var sujecionMetacrilato = document.getElementsByName("sujecionMetacrilato");
         var txt = "";
         var i;
         for (i = 0; i < sujecionMetacrilato.length; i++) {
@@ -273,7 +292,8 @@ function jQueryDoSomethingAJAX() {
             }
         }
 
-        var sujecion = txt;
+        var sujecion = txt;*/
+        var sujecion = "No Aplica";
 
         var acabadoMetacrilato = document.getElementsByName("acabadoMetacrilato");
         var txt = "";
@@ -442,7 +462,7 @@ function jQueryDoSomethingAJAX() {
         //Metacrilato Huecas y PVC:
         document.getElementById('sujecion').value               = sujecion;
 
-        document.getElementById('tiempoEntregaSumario').value   = tiemposEntregaText;
+        document.getElementById('tiempoEntregaSumario').value   = tiemposEntrega;
         document.getElementById('colorSumario').value           = color;
         document.getElementById('pathA').value                  = anchoSVG;
         document.getElementById('pathB').value                  = anchoSVGCorreccion.toFixed(3);
@@ -497,7 +517,8 @@ function letraCorporeaForm(divForm){
         document.getElementById('colorSumario').value = '';
 
         document.getElementById('selectGrosorAluminio').style.display = "inline";
-        document.getElementById("grosorAluminio").disabled = true;
+        //document.getElementById("grosorAluminio").disabled = true;
+        document.getElementById("grosorAluminio").disabled = false;
 
         var x = document.getElementById("grosorAluminio").selectedIndex;
         var y = document.getElementById("grosorAluminio").options;
@@ -586,6 +607,17 @@ function coloresForm(divForm, flag){
     }
 }
 
+function separacionForm(divForm, flag){
+
+    if(flag == 'true'){
+
+        document.getElementById(divForm).style.display = "inline";
+    }else{
+
+        document.getElementById(divForm).style.display = "none";
+    }
+}
+
 function grosorForm(tipo,select){
 
     //opcionesAluminio
@@ -613,11 +645,11 @@ function grosorForm(tipo,select){
 
         }
     }
-
 }
 
 window.addEventListener('load', function () {
-   document.getElementById("grosorAluminio").disabled = true;
+   //document.getElementById("grosorAluminio").disabled = true;
+   document.getElementById("grosorAluminio").disabled = false;
 
 });
 
@@ -634,3 +666,66 @@ function paleta(tipo, color){
     document.getElementById('colorPaleta').value = tipo +': '+ color;
     document.getElementById('colorSumario').value = tipo +': '+ color;
 }
+
+window.addEventListener('load', function () {
+
+    //En el formulario PVC:
+    var grosorPVC           = document.querySelector('#grosorPVC');
+    var sinSujecion2        = document.querySelector('#sinSujecion2');
+    var letraAdhesiva2      = document.querySelector('#letraAdhesiva2');
+    var sinLuz4             = document.querySelector('#sinLuz4');
+    var retroiluminado4     = document.querySelector('#retroiluminado4');
+    var iluminacionFrontal4 = document.querySelector('#iluminacionFrontal4');
+
+    //Muestra las opciones de separación:
+    grosorPVC.onchange = function () {
+
+        if(this.value == "19 mm"){
+            separacionForm('opcionesFormPVC','true');
+        }else{
+            separacionForm('opcionesFormPVC','false');
+        }
+
+
+
+        if((this.value == "19 mm") && (retroiluminado4.checked == true)){
+            separacionForm('separacionFormPVC','true');
+            document.getElementById('tornilleriaPVC').style.visibility = "visible";
+
+
+        }else{
+            separacionForm('separacionFormPVC','false');
+            document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+        }
+    };
+
+    retroiluminado4.onclick = function () {
+
+        if((grosorPVC.value == "19 mm") && (retroiluminado4.checked == true)){
+            separacionForm('separacionFormPVC','true');
+            document.getElementById('tornilleriaPVC').style.visibility = "visible";
+        }
+    };
+
+    //No muestra las opciones de separación:
+    sinSujecion2.onclick = function () {
+        separacionForm('separacionFormPVC','false');
+        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+    }
+
+    letraAdhesiva2.onclick = function () {
+        separacionForm('separacionFormPVC','false');
+        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+    } 
+
+    sinLuz4.onclick = function () {
+        separacionForm('separacionFormPVC','false');
+        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+    }
+
+    iluminacionFrontal4.onclick = function () {
+        separacionForm('separacionFormPVC','false');
+        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+    }  
+
+});

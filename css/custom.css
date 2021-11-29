@@ -10563,3 +10563,20 @@ label.c {
 #selectGrosorPVC{
   display: none;
 }
+
+#separacionFormAluminio{
+  display: none;
+}
+
+#separacionFormLaton{
+  display: none;
+}
+
+#separacionFormPVC,
+#opcionesFormPVC{
+  display: none;
+}
+
+#tornilleriaPVC{
+  visibility: hidden;
+}
