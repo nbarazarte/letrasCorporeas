@@ -41,7 +41,7 @@ function jQueryDoSomethingAJAX() {
         }
     }
 
-    var tiemposEntrega = txt;
+    var tiemposEntregaText = txt;
 
     if(tiemposEntregaText == "7 días laborables"){
         var tiemposEntrega = document.getElementById('cn_precio_sietediaslaboralesLetras').value;
@@ -462,7 +462,7 @@ function jQueryDoSomethingAJAX() {
         //Metacrilato Huecas y PVC:
         document.getElementById('sujecion').value               = sujecion;
 
-        document.getElementById('tiempoEntregaSumario').value   = tiemposEntrega;
+        document.getElementById('tiempoEntregaSumario').value   = tiemposEntregaText;
         document.getElementById('colorSumario').value           = color;
         document.getElementById('pathA').value                  = anchoSVG;
         document.getElementById('pathB').value                  = anchoSVGCorreccion.toFixed(3);
