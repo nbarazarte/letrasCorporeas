@@ -9343,6 +9343,95 @@
 /*Origenes de las fuentes (nuevas):*/
 
   @font-face{
+    font-family:"Action Man";
+    src: url("Fonts/action_man/ActionMan.woff2") format("woff2");
+         
+
+  }
+
+  @font-face{
+    font-family:"Asset-Regular";
+    src: url("Fonts/Asset/Asset-Regular.woff2") format("woff2");
+         
+  
+  }
+
+  @font-face{
+    font-family:"BebasNeue";
+    src: url("Fonts/bebas_neue/BebasNeue-Regular.woff2") format("woff2");
+  }
+
+    @font-face{
+    font-family:"Berlin Sans";
+    src: url("Fonts/berlin_sans/berlinsans.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Bookman old Style";
+    src: url("Fonts/bookman-old-style/BKMNOS.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Brussels";
+    src: url("Fonts/brussels/BRBRUBS0.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Candara-Font";
+    src: url("Fonts/Candara-Font/Candara_Font.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"comic-sans-ms";
+    src: url("Fonts/comic-sans-ms/COMIC.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Cubano";
+    src: url("Fonts/Cubano-Font-Family/Cubano.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Fredoka";
+    src: url("Fonts/Fredoka-Font-Family/FredokaOne-Regular.woff") format("woff");
+  }   
+
+  @font-face{
+    font-family:"Gabriela";
+    src: url("Fonts/Gabriela/Gabriela-Regular.woff") format("woff");
+  }   
+
+  @font-face{
+    font-family:"Krona_One";
+    src: url("Fonts/Krona_One/KronaOne-Regular.woff") format("woff");
+  }  
+
+  @font-face{
+    font-family:"Moderna";
+    src: url("Fonts/moderna/MODERNA_.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Neon";
+    src: url("Fonts/neon/neon.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Squada_One";
+    src: url("Fonts/Squada_One/SquadaOne-Regular.woff") format("woff");
+  }    
+
+  @font-face{
+    font-family:"Times-New-Roman";
+    src: url("Fonts/Times-New-Roman/times_new_roman.woff") format("woff");
+  }
+
+  @font-face{
+    font-family:"Verdana";
+    src: url("Fonts/Verdana-Font/Verdana.woff") format("woff");
+  }   
+
+  @font-face{
     font-family:"Barcelony";
     src: url("Fonts/barcelony/Barcelony.woff2") format("woff2"),
          url("Fonts/barcelony/Barcelony.woff") format("woff");
@@ -9790,6 +9879,108 @@ text-align: center;
 }
 
 /************************************************************************Nuevas fuentes*******************************************************************************/
+.Action_Man {
+  font-family: "Action Man";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Asset-Regular {
+  font-family: "Asset-Regular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.BebasNeue {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.BerlinSans {
+  font-family: "Berlin Sans";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Bookman {
+  font-family: "Bookman old Style";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Brussels {
+  font-family: "Brussels";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Candara-Font {
+  font-family: "Candara-Font";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.comic-sans-ms {
+  font-family: "comic-sans-ms";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Cubano {
+  font-family: "Cubano";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Fredoka {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Gabriela {
+  font-family: "Gabriela";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Krona_One {
+  font-family: "Krona_One";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Moderna {
+  font-family: "Moderna";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Neon {
+  font-family: "Neon";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Squada_One {
+  font-family: "Squada_One";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Times-New-Roman {
+  font-family: "Times-New-Roman";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Verdana {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: normal;
+}
+
 .Barcelony {
   font-family: "Barcelony";
   font-style: normal;

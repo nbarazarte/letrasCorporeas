@@ -374,7 +374,7 @@ function jQueryDoSomethingAJAX() {
             var color = txt;  */
 
             if(document.getElementById('colorSumario').value == ""){
-                var color = "Pantone: Yellow C";
+                var color = "Ral: Ral 1000";
             }else{                
                 var color = document.getElementById('colorPaleta').value
             }
@@ -397,7 +397,7 @@ function jQueryDoSomethingAJAX() {
     var data = {
         'action': 'jnjtest_LetrasCorporeas',
         'fuenteLetras': fuenteLetras,
-        'color': color,
+        'color': 'amarillo',
         'precioFinal': precioFinal.toFixed(2),
         'rotulo': rotulo,
     };
@@ -512,8 +512,8 @@ function letraCorporeaForm(divForm){
 
     if( divForm == "aluminioForm") {
         
-        document.getElementById('colorSeleccionado').innerHTML = 'Pantone: Yellow C';
-        document.getElementById('colorPaleta').value = 'Pantone: Yellow C';
+        document.getElementById('colorSeleccionado').innerHTML = 'Ral: Ral 1000';
+        document.getElementById('colorPaleta').value = 'Ral: Ral 1000';
         document.getElementById('colorSumario').value = '';
 
         document.getElementById('selectGrosorAluminio').style.display = "inline";
@@ -565,8 +565,8 @@ function letraCorporeaForm(divForm){
 
     if( divForm == "pvcForm") {
 
-        document.getElementById('colorSeleccionado').innerHTML = 'Pantone: Yellow C';
-        document.getElementById('colorPaleta').value = 'Pantone: Yellow C';
+        document.getElementById('colorSeleccionado').innerHTML = 'Ral: Ral 1000';
+        document.getElementById('colorPaleta').value = 'Ral: Ral 1000';
         document.getElementById('colorSumario').value = '';
                 
         document.getElementById('selectGrosorPVC').style.display = "inline";
@@ -661,10 +661,12 @@ function ajustarTamano(valor){
 function paleta(tipo, color){
 
     //alert(tipo+'--'+color);
+    //console.log(tipo +'-----'+ color)
     document.getElementById('colorSeleccionado').innerHTML = tipo +': '+ color;
 
-    document.getElementById('colorPaleta').value = tipo +': '+ color;
-    document.getElementById('colorSumario').value = tipo +': '+ color;
+    document.getElementById('colorPaleta').value = tipo +': '+ color.substr(-8, 400);
+    document.getElementById('colorSumario').value = tipo +': '+ color.substr(-8, 400);
+    
 }
 
 window.addEventListener('load', function () {

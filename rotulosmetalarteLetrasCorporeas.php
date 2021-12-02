@@ -215,8 +215,8 @@ function cn_genera_pagina_letrasCorporeas() {
   // Conseguir el valor del Precio base de todos los elementos:
   $cn_id_producto_personalizado_letras                  = get_option( 'cn_id_producto_personalizado_letras' ) ;
   $iva_letras                                           = get_option( 'iva_letras' ) ;
-  $cn_precio_sietediaslaboralesLetras                         = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
-  $cn_precio_4872Letras                                       = get_option( 'cn_precio_4872Letras' ) ;
+  $cn_precio_sietediaslaboralesLetras                   = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
+  $cn_precio_4872Letras                                 = get_option( 'cn_precio_4872Letras' ) ;
 
   //Aluminio:
   $precio_aluminio                                      = get_option( 'precio_aluminio' );
@@ -690,7 +690,7 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
         'display' => '<b>Texto:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
                      '<b>Fuente:</b><br/>'.wc_clean( $cart_item['fuenteLetrasText']).'<br/>'.
                      '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
-                     '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
+                     //'<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
                      '<b>Letra Corpórea de:</b><br/>'.wc_clean( $cart_item['tipoletraCorporea']).'<br/>'.
                      '<b>Profundidad:</b><br/>'.wc_clean( $cart_item['tipoGrosor']).'<br/>'.
                      '<b>Acabado:</b><br/>'.wc_clean( $cart_item['acabado']).'<br/>'.
@@ -750,12 +750,13 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
   true
  );
 
+/*
  $item->add_meta_data(
   __( 'Ancho (cm)', 'iconic' ),
   $values['anchocm'],
   true
  );
-
+*/
  $item->add_meta_data(
   __( 'Letra Corporea', 'iconic' ),
   $values['tipoletraCorporea'],

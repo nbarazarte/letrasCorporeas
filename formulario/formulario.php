@@ -17,7 +17,7 @@
   </div>
 </div>
 
-    <input id="font-url-input" type="hidden" readonly="yes" value="<?php echo plugin_dir_url( __FILE__ ). '../css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff'; ?>" />
+    <input id="font-url-input" type="hidden" readonly="yes" value="<?php echo plugin_dir_url( __FILE__ ). '../css/Fonts/bookman-old-style/BKMNOS.woff'; ?>" style="width: 900px;" />
   
     <div id="medida"> </div>
     <div id="result"> </div>
@@ -56,7 +56,7 @@
         <div class="container">
           <div id="caja" class="row justify-content-md-center">
 
-            <div id="muestra" class="col-md-auto neon_effect signatura_monoline_scriptRg amarillo">
+            <div id="muestra" class="col-md-auto neon_effect Bookman amarillo">
               Rótulos Metalarte
             </div>
 
@@ -155,11 +155,6 @@
             require 'formaContorno.php';
           
           ?>
-
-          <div id="colorPaletaSeleccionada">
-            <input type="hidden" id="colorPaleta" name="colorPaleta" value="RAL: RAL 1000" readonly="yes">
-            <div id="colorSeleccionado">RAL: RAL 1000</div>
-          </div>
 
           <div class="col-sm-10">
             

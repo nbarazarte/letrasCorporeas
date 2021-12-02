@@ -149,7 +149,13 @@
                   <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
                 </button>
 
-              </figure>                            
+              </figure>
+
+                <div id="colorPaletaSeleccionada">
+                  <input type="hidden" id="colorPaleta" name="colorPaleta" value="RAL: RAL 1000" readonly="yes">
+                  <div id="colorSeleccionado" style="">RAL: RAL 1000</div>
+                </div>
+                           
 
             </div>
 
