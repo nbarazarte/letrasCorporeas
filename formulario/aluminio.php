@@ -13,7 +13,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="acabadoAluminio" id="pintado" value="Pintado" checked onchange="deshabiltarBotonCart()">   
-            <label class="drinkcard-cc metacrilato" for="pintado"></label>
+            <label class="drinkcard-cc pintado" for="pintado"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO</figcaption>
 
@@ -38,7 +38,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
-            <label class="drinkcard-cc metacrilato" for="sinLuz1"></label>
+            <label class="drinkcard-cc sinIluminar" for="sinLuz1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
 
@@ -47,7 +47,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
-            <label class="drinkcard-cc metacrilato" for="retroiluminado1"></label>
+            <label class="drinkcard-cc retroiluminadas" for="retroiluminado1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADAS</figcaption>
 
@@ -56,7 +56,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
-            <label class="drinkcard-cc metacrilato" for="iluminacionFrontal1"></label>
+            <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINADAS FRONTALMENTE</figcaption>
 
@@ -81,7 +81,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="separacionAluminio" id="sinSeparacion1" value="Sin Separacion" checked onchange="deshabiltarBotonCart()" > 
-            <label class="drinkcard-cc rectangular" for="sinSeparacion1"></label> 
+            <label class="drinkcard-cc sinSeparacion" for="sinSeparacion1"></label> 
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
 
@@ -90,7 +90,7 @@
           <figure class="figure">
 
             <input  onclick="" type="radio" name="separacionAluminio" id="a1cm1" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
-            <label class="drinkcard-cc redondo" for="a1cm1"></label>
+            <label class="drinkcard-cc a1cm" for="a1cm1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
 
@@ -99,7 +99,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="separacionAluminio" id="a3cm1" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
-            <label class="drinkcard-cc personalizado" for="a3cm1"></label>
+            <label class="drinkcard-cc a3cm" for="a3cm1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
 

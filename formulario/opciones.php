@@ -78,7 +78,7 @@
   border-radius: 14px;
   border: 3px #ffffff solid;">  
       <option value="<?php echo esc_html($cn_precio_sietediaslaborales);?>">7 días (laborales)</option>
-      <option value="<?php echo esc_html($cn_precio_4872);?>">48 a 72 horas</option>
+      <option value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras);?>">48 a 72 horas</option>
     </select>
 
   </div>

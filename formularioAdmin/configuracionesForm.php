@@ -79,14 +79,14 @@
             <h5 class="card-title">Tiempos de entrega</h5>
 
               <div class="mb-3">
-                <label for="cn_precio_sietediaslaborales" class="form-label">7 días laborales:</label>
-                <input type="number" step=".01" class="form-control" id="cn_precio_sietediaslaboralesLetras" name="cn_precio_sietediaslaboralesLetras" value="<?php echo esc_html($cn_precio_sietediaslaboralesLetras);?>" required/>
+                <label for="cn_precio_sietediaslaborales" class="form-label">10 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_sietediaslaboralesLetras" name="cn_precio_diezdiaslaboralesLetras" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras);?>" required/>
                 
               </div>
 
               <div class="mb-3">
-                <label for="cn_precio_4872" class="form-label">48 a 72 horas:</label>
-                <input type="number" step=".01" class="form-control" id="cn_precio_4872Letras" name="cn_precio_4872Letras" value="<?php echo esc_html($cn_precio_4872Letras);?>" required/>
+                <label for="cn_precio_4872" class="form-label">15 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras" name="cn_precio_quincediaslaboralesLetras" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras);?>" required/>
 
               </div>
 

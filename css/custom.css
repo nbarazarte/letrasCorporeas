@@ -10536,11 +10536,74 @@ text-align: center;
   }
 }
 
-/*acabado*/
-.acabado{
-  background-image: url("../imagenes/trasera/metacrilato.png");
+/*tiempos de entrega*/
+.diezDias{
+  background-image: url("../imagenes/tiemposEntrega/10dias.png");
 }
 
+.quinceDias{
+  background-image: url("../imagenes/tiemposEntrega/15dias.png");
+}
+
+.pintado{
+  background-image: url("../imagenes/acabado/pintado.png");
+}
+
+/*acabado*/
+.pintado{
+  background-image: url("../imagenes/acabado/pintado.png");
+}
+
+.satinado{
+  background-image: url("../imagenes/acabado/satinado.png");
+}
+
+.pulido{
+  background-image: url("../imagenes/acabado/pulido.png");
+}
+
+.naturalBlanca{
+  background-image: url("../imagenes/acabado/natural_blanca.png");
+}
+
+.negroMate{
+  background-image: url("../imagenes/acabado/negro_mate.png");
+}
+
+.pintadoMate{
+  background-image: url("../imagenes/acabado/pintado_mate.png");
+}
+
+.pintadBrillo{
+  background-image: url("../imagenes/acabado/pintado_brillo.png");
+}
+
+
+/*iluminacion*/
+.sinIluminar{
+  background-image: url("../imagenes/iluminacion/sin_iluminar.png");
+}
+
+.iluminacionFrontal{
+  background-image: url("../imagenes/iluminacion/iluminacion_frontal.png");
+}
+
+.retroiluminadas{
+  background-image: url("../imagenes/iluminacion/retroiluminadas.png");
+}
+
+/*separacion*/
+.a1cm{
+  background-image: url("../imagenes/separacion/a_1cm.png");
+}
+
+.a3cm{
+  background-image: url("../imagenes/separacion/a_3cm.png");
+}
+
+.sinSeparacion{
+  background-image: url("../imagenes/separacion/sin_separacion.png");
+}
 
 /*contorno*/
 .rectangular{
@@ -10577,6 +10640,19 @@ text-align: center;
 }
 
 /*sujecion*/
+
+.sinSujecion{
+  background-image: url("../imagenes/sujecion/sin_sujecion.png");
+}
+
+.tornilleria{
+  background-image: url("../imagenes/sujecion/tornilleria.png");
+}
+
+.cinta{
+  background-image: url("../imagenes/sujecion/cinta_doble_cara.png");
+}
+
 .ancladoalapared{
   background-image: url("../imagenes/sujecion/ancladoalapared.png");
 }

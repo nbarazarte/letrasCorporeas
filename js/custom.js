@@ -43,11 +43,12 @@ function jQueryDoSomethingAJAX() {
 
     var tiemposEntregaText = txt;
 
-    if(tiemposEntregaText == "7 días laborables"){
-        var tiemposEntrega = document.getElementById('cn_precio_sietediaslaboralesLetras').value;
+    if(tiemposEntregaText == "10 días laborables"){
+        var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras').value;
     }else{
-        var tiemposEntrega = document.getElementById('cn_precio_4872Letras').value;
+        var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras').value;
     }    
+    //console.log(tiemposEntrega);
 
     var x = document.getElementById("letraCorporea").selectedIndex;
     var y = document.getElementById("letraCorporea").options;

@@ -13,7 +13,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="sujecionPvc" id="sinSujecion2" value="Sin Sujeción" checked onchange="deshabiltarBotonCart()">
-            <label class="drinkcard-cc metacrilato" for="sinSujecion2"></label>
+            <label class="drinkcard-cc sinSujecion" for="sinSujecion2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN SUJECIÓN</figcaption>
 
@@ -23,7 +23,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="sujecionPvc" id="letraAdhesiva2" value="Letra Adhesiva" onchange="deshabiltarBotonCart()">  
-            <label class="drinkcard-cc metacrilato" for="letraAdhesiva2"></label>
+            <label class="drinkcard-cc cinta" for="letraAdhesiva2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">CINTA DOBLE CARA</figcaption>
 
@@ -32,7 +32,7 @@
           <figure id="tornilleriaPVC" class="figure">
 
             <input onclick="" type="radio" name="sujecionPvc" id="tornilleria1" value="Tornillería" onchange="deshabiltarBotonCart()">  
-            <label class="drinkcard-cc metacrilato" for="tornilleria1"></label>
+            <label class="drinkcard-cc tornilleria" for="tornilleria1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">TORNILLERÍA</figcaption>
 
@@ -57,7 +57,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="opcionesPVC" id="sinLuz4" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
-            <label class="drinkcard-cc metacrilato" for="sinLuz4"></label>
+            <label class="drinkcard-cc sinIluminar" for="sinLuz4"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
 
@@ -66,7 +66,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="opcionesPVC" id="retroiluminado4" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
-            <label class="drinkcard-cc metacrilato" for="retroiluminado4"></label>
+            <label class="drinkcard-cc retroiluminadas" for="retroiluminado4"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADO</figcaption>
 
@@ -75,7 +75,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="opcionesPVC" id="iluminacionFrontal4" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
-            <label class="drinkcard-cc metacrilato" for="iluminacionFrontal4"></label>
+            <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal4"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
 
@@ -100,7 +100,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="separacionPvc" id="sinSeparacion4" value="Sin Separación" checked onchange="deshabiltarBotonCart()" > 
-            <label class="drinkcard-cc rectangular" for="sinSeparacion4"></label> 
+            <label class="drinkcard-cc sinSeparacion" for="sinSeparacion4"></label> 
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SIN SEPARACIÓN</figcaption>
 
@@ -109,7 +109,7 @@
           <figure class="figure">
 
             <input  onclick="" type="radio" name="separacionPvc" id="a1cm4" value="A 1 cm" onchange="deshabiltarBotonCart()"> 
-            <label class="drinkcard-cc redondo" for="a1cm4"></label>
+            <label class="drinkcard-cc a1cm" for="a1cm4"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">A 1 cm</figcaption>
 
@@ -118,7 +118,7 @@
           <figure class="figure">
 
             <input onclick="" type="radio" name="separacionPvc" id="a3cm4" value="A 3 cm" onchange="deshabiltarBotonCart()"> 
-            <label class="drinkcard-cc personalizado" for="a3cm4"></label>
+            <label class="drinkcard-cc a3cm" for="a3cm4"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">A 3 cm</figcaption>
 
@@ -144,7 +144,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="naturalBlanco2" value="Natural Blanco" checked onchange="deshabiltarBotonCart()">   
-            <label class="drinkcard-cc metacrilato" for="naturalBlanco2"></label>
+            <label class="drinkcard-cc naturalBlanca" for="naturalBlanco2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NATURAL BLANCO</figcaption>
 
@@ -153,7 +153,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormPvc','false')" type="radio" name="acabadoPvc" id="negroMate2" value="Negro Mate" onchange="deshabiltarBotonCart()">   
-            <label class="drinkcard-cc metacrilato" for="negroMate2"></label>
+            <label class="drinkcard-cc negroMate" for="negroMate2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">NEGRO MATE</figcaption>
 
@@ -162,7 +162,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoMate2" value="Pintado Mate"  onchange="deshabiltarBotonCart()">   
-            <label class="drinkcard-cc metacrilato" for="pintadoMate2"></label>
+            <label class="drinkcard-cc pintadoMate" for="pintadoMate2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO MATE</figcaption>
 
@@ -171,7 +171,7 @@
           <figure class="figure">
 
             <input onclick="coloresForm('coloresFormPvc','true')" type="radio" name="acabadoPvc" id="pintadoBrillo2" value="Pintado Brillo" onchange="deshabiltarBotonCart()">   
-            <label class="drinkcard-cc metacrilato" for="pintadoBrillo2"></label>
+            <label class="drinkcard-cc pintadBrillo" for="pintadoBrillo2"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">PINTADO BRILLO</figcaption>
 

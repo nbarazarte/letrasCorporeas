@@ -88,8 +88,8 @@
       </div>
       
       <input type="hidden" class="form-control" id="iva_letras" value="<?php echo esc_html($iva_letras);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="cn_precio_sietediaslaboralesLetras" value="<?php echo esc_html($cn_precio_sietediaslaboralesLetras);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="cn_precio_4872Letras" value="<?php echo esc_html($cn_precio_4872Letras);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras);?>" readonly="yes">
 
       <!-- Aluminio Sin Iluminar -->
       <input type="hidden" class="form-control" id="precio_aluminio" value="<?php echo esc_html($precio_aluminio);?>" readonly="yes">
@@ -167,19 +167,19 @@
 
                   <figure class="figure">
 
-                    <input onclick="" type="radio" name="opcionesTiempos" id="dias" value="7 días laborables" checked onchange="deshabiltarBotonCart()">
-                    <label class="drinkcard-cc metacrilato" for="dias"></label>
+                    <input onclick="" type="radio" name="opcionesTiempos" id="dias" value="10 días laborables" checked onchange="deshabiltarBotonCart()">
+                    <label class="drinkcard-cc diezDias" for="dias"></label>
 
-                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">7 días laborables</figcaption>
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">10 días laborables</figcaption>
 
                   </figure>
 
                   <figure class="figure">
 
-                    <input onclick="" type="radio" name="opcionesTiempos" id="horas" value="48 a 72 horas" onchange="deshabiltarBotonCart()">  
-                    <label class="drinkcard-cc metacrilato" for="horas"></label>
+                    <input onclick="" type="radio" name="opcionesTiempos" id="horas" value="15 días laborables" onchange="deshabiltarBotonCart()">  
+                    <label class="drinkcard-cc quinceDias" for="horas"></label>
 
-                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">48 a 72 horas</figcaption>
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">15 días laborales</figcaption>
 
                   </figure>
 

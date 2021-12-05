@@ -58,12 +58,12 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'iva_letras', '21' );
     }
 
-    if ( get_option( 'cn_precio_sietediaslaboralesLetras' ) === false ) {
-        add_option( 'cn_precio_sietediaslaboralesLetras', '00.00' );
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras', '00.00' );
     }
 
-    if ( get_option( 'cn_precio_4872Letras' ) === false ) {
-        add_option( 'cn_precio_4872Letras', '50.00' );
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras', '50.00' );
     }
 
     //Aluminio:
@@ -215,8 +215,8 @@ function cn_genera_pagina_letrasCorporeas() {
   // Conseguir el valor del Precio base de todos los elementos:
   $cn_id_producto_personalizado_letras                  = get_option( 'cn_id_producto_personalizado_letras' ) ;
   $iva_letras                                           = get_option( 'iva_letras' ) ;
-  $cn_precio_sietediaslaboralesLetras                   = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
-  $cn_precio_4872Letras                                 = get_option( 'cn_precio_4872Letras' ) ;
+  $cn_precio_diezdiaslaboralesLetras                    = get_option( 'cn_precio_diezdiaslaboralesLetras' ) ;
+  $cn_precio_quincediaslaboralesLetras                  = get_option( 'cn_precio_quincediaslaboralesLetras' ) ;
 
   //Aluminio:
   $precio_aluminio                                      = get_option( 'precio_aluminio' );
@@ -277,8 +277,8 @@ function cn_guardar_ga_LetrasCorporeas() {
     //Limpiar valor, para prevenir problemas de seguridad
     $cn_id_producto_personalizado_letras                  = sanitize_text_field( $_POST['cn_id_producto_personalizado_letras'] );
     $iva_letras                                           = sanitize_text_field( $_POST['iva_letras'] );
-    $cn_precio_sietediaslaboralesLetras                         = sanitize_text_field( $_POST['cn_precio_sietediaslaboralesLetras'] );
-    $cn_precio_4872Letras                                       = sanitize_text_field( $_POST['cn_precio_4872Letras'] );
+    $cn_precio_diezdiaslaboralesLetras                    = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras'] );
+    $cn_precio_quincediaslaboralesLetras                  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras'] );
 
     //Aluminio Sin Iluminar:
     $precio_aluminio                                      = sanitize_text_field( $_POST['precio_aluminio'] );
@@ -322,8 +322,8 @@ function cn_guardar_ga_LetrasCorporeas() {
     // Guardar en la base de datos
     update_option( 'cn_id_producto_personalizado_letras', $cn_id_producto_personalizado_letras );
     update_option( 'iva_letras', $iva_letras );
-    update_option( 'cn_precio_sietediaslaboralesLetras', $cn_precio_sietediaslaboralesLetras );
-    update_option( 'cn_precio_4872Letras', $cn_precio_4872Letras );    
+    update_option( 'cn_precio_diezdiaslaboralesLetras', $cn_precio_diezdiaslaboralesLetras );
+    update_option( 'cn_precio_quincediaslaboralesLetras', $cn_precio_quincediaslaboralesLetras );    
     //Aluminio:
     update_option( 'precio_aluminio', $precio_aluminio );
     update_option( 'precio_aluminio_mano_de_obra', $precio_aluminio_mano_de_obra );
@@ -454,8 +454,8 @@ function iconic_output_engraving_field_LetrasCorporeas() {
       // Conseguir el valor del Precio base de todos los elementos:
 
         $iva_letras                                           = get_option( 'iva_letras' ) ;
-        $cn_precio_sietediaslaboralesLetras                   = get_option( 'cn_precio_sietediaslaboralesLetras' ) ;
-        $cn_precio_4872Letras                                 = get_option( 'cn_precio_4872Letras' ) ;
+        $cn_precio_diezdiaslaboralesLetras                    = get_option( 'cn_precio_diezdiaslaboralesLetras' ) ;
+        $cn_precio_quincediaslaboralesLetras                  = get_option( 'cn_precio_quincediaslaboralesLetras' ) ;
 
         //Aluminio:
         $precio_aluminio                                      = get_option( 'precio_aluminio' ) ;
