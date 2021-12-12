@@ -32,24 +32,6 @@ function jQueryDoSomethingAJAX() {
         var tiemposEntrega = y[x].value;
     */
 
-   var opcionesTiempos = document.getElementsByName("opcionesTiempos");
-    var txt = "";
-    var i;
-    for (i = 0; i < opcionesTiempos.length; i++) {
-        if (opcionesTiempos[i].checked) {
-          txt = opcionesTiempos[i].value;
-        }
-    }
-
-    var tiemposEntregaText = txt;
-
-    if(tiemposEntregaText == "10 días laborables"){
-        var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras').value;
-    }else{
-        var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras').value;
-    }    
-    //console.log(tiemposEntrega);
-
     var x = document.getElementById("letraCorporea").selectedIndex;
     var y = document.getElementById("letraCorporea").options;
     //alert("Index: " + y[x].index + " is " + y[x].text);
@@ -59,11 +41,28 @@ function jQueryDoSomethingAJAX() {
     var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
     var alturacm = document.getElementById("altura").value;
 
+    var anchoM2 = anchocm/1000;
+
     //ancho del SVG:
     var anchoSVG = document.getElementById('anchoSVG').value;
     var anchoSVGCorreccion = anchoSVG * 0.76;
+
+    var anchoSVGM2 = anchoSVGCorreccion/1000;
    
     document.getElementById('impuesto').value = document.getElementById('iva_letras').value;
+    
+    var previsualizacion = Number(document.getElementById("previsualizacion").value);
+
+    var opcionesTiempos = document.getElementsByName("opcionesTiempos");
+    var txt = "";
+    var i;
+    for (i = 0; i < opcionesTiempos.length; i++) {
+        if (opcionesTiempos[i].checked) {
+          txt = opcionesTiempos[i].value;
+        }
+    }
+
+    var tiemposEntregaText = txt;
 
     //alert(letraCorporea);
     //alert(opciones);
@@ -110,34 +109,39 @@ function jQueryDoSomethingAJAX() {
         }
 
         var opciones = txt;
-        var sujecion = 'No Aplica';
+        var sujecion = 'No Aplica';    
 
-        //Aluminio Sin Iluminar:
-        var $a = Number(document.getElementById("precio_aluminio").value);
-        var $b = Number(document.getElementById("precio_aluminio_mano_de_obra").value);
-        var $c = Number(document.getElementById("precio_aluminio_pintura").value);
-        //Aluminio retroiluminadas:
-        var $d = Number(document.getElementById('precio_aluminio_retroiluminado').value);
-        var $e = Number(document.getElementById('precio_aluminio_retroiluminado_mano_de_obra').value);
-        var $f = Number(document.getElementById('precio_aluminio_retroiluminado_pintura').value);
-        var $g = Number(document.getElementById('precio_aluminio_retroiluminado_metacrilato10mm').value);
-        var $h = Number(document.getElementById('precio_aluminio_retroiluminado_led').value);
-        var $i = Number(document.getElementById('precio_aluminio_retroiluminado_transformador').value);
-        var $j = Number(document.getElementById('precio_aluminio_retroiluminado_corte_cnc').value);
-        //Aluminio Iluminadas frontalmente:
-        var $k = Number(document.getElementById('precio_aluminio_iluminado_frontal').value);
-        var $l = Number(document.getElementById('precio_aluminio_iluminado_frontal_mano_de_obra').value);
-        var $m = Number(document.getElementById('precio_aluminio_iluminado_frontal_pintura').value);
-        var $n = Number(document.getElementById('precio_aluminio_iluminado_frontal_metacrilato3mm').value);
-        var $o = Number(document.getElementById('precio_aluminio_iluminado_frontal_junquillo').value);
-        var $p = Number(document.getElementById('precio_aluminio_iluminado_frontal_led').value);
-        var $q = Number(document.getElementById('precio_aluminio_iluminado_frontal_transformador').value);
-        var $r = Number(document.getElementById('precio_aluminio_iluminado_frontal_corte_cnc').value);
+
 
         if(opciones == "Sin Luz" ){
 
-            var subTotalprecio  = Number(($a + $b + $c ) * 4);
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar').value;
+            }    
+            //console.log(tiemposEntrega);    
 
+            //Aluminio Sin Iluminar:
+            var a = Number(document.getElementById("precio_aluminio").value);
+            var b = Number(document.getElementById("precio_aluminio_mano_de_obra").value);//Soldadura
+            var c = Number(document.getElementById("precio_aluminio_pintura").value);
+            var d = Number(document.getElementById("precio_aluminio_corte_cnc").value);
+            var e = Number(document.getElementById("cn_precio_doblado_aluminio_sin_iluminar").value);
+
+            var totalAluminio   = Number(a * anchoM2);
+            var totalPintura    = Number(c * anchoM2);
+            var totalCorte      = Number(d * anchoSVGM2);
+            var soldadura       = Number(b);
+            var doblado         = Number(e);
+            
+            console.log("Total Aluminio "+ totalAluminio);
+            console.log("Total Pintura " + totalPintura);
+            console.log("Total Corte " + totalCorte);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+
+            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            
             document.getElementById('colorPaletaSeleccionada').style.display = "inline";
             /*var colores = document.getElementsByName("colores");
             var txt = "";
@@ -159,15 +163,87 @@ function jQueryDoSomethingAJAX() {
         }
 
         if(opciones == "Retroiluminado" ){
-             document.getElementById('colorPaletaSeleccionada').style.display = "none";
-            var subTotalprecio  = ($d + $e + $f + $g + $h + $i + $j) * 4;
+
+            document.getElementById('colorPaletaSeleccionada').style.display = "none";
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado').value;
+            }    
+            //console.log(tiemposEntrega);                
+            
+            //Aluminio retroiluminadas:
+            var a = Number(document.getElementById('precio_aluminio_retroiluminado').value);
+            var b = Number(document.getElementById('precio_aluminio_retroiluminado_mano_de_obra').value);
+            var c = Number(document.getElementById('precio_aluminio_retroiluminado_pintura').value);
+            var d = Number(document.getElementById('precio_aluminio_retroiluminado_metacrilato10mm').value);
+            var e = Number(document.getElementById('precio_aluminio_retroiluminado_led').value);
+            var f = Number(document.getElementById('precio_aluminio_retroiluminado_transformador').value);
+            var g = Number(document.getElementById('precio_aluminio_retroiluminado_corte_cnc').value);
+            var h = Number(document.getElementById('cn_precio_doblado_aluminio_retroiluminado').value);
+            var i = Number(document.getElementById('cn_precio_separadores_aluminio_retroiluminado').value);
+
+            var totalAluminio   = Number(a * anchoM2);
+            var totalPintura    = Number(c * anchoM2);
+            var totalCorte      = Number(g * anchoSVGM2);
+            var soldadura       = Number(b);
+            var doblado         = Number(h);
+            var metacrilato     = Number(d);
+            var transformador   = Number(f); 
+            var separadores     = Number(i);
+            var led             = Number(e);
+            
+            console.log("Total Aluminio "+ totalAluminio);
+            console.log("Total Pintura " + totalPintura);
+            console.log("Total Corte " + totalCorte);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+
+            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            
             var color = 'No Aplica';  
         }
 
         if(opciones == "Iluminación Frontal" ){
+
             document.getElementById('colorPaletaSeleccionada').style.display = "none";
-            var subTotalprecio  = ($k + $l + $m + $n + $o + $p + $q + $r) * 4;
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal').value;
+            }    
+            //console.log(tiemposEntrega);     
+
+            //Aluminio Iluminadas frontalmente:
+            var a = Number(document.getElementById('precio_aluminio_iluminado_frontal').value);
+            var b = Number(document.getElementById('precio_aluminio_iluminado_frontal_mano_de_obra').value);
+            var c = Number(document.getElementById('precio_aluminio_iluminado_frontal_pintura').value);
+            var d = Number(document.getElementById('precio_aluminio_iluminado_frontal_metacrilato3mm').value);
+            var e = Number(document.getElementById('precio_aluminio_iluminado_frontal_junquillo').value);
+            var f = Number(document.getElementById('precio_aluminio_iluminado_frontal_led').value);
+            var g = Number(document.getElementById('precio_aluminio_iluminado_frontal_transformador').value);
+            var h = Number(document.getElementById('precio_aluminio_iluminado_frontal_corte_cnc').value);
+            var i = Number(document.getElementById('cn_precio_doblado_aluminio_iluminado_frontal').value);
+
+            var totalAluminio   = Number(a * anchoM2);
+            var totalPintura    = Number(c * anchoM2);
+            var totalCorte      = Number(h * anchoSVGM2);
+            var soldadura       = Number(b);
+            var doblado         = Number(i);
+            var metacrilato     = Number(d);
+            var transformador   = Number(g); 
+            var junquillo       = Number(e);
+            var led             = Number(f);
+            
+            console.log("Total Aluminio "+ totalAluminio);
+            console.log("Total Pintura " + totalPintura);
+            console.log("Total Corte " + totalCorte);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+
+            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
             var color = 'No Aplica';  
+
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
@@ -178,6 +254,10 @@ function jQueryDoSomethingAJAX() {
     }
 
     if(letraCorporea == "aceroForm"){
+
+        document.getElementById('colorPaletaSeleccionada').style.display = "none";
+        
+        //var previsualizacion = Number(document.getElementById("previsualizacion").value);
 
         var x = document.getElementById("grosorAcero").selectedIndex;
         var y = document.getElementById("grosorAcero").options;
@@ -197,7 +277,7 @@ function jQueryDoSomethingAJAX() {
 
         var acabado = txt;
 
-       var separacionAcero = document.getElementsByName("separacionAcero");
+        var separacionAcero = document.getElementsByName("separacionAcero");
         var txt = "";
         var i;
         for (i = 0; i < separacionAcero.length; i++) {
@@ -208,7 +288,7 @@ function jQueryDoSomethingAJAX() {
 
         var separacion = txt;
 
-       var opcionesAcero = document.getElementsByName("opcionesAcero");
+        var opcionesAcero = document.getElementsByName("opcionesAcero");
         var txt = "";
         var i;
         for (i = 0; i < opcionesAcero.length; i++) {
@@ -219,9 +299,84 @@ function jQueryDoSomethingAJAX() {
 
         var opciones = txt;
         var sujecion = 'No Aplica';
-        var color = 'No Aplica';
-        var subTotalprecio = 10;     
-        precioFinal = 100;
+        
+        if(opciones == "Sin Luz" ){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_acero_sin_iluminar').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Acero sin Iluminar:
+            var a = Number(document.getElementById('precio_acero').value);
+            var b = Number(document.getElementById('precio_acero_mano_de_obra').value);
+            var c = Number(document.getElementById('precio_acero_corte_cnc').value);
+            var d = Number(document.getElementById('cn_precio_doblado_acero_sin_iluminar').value);
+
+            var totalAcero   = Number(a * anchoM2);
+            var totalCorte   = Number(c * anchoSVGM2);
+            var soldadura    = Number(b);
+            var doblado      = Number(d);
+            
+            console.log("Total Acero "+ totalAcero);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';  
+        }
+        
+        if(opciones == "Retroiluminado" ){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_acero_sin_iluminar').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Acero Retroiluminado:
+            var a = Number(document.getElementById('cn_precio_acero_retroiluminado').value);
+            var b = Number(document.getElementById('cn_precio_acero_mano_de_obra_retroiluminado').value);
+            var c = Number(document.getElementById('precio_acero_retroiluminado_corte_cnc').value);
+            var d = Number(document.getElementById('precio_acero_retroiluminado_doblado').value);
+            var e = Number(document.getElementById('precio_acero_retroiluminado_metacrilato10mm').value);
+            var f = Number(document.getElementById('precio_acero_retroiluminado_led').value);
+            var g = Number(document.getElementById('precio_acero_retroiluminado_transformador').value);
+            var h = Number(document.getElementById('precio_acero_retroiluminado_separadores').value);
+
+            var totalAcero    = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var soldadura     = Number(b);
+            var doblado       = Number(d);
+            var metacrilato   = Number(e);
+            var led           = Number(f);
+            var transformador = Number(g);
+            var separadores   = Number(h);
+            
+            console.log("Total Acero "+ totalAcero);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';
+        }
+
+        if(opciones == "Iluminación Frontal" ){
+
+        }
+
+
+        var iva     = Number(document.getElementById('iva_letras').value / 100);
+        precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
         letraCorporea = "Acero Inoxidable Hueca";
     }

@@ -10,7 +10,7 @@
 <div class="col-12 text-center">
 
 <br/>
-<h5 class="card-title">Configuración de Letras Corporeas</h5>
+<h5 class="card-title">Configuración de Letras Corpóreas</h5>
 
 <form method="post" action="admin-post.php">
 
@@ -76,35 +76,19 @@
         <div class="card">
           <div class="card-body">
 
-            <h5 class="card-title">Tiempos de entrega</h5>
+            <h5 class="card-title">Previsualización</h5>
 
               <div class="mb-3">
-                <label for="cn_precio_sietediaslaborales" class="form-label">10 días laborales:</label>
-                <input type="number" step=".01" class="form-control" id="cn_precio_sietediaslaboralesLetras" name="cn_precio_diezdiaslaboralesLetras" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras);?>" required/>
+                <label for="cn_precio_base" class="form-label">Valor:</label>
+                <input type="number" step=".01" class="form-control" id="previsualizacion" name="previsualizacion" value="<?php echo esc_html($previsualizacion);?>" required/>
                 
-              </div>
-
-              <div class="mb-3">
-                <label for="cn_precio_4872" class="form-label">15 días laborales:</label>
-                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras" name="cn_precio_quincediaslaboralesLetras" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras);?>" required/>
-
               </div>
 
           </div>
         </div>
-      </div> 
-
-
+      </div>      
 
     </div>  
-
-
-
-
-
-
-
-
 
     <p>&nbsp;</p>
 
@@ -113,35 +97,51 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingA1">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
-            <h5 class="card-title" style="text-align: left;">Sin Iluminar</h5>
+            <h5 class="card-title" style="text-align: left;">Letras Corpóreas de Aluminio Sin Iluminar</h5>
           </button>
         </h2>
         <div id="collapseA1" class="accordion-collapse collapse show" aria-labelledby="headingA1" data-bs-parent="#accordionExample1">
           <div class="accordion-body">
             
-            <h6 class="card-title">Aluminio:</h6>
+            <h6 class="card-title"></h6>
 
             <div class="row">
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Aluminio:</label>
+                <label for="precio_aluminio" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio" name="precio_aluminio" value="<?php echo esc_html($precio_aluminio);?>" required/>
               </div>
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Mano de Obra:</label>
+                <label for="precio_aluminio_mano_de_obra" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_mano_de_obra" name="precio_aluminio_mano_de_obra" value="<?php echo esc_html($precio_aluminio_mano_de_obra);?>" required/>
               </div>
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio de la Pintura:</label>
+                <label for="precio_aluminio_pintura" class="form-label">Pintura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_pintura" name="precio_aluminio_pintura" value="<?php echo esc_html($precio_aluminio_pintura);?>" required/>
               </div>
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Corte CNC:</label>
+                <label for="precio_aluminio_corte_cnc" class="form-label">Corte CNC:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_corte_cnc" name="precio_aluminio_corte_cnc" value="<?php echo esc_html($precio_aluminio_corte_cnc);?>" required/>
-              </div>                  
+              </div>    
+
+
+              <div class="col">
+                <label for="cn_precio_doblado_aluminio_sin_iluminar" class="form-label">Doblado:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_doblado_aluminio_sin_iluminar" name="cn_precio_doblado_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_aluminio_sin_iluminar);?>" required/>                
+              </div>
+
+              <div class="col">
+                <label for="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" class="form-label">10 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" name="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar);?>" required/>               
+              </div>  
+
+              <div class="col">
+                <label for="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" class="form-label">15 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" name="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar);?>" required/>               
+              </div>  
 
             </div>
 
@@ -152,50 +152,70 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingA2">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA2" aria-expanded="false" aria-controls="collapseA2">
-            <h5 class="card-title" style="text-align: left;">Retroiluminadas</h5>
+            <h5 class="card-title" style="text-align: left;">Letras Corpóreas de Aluminio Retroiluminadas</h5>
           </button>
         </h2>
         <div id="collapseA2" class="accordion-collapse collapse" aria-labelledby="headingA2" data-bs-parent="#accordionExample1">
           <div class="accordion-body">
 
-            <h6 class="card-title">Aluminio:</h6>
+            <h6 class="card-title"></h6>
 
             <div class="row">
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Aluminio:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado" name="precio_aluminio_retroiluminado" value="<?php echo esc_html($precio_aluminio_retroiluminado);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Mano de Obra:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado_mano_de_obra" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_mano_de_obra" name="precio_aluminio_retroiluminado_mano_de_obra" value="<?php echo esc_html($precio_aluminio_retroiluminado_mano_de_obra);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio de la Pintura:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado_pintura" class="form-label">Pintura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_pintura" name="precio_aluminio_retroiluminado_pintura" value="<?php echo esc_html($precio_aluminio_retroiluminado_pintura);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Metacrilato 10mm:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado_metacrilato10mm" class="form-label">Metacrilato 10mm:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_metacrilato10mm" name="precio_aluminio_retroiluminado_metacrilato10mm" value="<?php echo esc_html($precio_aluminio_retroiluminado_metacrilato10mm);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Iluminación Led:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado_led" class="form-label">Iluminación Led:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_led" name="precio_aluminio_retroiluminado_led" value="<?php echo esc_html($precio_aluminio_retroiluminado_led);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Transformador:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_retroiluminado_transformador" class="form-label">Transformador:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_transformador" name="precio_aluminio_retroiluminado_transformador" value="<?php echo esc_html($precio_aluminio_retroiluminado_transformador);?>" required/>
               </div>                                                     
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Corte CNC:</label>
+                <label for="precio_aluminio_retroiluminado_corte_cnc" class="form-label">Corte CNC:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_corte_cnc" name="precio_aluminio_retroiluminado_corte_cnc" value="<?php echo esc_html($precio_aluminio_retroiluminado_corte_cnc);?>" required/>
-              </div>                  
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado" class="form-label">10 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado" name="cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado" class="form-label">15 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado" name="cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_doblado_aluminio_retroiluminado" class="form-label">Doblado:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_doblado_aluminio_retroiluminado" name="cn_precio_doblado_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_doblado_aluminio_retroiluminado);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_separadores_aluminio_retroiluminado" class="form-label">Separadores:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_separadores_aluminio_retroiluminado" name="cn_precio_separadores_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_separadores_aluminio_retroiluminado);?>" required/>
+              </div> 
 
             </div>
 
@@ -206,61 +226,225 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingA3">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA3" aria-expanded="false" aria-controls="collapseA3">
-            <h5 class="card-title" style="text-align: left;">Iluminadas Frontalmente</h5>
+            <h5 class="card-title" style="text-align: left;">Letras Corpóreas de Aluminio Iluminadas Frontalmente</h5>
           </button>
         </h2>
         <div id="collapseA3" class="accordion-collapse collapse" aria-labelledby="headingA3" data-bs-parent="#accordionExample1">
           <div class="accordion-body">
 
-            <h6 class="card-title">Aluminio:</h6>
+            <h6 class="card-title"></h6>
 
             <div class="row">
 
               <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Alumino:</label>
+                <label for="precio_aluminio_iluminado_frontal" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal" name="precio_aluminio_iluminado_frontal" value="<?php echo esc_html($precio_aluminio_iluminado_frontal);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Mano de Obra:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_mano_de_obra" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_mano_de_obra" name="precio_aluminio_iluminado_frontal_mano_de_obra" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_mano_de_obra);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio de la Pintura:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_pintura" class="form-label">Pintura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_pintura" name="precio_aluminio_iluminado_frontal_pintura" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_pintura);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Metacrilato 3mm:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_metacrilato3mm" class="form-label">Metacrilato 3mm:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_metacrilato3mm" name="precio_aluminio_iluminado_frontal_metacrilato3mm" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_metacrilato3mm);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Junquillo:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_junquillo" class="form-label">Junquillo:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_junquillo" name="precio_aluminio_iluminado_frontal_junquillo" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_junquillo);?>" required/>
               </div>
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Iluminación Led:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_led" class="form-label">Precio Iluminación Led:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_led" name="precio_aluminio_iluminado_frontal_led" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_led);?>" required/>
               </div>               
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio Transformador:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_transformador" class="form-label">Transformador:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_transformador" name="precio_aluminio_iluminado_frontal_transformador" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_transformador);?>" required/>
               </div>                                                     
 
-              <div class="col">
-                <label for="cn_pagina" class="form-label">Precio del Corte CNC:</label>
+              <div class="col-sm-2">
+                <label for="precio_aluminio_iluminado_frontal_corte_cnc" class="form-label">Corte CNC:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_corte_cnc" name="precio_aluminio_iluminado_frontal_corte_cnc" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_corte_cnc);?>" required/>
               </div>                  
+
+              <div class="col-sm-2">
+                <label for="cn_precio_doblado_aluminio_iluminado_frontal" class="form-label">Doblado:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_doblado_aluminio_iluminado_frontal" name="cn_precio_doblado_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_doblado_aluminio_iluminado_frontal);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal" class="form-label">10 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal" name="cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" class="form-label">15 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" name="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal);?>" required/>
+              </div> 
 
             </div>
 
           </div>
         </div>
       </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingA6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA6" aria-expanded="false" aria-controls="collapseA3">
+            <h5 class="card-title" style="text-align: left;">Letras Corpóreas de Acero Sin Iluminar</h5>
+          </button>
+        </h2>
+        <div id="collapseA6" class="accordion-collapse collapse" aria-labelledby="headingA6" data-bs-parent="#accordionExample1">
+          <div class="accordion-body">
+
+            <h6 class="card-title"></h6>
+
+            <div class="row">
+
+              <div class="col">
+                <label for="precio_acero" class="form-label">Precio:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero" name="precio_acero" value="<?php echo esc_html($precio_acero);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="precio_acero_mano_de_obra" class="form-label">Soldadura:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_mano_de_obra" name="precio_acero_mano_de_obra" value="<?php echo esc_html($precio_acero_mano_de_obra);?>" required/>
+              </div>                                                 
+
+              <div class="col-sm-2">
+                <label for="precio_acero_corte_cnc" class="form-label">Corte CNC:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_corte_cnc" name="precio_acero_corte_cnc" value="<?php echo esc_html($precio_acero_corte_cnc);?>" required/>
+              </div>                  
+
+              <div class="col-sm-2">
+                <label for="cn_precio_doblado_acero_sin_iluminar" class="form-label">Doblado:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_doblado_acero_sin_iluminar" name="cn_precio_doblado_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_acero_sin_iluminar);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar" class="form-label">10 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar" name="cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar);?>" required/>
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" class="form-label">15 días laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" name="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_sin_iluminar);?>" required/>
+              </div> 
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingA7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA7" aria-expanded="false" aria-controls="collapseA3">
+            <h5 class="card-title" style="text-align: left;">Letras Corpóreas de Acero Retroiluminadas</h5>
+          </button>
+        </h2>
+        <div id="collapseA7" class="accordion-collapse collapse" aria-labelledby="headingA7" data-bs-parent="#accordionExample1">
+          <div class="accordion-body">
+
+            <h6 class="card-title"></h6>
+
+            <div class="row">
+
+              <div class="col-sm-2">
+                <label for="cn_precio_acero_retroiluminado" class="form-label">Precio:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_acero_retroiluminado" name="cn_precio_acero_retroiluminado" value="<?php echo esc_html($cn_precio_acero_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="cn_precio_acero_mano_de_obra_retroiluminado" class="form-label">Mano de Obra:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_acero_mano_de_obra_retroiluminado" name="cn_precio_acero_mano_de_obra_retroiluminado" value="<?php echo esc_html($cn_precio_acero_mano_de_obra_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_metacrilato10mm" class="form-label">Metacrilato 10mm:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_metacrilato10mm" name="precio_acero_retroiluminado_metacrilato10mm" value="<?php echo esc_html($precio_acero_retroiluminado_metacrilato10mm);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_led" class="form-label">Led:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_led" name="precio_acero_retroiluminado_led" value="<?php echo esc_html($precio_acero_retroiluminado_led);?>" required/>
+              </div>              
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_transformador" class="form-label">Transformador:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_transformador" name="precio_acero_retroiluminado_transformador" value="<?php echo esc_html($precio_acero_retroiluminado_transformador);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_corte_cnc" class="form-label">Corte CNC:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_corte_cnc" name="precio_acero_retroiluminado_corte_cnc" value="<?php echo esc_html($precio_acero_retroiluminado_corte_cnc);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_separadores" class="form-label">Precio:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_separadores" name="precio_acero_retroiluminado_separadores" value="<?php echo esc_html($precio_acero_retroiluminado_separadores);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="precio_acero_retroiluminado_doblado" class="form-label">Separadores:</label>
+                <input type="number" step=".01" class="form-control" id="precio_acero_retroiluminado_doblado" name="precio_acero_retroiluminado_doblado" value="<?php echo esc_html($precio_acero_retroiluminado_doblado);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="cn_precio_diezdiaslaboralesLetras_acero_retroiluminado" class="form-label">10 días Laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_retroiluminado" name="cn_precio_diezdiaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_retroiluminado);?>" required/>
+              </div>                
+
+              <div class="col-sm-2">
+                <label for="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" class="form-label">15 días Laborales:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" name="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_retroiluminado);?>" required/>
+              </div>  
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingA4">

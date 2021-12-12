@@ -46,7 +46,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
+            <input onclick="coloresForm('coloresFormAluminio','false');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
             <label class="drinkcard-cc retroiluminadas" for="retroiluminado1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADAS</figcaption>
@@ -55,7 +55,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
+            <input onclick="coloresForm('coloresFormAluminio','false');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
             <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINADAS FRONTALMENTE</figcaption>
@@ -74,7 +74,7 @@
     <div class="card" style="border: 0;">
       <div class="card-body" style="background-color: #D3D3D3">
         
-        <label>Separación de la Pared (Sin Pintar<i class="fas fa-paint-roller"></i>)</label>             
+        <label>Separación de la Pared</label>             
         <div class="cc-selector">
 
 

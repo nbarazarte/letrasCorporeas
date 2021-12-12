@@ -181,14 +181,21 @@
 
   <div class="col-sm-4">
    
-   
     <!--<label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 130 cm)</span>-->
     <input type="hidden" class="" id="ancho" placeholder="Ancho total texto cm" value="98.392" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;width: 200px;">
-    <input type="hidden" class="form-control" id="anchoSVG" value="0" readonly="yes">
-
+  
   </div>
+
+  <div class="col-sm-4">
+  
+    <!--<label for="ancho">Longitud: </label> -->
+    <input type="hidden" class="" id="anchoSVG" placeholder="Longitud total texto cm" value="408.822" readonly="yes" style="height: 50px;padding: 3% 0;
+  border-radius: 14px;
+  border: 3px #ffffff solid;width: 200px;">
+    
+  </div>  
 
 <br/>
   <div id="errorAltoAncho" style="color: red; text-align: center;"></div>

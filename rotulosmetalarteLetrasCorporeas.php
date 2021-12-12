@@ -58,57 +58,82 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'iva_letras', '21' );
     }
 
-    if ( get_option( 'cn_precio_diezdiaslaboralesLetras' ) === false ) {
-        add_option( 'cn_precio_diezdiaslaboralesLetras', '00.00' );
+    if ( get_option( 'previsualizacion' ) === false ) {
+        add_option( 'previsualizacion', '20' );
     }
 
-    if ( get_option( 'cn_precio_quincediaslaboralesLetras' ) === false ) {
-        add_option( 'cn_precio_quincediaslaboralesLetras', '50.00' );
-    }
-
-    //Aluminio:
+    //Aluminio sin iluminar:
     if ( get_option( 'precio_aluminio' ) === false ) {
-        add_option( 'precio_aluminio', '124' );
+        add_option( 'precio_aluminio', '25' );
     }
 
     if ( get_option( 'precio_aluminio_mano_de_obra' ) === false ) {
-        add_option( 'precio_aluminio_mano_de_obra', '1600' );
+        add_option( 'precio_aluminio_mano_de_obra', '20' );
     }
 
-   if ( get_option( 'precio_aluminio_pintura' ) === false ) {
-        add_option( 'precio_aluminio_pintura', '40' );
+    if ( get_option( 'precio_aluminio_pintura' ) === false ) {
+        add_option( 'precio_aluminio_pintura', '20' );
     }
 
-   if ( get_option( 'precio_aluminio_corte_cnc' ) === false ) {
-        add_option( 'precio_aluminio_corte_cnc', '30' );
+    if ( get_option( 'precio_aluminio_corte_cnc' ) === false ) {
+        add_option( 'precio_aluminio_corte_cnc', '0.30' );
     }
+
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar', '100.00' );
+    }
+
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar', '20.00' );
+    }
+
+    if ( get_option( 'cn_precio_doblado_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_doblado_aluminio_sin_iluminar', '20.00' );
+    }    
 
     //Aluminio retroiluminadas:
     if ( get_option( 'precio_aluminio_retroiluminado' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado', '124' );
+        add_option( 'precio_aluminio_retroiluminado', '25' );
     }
 
     if ( get_option( 'precio_aluminio_retroiluminado_mano_de_obra' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado_mano_de_obra', '1600' );
+        add_option( 'precio_aluminio_retroiluminado_mano_de_obra', '20' );
     }
 
-   if ( get_option( 'precio_aluminio_retroiluminado_pintura' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado_pintura', '30' );
+    if ( get_option( 'precio_aluminio_retroiluminado_pintura' ) === false ) {
+        add_option( 'precio_aluminio_retroiluminado_pintura', '20' );
     }  
 
-   if ( get_option( 'precio_aluminio_retroiluminado_metacrilato10mm' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado_metacrilato10mm', '260' );
+    if ( get_option( 'precio_aluminio_retroiluminado_metacrilato10mm' ) === false ) {
+        add_option( 'precio_aluminio_retroiluminado_metacrilato10mm', '65' );
     } 
 
-   if ( get_option( 'precio_aluminio_retroiluminado_led' ) === false ) {
+    if ( get_option( 'precio_aluminio_retroiluminado_led' ) === false ) {
         add_option( 'precio_aluminio_retroiluminado_led', '8' );
     } 
 
-   if ( get_option( 'precio_aluminio_retroiluminado_transformador' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado_transformador', '80' );
+    if ( get_option( 'precio_aluminio_retroiluminado_transformador' ) === false ) {
+        add_option( 'precio_aluminio_retroiluminado_transformador', '40' );
     }                   
-   if ( get_option( 'precio_aluminio_retroiluminado_corte_cnc' ) === false ) {
-        add_option( 'precio_aluminio_retroiluminado_corte_cnc', '30' );
+   
+    if ( get_option( 'precio_aluminio_retroiluminado_corte_cnc' ) === false ) {
+        add_option( 'precio_aluminio_retroiluminado_corte_cnc', '0.30' );
+    }
+
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado', '100.00' );
+    }
+
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado', '20.00' );
+    }
+
+    if ( get_option( 'cn_precio_doblado_aluminio_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_doblado_aluminio_retroiluminado', '20.00' );
+    }
+
+    if ( get_option( 'cn_precio_separadores_aluminio_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_separadores_aluminio_retroiluminado', '10.00' );
     }
 
     //Aluminio Iluminadas frontalmente:
@@ -120,40 +145,120 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'precio_aluminio_iluminado_frontal_mano_de_obra', '1600' );
     }
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_pintura' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_pintura' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_pintura', '40' );
     }  
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_metacrilato3mm' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_metacrilato3mm' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_metacrilato3mm', '79' );
     } 
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_junquillo' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_junquillo' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_junquillo', '8' );
     } 
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_led' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_led' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_led', '8' );
     } 
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_transformador' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_transformador' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_transformador', '80' );
     }   
 
-   if ( get_option( 'precio_aluminio_iluminado_frontal_corte_cnc' ) === false ) {
+    if ( get_option( 'precio_aluminio_iluminado_frontal_corte_cnc' ) === false ) {
         add_option( 'precio_aluminio_iluminado_frontal_corte_cnc', '30' );
-    }    
+    }   
 
-    //Letras corporeas PVC:
+    if ( get_option( 'cn_precio_doblado_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'cn_precio_doblado_aluminio_iluminado_frontal', '20.00' );
+    }
+
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal', '100.00' );
+    }
+
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal', '20.00' );
+    }
+
+    //Letras corpóreas de Acero sin iluminar:
+    if ( get_option( 'precio_acero' ) === false ) {
+        add_option( 'precio_acero', '50' );
+    }
+
+    if ( get_option( 'precio_acero_mano_de_obra' ) === false ) {
+        add_option( 'precio_acero_mano_de_obra', '30' );
+    }
+
+    if ( get_option( 'precio_acero_corte_cnc' ) === false ) {
+        add_option( 'precio_acero_corte_cnc', '0.30' );
+    }
+
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar', '100.00' );
+    }
+
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar', '20.00' );
+    }
+
+    if ( get_option( 'cn_precio_doblado_acero_sin_iluminar' ) === false ) {
+        add_option( 'cn_precio_doblado_acero_sin_iluminar', '20.00' );
+    }   
+
+    //Letras corpóreas de Acero retroiluminado:
+    if ( get_option( 'cn_precio_acero_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_acero_retroiluminado', '50.00' );
+    }  
+
+    if ( get_option( 'cn_precio_acero_mano_de_obra_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_acero_mano_de_obra_retroiluminado', '30.00' );
+    }  
+
+    if ( get_option( 'precio_acero_retroiluminado_metacrilato10mm' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_metacrilato10mm', '65.00' );
+    }  
+
+    if ( get_option( 'precio_acero_retroiluminado_led' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_led', '8.00' );
+    } 
+
+    if ( get_option( 'precio_acero_retroiluminado_transformador' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_transformador', '40.00' );
+    } 
+
+    if ( get_option( 'precio_acero_retroiluminado_corte_cnc' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_corte_cnc', '0.30' );
+    } 
+
+    if ( get_option( 'precio_acero_retroiluminado_separadores' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_separadores', '10.00' );
+    } 
+
+    if ( get_option( 'precio_acero_retroiluminado_doblado' ) === false ) {
+        add_option( 'precio_acero_retroiluminado_doblado', '20.00' );
+    } 
+
+    if ( get_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado', '100.00' );
+    } 
+
+    if ( get_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado' ) === false ) {
+        add_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado', '20.00' );
+    } 
+
+    //Letras corpóreas de acero iluminación frontal:
+
+    //Letras corpóreas PVC:
     if ( get_option( 'precio_pvc_5mm' ) === false ) {
         add_option( 'precio_pvc_5mm', '31' );
     }
 
-   if ( get_option( 'precio_pvc_10mm' ) === false ) {
+    if ( get_option( 'precio_pvc_10mm' ) === false ) {
         add_option( 'precio_pvc_10mm', '61' );
     } 
 
-   if ( get_option( 'precio_pvc_19mm' ) === false ) {
+    if ( get_option( 'precio_pvc_19mm' ) === false ) {
         add_option( 'precio_pvc_19mm', '45' );
     } 
     
@@ -161,11 +266,11 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'precio_pvc_mano_de_obra', '1600' );
     }
 
-   if ( get_option( 'precio_pvc_pintura' ) === false ) {
+    if ( get_option( 'precio_pvc_pintura' ) === false ) {
         add_option( 'precio_pvc_pintura', '160' );
     }  
     
-   if ( get_option( 'precio_pvc_led' ) === false ) {
+    if ( get_option( 'precio_pvc_led' ) === false ) {
         add_option( 'precio_pvc_led', '8' );
     } 
 
@@ -173,27 +278,28 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'precio_pvc_transformador', '50' );
     }
 
-   if ( get_option( 'precio_pvc_corte_cnc' ) === false ) {
+    if ( get_option( 'precio_pvc_corte_cnc' ) === false ) {
         add_option( 'precio_pvc_corte_cnc', '30' );
     }             
 
-    //Letras Corporeas de metacrilatos huecas:  
+    //Letras corpóreas de metacrilatos huecas:  
     if ( get_option( 'precio_metacrilato_huecas_mano_de_obra' ) === false ) {
         add_option( 'precio_metacrilato_huecas_mano_de_obra', '1600' );
     } 
 
-   if ( get_option( 'precio_metacrilato_huecas_metacrilato3mm' ) === false ) {
+    if ( get_option( 'precio_metacrilato_huecas_metacrilato3mm' ) === false ) {
         add_option( 'precio_metacrilato_huecas_metacrilato3mm', '80' );
     } 
 
-   if ( get_option( 'precio_metacrilato_huecas_led' ) === false ) {
+    if ( get_option( 'precio_metacrilato_huecas_led' ) === false ) {
         add_option( 'precio_metacrilato_huecas_led', '8' );
     } 
 
-   if ( get_option( 'precio_metacrilato_huecas_transformador' ) === false ) {
+    if ( get_option( 'precio_metacrilato_huecas_transformador' ) === false ) {
         add_option( 'precio_metacrilato_huecas_transformador', '80' );
-    }                   
-   if ( get_option( 'precio_metacrilato_huecas_corte_cnc' ) === false ) {
+    } 
+
+    if ( get_option( 'precio_metacrilato_huecas_corte_cnc' ) === false ) {
         add_option( 'precio_metacrilato_huecas_corte_cnc', '30' );
     }     
 }
@@ -215,14 +321,16 @@ function cn_genera_pagina_letrasCorporeas() {
   // Conseguir el valor del Precio base de todos los elementos:
   $cn_id_producto_personalizado_letras                  = get_option( 'cn_id_producto_personalizado_letras' ) ;
   $iva_letras                                           = get_option( 'iva_letras' ) ;
-  $cn_precio_diezdiaslaboralesLetras                    = get_option( 'cn_precio_diezdiaslaboralesLetras' ) ;
-  $cn_precio_quincediaslaboralesLetras                  = get_option( 'cn_precio_quincediaslaboralesLetras' ) ;
+  $previsualizacion                                     = get_option( 'previsualizacion' ) ;
 
-  //Aluminio:
+  //Aluminio sin iluminar:
   $precio_aluminio                                      = get_option( 'precio_aluminio' );
   $precio_aluminio_mano_de_obra                         = get_option( 'precio_aluminio_mano_de_obra' );
   $precio_aluminio_pintura                              = get_option( 'precio_aluminio_pintura' );
   $precio_aluminio_corte_cnc                            = get_option( 'precio_aluminio_corte_cnc' );
+  $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar   = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar' ) ;
+  $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar' ) ;
+  $cn_precio_doblado_aluminio_sin_iluminar              = get_option( 'cn_precio_doblado_aluminio_sin_iluminar' ) ;  
 
   //Aluminio retroiluminadas:
   $precio_aluminio_retroiluminado                       = get_option( 'precio_aluminio_retroiluminado' ); 
@@ -232,6 +340,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $precio_aluminio_retroiluminado_led                   = get_option( 'precio_aluminio_retroiluminado_led' );
   $precio_aluminio_retroiluminado_transformador         = get_option( 'precio_aluminio_retroiluminado_transformador' );
   $precio_aluminio_retroiluminado_corte_cnc             = get_option( 'precio_aluminio_retroiluminado_corte_cnc' );
+  $cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado    = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado' );
+  $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado  = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado' );
+  $cn_precio_doblado_aluminio_retroiluminado                    = get_option( 'cn_precio_doblado_aluminio_retroiluminado' );
+  $cn_precio_separadores_aluminio_retroiluminado                = get_option( 'cn_precio_separadores_aluminio_retroiluminado' );
 
   //Aluminio Iluminadas frontalmente:
   $precio_aluminio_iluminado_frontal                    = get_option( 'precio_aluminio_iluminado_frontal' );
@@ -242,8 +354,31 @@ function cn_genera_pagina_letrasCorporeas() {
   $precio_aluminio_iluminado_frontal_led                = get_option( 'precio_aluminio_iluminado_frontal_led' );
   $precio_aluminio_iluminado_frontal_transformador      = get_option( 'precio_aluminio_iluminado_frontal_transformador' );
   $precio_aluminio_iluminado_frontal_corte_cnc          = get_option( 'precio_aluminio_iluminado_frontal_corte_cnc' ); 
+  $cn_precio_doblado_aluminio_iluminado_frontal         = get_option( 'cn_precio_doblado_aluminio_iluminado_frontal' ); 
+  $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal     = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal' ); 
+  $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal   = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal' ); 
 
-  //Letras corporeas PVC:
+  //Letras córporeas de Acero sin iluminar: 
+  $precio_acero                                           = get_option( 'precio_acero' );
+  $precio_acero_mano_de_obra                              = get_option( 'precio_acero_mano_de_obra' );
+  $precio_acero_corte_cnc                                 = get_option( 'precio_acero_corte_cnc' );
+  $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar' );
+  $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar = get_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar' );
+  $cn_precio_doblado_acero_sin_iluminar                   = get_option( 'cn_precio_doblado_acero_sin_iluminar' );
+
+  //Letras córporeas de Acero retroiluminado:
+  $cn_precio_acero_retroiluminado                           = get_option( 'cn_precio_acero_retroiluminado' );
+  $cn_precio_acero_mano_de_obra_retroiluminado              = get_option( 'cn_precio_acero_mano_de_obra_retroiluminado' );
+  $precio_acero_retroiluminado_metacrilato10mm              = get_option( 'precio_acero_retroiluminado_metacrilato10mm' );
+  $precio_acero_retroiluminado_led                          = get_option( 'precio_acero_retroiluminado_led' );
+  $precio_acero_retroiluminado_transformador                = get_option( 'precio_acero_retroiluminado_transformador' );
+  $precio_acero_retroiluminado_corte_cnc                    = get_option( 'precio_acero_retroiluminado_corte_cnc' );
+  $precio_acero_retroiluminado_separadores                  = get_option( 'precio_acero_retroiluminado_separadores' );
+  $precio_acero_retroiluminado_doblado                      = get_option( 'precio_acero_retroiluminado_doblado' );
+  $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado' );
+  $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado' );
+
+  //Letras corpóreas PVC:
   $precio_pvc_5mm                                       = get_option( 'precio_pvc_5mm' );
   $precio_pvc_10mm                                      = get_option( 'precio_pvc_10mm' );
   $precio_pvc_19mm                                      = get_option( 'precio_pvc_19mm' );
@@ -253,7 +388,7 @@ function cn_genera_pagina_letrasCorporeas() {
   $precio_pvc_transformador                             = get_option( 'precio_pvc_transformador' );
   $precio_pvc_corte_cnc                                 = get_option( 'precio_pvc_corte_cnc' );  
 
-  //Letras Corporeas de metacrilatos huecas:
+  //Letras corpóreas de metacrilatos huecas:
   $precio_metacrilato_huecas_mano_de_obra               = get_option( 'precio_metacrilato_huecas_mano_de_obra' );
   $precio_metacrilato_huecas_metacrilato3mm             = get_option( 'precio_metacrilato_huecas_metacrilato3mm' );
   $precio_metacrilato_huecas_led                        = get_option( 'precio_metacrilato_huecas_led' );
@@ -277,14 +412,15 @@ function cn_guardar_ga_LetrasCorporeas() {
     //Limpiar valor, para prevenir problemas de seguridad
     $cn_id_producto_personalizado_letras                  = sanitize_text_field( $_POST['cn_id_producto_personalizado_letras'] );
     $iva_letras                                           = sanitize_text_field( $_POST['iva_letras'] );
-    $cn_precio_diezdiaslaboralesLetras                    = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras'] );
-    $cn_precio_quincediaslaboralesLetras                  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras'] );
-
+    $previsualizacion                                     = sanitize_text_field( $_POST['previsualizacion'] );
     //Aluminio Sin Iluminar:
     $precio_aluminio                                      = sanitize_text_field( $_POST['precio_aluminio'] );
     $precio_aluminio_mano_de_obra                         = sanitize_text_field( $_POST['precio_aluminio_mano_de_obra'] );
     $precio_aluminio_pintura                              = sanitize_text_field( $_POST['precio_aluminio_pintura'] );
     $precio_aluminio_corte_cnc                            = sanitize_text_field( $_POST['precio_aluminio_corte_cnc'] );
+    $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar   = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar'] );
+    $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar'] );
+    $cn_precio_doblado_aluminio_sin_iluminar              = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_sin_iluminar'] );
     //Aluminio retroiluminadas:
     $precio_aluminio_retroiluminado                       = sanitize_text_field( $_POST['precio_aluminio_retroiluminado'] );
     $precio_aluminio_retroiluminado_mano_de_obra          = sanitize_text_field( $_POST['precio_aluminio_retroiluminado_mano_de_obra'] );
@@ -293,6 +429,11 @@ function cn_guardar_ga_LetrasCorporeas() {
     $precio_aluminio_retroiluminado_led                   = sanitize_text_field( $_POST['precio_aluminio_retroiluminado_led'] );
     $precio_aluminio_retroiluminado_transformador         = sanitize_text_field( $_POST['precio_aluminio_retroiluminado_transformador'] );
     $precio_aluminio_retroiluminado_corte_cnc             = sanitize_text_field( $_POST['precio_aluminio_retroiluminado_corte_cnc'] );
+    $cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado    = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado'] );
+    $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado'] );
+    $cn_precio_doblado_aluminio_retroiluminado                    = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_retroiluminado'] );
+    $cn_precio_separadores_aluminio_retroiluminado                = sanitize_text_field( $_POST['cn_precio_separadores_aluminio_retroiluminado'] );
+
     //Aluminio Iluminadas frontalmente:
     $precio_aluminio_iluminado_frontal                    = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal'] );
     $precio_aluminio_iluminado_frontal_mano_de_obra       = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal_mano_de_obra'] );
@@ -302,7 +443,31 @@ function cn_guardar_ga_LetrasCorporeas() {
     $precio_aluminio_iluminado_frontal_led                = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal_led'] );
     $precio_aluminio_iluminado_frontal_transformador      = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal_transformador'] );
     $precio_aluminio_iluminado_frontal_corte_cnc          = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal_corte_cnc'] );
-    //Letras corporeas PVC:
+    $cn_precio_doblado_aluminio_iluminado_frontal         = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_iluminado_frontal'] );
+    $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal'] );
+    $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal'] );
+
+    //Letras corpóreas de Acero sin iluminar:
+    $precio_acero                                            = sanitize_text_field( $_POST['precio_acero'] );
+    $precio_acero_mano_de_obra                               = sanitize_text_field( $_POST['precio_acero_mano_de_obra'] );
+    $precio_acero_corte_cnc                                  = sanitize_text_field( $_POST['precio_acero_corte_cnc'] );
+    $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar    = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar'] );
+    $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_acero_sin_iluminar'] );
+    $cn_precio_doblado_acero_sin_iluminar                    = sanitize_text_field( $_POST['cn_precio_doblado_acero_sin_iluminar'] );
+
+    //Letras corpóreas de Acero retroiluminado:
+    $cn_precio_acero_retroiluminado                           = sanitize_text_field( $_POST['cn_precio_acero_retroiluminado'] );
+    $cn_precio_acero_mano_de_obra_retroiluminado              = sanitize_text_field( $_POST['cn_precio_acero_mano_de_obra_retroiluminado'] );
+    $precio_acero_retroiluminado_metacrilato10mm              = sanitize_text_field( $_POST['precio_acero_retroiluminado_metacrilato10mm'] );
+    $precio_acero_retroiluminado_led                          = sanitize_text_field( $_POST['precio_acero_retroiluminado_led'] );
+    $precio_acero_retroiluminado_transformador                = sanitize_text_field( $_POST['precio_acero_retroiluminado_transformador'] );
+    $precio_acero_retroiluminado_corte_cnc                    = sanitize_text_field( $_POST['precio_acero_retroiluminado_corte_cnc'] );
+    $precio_acero_retroiluminado_separadores                  = sanitize_text_field( $_POST['precio_acero_retroiluminado_separadores'] );
+    $precio_acero_retroiluminado_doblado                      = sanitize_text_field( $_POST['precio_acero_retroiluminado_doblado'] );
+    $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_acero_retroiluminado'] );
+    $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_acero_retroiluminado'] );
+
+    //Letras corpóreas PVC:
     $precio_pvc_5mm                                       = sanitize_text_field( $_POST['precio_pvc_5mm'] );
     $precio_pvc_10mm                                      = sanitize_text_field( $_POST['precio_pvc_10mm'] );
     $precio_pvc_19mm                                      = sanitize_text_field( $_POST['precio_pvc_19mm'] );
@@ -311,24 +476,28 @@ function cn_guardar_ga_LetrasCorporeas() {
     $precio_pvc_led                                       = sanitize_text_field( $_POST['precio_pvc_led'] );
     $precio_pvc_transformador                             = sanitize_text_field( $_POST['precio_pvc_transformador'] );
     $precio_pvc_corte_cnc                                 = sanitize_text_field( $_POST['precio_pvc_corte_cnc'] );
-    //Letras Corporeas de metacrilatos huecas:
+
+    //Letras córporeas de metacrilatos huecas:
     $precio_metacrilato_huecas_mano_de_obra               = sanitize_text_field( $_POST['precio_metacrilato_huecas_mano_de_obra'] );
     $precio_metacrilato_huecas_metacrilato3mm             = sanitize_text_field( $_POST['precio_metacrilato_huecas_metacrilato3mm'] );
     $precio_metacrilato_huecas_led                        = sanitize_text_field( $_POST['precio_metacrilato_huecas_led'] );
     $precio_metacrilato_huecas_transformador              = sanitize_text_field( $_POST['precio_metacrilato_huecas_transformador'] );
     $precio_metacrilato_huecas_corte_cnc                  = sanitize_text_field( $_POST['precio_metacrilato_huecas_corte_cnc'] );
 
-
     // Guardar en la base de datos
     update_option( 'cn_id_producto_personalizado_letras', $cn_id_producto_personalizado_letras );
     update_option( 'iva_letras', $iva_letras );
-    update_option( 'cn_precio_diezdiaslaboralesLetras', $cn_precio_diezdiaslaboralesLetras );
-    update_option( 'cn_precio_quincediaslaboralesLetras', $cn_precio_quincediaslaboralesLetras );    
-    //Aluminio:
+    update_option( 'previsualizacion', $previsualizacion );
+
+    //Aluminio sin iluminar:
     update_option( 'precio_aluminio', $precio_aluminio );
     update_option( 'precio_aluminio_mano_de_obra', $precio_aluminio_mano_de_obra );
     update_option( 'precio_aluminio_pintura', $precio_aluminio_pintura );
     update_option( 'precio_aluminio_corte_cnc', $precio_aluminio_corte_cnc );
+    update_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar', $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar );
+    update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar', $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar );    
+    update_option( 'cn_precio_doblado_aluminio_sin_iluminar', $cn_precio_doblado_aluminio_sin_iluminar );   
+
     //Aluminio retroiluminadas:    
     update_option( 'precio_aluminio_retroiluminado', $precio_aluminio_retroiluminado );
     update_option( 'precio_aluminio_retroiluminado_mano_de_obra', $precio_aluminio_retroiluminado_mano_de_obra );
@@ -337,6 +506,11 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'precio_aluminio_retroiluminado_led', $precio_aluminio_retroiluminado_led );
     update_option( 'precio_aluminio_retroiluminado_transformador', $precio_aluminio_retroiluminado_transformador );
     update_option( 'precio_aluminio_retroiluminado_corte_cnc', $precio_aluminio_retroiluminado_corte_cnc );
+    update_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado', $cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado );
+    update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado', $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado );
+    update_option( 'cn_precio_doblado_aluminio_retroiluminado', $cn_precio_doblado_aluminio_retroiluminado );
+    update_option( 'cn_precio_separadores_aluminio_retroiluminado', $cn_precio_separadores_aluminio_retroiluminado );
+
     //Aluminio Iluminadas frontalmente:    
     update_option( 'precio_aluminio_iluminado_frontal', $precio_aluminio_iluminado_frontal );
     update_option( 'precio_aluminio_iluminado_frontal_mano_de_obra', $precio_aluminio_iluminado_frontal_mano_de_obra );
@@ -346,7 +520,31 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'precio_aluminio_iluminado_frontal_led', $precio_aluminio_iluminado_frontal_led );
     update_option( 'precio_aluminio_iluminado_frontal_transformador', $precio_aluminio_iluminado_frontal_transformador );
     update_option( 'precio_aluminio_iluminado_frontal_corte_cnc', $precio_aluminio_iluminado_frontal_corte_cnc );
-    //Letras corporeas PVC:    
+    update_option( 'cn_precio_doblado_aluminio_iluminado_frontal', $cn_precio_doblado_aluminio_iluminado_frontal );
+    update_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal', $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal );
+    update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal', $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal );
+
+    //Letras corpóreas Acero sin iluminar:
+    update_option( 'precio_acero', $precio_acero );
+    update_option( 'precio_acero_mano_de_obra', $precio_acero_mano_de_obra );
+    update_option( 'precio_acero_corte_cnc', $precio_acero_corte_cnc );
+    update_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar', $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar );
+    update_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar', $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar );
+    update_option( 'cn_precio_doblado_acero_sin_iluminar', $cn_precio_doblado_acero_sin_iluminar );
+
+    //Letras corpóreas Acero retroiluminado:
+    update_option( 'cn_precio_acero_retroiluminado', $cn_precio_acero_retroiluminado );
+    update_option( 'cn_precio_acero_mano_de_obra_retroiluminado', $cn_precio_acero_mano_de_obra_retroiluminado );
+    update_option( 'precio_acero_retroiluminado_metacrilato10mm', $precio_acero_retroiluminado_metacrilato10mm );
+    update_option( 'precio_acero_retroiluminado_led', $precio_acero_retroiluminado_led );
+    update_option( 'precio_acero_retroiluminado_transformador', $precio_acero_retroiluminado_transformador );
+    update_option( 'precio_acero_retroiluminado_corte_cnc', $precio_acero_retroiluminado_corte_cnc );
+    update_option( 'precio_acero_retroiluminado_separadores', $precio_acero_retroiluminado_separadores );
+    update_option( 'precio_acero_retroiluminado_doblado', $precio_acero_retroiluminado_doblado );
+    update_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado', $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado );
+    update_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado', $cn_precio_quincediaslaboralesLetras_acero_retroiluminado );
+
+    //Letras corpóreas PVC:    
     update_option( 'precio_pvc_5mm', $precio_pvc_5mm );
     update_option( 'precio_pvc_10mm', $precio_pvc_10mm );
     update_option( 'precio_pvc_19mm', $precio_pvc_19mm );
@@ -355,13 +553,13 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'precio_pvc_led', $precio_pvc_led );
     update_option( 'precio_pvc_transformador', $precio_pvc_transformador );
     update_option( 'precio_pvc_corte_cnc', $precio_pvc_corte_cnc );
-    //Letras Corporeas de metacrilatos huecas:
+
+    //Letras corpóreas de metacrilatos huecas:
     update_option( 'precio_metacrilato_huecas_mano_de_obra', $precio_metacrilato_huecas_mano_de_obra );
     update_option( 'precio_metacrilato_huecas_metacrilato3mm', $precio_metacrilato_huecas_metacrilato3mm );
     update_option( 'precio_metacrilato_huecas_led', $precio_metacrilato_huecas_led );
     update_option( 'precio_metacrilato_huecas_transformador', $precio_metacrilato_huecas_transformador ); 
     update_option( 'precio_metacrilato_huecas_corte_cnc', $precio_metacrilato_huecas_corte_cnc );     
-
 
     // Regresamos a la pagina de ajustes
     wp_redirect(
@@ -375,7 +573,6 @@ function cn_guardar_ga_LetrasCorporeas() {
     exit;
 }
 
-
 add_action('wp_ajax_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorporeas');
 add_action('wp_ajax_nopriv_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorporeas');
 
@@ -383,7 +580,6 @@ add_action('wp_ajax_nopriv_jnjtest_LetrasCorporeas', 'jnj_mi_funcion_LetrasCorpo
 // en el formato que queramos..
 function jnj_mi_funcion_LetrasCorporeas()
 {
-
     $fuente = $_POST['fuenteLetras'];
     $color = $_POST['color'];
 
@@ -434,7 +630,6 @@ function jnj_mi_funcion_LetrasCorporeas()
   wp_die();
 }
 
-
 //Aqui se muestra el formulario de personalización del rotulo de neon:
 /**
  * Output engraving field.
@@ -454,14 +649,17 @@ function iconic_output_engraving_field_LetrasCorporeas() {
       // Conseguir el valor del Precio base de todos los elementos:
 
         $iva_letras                                           = get_option( 'iva_letras' ) ;
-        $cn_precio_diezdiaslaboralesLetras                    = get_option( 'cn_precio_diezdiaslaboralesLetras' ) ;
-        $cn_precio_quincediaslaboralesLetras                  = get_option( 'cn_precio_quincediaslaboralesLetras' ) ;
+        $previsualizacion                                     = get_option( 'previsualizacion' ) ;
 
-        //Aluminio:
+        //Aluminio sin iluminar:
         $precio_aluminio                                      = get_option( 'precio_aluminio' ) ;
         $precio_aluminio_mano_de_obra                         = get_option( 'precio_aluminio_mano_de_obra' ) ;
         $precio_aluminio_pintura                              = get_option( 'precio_aluminio_pintura' ) ;
         $precio_aluminio_corte_cnc                            = get_option( 'precio_aluminio_corte_cnc' ) ;
+        $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar    = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar' ) ;
+        $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar  = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar' ) ;
+        $cn_precio_doblado_aluminio_sin_iluminar              = get_option( 'cn_precio_doblado_aluminio_sin_iluminar' ) ;
+
         //Aluminio retroiluminadas:
         $precio_aluminio_retroiluminado                       = get_option( 'precio_aluminio_retroiluminado' ) ;
         $precio_aluminio_retroiluminado_mano_de_obra          = get_option( 'precio_aluminio_retroiluminado_mano_de_obra' ) ;
@@ -470,6 +668,11 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $precio_aluminio_retroiluminado_led                   = get_option( 'precio_aluminio_retroiluminado_led' ) ;
         $precio_aluminio_retroiluminado_transformador         = get_option( 'precio_aluminio_retroiluminado_transformador' ) ;
         $precio_aluminio_retroiluminado_corte_cnc             = get_option( 'precio_aluminio_retroiluminado_corte_cnc' ) ;
+        $cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado   = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado' ) ;
+        $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado' ) ;
+        $cn_precio_doblado_aluminio_retroiluminado                   = get_option( 'cn_precio_doblado_aluminio_retroiluminado' ) ;
+        $cn_precio_separadores_aluminio_retroiluminado               = get_option( 'cn_precio_separadores_aluminio_retroiluminado' ) ;
+
         //Aluminio Iluminadas frontalmente:
         $precio_aluminio_iluminado_frontal                    = get_option( 'precio_aluminio_iluminado_frontal' ) ;
         $precio_aluminio_iluminado_frontal_mano_de_obra       = get_option( 'precio_aluminio_iluminado_frontal_mano_de_obra' ) ;
@@ -479,7 +682,31 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $precio_aluminio_iluminado_frontal_led                = get_option( 'precio_aluminio_iluminado_frontal_led' ) ;
         $precio_aluminio_iluminado_frontal_transformador      = get_option( 'precio_aluminio_iluminado_frontal_transformador' ) ;
         $precio_aluminio_iluminado_frontal_corte_cnc          = get_option( 'precio_aluminio_iluminado_frontal_corte_cnc' ) ;
-        //Letras corporeas PVC:
+        $cn_precio_doblado_aluminio_iluminado_frontal         = get_option( 'cn_precio_doblado_aluminio_iluminado_frontal' ) ;
+        $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal   = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal' ) ;
+        $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal' ) ;
+
+        //Letras corpóreas Acero sin iluminar:
+        $precio_acero                                            = get_option( 'precio_acero' ) ;
+        $precio_acero_mano_de_obra                               = get_option( 'precio_acero_mano_de_obra' ) ;
+        $precio_acero_corte_cnc                                  = get_option( 'precio_acero_corte_cnc' ) ;
+        $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar    = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar' ) ;
+        $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar  = get_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar' ) ;
+        $cn_precio_doblado_acero_sin_iluminar                    = get_option( 'cn_precio_doblado_acero_sin_iluminar' ) ;
+
+        //Letras corpóreas Acero retroiluminado:
+        $cn_precio_acero_retroiluminado                           = get_option( 'cn_precio_acero_retroiluminado' ) ;
+        $cn_precio_acero_mano_de_obra_retroiluminado              = get_option( 'cn_precio_acero_mano_de_obra_retroiluminado' ) ;
+        $precio_acero_retroiluminado_metacrilato10mm              = get_option( 'precio_acero_retroiluminado_metacrilato10mm' ) ;
+        $precio_acero_retroiluminado_led                          = get_option( 'precio_acero_retroiluminado_led' ) ;
+        $precio_acero_retroiluminado_transformador                = get_option( 'precio_acero_retroiluminado_transformador' ) ;
+        $precio_acero_retroiluminado_corte_cnc                    = get_option( 'precio_acero_retroiluminado_corte_cnc' ) ;
+        $precio_acero_retroiluminado_separadores                  = get_option( 'precio_acero_retroiluminado_separadores' ) ;
+        $precio_acero_retroiluminado_doblado                      = get_option( 'precio_acero_retroiluminado_doblado' ) ;
+        $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado' ) ;
+        $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado' ) ;
+
+        //Letras corpóreas PVC:
         $precio_pvc_5mm                                       = get_option( 'precio_pvc_5mm' ) ;
         $precio_pvc_10mm                                      = get_option( 'precio_pvc_10mm' ) ;
         $precio_pvc_19mm                                      = get_option( 'precio_pvc_19mm' ) ;
@@ -488,7 +715,8 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $precio_pvc_led                                       = get_option( 'precio_pvc_led' ) ;
         $precio_pvc_transformador                             = get_option( 'precio_pvc_transformador' ) ;
         $precio_pvc_corte_cnc                                 = get_option( 'precio_pvc_corte_cnc' ) ;
-        //Letras Corporeas de metacrilatos huecas:
+
+        //Letras corpóreas de metacrilatos huecas:
         $precio_metacrilato_huecas_mano_de_obra               = get_option( 'precio_metacrilato_huecas_mano_de_obra' ) ;
         $precio_metacrilato_huecas_metacrilato3mm             = get_option( 'precio_metacrilato_huecas_metacrilato3mm' ) ;
         $precio_metacrilato_huecas_led                        = get_option( 'precio_metacrilato_huecas_led' ) ;
@@ -496,7 +724,6 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $precio_metacrilato_huecas_corte_cnc                  = get_option( 'precio_metacrilato_huecas_corte_cnc' ) ;
 
       require('formularioCustomizer.php');
-
 }
 
 add_action( 'woocommerce_before_single_product', 'iconic_output_engraving_field_LetrasCorporeas', 10 );
