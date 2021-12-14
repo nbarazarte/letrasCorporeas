@@ -13,6 +13,7 @@
     </select>
 
   </div>
+
   <div class="col-sm-4">
 
     <label for="alto">Tipo de letra:</label>
@@ -84,8 +85,6 @@
   </div>
 -->
 
-
-
   <div class="col-sm-4">
       <label for="rotulo">Escríbe tu texto aquí:</label>
       <input type="text" class="" id="rotulo" placeholder="Tu texto" value="Rótulos Metalarte" onkeyup="deshabiltarBotonCart()" style="height: 50px;padding: 3% 0;
@@ -102,20 +101,13 @@
     
   </div>
 
-
-
   <div class="col-sm-4">
 
     <div id="selectGrosorAluminio">
 
       <label for="grosor">Profundidad:</label>
       <select form="" class="form-select" id="grosorAluminio" style="height: 50px;padding: 3% 0;border-radius: 14px;border: 3px #ffffff solid;width: 200px;">
-<!--
-        <option style="font-size: 20px"value="No Aplica">No Aplica</option>
-        <option style="font-size: 20px"value="Metacrilato 3 mm">3 mm</option>
-        <option style="font-size: 20px"value="Metacrilato 10 mm">10 mm</option>
-      -->
-        
+
         <option style="font-size: 20px"value="30 mm">30 mm</option>
         <option style="font-size: 20px"value="50 mm">50 mm</option>
         <option style="font-size: 20px"value="80 mm">80 mm</option>
@@ -177,25 +169,28 @@
 
   </div>
 
-</div>
-
   <div class="col-sm-4">
    
-    <!--<label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 130 cm)</span>-->
-    <input type="hidden" class="" id="ancho" placeholder="Ancho total texto cm" value="98.392" readonly="yes" style="height: 50px;padding: 3% 0;
+    <label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 130 cm)</span>
+    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="73.772" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;width: 200px;">
   
   </div>
 
+<!--
   <div class="col-sm-4">
   
-    <!--<label for="ancho">Longitud: </label> -->
-    <input type="hidden" class="" id="anchoSVG" placeholder="Longitud total texto cm" value="408.822" readonly="yes" style="height: 50px;padding: 3% 0;
-  border-radius: 14px;
-  border: 3px #ffffff solid;width: 200px;">
+    <label for="ancho">Longitud: </label>
+
     
   </div>  
+-->
+    <input type="hidden" class="" id="anchoSVG" placeholder="Longitud total texto cm" value="408.822" readonly="yes" style="height: 50px;padding: 3% 0;
+  border-radius: 14px;
+  border: 3px #ffffff solid;width: 200px;">  
+
+</div>
 
 <br/>
-  <div id="errorAltoAncho" style="color: red; text-align: center;"></div>
+<div id="errorAltoAncho" style="color: red; text-align: center;"></div>

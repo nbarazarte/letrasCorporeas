@@ -72,6 +72,7 @@
 
           </figure>
 
+        <!--
           <figure class="figure">
 
             <input onclick="" type="radio" name="opcionesPVC" id="iluminacionFrontal4" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
@@ -80,6 +81,7 @@
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
 
           </figure>
+        -->
 
         </div>
 
@@ -196,24 +198,29 @@
             <div class="cc-selector">
               
               <!-- Pantone -->
+              <!--
               <figure class="figure">
 
-                <!-- Button trigger modal -->
+                
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#pantone" onclick="deshabiltarBotonCart()">
                   <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/pantone.png'?>" width="75" title="Pantone"/>
                 </button>
 
               </figure>
+            -->
 
               <!-- NCS -->
+
+             <!-- 
               <figure class="figure">
 
-                <!-- Button trigger modal -->
+                
                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ncs">
                   <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ncs.png'?>" width="75" title="NCS"/>
                 </button>
 
               </figure>
+            -->
 
               <!-- RAL -->
               <figure class="figure">

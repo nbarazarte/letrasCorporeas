@@ -38,17 +38,31 @@ function jQueryDoSomethingAJAX() {
     var letraCorporeaText = y[x].text;
     var letraCorporea = y[x].value;
 
-    var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    //Ancho y Alto en centímetros:
+    var anchocm = document.getElementById("ancho").value;
     var alturacm = document.getElementById("altura").value;
 
-    var anchoM2 = anchocm/1000;
+    var areaCm = Number(anchocm) * Number(alturacm);
+    var areaM = Number(areaCm) / 100;
+
+    var areaCm2 = Number(areaCm) * Number(areaCm);
+    var areaM2 = Number(areaCm2) / 10000;
+
+    //Centímetros cuadrados:
+    var anchocm2 = Number(anchocm) * Number(anchocm);
+
+    //Metros cuadrados
+    var anchoM2 = Number(anchocm2)/10000;
+
+    //Metros lineales:
+    var anchoM  = Number(anchocm)/100;
 
     //ancho del SVG:
+    
     var anchoSVG = document.getElementById('anchoSVG').value;
     var anchoSVGCorreccion = anchoSVG * 0.76;
+    var anchoSVGM2 = anchoSVGCorreccion/10000;
 
-    var anchoSVGM2 = anchoSVGCorreccion/1000;
-   
     document.getElementById('impuesto').value = document.getElementById('iva_letras').value;
     
     var previsualizacion = Number(document.getElementById("previsualizacion").value);
@@ -111,8 +125,6 @@ function jQueryDoSomethingAJAX() {
         var opciones = txt;
         var sujecion = 'No Aplica';    
 
-
-
         if(opciones == "Sin Luz" ){
 
             if(tiemposEntregaText == "10 días laborables"){
@@ -129,16 +141,22 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById("precio_aluminio_corte_cnc").value);
             var e = Number(document.getElementById("cn_precio_doblado_aluminio_sin_iluminar").value);
 
-            var totalAluminio   = Number(a * anchoM2);
-            var totalPintura    = Number(c * anchoM2);
-            var totalCorte      = Number(d * anchoSVGM2);
+            var totalAluminio   = Number(a * areaM2.toFixed(2));
+            var totalPintura    = Number(c * areaM2.toFixed(2));
+            var totalCorte      = Number(d * areaM.toFixed(2));
             var soldadura       = Number(b);
             var doblado         = Number(e);
             
-            console.log("Total Aluminio "+ totalAluminio);
-            console.log("Total Pintura " + totalPintura);
-            console.log("Total Corte " + totalCorte);
-            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Area metros: "+ areaM.toFixed(2));
+            console.log("Area metros2: "+ areaM2.toFixed(2));
+
+            console.log("Total Aluminio: "+ totalAluminio + " = " + a +" x "+ areaM2.toFixed(2));
+            console.log("Total Pintura: " + totalPintura + " = " + c +" x "+ areaM2.toFixed(2));
+            console.log("Total Soldadura: " + soldadura);
+            console.log("Total Doblado: " + doblado);
+            console.log("Total Corte: " + totalCorte + " = " + d +" x "+ areaM.toFixed(2));
+            console.log("Tiempos de entrega: " + tiemposEntrega);
+            console.log("Previsualización: " + previsualizacion);
 
             var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
             
@@ -186,13 +204,13 @@ function jQueryDoSomethingAJAX() {
 
             var totalAluminio   = Number(a * anchoM2);
             var totalPintura    = Number(c * anchoM2);
-            var totalCorte      = Number(g * anchoSVGM2);
+            var totalCorte      = Number(g * anchoM);
             var soldadura       = Number(b);
             var doblado         = Number(h);
-            var metacrilato     = Number(d);
+            var metacrilato     = Number(d * anchoM2);
             var transformador   = Number(f); 
             var separadores     = Number(i);
-            var led             = Number(e);
+            var led             = Number(e * anchoSVGM2);
             
             console.log("Total Aluminio "+ totalAluminio);
             console.log("Total Pintura " + totalPintura);
@@ -231,10 +249,10 @@ function jQueryDoSomethingAJAX() {
             var totalCorte      = Number(h * anchoSVGM2);
             var soldadura       = Number(b);
             var doblado         = Number(i);
-            var metacrilato     = Number(d);
+            var metacrilato     = Number(d * anchoM2);
             var transformador   = Number(g); 
             var junquillo       = Number(e);
-            var led             = Number(f);
+            var led             = Number(f * anchoSVGM2);
             
             console.log("Total Aluminio "+ totalAluminio);
             console.log("Total Pintura " + totalPintura);
@@ -372,6 +390,42 @@ function jQueryDoSomethingAJAX() {
 
         if(opciones == "Iluminación Frontal" ){
 
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Acero Iluminación frontal:
+            var a = Number(document.getElementById('cn_precio_acero_iluminacion_frontal').value);
+            var b = Number(document.getElementById('cn_precio_acero_soldadura_iluminacion_frontal').value);
+            var c = Number(document.getElementById('cn_precio_acero_corte_cnc_iluminacion_frontal').value);
+            var d = Number(document.getElementById('cn_precio_acero_doblado_iluminacion_frontal').value);
+            var e = Number(document.getElementById('cn_precio_acero_metacrilato3mm_iluminacion_frontal').value);
+            var f = Number(document.getElementById('cn_precio_acero_led_iluminacion_frontal').value);
+            var g = Number(document.getElementById('cn_precio_acero_transformador_iluminacion_frontal').value);
+            var h = Number(document.getElementById('cn_precio_acero_junquillo_iluminacion_frontal').value);
+
+            var totalAcero    = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var soldadura     = Number(b);
+            var doblado       = Number(d);
+            var metacrilato   = Number(e);
+            var led           = Number(f);
+            var transformador = Number(g);
+            var junquillo     = Number(h);
+            
+            console.log("Total Acero "+ totalAcero);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';
+
         }
 
 
@@ -401,7 +455,7 @@ function jQueryDoSomethingAJAX() {
 
         var acabado = txt;
 
-       var separacionLaton = document.getElementsByName("separacionLaton");
+        var separacionLaton = document.getElementsByName("separacionLaton");
         var txt = "";
         var i;
         for (i = 0; i < separacionLaton.length; i++) {
@@ -423,14 +477,130 @@ function jQueryDoSomethingAJAX() {
 
         var opciones = txt;
         var sujecion = 'No Aplica';
-        var color = 'No Aplica';  
-        var subTotalprecio = 20;            
-        precioFinal = 200;
+
+        if(opciones == "Sin Luz" ){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diez_dias_laton_sin_iluminar').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quince_dias_laton_sin_iluminar').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Latón Sin Iluminar:
+            var a = Number(document.getElementById('cn_precio_laton_sin_iluminar').value);
+            var b = Number(document.getElementById('cn_precio_soldadura_laton_sin_iluminar').value);
+            var c = Number(document.getElementById('cn_precio_corte_cnc_laton_sin_iluminar').value);
+            var d = Number(document.getElementById('cn_precio_doblado_laton_sin_iluminar').value);
+            
+            var totalLaton    = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var soldadura     = Number(b);
+            var doblado       = Number(d);
+
+            console.log("Total Latón "+ totalLaton);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';    
+        }
+
+        if(opciones == "Retroiluminado" ){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diez_dias_laton_retroiluminadas').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quince_dias_laton_retroiluminadas').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Latón retroiluminado:
+            var a = Number(document.getElementById('cn_precio_laton_retroiluminadas').value);
+            var b = Number(document.getElementById('cn_precio_laton_soldadura_retroiluminadas').value);
+            var c = Number(document.getElementById('cn_precio_laton_corte_cnc_retroiluminadas').value);
+            var d = Number(document.getElementById('cn_precio_laton_doblado_retroiluminadas').value);
+            var e = Number(document.getElementById('cn_precio_laton_metacrilato10mm_retroiluminadas').value);
+            var f = Number(document.getElementById('cn_precio_laton_led_retroiluminadas').value);
+            var g = Number(document.getElementById('cn_precio_laton_transformador_retroiluminadas').value);
+            var h = Number(document.getElementById('cn_precio_laton_separadores_retroiluminadas').value);
+            
+            var totalLaton    = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var soldadura     = Number(b);
+            var doblado       = Number(d);
+            var metacrilato   = Number(e);
+            var led           = Number(f);
+            var transformador = Number(g);
+            var separadores   = Number(h);
+
+            console.log("Total Latón "+ totalLaton);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';
+        }
+
+        if(opciones == "Iluminación Frontal" ){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('cn_precio_diez_dias_laton_iluminacion_frontal').value;
+            }else{
+                var tiemposEntrega = document.getElementById('cn_precio_quince_dias_laton_iluminacion_frontal').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //Latón iluminación frontal:
+            var a = Number(document.getElementById('cn_precio_laton_iluminacion_frontal').value);
+            var b = Number(document.getElementById('cn_precio_laton_soldadura_iluminacion_frontal').value);
+            var c = Number(document.getElementById('cn_precio_laton_corte_cnc_iluminacion_frontal').value);
+            var d = Number(document.getElementById('cn_precio_laton_doblado_iluminacion_frontal').value);
+            var e = Number(document.getElementById('cn_precio_laton_metacrilato3mm_iluminacion_frontal').value);
+            var f = Number(document.getElementById('cn_precio_laton_led_iluminacion_frontal').value);
+            var g = Number(document.getElementById('cn_precio_laton_transformador_iluminacion_frontal').value);
+            var h = Number(document.getElementById('cn_precio_laton_junquillo_iluminacion_frontal').value);
+            
+            var totalLaton    = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var soldadura     = Number(b);
+            var doblado       = Number(d);
+            var metacrilato   = Number(e);
+            var led           = Number(f);
+            var transformador = Number(g);
+            var junquillo     = Number(h);
+
+            console.log("Total Latón "+ totalLaton);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Soldadura " + soldadura);
+            console.log("Total Doblado " + doblado);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';       
+        }
+
+        var iva     = Number(document.getElementById('iva_letras').value / 100);
+        precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
         letraCorporea = "Latón Hueca";
     }
 
     if(letraCorporea == "metacrilatoForm"){
+
+        if(tiemposEntregaText == "10 días laborables"){
+            var tiemposEntrega = document.getElementById('cn_precio_diez_dias_metacrilato_sin_luz').value;
+        }else{
+            var tiemposEntrega = document.getElementById('cn_precio_quince_dias_metacrilato_sin_luz').value;
+        }    
+        //console.log(tiemposEntrega);  
 
         var x = document.getElementById("grosorMetacrilato").selectedIndex;
         var y = document.getElementById("grosorMetacrilato").options;
@@ -461,14 +631,60 @@ function jQueryDoSomethingAJAX() {
         }
 
         var acabado = txt;
+
         var opciones = 'No Aplica';
         var separacion = 'No Aplica';
-        var color = 'No Aplica';
+     
+        //Metacrilato con luz:
+        if(acabado == "Color 360"){
+            var a = Number(document.getElementById('cn_precio_metacrilato3mm_color360_sin_luz').value);
+        }else if(acabado == "Blanco Opal"){
+            var a = Number(document.getElementById('cn_precio_metacrilato3mm_blancoOpal_sin_luz').value);
+        }
+        var b = Number(document.getElementById('cn_precio_metacrilato_traseraPVC10mm_sin_luz').value);
+        var c = Number(document.getElementById('cn_precio_metacrilato_corte_cnc_sin_luz').value);
+        var d = Number(document.getElementById('cn_precio_metacrilato_doblado_sin_luz').value);
+        var e = Number(document.getElementById('cn_precio_metacrilato_led_sin_luz').value);
+        var f = Number(document.getElementById('cn_precio_metacrilato_transformador_sin_luz').value);
+        var g = Number(document.getElementById('cn_precio_metacrilato_cloroformo_sin_luz').value);
+        
+        var totalMetacrilato    = Number(a * anchoM2);
+        var totalCorte          = Number(c * anchoSVGM2);
+        var traseraPVC10mm      = Number(b);
+        var doblado             = Number(d);
+        var led                 = Number(e);
+        var transformador       = Number(f);
+        var cloroformo          = Number(g);
 
-        var subTotalprecio = 30;   
-        precioFinal = 300;
+        console.log("Total Metacrilato "+ totalMetacrilato);
+        console.log("Total Corte " + totalCorte);  
+        console.log("Total Trasera PVC " + traseraPVC10mm);    
+        console.log("Total Doblado " + doblado);
+        console.log("Total Led " + led);
+        console.log("Total Transformador " + transformador);
+        console.log("Total Cloroformo " + cloroformo);
+        console.log("Tiempos de entrega " + tiemposEntrega);
+        console.log("Previsualizacion " + previsualizacion);
 
-        letraCorporea = "Metacrilato Hueca";
+        var subTotalprecio  =  Number(Number(Number(totalMetacrilato) + + Number(led) + Number(transformador) + Number(cloroformo) + Number(totalCorte) + Number(doblado) + Number(traseraPVC10mm) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+
+        var colores = document.getElementsByName("colores");
+        var txt = "";
+        var i;
+        for (i = 0; i < colores.length; i++) {
+            if (colores[i].checked) {
+              txt = colores[i].value;
+            }
+        }
+
+        var color = txt;
+
+        console.log(color);
+
+        var iva     = Number(document.getElementById('iva_letras').value / 100);
+        precioFinal = (subTotalprecio * iva) + subTotalprecio;
+
+        letraCorporea = "Metacrilato con Luz";
     }
 
     if(letraCorporea == "pvcForm"){
@@ -512,8 +728,18 @@ function jQueryDoSomethingAJAX() {
         }
 
         var separacion = txt;
-        var opciones = 'No Aplica';
-        
+ 
+        var opcionesPVC = document.getElementsByName("opcionesPVC");
+        var txt = "";
+        var i;
+        for (i = 0; i < opcionesPVC.length; i++) {
+            if (opcionesPVC[i].checked) {
+              txt = opcionesPVC[i].value;
+            }
+        }
+
+        var opciones = txt;
+       
         if( (acabado == "Pintado Mate") || (acabado == 'Pintado Brillo') ){
 
             document.getElementById('colorPaletaSeleccionada').style.display = "inline";
@@ -540,8 +766,154 @@ function jQueryDoSomethingAJAX() {
             var color = 'No Aplica';  
         }
 
-        var subTotalprecio = 40;   
-        precioFinal = 400;
+        if( grosor == "5 mm"){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('precio_pvc_5mm_diez_dias').value;
+            }else{
+                var tiemposEntrega = document.getElementById('precio_pvc_5mm_quince_dias').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //PVC 5mm:
+            var a = Number(document.getElementById('precio_pvc_5mm').value);
+            var b = Number(document.getElementById('precio_pvc_5mm_fondo').value);
+            var c = Number(document.getElementById('precio_pvc_5mm_corte_cnc').value);
+            var d = Number(document.getElementById('precio_pvc_5mm_pintura').value);
+            var e = Number(document.getElementById('precio_pvc_5mm_cinta').value);
+  
+            var totalPVC5mm   = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var fondo         = Number(b);
+            var pintura       = Number(d);
+            var cinta         = Number(e);
+
+            console.log("Total PVC 5mm "+ totalPVC5mm);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Fondo " + fondo);
+            console.log("Total Pintura " + pintura);
+            console.log("Total Cinta " + cinta);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalPVC5mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';  
+        }
+
+        if( grosor == "10 mm"){
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('precio_pvc_10mm_diez_dias').value;
+            }else{
+                var tiemposEntrega = document.getElementById('precio_pvc_10mm_quince_dias').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //PVC 10mm:
+            var a = Number(document.getElementById('precio_pvc_10mm').value);
+            var b = Number(document.getElementById('precio_pvc_10mm_fondo').value);
+            var c = Number(document.getElementById('precio_pvc_10mm_corte_cnc').value);
+            var d = Number(document.getElementById('precio_pvc_10mm_pintura').value);
+            var e = Number(document.getElementById('precio_pvc_10mm_cinta').value);
+  
+            var totalPVC5mm   = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var fondo         = Number(b);
+            var pintura       = Number(d);
+            var cinta         = Number(e);
+
+            console.log("Total PVC 10mm "+ totalPVC5mm);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Fondo " + fondo);
+            console.log("Total Pintura " + pintura);
+            console.log("Total Cinta " + cinta);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalPVC5mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';  
+        }
+
+        if( (grosor == "19 mm") && (opciones == "Sin Luz")) {
+
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('precio_pvc_19mm_diez_dias').value;
+            }else{
+                var tiemposEntrega = document.getElementById('precio_pvc_19mm_quince_dias').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //PVC 19mm sin iluminar:
+            var a = Number(document.getElementById('precio_pvc_19mm').value);
+            var b = Number(document.getElementById('precio_pvc_19mm_fondo').value);
+            var c = Number(document.getElementById('precio_pvc_19mm_corte_cnc').value);
+            var d = Number(document.getElementById('precio_pvc_19mm_pintura').value);
+            var e = Number(document.getElementById('precio_pvc_19mm_cinta').value);
+  
+            var totalPVC19mm   = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var fondo         = Number(b);
+            var pintura       = Number(d);
+            var cinta         = Number(e);
+
+            console.log("Total PVC 19mm "+ totalPVC19mm);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Fondo " + fondo);
+            console.log("Total Pintura " + pintura);
+            console.log("Total Cinta " + cinta);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';  
+        }              
+
+
+        if( ( grosor == "19 mm") && (opciones == "Retroiluminado") ){
+            
+            if(tiemposEntregaText == "10 días laborables"){
+                var tiemposEntrega = document.getElementById('precio_pvc_19mm_diez_dias_retroalimentadas').value;
+            }else{
+                var tiemposEntrega = document.getElementById('precio_pvc_19mm_quince_dias_retroalimentadas').value;
+            }    
+            //console.log(tiemposEntrega);   
+
+            //PVC 19mm sin iluminar:
+            var a = Number(document.getElementById('precio_pvc_19mm_retroiluminadas').value);
+            var b = Number(document.getElementById('precio_pvc_19mm_fondo_retroiluminadas').value);
+            var c = Number(document.getElementById('precio_pvc_19mm_corte_cnc_retroiluminadas').value);
+            var d = Number(document.getElementById('precio_pvc_19mm_pintura_retroiluminadas').value);
+            var e = Number(document.getElementById('precio_pvc_19mm_cinta_retroiluminadas').value);
+            var f = Number(document.getElementById('precio_pvc_19mm_tornilleria_retroiluminadas').value);
+            var g = Number(document.getElementById('precio_pvc_19mm_separadores_retroiluminadas').value);
+            var h = Number(document.getElementById('precio_pvc_19mm_transformador_retroiluminadas').value);
+            var i = Number(document.getElementById('precio_pvc_19mm_led_retroiluminadas').value);
+         
+            var totalPVC19mm  = Number(a * anchoM2);
+            var totalCorte    = Number(c * anchoSVGM2);
+            var fondo         = Number(b);
+            var pintura       = Number(d);
+            var cinta         = Number(e);
+            var tornilleria   = Number(f);
+            var separadores   = Number(g);
+            var transformador = Number(h);
+            var led           = Number(i);
+
+            console.log("Total PVC 19mm retroiluminada "+ totalPVC19mm);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Fondo " + fondo);
+            console.log("Total Pintura " + pintura);
+            console.log("Total Cinta " + cinta);
+            console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion " + previsualizacion);
+
+            var subTotalprecio  =  Number(Number(Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) + Number(tornilleria) + Number(transformador) + Number(separadores) + Number(led)  * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var color = 'No Aplica';  
+
+        }
+
+        var iva     = Number(document.getElementById('iva_letras').value / 100);
+        precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
         letraCorporea = "PVC";
     }    
@@ -838,13 +1210,13 @@ window.addEventListener('load', function () {
     //Muestra las opciones de separación:
     grosorPVC.onchange = function () {
 
+        deshabiltarBotonCart();
+
         if(this.value == "19 mm"){
             separacionForm('opcionesFormPVC','true');
         }else{
             separacionForm('opcionesFormPVC','false');
         }
-
-
 
         if((this.value == "19 mm") && (retroiluminado4.checked == true)){
             separacionForm('separacionFormPVC','true');
@@ -881,9 +1253,11 @@ window.addEventListener('load', function () {
         document.getElementById('tornilleriaPVC').style.visibility = "hidden";
     }
 
+    /*
     iluminacionFrontal4.onclick = function () {
         separacionForm('separacionFormPVC','false');
         document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-    }  
+    } 
+    */
 
 });

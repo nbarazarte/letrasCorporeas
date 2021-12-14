@@ -116,7 +116,7 @@
 
       <input type="hidden" class="form-control" id="cn_precio_separadores_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_separadores_aluminio_retroiluminado);?>" readonly="yes">
 
-      <!-- Aluminio Iluminadas frontalmente -->
+      <!-- Aluminio iluminadas frontalmente -->
       <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal" value="<?php echo esc_html($precio_aluminio_iluminado_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_mano_de_obra" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_mano_de_obra);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal_pintura" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_pintura);?>" readonly="yes">
@@ -129,7 +129,7 @@
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal);?>" readonly="yes">
 
-      <!-- Letras corpóreas de Acero sin iluminar -->
+      <!-- Acero sin iluminar -->
       <input type="hidden" class="form-control" id="precio_acero" value="<?php echo esc_html($precio_acero);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_acero_mano_de_obra" value="<?php echo esc_html($precio_acero_mano_de_obra);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar);?>" readonly="yes">
@@ -137,7 +137,7 @@
       <input type="hidden" class="form-control" id="cn_precio_doblado_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_acero_sin_iluminar);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_acero_corte_cnc" value="<?php echo esc_html($precio_acero_corte_cnc);?>" readonly="yes">
 
-      <!-- Letras corpóreas de Acero retroiluminadas -->
+      <!-- Acero retroiluminadas -->
       <input type="hidden" class="form-control" id="cn_precio_acero_retroiluminado" value="<?php echo esc_html($cn_precio_acero_retroiluminado);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_acero_mano_de_obra_retroiluminado" value="<?php echo esc_html($cn_precio_acero_mano_de_obra_retroiluminado);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_acero_retroiluminado_metacrilato10mm" value="<?php echo esc_html($precio_acero_retroiluminado_metacrilato10mm);?>" readonly="yes">
@@ -149,23 +149,111 @@
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_retroiluminado);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_retroiluminado);?>" readonly="yes">
 
-      <!-- Letras corpóreas PVC -->
-      <input type="hidden" class="form-control" id="precio_pvc_5mm" value="<?php echo esc_html($precio_pvc_5mm);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_10mm" value="<?php echo esc_html($precio_pvc_10mm);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_19mm" value="<?php echo esc_html($precio_pvc_19mm);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_mano_de_obra" value="<?php echo esc_html($precio_pvc_mano_de_obra);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_pintura" value="<?php echo esc_html($precio_pvc_pintura);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_led" value="<?php echo esc_html($precio_pvc_led);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_transformador" value="<?php echo esc_html($precio_pvc_transformador);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_pvc_corte_cnc" value="<?php echo esc_html($precio_pvc_corte_cnc);?>" readonly="yes">
+      <!-- Acero iluminadas frontalmente -->
+      <input type="hidden" class="form-control" id="cn_precio_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_soldadura_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_soldadura_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_metacrilato3mm_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_metacrilato3mm_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_led_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_led_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_transformador_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_transformador_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_corte_cnc_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_corte_cnc_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_doblado_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_doblado_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_acero_junquillo_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_junquillo_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal);?>" readonly="yes">
 
-      <!-- Letras corpóreas de metacrilatos huecas -->
-      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_mano_de_obra" value="<?php echo esc_html($precio_metacrilato_huecas_mano_de_obra);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_metacrilato3mm" value="<?php echo esc_html($precio_metacrilato_huecas_metacrilato3mm);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_led" value="<?php echo esc_html($precio_metacrilato_huecas_led);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_transformador" value="<?php echo esc_html($precio_metacrilato_huecas_transformador);?>" readonly="yes">
-      <input type="hidden" class="form-control" id="precio_metacrilato_huecas_corte_cnc" value="<?php echo esc_html($precio_metacrilato_huecas_corte_cnc);?>" readonly="yes">
+      <!-- Latón Sin Iluminar -->
+     <input type="hidden" class="form-control" id="cn_precio_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="cn_precio_soldadura_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_soldadura_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="cn_precio_corte_cnc_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_corte_cnc_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="cn_precio_doblado_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_diez_dias_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_quince_dias_laton_sin_iluminar);?>" readonly="yes">
 
+     <!-- Latón retroiluminadas -->
+    <input type="hidden" class="form-control" id="cn_precio_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_soldadura_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_soldadura_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_metacrilato10mm_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_metacrilato10mm_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_led_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_led_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_transformador_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_transformador_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_corte_cnc_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_corte_cnc_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_separadores_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_separadores_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_doblado_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_doblado_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_diez_dias_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_quince_dias_laton_retroiluminadas);?>" readonly="yes">
+
+    <!-- Latón iluminadas frontalmente -->
+    <input type="hidden" class="form-control" id="cn_precio_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_soldadura_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_soldadura_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_metacrilato3mm_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_metacrilato3mm_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_led_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_led_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_transformador_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_transformador_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_corte_cnc_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_corte_cnc_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_junquillo_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_junquillo_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_laton_doblado_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_doblado_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_diez_dias_laton_iluminacion_frontal);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quince_dias_laton_iluminacion_frontal);?>" readonly="yes">
+
+    <!-- Letras corpóreas PVC -->
+    <input type="hidden" class="form-control" id="precio_pvc_5mm" value="<?php echo esc_html($precio_pvc_5mm);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_10mm" value="<?php echo esc_html($precio_pvc_10mm);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_19mm" value="<?php echo esc_html($precio_pvc_19mm);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_mano_de_obra" value="<?php echo esc_html($precio_pvc_mano_de_obra);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_pintura" value="<?php echo esc_html($precio_pvc_pintura);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_led" value="<?php echo esc_html($precio_pvc_led);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_transformador" value="<?php echo esc_html($precio_pvc_transformador);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="precio_pvc_corte_cnc" value="<?php echo esc_html($precio_pvc_corte_cnc);?>" readonly="yes">
+
+    <!-- Metacrilato con luz -->
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato3mm_blancoOpal_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato3mm_blancoOpal_sin_luz);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato3mm_color360_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato3mm_color360_sin_luz);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato_led_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_led_sin_luz);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato_transformador_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_transformador_sin_luz);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato_cloroformo_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_cloroformo_sin_luz);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato_corte_cnc_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_corte_cnc_sin_luz);?>" readonly="yes">   
+    <input type="hidden" class="form-control" id="cn_precio_metacrilato_doblado_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_doblado_sin_luz);?>" readonly="yes">  
+   <input type="hidden" class="form-control" id="cn_precio_metacrilato_traseraPVC10mm_sin_luz" value="<?php echo esc_html($cn_precio_metacrilato_traseraPVC10mm_sin_luz);?>" readonly="yes">  
+   <input type="hidden" class="form-control" id="cn_precio_diez_dias_metacrilato_sin_luz" value="<?php echo esc_html($cn_precio_diez_dias_metacrilato_sin_luz);?>" readonly="yes">  
+   <input type="hidden" class="form-control" id="cn_precio_quince_dias_metacrilato_sin_luz" value="<?php echo esc_html($cn_precio_quince_dias_metacrilato_sin_luz);?>" readonly="yes">  
+
+  <!-- PVC 5mm -->
+  <input type="hidden" class="form-control" id="precio_pvc_5mm" value="<?php echo esc_html($precio_pvc_5mm);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_fondo" value="<?php echo esc_html($precio_pvc_5mm_fondo);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_pintura" value="<?php echo esc_html($precio_pvc_5mm_pintura);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_corte_cnc" value="<?php echo esc_html($precio_pvc_5mm_corte_cnc);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_cinta" value="<?php echo esc_html($precio_pvc_5mm_cinta);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_diez_dias" value="<?php echo esc_html($precio_pvc_5mm_diez_dias);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_5mm_quince_dias" value="<?php echo esc_html($precio_pvc_5mm_quince_dias);?>" readonly="yes">
+
+  <!-- PVC 10mm -->
+  <input type="hidden" class="form-control" id="precio_pvc_10mm" value="<?php echo esc_html($precio_pvc_10mm);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_fondo" value="<?php echo esc_html($precio_pvc_10mm_fondo);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_pintura" value="<?php echo esc_html($precio_pvc_10mm_pintura);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_corte_cnc" value="<?php echo esc_html($precio_pvc_10mm_corte_cnc);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_cinta" value="<?php echo esc_html($precio_pvc_10mm_cinta);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_diez_dias" value="<?php echo esc_html($precio_pvc_10mm_diez_dias);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_10mm_quince_dias" value="<?php echo esc_html($precio_pvc_10mm_quince_dias);?>" readonly="yes">
+
+  <!-- PVC 19mm sin iluminar -->
+  <input type="hidden" class="form-control" id="precio_pvc_19mm" value="<?php echo esc_html($precio_pvc_19mm);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_fondo" value="<?php echo esc_html($precio_pvc_19mm_fondo);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_pintura" value="<?php echo esc_html($precio_pvc_19mm_pintura);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_corte_cnc" value="<?php echo esc_html($precio_pvc_19mm_corte_cnc);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_cinta" value="<?php echo esc_html($precio_pvc_19mm_cinta);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_diez_dias" value="<?php echo esc_html($precio_pvc_19mm_diez_dias);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_quince_dias" value="<?php echo esc_html($precio_pvc_19mm_quince_dias);?>" readonly="yes">
+
+  <!-- PVC 19mm retroiluminadas -->
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_fondo_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_fondo_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_pintura_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_pintura_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_corte_cnc_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_corte_cnc_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_cinta_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_cinta_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_tornilleria_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_tornilleria_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_separadores_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_separadores_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_transformador_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_transformador_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_led_retroiluminadas" value="<?php echo esc_html($precio_pvc_19mm_led_retroiluminadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_diez_dias_retroalimentadas" value="<?php echo esc_html($precio_pvc_19mm_diez_dias_retroalimentadas);?>" readonly="yes">
+  <input type="hidden" class="form-control" id="precio_pvc_19mm_quince_dias_retroalimentadas" value="<?php echo esc_html($precio_pvc_19mm_quince_dias_retroalimentadas);?>" readonly="yes">
 
       <div class="card" style="">
 

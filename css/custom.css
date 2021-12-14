@@ -10679,6 +10679,50 @@ text-align: center;
 }
 
 /*colores*/
+
+
+.amarilloColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/amarillo.jpeg");
+}
+
+.rojoColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/rojo.jpeg");
+}
+
+.verdeManzanaColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/verde_manzana.jpeg");
+}
+
+.amarilloMostazaColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/amarillo_mostaza.jpeg");
+}
+
+.azulCelesteColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/azul_celeste.jpeg");
+}
+
+.azulMarinoColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/azul_marino.jpeg");
+}
+
+.azulElectricoColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/azul_electrico.jpeg");
+}
+
+.verdeNavidadColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/verde_navidad.jpeg");
+}
+
+.naranjaColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/naranja.jpeg");
+}
+
+.vinotintoColorMetacrilato{
+  background-image: url("../imagenes/nuevosColores/coloresMetacrilato/vinotinto.jpeg");
+}
+
+
+
 .rojoColor{
   background-image: url("../imagenes/nuevosColores/rojo.png");
 }

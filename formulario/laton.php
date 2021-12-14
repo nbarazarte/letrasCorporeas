@@ -85,7 +85,7 @@
         <div class="card" style="border: 0;">
           <div class="card-body" style="background-color: #D3D3D3">
             
-            <label>Separación de la Pared (Sin Pintar<i class="fas fa-paint-roller"></i>)</label>             
+            <label>Separación de la Pared</label>             
             <div class="cc-selector">
 
 
