@@ -46,7 +46,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','false');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
+            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
             <label class="drinkcard-cc retroiluminadas" for="retroiluminado1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADAS</figcaption>
@@ -55,7 +55,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','false');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
+            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
             <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINADAS FRONTALMENTE</figcaption>

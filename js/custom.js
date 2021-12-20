@@ -225,7 +225,23 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
             
-            var color = 'No Aplica';  
+            document.getElementById('colorPaletaSeleccionada').style.display = "inline";
+            /*var colores = document.getElementsByName("colores");
+            var txt = "";
+            var i;
+            for (i = 0; i < colores.length; i++) {
+                if (colores[i].checked) {
+                  txt = colores[i].value;
+                }
+            }
+
+            var color = txt;*/
+
+            if(document.getElementById('colorSumario').value == ""){
+                var color = "RAL: RAL 1000";
+            }else{                
+                var color = document.getElementById('colorPaleta').value
+            }
         }
 
         if(opciones == "Iluminación Frontal" ){
@@ -276,7 +292,23 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';  
+            document.getElementById('colorPaletaSeleccionada').style.display = "inline";
+            /*var colores = document.getElementsByName("colores");
+            var txt = "";
+            var i;
+            for (i = 0; i < colores.length; i++) {
+                if (colores[i].checked) {
+                  txt = colores[i].value;
+                }
+            }
+
+            var color = txt;*/
+
+            if(document.getElementById('colorSumario').value == ""){
+                var color = "RAL: RAL 1000";
+            }else{                
+                var color = document.getElementById('colorPaleta').value
+            }
 
         }
 
