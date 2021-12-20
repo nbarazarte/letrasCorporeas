@@ -43,25 +43,12 @@ function jQueryDoSomethingAJAX() {
     var alturacm = document.getElementById("altura").value;
 
     var areaCm = Number(anchocm) * Number(alturacm);
-    var areaM = Number(areaCm) / 100;
-
-    var areaCm2 = Number(areaCm) * Number(areaCm);
-    var areaM2 = Number(areaCm2) / 10000;
-
-    //Centímetros cuadrados:
-    var anchocm2 = Number(anchocm) * Number(anchocm);
-
-    //Metros cuadrados
-    var anchoM2 = Number(anchocm2)/10000;
-
-    //Metros lineales:
-    var anchoM  = Number(anchocm)/100;
+    var areaM2 = Number(areaCm) / 10000;
 
     //ancho del SVG:
-    
     var anchoSVG = document.getElementById('anchoSVG').value;
     var anchoSVGCorreccion = anchoSVG * 0.76;
-    var anchoSVGM2 = anchoSVGCorreccion/10000;
+    var anchoSVGM = anchoSVGCorreccion/100;
 
     document.getElementById('impuesto').value = document.getElementById('iva_letras').value;
     
@@ -143,23 +130,33 @@ function jQueryDoSomethingAJAX() {
 
             var totalAluminio   = Number(a * areaM2.toFixed(2));
             var totalPintura    = Number(c * areaM2.toFixed(2));
-            var totalCorte      = Number(d * areaM.toFixed(2));
+            var totalCorte      = Number(d * anchoSVGM.toFixed(2));
             var soldadura       = Number(b);
             var doblado         = Number(e);
             
-            console.log("Area metros: "+ areaM.toFixed(2));
+            //console.log("Area metros: "+ areaM.toFixed(2));
             console.log("Area metros2: "+ areaM2.toFixed(2));
-
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Aluminio: "+ totalAluminio + " = " + a +" x "+ areaM2.toFixed(2));
             console.log("Total Pintura: " + totalPintura + " = " + c +" x "+ areaM2.toFixed(2));
             console.log("Total Soldadura: " + soldadura);
             console.log("Total Doblado: " + doblado);
-            console.log("Total Corte: " + totalCorte + " = " + d +" x "+ areaM.toFixed(2));
+            console.log("Total Corte: " + totalCorte + " = " + d +" x "+ anchoSVGM.toFixed(2));
             console.log("Tiempos de entrega: " + tiemposEntrega);
             console.log("Previsualización: " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            //var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
             
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado);
+
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             document.getElementById('colorPaletaSeleccionada').style.display = "inline";
             /*var colores = document.getElementsByName("colores");
             var txt = "";
@@ -202,22 +199,31 @@ function jQueryDoSomethingAJAX() {
             var h = Number(document.getElementById('cn_precio_doblado_aluminio_retroiluminado').value);
             var i = Number(document.getElementById('cn_precio_separadores_aluminio_retroiluminado').value);
 
-            var totalAluminio   = Number(a * anchoM2);
-            var totalPintura    = Number(c * anchoM2);
-            var totalCorte      = Number(g * anchoM);
+            var totalAluminio   = Number(a * areaM2);
+            var totalPintura    = Number(c * areaM2);
+            var totalCorte      = Number(g * anchoSVGM);
             var soldadura       = Number(b);
             var doblado         = Number(h);
-            var metacrilato     = Number(d * anchoM2);
+            var metacrilato     = Number(d * areaM2);
             var transformador   = Number(f); 
             var separadores     = Number(i);
-            var led             = Number(e * anchoSVGM2);
+            var led             = Number(e * anchoSVGM);
             
             console.log("Total Aluminio "+ totalAluminio);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Pintura " + totalPintura);
             console.log("Total Corte " + totalCorte);
             console.log("Tiempos de entrega " + tiemposEntrega);
 
-            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
             
             var color = 'No Aplica';  
         }
@@ -244,22 +250,32 @@ function jQueryDoSomethingAJAX() {
             var h = Number(document.getElementById('precio_aluminio_iluminado_frontal_corte_cnc').value);
             var i = Number(document.getElementById('cn_precio_doblado_aluminio_iluminado_frontal').value);
 
-            var totalAluminio   = Number(a * anchoM2);
-            var totalPintura    = Number(c * anchoM2);
-            var totalCorte      = Number(h * anchoSVGM2);
+            var totalAluminio   = Number(a * areaM2);
+            var totalPintura    = Number(c * areaM2);
+            var totalCorte      = Number(h * anchoSVGM);
             var soldadura       = Number(b);
             var doblado         = Number(i);
-            var metacrilato     = Number(d * anchoM2);
+            var metacrilato     = Number(d * areaM2);
             var transformador   = Number(g); 
-            var junquillo       = Number(e);
-            var led             = Number(f * anchoSVGM2);
+            var junquillo       = Number(e * anchoSVGM);
+            var led             = Number(f * anchoSVGM);
             
             console.log("Total Aluminio "+ totalAluminio);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Pintura " + totalPintura);
             console.log("Total Corte " + totalCorte);
             console.log("Tiempos de entrega " + tiemposEntrega);
 
-            var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
 
         }
@@ -333,19 +349,29 @@ function jQueryDoSomethingAJAX() {
             var c = Number(document.getElementById('precio_acero_corte_cnc').value);
             var d = Number(document.getElementById('cn_precio_doblado_acero_sin_iluminar').value);
 
-            var totalAcero   = Number(a * anchoM2);
-            var totalCorte   = Number(c * anchoSVGM2);
+            var totalAcero   = Number(a * areaM2);
+            var totalCorte   = Number(c * anchoSVGM);
             var soldadura    = Number(b);
             var doblado      = Number(d);
             
             console.log("Total Acero "+ totalAcero);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
-            console.log("Previsualizacion " + previsualizacion);
+            console.log("Previsualizacion " + previsualizacion);                  
+            
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(totalCorte) + Number(doblado);
+            
+            var parte2 = Number(parte1) * 4;
 
-            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
         }
         
@@ -368,23 +394,33 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('precio_acero_retroiluminado_transformador').value);
             var h = Number(document.getElementById('precio_acero_retroiluminado_separadores').value);
 
-            var totalAcero    = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalAcero    = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
-            var metacrilato   = Number(e);
-            var led           = Number(f);
+            var metacrilato   = Number(e * areaM2);
+            var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var separadores   = Number(h);
             
             console.log("Total Acero "+ totalAcero);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
-            console.log("Previsualizacion " + previsualizacion);
+            console.log("Previsualizacion " + previsualizacion);          
 
-            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';
         }
 
@@ -407,27 +443,36 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('cn_precio_acero_transformador_iluminacion_frontal').value);
             var h = Number(document.getElementById('cn_precio_acero_junquillo_iluminacion_frontal').value);
 
-            var totalAcero    = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalAcero    = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
-            var metacrilato   = Number(e);
-            var led           = Number(f);
+            var metacrilato   = Number(e * areaM2);
+            var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
-            var junquillo     = Number(h);
+            var junquillo     = Number(h * anchoSVGM);
             
             console.log("Total Acero "+ totalAcero);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+          
             var color = 'No Aplica';
 
         }
-
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
         precioFinal = (subTotalprecio * iva) + subTotalprecio;
@@ -493,19 +538,29 @@ function jQueryDoSomethingAJAX() {
             var c = Number(document.getElementById('cn_precio_corte_cnc_laton_sin_iluminar').value);
             var d = Number(document.getElementById('cn_precio_doblado_laton_sin_iluminar').value);
             
-            var totalLaton    = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalLaton    = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
 
             console.log("Total Latón "+ totalLaton);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(totalCorte) + Number(doblado);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';    
         }
 
@@ -528,23 +583,33 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('cn_precio_laton_transformador_retroiluminadas').value);
             var h = Number(document.getElementById('cn_precio_laton_separadores_retroiluminadas').value);
             
-            var totalLaton    = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalLaton    = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
-            var metacrilato   = Number(e);
-            var led           = Number(f);
+            var metacrilato   = Number(e * areaM2);
+            var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var separadores   = Number(h);
 
             console.log("Total Latón "+ totalLaton);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';
         }
 
@@ -567,23 +632,33 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('cn_precio_laton_transformador_iluminacion_frontal').value);
             var h = Number(document.getElementById('cn_precio_laton_junquillo_iluminacion_frontal').value);
             
-            var totalLaton    = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalLaton    = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
-            var metacrilato   = Number(e);
-            var led           = Number(f);
+            var metacrilato   = Number(e * areaM2);
+            var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
-            var junquillo     = Number(h);
+            var junquillo     = Number(h * anchoSVGM);
 
             console.log("Total Latón "+ totalLaton);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';       
         }
 
@@ -648,15 +723,16 @@ function jQueryDoSomethingAJAX() {
         var f = Number(document.getElementById('cn_precio_metacrilato_transformador_sin_luz').value);
         var g = Number(document.getElementById('cn_precio_metacrilato_cloroformo_sin_luz').value);
         
-        var totalMetacrilato    = Number(a * anchoM2);
-        var totalCorte          = Number(c * anchoSVGM2);
-        var traseraPVC10mm      = Number(b);
+        var totalMetacrilato    = Number(a * areaM2);
+        var totalCorte          = Number(c * anchoSVGM);
+        var traseraPVC10mm      = Number(b * anchoSVGM);
         var doblado             = Number(d);
-        var led                 = Number(e);
+        var led                 = Number(e * anchoSVGM);
         var transformador       = Number(f);
         var cloroformo          = Number(g);
 
         console.log("Total Metacrilato "+ totalMetacrilato);
+        console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
         console.log("Total Corte " + totalCorte);  
         console.log("Total Trasera PVC " + traseraPVC10mm);    
         console.log("Total Doblado " + doblado);
@@ -666,7 +742,15 @@ function jQueryDoSomethingAJAX() {
         console.log("Tiempos de entrega " + tiemposEntrega);
         console.log("Previsualizacion " + previsualizacion);
 
-        var subTotalprecio  =  Number(Number(Number(totalMetacrilato) + + Number(led) + Number(transformador) + Number(cloroformo) + Number(totalCorte) + Number(doblado) + Number(traseraPVC10mm) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+        var parte1 = Number(totalMetacrilato) + Number(led) + Number(transformador) + Number(cloroformo) + Number(totalCorte) + Number(doblado) + Number(traseraPVC10mm);
+        
+        var parte2 = Number(parte1) * 4;
+
+        var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+        var subTotalprecio = Number(parte3);
+
+        console.log("Subtotal: "+ subTotalprecio);
 
         var colores = document.getElementsByName("colores");
         var txt = "";
@@ -782,21 +866,31 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById('precio_pvc_5mm_pintura').value);
             var e = Number(document.getElementById('precio_pvc_5mm_cinta').value);
   
-            var totalPVC5mm   = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalPVC5mm   = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var fondo         = Number(b);
             var pintura       = Number(d);
             var cinta         = Number(e);
 
             console.log("Total PVC 5mm "+ totalPVC5mm);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+            
+            var parte1 = Number(totalPVC5mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta);
+            
+            var parte2 = Number(parte1) * 4;
 
-            var subTotalprecio  =  Number(Number(Number(totalPVC5mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
         }
 
@@ -816,21 +910,31 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById('precio_pvc_10mm_pintura').value);
             var e = Number(document.getElementById('precio_pvc_10mm_cinta').value);
   
-            var totalPVC5mm   = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalPVC10mm  = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var fondo         = Number(b);
             var pintura       = Number(d);
             var cinta         = Number(e);
 
-            console.log("Total PVC 10mm "+ totalPVC5mm);
+            console.log("Total PVC 10mm "+ totalPVC10mm);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
-            console.log("Previsualizacion " + previsualizacion);
+            console.log("Previsualizacion " + previsualizacion);      
+            
+            var parte1 = Number(totalPVC10mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta);
+            
+            var parte2 = Number(parte1) * 4;
 
-            var subTotalprecio  =  Number(Number(Number(totalPVC5mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
         }
 
@@ -850,21 +954,31 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById('precio_pvc_19mm_pintura').value);
             var e = Number(document.getElementById('precio_pvc_19mm_cinta').value);
   
-            var totalPVC19mm   = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalPVC19mm  = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var fondo         = Number(b);
             var pintura       = Number(d);
             var cinta         = Number(e);
 
             console.log("Total PVC 19mm "+ totalPVC19mm);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+          
+            var parte1 = Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta);
+            
+            var parte2 = Number(parte1) * 4;
 
-            var subTotalprecio  =  Number(Number(Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
         }              
 
@@ -889,17 +1003,18 @@ function jQueryDoSomethingAJAX() {
             var h = Number(document.getElementById('precio_pvc_19mm_transformador_retroiluminadas').value);
             var i = Number(document.getElementById('precio_pvc_19mm_led_retroiluminadas').value);
          
-            var totalPVC19mm  = Number(a * anchoM2);
-            var totalCorte    = Number(c * anchoSVGM2);
+            var totalPVC19mm  = Number(a * areaM2);
+            var totalCorte    = Number(c * anchoSVGM);
             var fondo         = Number(b);
             var pintura       = Number(d);
             var cinta         = Number(e);
             var tornilleria   = Number(f);
             var separadores   = Number(g);
             var transformador = Number(h);
-            var led           = Number(i);
+            var led           = Number(i * anchoSVGM);
 
             console.log("Total PVC 19mm retroiluminada "+ totalPVC19mm);
+            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
             console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
@@ -907,7 +1022,16 @@ function jQueryDoSomethingAJAX() {
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
-            var subTotalprecio  =  Number(Number(Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) + Number(tornilleria) + Number(transformador) + Number(separadores) + Number(led)  * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
+            var parte1 = Number(totalPVC19mm) + Number(fondo) + Number(pintura) + Number(totalCorte) + Number(cinta) + Number(tornilleria) + Number(transformador) + Number(separadores) + Number(led);
+            
+            var parte2 = Number(parte1) * 4;
+
+            var parte3 = Number(parte2) + Number(tiemposEntrega) + Number(previsualizacion)
+
+            var subTotalprecio = Number(parte3);
+
+            console.log("Subtotal: "+ subTotalprecio);
+
             var color = 'No Aplica';  
 
         }
