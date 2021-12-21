@@ -183,7 +183,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="precio_aluminio_retroiluminado_led" class="form-label">Iluminación Led:</label>
+                <label for="precio_aluminio_retroiluminado_led" class="form-label">Led:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_retroiluminado_led" name="precio_aluminio_retroiluminado_led" value="<?php echo esc_html($precio_aluminio_retroiluminado_led);?>" required/>
               </div>
 
@@ -262,7 +262,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="precio_aluminio_iluminado_frontal_led" class="form-label">Precio Iluminación Led:</label>
+                <label for="precio_aluminio_iluminado_frontal_led" class="form-label">Led:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal_led" name="precio_aluminio_iluminado_frontal_led" value="<?php echo esc_html($precio_aluminio_iluminado_frontal_led);?>" required/>
               </div>               
 
@@ -365,7 +365,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="cn_precio_acero_mano_de_obra_retroiluminado" class="form-label">Mano de Obra:</label>
+                <label for="cn_precio_acero_mano_de_obra_retroiluminado" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_acero_mano_de_obra_retroiluminado" name="cn_precio_acero_mano_de_obra_retroiluminado" value="<?php echo esc_html($cn_precio_acero_mano_de_obra_retroiluminado);?>" required/>
               </div>
 
@@ -434,7 +434,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="cn_precio_acero_soldadura_iluminacion_frontal" class="form-label">Mano de Obra:</label>
+                <label for="cn_precio_acero_soldadura_iluminacion_frontal" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_acero_soldadura_iluminacion_frontal" name="cn_precio_acero_soldadura_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_soldadura_iluminacion_frontal);?>" required/>
               </div> 
 
@@ -503,7 +503,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="cn_precio_soldadura_laton_sin_iluminar" class="form-label">Mano de Obra:</label>
+                <label for="cn_precio_soldadura_laton_sin_iluminar" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_soldadura_laton_sin_iluminar" name="cn_precio_soldadura_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_soldadura_laton_sin_iluminar);?>" required/>
               </div>
 
@@ -552,7 +552,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="cn_precio_laton_soldadura_retroiluminadas" class="form-label">Mano de Obra:</label>
+                <label for="cn_precio_laton_soldadura_retroiluminadas" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_laton_soldadura_retroiluminadas" name="cn_precio_laton_soldadura_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_soldadura_retroiluminadas);?>" required/>
               </div>
 
@@ -621,7 +621,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="cn_precio_laton_soldadura_iluminacion_frontal" class="form-label">Mano de Obra:</label>
+                <label for="cn_precio_laton_soldadura_iluminacion_frontal" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_laton_soldadura_iluminacion_frontal" name="cn_precio_laton_soldadura_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_soldadura_iluminacion_frontal);?>" required/>
               </div>
 
@@ -674,7 +674,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingA5">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseA5" aria-expanded="false" aria-controls="collapseA5">
-            <h5 class="card-title" style="text-align: left;">Metacrilato Sin Luz</h5>
+            <h5 class="card-title" style="text-align: left;">Metacrilato Con Luz</h5>
           </button>
         </h2>
         <div id="collapseA5" class="accordion-collapse collapse" aria-labelledby="headingA5" data-bs-parent="#accordionExample1">
@@ -774,7 +774,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="precio_pvc_5mm_cinta" class="form-label">Cinta doble cara:</label>
+                <label for="precio_pvc_5mm_cinta" class="form-label">Cinta:</label>
                 <input type="number" step=".01" class="form-control" id="precio_pvc_5mm_cinta" name="precio_pvc_5mm_cinta" value="<?php echo esc_html($precio_pvc_5mm_cinta);?>" required/>
               </div>
 
@@ -829,7 +829,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="precio_pvc_10mm_cinta" class="form-label">Cinta doble cara:</label>
+                <label for="precio_pvc_10mm_cinta" class="form-label">Cinta:</label>
                 <input type="number" step=".01" class="form-control" id="precio_pvc_10mm_cinta" name="precio_pvc_10mm_cinta" value="<?php echo esc_html($precio_pvc_10mm_cinta);?>" required/>
               </div>
 
@@ -883,7 +883,7 @@
               </div>
 
               <div class="col-sm-2">
-                <label for="precio_pvc_19mm_cinta" class="form-label">Cinta doble cara:</label>
+                <label for="precio_pvc_19mm_cinta" class="form-label">Cinta:</label>
                 <input type="number" step=".01" class="form-control" id="precio_pvc_19mm_cinta" name="precio_pvc_19mm_cinta" value="<?php echo esc_html($precio_pvc_19mm_cinta);?>" required/>
               </div>
 

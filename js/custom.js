@@ -128,20 +128,20 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById("precio_aluminio_corte_cnc").value);
             var e = Number(document.getElementById("cn_precio_doblado_aluminio_sin_iluminar").value);
 
-            var totalAluminio   = Number(a * areaM2.toFixed(2));
-            var totalPintura    = Number(c * areaM2.toFixed(2));
-            var totalCorte      = Number(d * anchoSVGM.toFixed(2));
+            var totalAluminio   = Number(a * areaM2);
+            var totalPintura    = Number(c * areaM2);
+            var totalCorte      = Number(d * anchoSVGM);
             var soldadura       = Number(b);
             var doblado         = Number(e);
             
             //console.log("Area metros: "+ areaM.toFixed(2));
-            console.log("Area metros2: "+ areaM2.toFixed(2));
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Aluminio: "+ totalAluminio + " = " + a +" x "+ areaM2.toFixed(2));
-            console.log("Total Pintura: " + totalPintura + " = " + c +" x "+ areaM2.toFixed(2));
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
+            console.log("Total Aluminio: "+ totalAluminio + " = " + a +" x "+ areaM2);
             console.log("Total Soldadura: " + soldadura);
-            console.log("Total Doblado: " + doblado);
-            console.log("Total Corte: " + totalCorte + " = " + d +" x "+ anchoSVGM.toFixed(2));
+            console.log("Total Pintura: " + totalPintura + " = " + c +" x "+ areaM2);
+            console.log("Total Corte: " + totalCorte + " = " + d +" x "+ anchoSVGM);            
+            console.log("Total Doblado: " + doblado);            
             console.log("Tiempos de entrega: " + tiemposEntrega);
             console.log("Previsualización: " + previsualizacion);
 
@@ -208,12 +208,20 @@ function jQueryDoSomethingAJAX() {
             var transformador   = Number(f); 
             var separadores     = Number(i);
             var led             = Number(e * anchoSVGM);
-            
-            console.log("Total Aluminio "+ totalAluminio);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Pintura " + totalPintura);
-            console.log("Total Corte " + totalCorte);
+
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);            
+            console.log("Total Aluminio: "+ totalAluminio);
+            console.log("Soldadura: "+ soldadura);
+            console.log("Total Pintura: " + totalPintura);
+            console.log("Metacrilato 10mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
+            console.log("Total Corte: " + totalCorte);
+            console.log("Separadores: " + separadores);
+            console.log("Doblado: " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualización: " + previsualizacion);
 
             var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
             
@@ -276,11 +284,19 @@ function jQueryDoSomethingAJAX() {
             var junquillo       = Number(e * anchoSVGM);
             var led             = Number(f * anchoSVGM);
             
-            console.log("Total Aluminio "+ totalAluminio);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Pintura " + totalPintura);
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);            
+            console.log("Total Aluminio: "+ totalAluminio);
+            console.log("Soldadura: " + soldadura);
+            console.log("Total Pintura: " + totalPintura);
+            console.log("Metacrilato 3mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
             console.log("Total Corte " + totalCorte);
+            console.log("Doblado: " + doblado);
+            console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
+            console.log("Previsualizacion: " + previsualizacion);
 
             var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
             
@@ -386,10 +402,11 @@ function jQueryDoSomethingAJAX() {
             var soldadura    = Number(b);
             var doblado      = Number(d);
             
-            console.log("Total Acero "+ totalAcero);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
+            console.log("Total Acero: "+ totalAcero);
+            console.log("Soldadura: "+ soldadura);
             console.log("Total Corte " + totalCorte);
-            console.log("Total Soldadura " + soldadura);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);                  
@@ -435,11 +452,16 @@ function jQueryDoSomethingAJAX() {
             var transformador = Number(g);
             var separadores   = Number(h);
             
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total Acero "+ totalAcero);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
-            console.log("Total Doblado " + doblado);
+            console.log("Metacrilato 10mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
+            console.log("Total Corte " + totalCorte);
+            console.log("Separadores: " + separadores);
+            console.log("Total Doblado: " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);          
 
@@ -484,11 +506,16 @@ function jQueryDoSomethingAJAX() {
             var transformador = Number(g);
             var junquillo     = Number(h * anchoSVGM);
             
-            console.log("Total Acero "+ totalAcero);
+            console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
+            console.log("Total Acero "+ totalAcero);
             console.log("Total Soldadura " + soldadura);
+            console.log("Metacrilato 3mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Doblado " + doblado);
+            console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
@@ -575,10 +602,11 @@ function jQueryDoSomethingAJAX() {
             var soldadura     = Number(b);
             var doblado       = Number(d);
 
-            console.log("Total Latón "+ totalLaton);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
+            console.log("Total Latón: "+ totalLaton + " = " + a +" x "+ areaM2);
             console.log("Total Soldadura " + soldadura);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
@@ -624,10 +652,15 @@ function jQueryDoSomethingAJAX() {
             var transformador = Number(g);
             var separadores   = Number(h);
 
-            console.log("Total Latón "+ totalLaton);
+            console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
+            console.log("Total Latón "+ totalLaton);
             console.log("Total Soldadura " + soldadura);
+            console.log("Metacrilato 10mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
+            console.log("Total Corte " + totalCorte);
+            console.log("Separadores: " + separadores);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
@@ -673,11 +706,16 @@ function jQueryDoSomethingAJAX() {
             var transformador = Number(g);
             var junquillo     = Number(h * anchoSVGM);
 
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total Latón "+ totalLaton);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Soldadura " + soldadura);
-            console.log("Total Doblado " + doblado);
+            console.log("Metacrilato 3mm Blanco Opal: " + metacrilato);
+            console.log("Led: " + led);
+            console.log("Transformador: " + transformador);
+            console.log("Total Corte " + totalCorte);
+            console.log("Total Doblado: " + doblado);
+            console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
@@ -745,9 +783,26 @@ function jQueryDoSomethingAJAX() {
         //Metacrilato con luz:
         if(acabado == "Color 360"){
             var a = Number(document.getElementById('cn_precio_metacrilato3mm_color360_sin_luz').value);
+
+            var colores = document.getElementsByName("colores");
+            var txt = "";
+            var i;
+            for (i = 0; i < colores.length; i++) {
+                if (colores[i].checked) {
+                  txt = colores[i].value;
+                }
+            }
+
+            var color = txt;
+            console.log(color);
+
         }else if(acabado == "Blanco Opal"){
             var a = Number(document.getElementById('cn_precio_metacrilato3mm_blancoOpal_sin_luz').value);
+
+            var color = "No Aplica";
+            console.log(color);
         }
+
         var b = Number(document.getElementById('cn_precio_metacrilato_traseraPVC10mm_sin_luz').value);
         var c = Number(document.getElementById('cn_precio_metacrilato_corte_cnc_sin_luz').value);
         var d = Number(document.getElementById('cn_precio_metacrilato_doblado_sin_luz').value);
@@ -763,16 +818,17 @@ function jQueryDoSomethingAJAX() {
         var transformador       = Number(f);
         var cloroformo          = Number(g);
 
-        console.log("Total Metacrilato "+ totalMetacrilato);
-        console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-        console.log("Total Corte " + totalCorte);  
-        console.log("Total Trasera PVC " + traseraPVC10mm);    
-        console.log("Total Doblado " + doblado);
-        console.log("Total Led " + led);
-        console.log("Total Transformador " + transformador);
+        console.log("Area metros2: "+ areaM2);
+        console.log("Metros lineales (longitud): "+ anchoSVGM);
+        console.log("Total Metacrilato 3mm "+ totalMetacrilato);
+        console.log("Total Led: " + led);
+        console.log("Total Transformador: " + transformador);
         console.log("Total Cloroformo " + cloroformo);
-        console.log("Tiempos de entrega " + tiemposEntrega);
-        console.log("Previsualizacion " + previsualizacion);
+        console.log("Total Corte: " + totalCorte);  
+        console.log("Total Doblado: " + doblado);
+        console.log("Total Trasera PVC 10mm: " + traseraPVC10mm);    
+        console.log("Tiempos de entrega: " + tiemposEntrega);
+        console.log("Previsualizacion: " + previsualizacion);
 
         var parte1 = Number(totalMetacrilato) + Number(led) + Number(transformador) + Number(cloroformo) + Number(totalCorte) + Number(doblado) + Number(traseraPVC10mm);
         
@@ -784,18 +840,7 @@ function jQueryDoSomethingAJAX() {
 
         console.log("Subtotal: "+ subTotalprecio);
 
-        var colores = document.getElementsByName("colores");
-        var txt = "";
-        var i;
-        for (i = 0; i < colores.length; i++) {
-            if (colores[i].checked) {
-              txt = colores[i].value;
-            }
-        }
 
-        var color = txt;
-
-        console.log(color);
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
         precioFinal = (subTotalprecio * iva) + subTotalprecio;
@@ -904,11 +949,12 @@ function jQueryDoSomethingAJAX() {
             var pintura       = Number(d);
             var cinta         = Number(e);
 
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total PVC 5mm "+ totalPVC5mm);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
@@ -948,11 +994,12 @@ function jQueryDoSomethingAJAX() {
             var pintura       = Number(d);
             var cinta         = Number(e);
 
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total PVC 10mm "+ totalPVC10mm);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);      
@@ -992,11 +1039,12 @@ function jQueryDoSomethingAJAX() {
             var pintura       = Number(d);
             var cinta         = Number(e);
 
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total PVC 19mm "+ totalPVC19mm);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Cinta " + cinta);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
@@ -1045,12 +1093,17 @@ function jQueryDoSomethingAJAX() {
             var transformador = Number(h);
             var led           = Number(i * anchoSVGM);
 
+            console.log("Area metros2: "+ areaM2);
+            console.log("Metros lineales (longitud): "+ anchoSVGM);
             console.log("Total PVC 19mm retroiluminada "+ totalPVC19mm);
-            console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
-            console.log("Total Corte " + totalCorte);
             console.log("Total Fondo " + fondo);
             console.log("Total Pintura " + pintura);
+            console.log("Total Corte " + totalCorte);
             console.log("Total Cinta " + cinta);
+            console.log("Tornilleria " + tornilleria);
+            console.log("Separadores " + separadores);
+            console.log("Transformador " + transformador);
+            console.log("Led " + led);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
 
@@ -1288,6 +1341,18 @@ function coloresForm(divForm, flag){
     }else{
         document.getElementById(divForm).style.display = "none";
         document.getElementById('colorPaletaSeleccionada').style.display = "none";
+    }
+}
+
+function coloresForm2(divForm, flag){
+
+    //alert(divForm+'--'+ flag);
+    if(flag == 'true'){
+        document.getElementById(divForm).style.display = "inline";
+        
+    }else{
+        document.getElementById(divForm).style.display = "none";
+        
     }
 }
 
