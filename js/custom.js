@@ -89,7 +89,7 @@ function jQueryDoSomethingAJAX() {
 
         var acabado = txt;
 
-       var separacionAluminio = document.getElementsByName("separacionAluminio");
+        var separacionAluminio = document.getElementsByName("separacionAluminio");
         var txt = "";
         var i;
         for (i = 0; i < separacionAluminio.length; i++) {
@@ -100,7 +100,7 @@ function jQueryDoSomethingAJAX() {
 
         var separacion = txt;
 
-       var opcionesAluminio = document.getElementsByName("opcionesAluminio");
+        var opcionesAluminio = document.getElementsByName("opcionesAluminio");
         var txt = "";
         var i;
         for (i = 0; i < opcionesAluminio.length; i++) {
@@ -175,9 +175,21 @@ function jQueryDoSomethingAJAX() {
                 var color = document.getElementById('colorPaleta').value
             }
             
+            var colorLed = 'No Aplica';
         }
 
         if(opciones == "Retroiluminado" ){
+
+            var colorLedAluminio = document.getElementsByName("colorLedAluminio");
+            var txt = "";
+            var i;
+            for (i = 0; i < colorLedAluminio.length; i++) {
+                if (colorLedAluminio[i].checked) {
+                  txt = colorLedAluminio[i].value;
+                }
+            }
+
+            var colorLed = txt;            
 
             document.getElementById('colorPaletaSeleccionada').style.display = "none";
 
@@ -326,6 +338,7 @@ function jQueryDoSomethingAJAX() {
                 var color = document.getElementById('colorPaleta').value
             }
 
+            var colorLed = 'No Aplica';
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
@@ -421,10 +434,22 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';  
+            var color = 'No Aplica'; 
+            var colorLed = 'No Aplica'; 
         }
         
         if(opciones == "Retroiluminado" ){
+
+            var colorLedAcero = document.getElementsByName("colorLedAcero");
+            var txt = "";
+            var i;
+            for (i = 0; i < colorLedAcero.length; i++) {
+                if (colorLedAcero[i].checked) {
+                  txt = colorLedAcero[i].value;
+                }
+            }
+
+            var colorLed = txt;            
 
             if(tiemposEntregaText == "10 días laborables"){
                 var tiemposEntrega = document.getElementById('cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar').value;
@@ -531,6 +556,8 @@ function jQueryDoSomethingAJAX() {
           
             var color = 'No Aplica';
 
+            var colorLed = 'No Aplica';
+
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
@@ -570,7 +597,7 @@ function jQueryDoSomethingAJAX() {
 
         var separacion = txt;
 
-       var opcionesLaton = document.getElementsByName("opcionesLaton");
+        var opcionesLaton = document.getElementsByName("opcionesLaton");
         var txt = "";
         var i;
         for (i = 0; i < opcionesLaton.length; i++) {
@@ -621,10 +648,23 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';    
+            var color = 'No Aplica';
+
+            var colorLed = 'No Aplica';
         }
 
         if(opciones == "Retroiluminado" ){
+
+            var colorLedLaton = document.getElementsByName("colorLedLaton");
+            var txt = "";
+            var i;
+            for (i = 0; i < colorLedLaton.length; i++) {
+                if (colorLedLaton[i].checked) {
+                  txt = colorLedLaton[i].value;
+                }
+            }
+
+            var colorLed = txt;            
 
             if(tiemposEntregaText == "10 días laborables"){
                 var tiemposEntrega = document.getElementById('cn_precio_diez_dias_laton_retroiluminadas').value;
@@ -729,7 +769,9 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';       
+            var color = 'No Aplica';   
+
+            var colorLed = 'No Aplica';    
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
@@ -777,11 +819,22 @@ function jQueryDoSomethingAJAX() {
 
         var acabado = txt;
 
+        var colorMetacrilato = document.getElementsByName("colorMetacrilato");
+        var txt = "";
+        var i;
+        for (i = 0; i < colorMetacrilato.length; i++) {
+            if (colorMetacrilato[i].checked) {
+              txt = colorMetacrilato[i].value;
+            }
+        }
+
+        var colorMetacrilato = txt;
+
         var opciones = 'No Aplica';
         var separacion = 'No Aplica';
      
         //Metacrilato con luz:
-        if(acabado == "Color 360"){
+        if(colorMetacrilato == "Color 360"){
             var a = Number(document.getElementById('cn_precio_metacrilato3mm_color360_sin_luz').value);
 
             var colores = document.getElementsByName("colores");
@@ -793,7 +846,7 @@ function jQueryDoSomethingAJAX() {
                 }
             }
 
-            var color = txt;
+            var color = "Color 360: " + txt;
             console.log(color);
 
         }else if(acabado == "Blanco Opal"){
@@ -840,12 +893,12 @@ function jQueryDoSomethingAJAX() {
 
         console.log("Subtotal: "+ subTotalprecio);
 
-
-
         var iva     = Number(document.getElementById('iva_letras').value / 100);
         precioFinal = (subTotalprecio * iva) + subTotalprecio;
 
         letraCorporea = "Metacrilato con Luz";
+
+        var colorLed = 'No Aplica';
     }
 
     if(letraCorporea == "pvcForm"){
@@ -901,32 +954,6 @@ function jQueryDoSomethingAJAX() {
 
         var opciones = txt;
        
-        if( (acabado == "Pintado Mate") || (acabado == 'Pintado Brillo') ){
-
-            document.getElementById('colorPaletaSeleccionada').style.display = "inline";
-            /*
-            var colores = document.getElementsByName("coloresPvc");
-            var txt = "";
-            var i;
-            for (i = 0; i < colores.length; i++) {
-                if (colores[i].checked) {
-                  txt = colores[i].value;
-                }
-            }
-
-            var color = txt;  */
-
-            if(document.getElementById('colorSumario').value == ""){
-                var color = "Ral: Ral 1000";
-            }else{                
-                var color = document.getElementById('colorPaleta').value
-            }
-
-        }else{
-            document.getElementById('colorPaletaSeleccionada').style.display = "none";
-            var color = 'No Aplica';  
-        }
-
         if( grosor == "5 mm"){
 
             if(tiemposEntregaText == "10 días laborables"){
@@ -970,6 +997,8 @@ function jQueryDoSomethingAJAX() {
             console.log("Subtotal: "+ subTotalprecio);
 
             var color = 'No Aplica';  
+
+            var colorLed = 'No Aplica';
         }
 
         if( grosor == "10 mm"){
@@ -1015,6 +1044,7 @@ function jQueryDoSomethingAJAX() {
             console.log("Subtotal: "+ subTotalprecio);
 
             var color = 'No Aplica';  
+            var colorLed = 'No Aplica';
         }
 
         if( (grosor == "19 mm") && (opciones == "Sin Luz")) {
@@ -1059,11 +1089,23 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';  
+            var color = 'No Aplica'; 
+
+            var colorLed = 'No Aplica'; 
         }              
 
-
         if( ( grosor == "19 mm") && (opciones == "Retroiluminado") ){
+
+            var colorLedPvc = document.getElementsByName("colorLedPvc");
+            var txt = "";
+            var i;
+            for (i = 0; i < colorLedPvc.length; i++) {
+                if (colorLedPvc[i].checked) {
+                  txt = colorLedPvc[i].value;
+                }
+            }
+
+            var colorLed = txt;            
             
             if(tiemposEntregaText == "10 días laborables"){
                 var tiemposEntrega = document.getElementById('precio_pvc_19mm_diez_dias_retroalimentadas').value;
@@ -1117,8 +1159,33 @@ function jQueryDoSomethingAJAX() {
 
             console.log("Subtotal: "+ subTotalprecio);
 
-            var color = 'No Aplica';  
+            //var color = 'No Aplica';  
 
+            if( (acabado == "Pintado Mate") || (acabado == 'Pintado Brillo') ){
+
+                document.getElementById('colorPaletaSeleccionada').style.display = "inline";
+                /*
+                var colores = document.getElementsByName("coloresPvc");
+                var txt = "";
+                var i;
+                for (i = 0; i < colores.length; i++) {
+                    if (colores[i].checked) {
+                      txt = colores[i].value;
+                    }
+                }
+
+                var color = txt;  */
+
+                if(document.getElementById('colorSumario').value == ""){
+                    var color = "Ral: Ral 1000";
+                }else{                
+                    var color = document.getElementById('colorPaleta').value
+                }
+
+            }else{
+                document.getElementById('colorPaletaSeleccionada').style.display = "none";
+                var color = 'No Aplica';  
+            }
         }
 
         var iva     = Number(document.getElementById('iva_letras').value / 100);
@@ -1193,6 +1260,7 @@ function jQueryDoSomethingAJAX() {
 
         //Aluminio, Acero y Laton:
         document.getElementById('acabado').value                = acabado;
+        document.getElementById('colorLed').value               = colorLed;
         document.getElementById('separacion').value             = separacion;
         document.getElementById('opciones').value               = opciones;
 
@@ -1367,6 +1435,17 @@ function separacionForm(divForm, flag){
     }
 }
 
+function colorLedForm(divForm, flag){
+
+    if(flag == 'true'){
+
+        document.getElementById(divForm).style.display = "inline";
+    }else{
+
+        document.getElementById(divForm).style.display = "none";
+    }
+}
+
 function grosorForm(tipo,select){
 
     //opcionesAluminio
@@ -1418,6 +1497,7 @@ function paleta(tipo, color){
     
 }
 
+//Estos son los eventos para el formulario de PVC (hubo muchos cambios a última hora durante todo el desarrollo)
 window.addEventListener('load', function () {
 
     //En el formulario PVC:
@@ -1427,6 +1507,44 @@ window.addEventListener('load', function () {
     var sinLuz4             = document.querySelector('#sinLuz4');
     var retroiluminado4     = document.querySelector('#retroiluminado4');
     var iluminacionFrontal4 = document.querySelector('#iluminacionFrontal4');
+    var letraCorporea       = document.querySelector('#letraCorporea');
+   
+
+    var alturaMinima = 15;
+    letraCorporea.onchange = function () {
+
+        letraCorporeaForm(this.value);
+        deshabiltarBotonCart();
+
+        switch (this.value) {
+
+            case "aluminioForm":
+            case "aceroForm":
+            case "latonForm":
+            case "metacrilatoForm":
+
+              var alturaMinima = 15;
+
+            break;
+
+            case "pvcForm":
+
+                if( ((grosorPVC.value == "5 mm") || (grosorPVC.value == "10 mm") || (grosorPVC.value == "19 mm")) && (sinLuz4.checked == true)){
+
+                    var alturaMinima = 6;
+
+                }else if( (grosorPVC.value == "19 mm") && (retroiluminado4.checked == true)){
+
+                    var alturaMinima = 15;
+                }
+
+            break;
+
+        }
+
+        //Campo oculto: lo uso en obtenerSVG()
+        document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
+    }
 
     //Muestra las opciones de separación:
     grosorPVC.onchange = function () {
@@ -1440,14 +1558,24 @@ window.addEventListener('load', function () {
         }
 
         if((this.value == "19 mm") && (retroiluminado4.checked == true)){
+
             separacionForm('separacionFormPVC','true');
             document.getElementById('tornilleriaPVC').style.visibility = "visible";
-
 
         }else{
             separacionForm('separacionFormPVC','false');
             document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+            colorLedForm('colorLedFormPvc','false');
         }
+
+        if( ((this.value == "5 mm") || (this.value == "10 mm") || (this.value == "19 mm")) && (sinLuz4.checked == true)){
+
+            var alturaMinima = 6;
+        
+            //Campo oculto: lo uso en obtenerSVG()
+            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
+        }
+
     };
 
     retroiluminado4.onclick = function () {
@@ -1455,7 +1583,16 @@ window.addEventListener('load', function () {
         if((grosorPVC.value == "19 mm") && (retroiluminado4.checked == true)){
             separacionForm('separacionFormPVC','true');
             document.getElementById('tornilleriaPVC').style.visibility = "visible";
+
+            var alturaMinima = 15;
+     
+            //Campo oculto: lo uso en obtenerSVG()
+            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
+           
         }
+
+        colorLedForm('colorLedFormPvc','true');
+        
     };
 
     //No muestra las opciones de separación:
@@ -1472,6 +1609,15 @@ window.addEventListener('load', function () {
     sinLuz4.onclick = function () {
         separacionForm('separacionFormPVC','false');
         document.getElementById('tornilleriaPVC').style.visibility = "hidden";
+        colorLedForm('colorLedFormPvc','false');
+
+        if( ((grosorPVC.value == "5 mm") || (grosorPVC.value == "10 mm") || (grosorPVC.value == "19 mm")) && (sinLuz4.checked == true)){
+
+            var alturaMinima = 6;
+        
+            //Campo oculto: lo uso en obtenerSVG()
+            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
+        }
     }
 
     /*
@@ -1480,5 +1626,11 @@ window.addEventListener('load', function () {
         document.getElementById('tornilleriaPVC').style.visibility = "hidden";
     } 
     */
+
+
+
+
+
+
 
 });

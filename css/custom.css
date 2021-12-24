@@ -10871,20 +10871,15 @@ label.c {
 #selectGrosorAcero,
 #selectGrosorLaton,
 #selectGrosorMetacrilato,
-#selectGrosorPVC{
-  display: none;
-}
-
-#separacionFormAluminio{
-  display: none;
-}
-
-#separacionFormLaton{
-  display: none;
-}
-
+#selectGrosorPVC,
+#separacionFormAluminio,
+#separacionFormLaton,
 #separacionFormPVC,
-#opcionesFormPVC{
+#opcionesFormPVC,
+#colorLedFormAluminio,
+#colorLedFormAcero,
+#colorLedFormLaton,
+#colorLedFormPvc{
   display: none;
 }
 

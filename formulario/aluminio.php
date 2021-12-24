@@ -37,7 +37,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
+            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');colorLedForm('colorLedFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="sinLuz1" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
             <label class="drinkcard-cc sinIluminar" for="sinLuz1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
@@ -46,7 +46,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
+            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','true');colorLedForm('colorLedFormAluminio','true');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="retroiluminado1" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
             <label class="drinkcard-cc retroiluminadas" for="retroiluminado1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADAS</figcaption>
@@ -55,7 +55,7 @@
 
           <figure class="figure">
 
-            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
+            <input onclick="coloresForm('coloresFormAluminio','true');separacionForm('separacionFormAluminio','false');colorLedForm('colorLedFormAluminio','flase');//grosorForm('opcionesAluminio','grosorAluminio')" type="radio" name="opcionesAluminio" id="iluminacionFrontal1" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
             <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal1"></label>
 
             <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINADAS FRONTALMENTE</figcaption>
@@ -69,7 +69,40 @@
 
   </div>  
 
-  <div id="separacionFormAluminio" class="col-sm-10">
+  <div id="colorLedFormAluminio" class="col-sm-4">
+    
+    <div class="card" style="border: 0;">
+      <div class="card-body" style="background-color: #D3D3D3">
+        
+       <label>Color de Led</label>
+        <div class="cc-selector">
+          
+          <figure class="figure">
+
+            <input onclick="" type="radio" name="colorLedAluminio" id="blancoFrioAluminio" value="Blanco Frío" checked onchange="deshabiltarBotonCart()">
+            <label class="drinkcard-cc retroiluminadas" for="blancoFrioAluminio"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO FRÍO</figcaption>
+
+          </figure>
+
+          <figure class="figure">
+
+            <input onclick="" type="radio" name="colorLedAluminio" id="blancoCalidoAluminio" value="Blanco Cálido" onchange="deshabiltarBotonCart()">  
+            <label class="drinkcard-cc retroiluminadas" for="blancoCalidoAluminio"></label>
+
+            <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">BLANCO CÁLIDO</figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+    </div>              
+
+  </div>  
+
+  <div id="separacionFormAluminio" class="col-sm-8">
 
     <div class="card" style="border: 0;">
       <div class="card-body" style="background-color: #D3D3D3">
@@ -149,13 +182,7 @@
                   <img src="<?php echo plugin_dir_url(__FILE__).'../imagenes/nuevosColores/ral.png'?>" width="75" title="RAL"/>
                 </button>
 
-              </figure>
-
-                <div id="colorPaletaSeleccionada">
-                  <input type="hidden" id="colorPaleta" name="colorPaleta" value="RAL: RAL 1000" readonly="yes">
-                  <div id="colorSeleccionado" style="">RAL: RAL 1000</div>
-                </div>
-                           
+              </figure>                         
 
             </div>
 

@@ -1,6 +1,6 @@
     <div class="row">
 
-      <div class="col-sm-12">
+      <div class="col-sm-2">
 
         <div class="card" style="border: 0;">
           <div class="card-body" style="background-color: #D3D3D3">
@@ -10,7 +10,7 @@
             <div class="cc-selector">
               
               <!-- METACRILATO -->
-              <!--
+              
               <figure class="figure">
 
                 <input onclick="" type="radio" name="acabadoMetacrilato" id="sinPintar" value="Sin Pintar" checked onchange="deshabiltarBotonCart()">   
@@ -18,12 +18,30 @@
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN PINTAR</figcaption>
 
-              </figure>
-            -->
+              </figure>                                                                           
+
+            </div>
+            
+          </div>
+        </div>          
+
+      </div>
+
+
+      <div class="col-sm-6">
+
+        <div class="card" style="border: 0;">
+          <div class="card-body" style="background-color: #D3D3D3">
+          
+          <label>Colores</label>
+            
+            <div class="cc-selector">
+              
+              <!-- METACRILATO -->            
 
               <figure class="figure">
 
-                <input onclick="coloresForm2('coloresFormMetacrilato','true')" type="radio" name="acabadoMetacrilato" id="color360" value="Color 360" checked onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm2('coloresFormMetacrilato','true')" type="radio" name="colorMetacrilato" id="color360" value="Color 360" checked onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc pintado" for="color360"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">COLOR 360</figcaption>
@@ -32,7 +50,7 @@
 
               <figure class="figure">
 
-                <input onclick="coloresForm2('coloresFormMetacrilato','false')" type="radio" name="acabadoMetacrilato" id="blancoOpal" value="Blanco Opal" onchange="deshabiltarBotonCart()">   
+                <input onclick="coloresForm2('coloresFormMetacrilato','false')" type="radio" name="colorMetacrilato" id="blancoOpal" value="Blanco Opal" onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc pintado" for="blancoOpal"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO OPAL</figcaption>
@@ -40,13 +58,14 @@
               </figure>
 
                                                                                
-
             </div>
             
           </div>
         </div>          
 
       </div>
+
+
 
       <div id="coloresFormMetacrilato">
         <div class="col-sm-12">

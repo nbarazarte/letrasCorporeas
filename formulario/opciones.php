@@ -3,7 +3,7 @@
   <div class="col-sm-4">
 
     <label for="letraCorporea">Letra Corpórea de:</label>
-    <select form="letrasCorporeas" class="form-select" id="letraCorporea" onchange="letraCorporeaForm(this.value);deshabiltarBotonCart();" style="height: 50px;padding: 3% 0;  border-radius: 14px;  border: 3px #ffffff solid;width: 200px;">  <!-- browser.js ln 274-->  
+    <select form="letrasCorporeas" class="form-select" id="letraCorporea" onchange="" style="height: 50px;padding: 3% 0;  border-radius: 14px;  border: 3px #ffffff solid;width: 200px;">  <!-- browser.js ln 274-->  
       <option style="font-size: 20px"value="aluminioForm">Aluminio Hueca</option>
       <option style="font-size: 20px"value="aceroForm">Acero Inoxidable Hueca</option>
       <option style="font-size: 20px"value="latonForm">Latón Hueca</option>
@@ -69,6 +69,8 @@
   border: 3px #ffffff solid; width: 200px;">  
     <input type="hidden" class="form-range" id="alto" value="8.519" readonly="yes"> 
 
+  <input type="hidden" class="" id="minimaAltura" value="15" readonly="yes">
+
   </div>   
 
 <!--
@@ -110,8 +112,7 @@
 
         <option style="font-size: 20px"value="30 mm">30 mm</option>
         <option style="font-size: 20px"value="50 mm">50 mm</option>
-        <option style="font-size: 20px"value="80 mm">80 mm</option>
-        <option style="font-size: 20px"value="100 mm">100 mm</option>
+
       </select>
 
     </div>
@@ -123,7 +124,7 @@
         
         <option style="font-size: 20px"value="30 mm">30 mm</option>
         <option style="font-size: 20px"value="50 mm">50 mm</option>
-        <option style="font-size: 20px"value="100 mm">100 mm</option>
+
 
       </select>
 
@@ -136,7 +137,7 @@
         
         <option style="font-size: 20px"value="30 mm">30 mm</option>
         <option style="font-size: 20px"value="50 mm">50 mm</option>
-        <option style="font-size: 20px"value="100 mm">100 mm</option>
+
 
       </select>
 

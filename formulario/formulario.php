@@ -278,6 +278,21 @@
           ?>
 
           <div class="col-sm-10">
+
+            <div class="card" style="border: 0;">
+              <div class="card-body" style="background-color: #D3D3D3">
+                    
+                <div id="colorPaletaSeleccionada">
+                  <input type="hidden" id="colorPaleta" name="colorPaleta" value="RAL: RAL 1000" readonly="yes">
+                  <div id="colorSeleccionado" style="">RAL: RAL 1000</div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-10">
             
             <div class="card" style="border: 0;">
               <div class="card-body" style="background-color: #D3D3D3">

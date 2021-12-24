@@ -46,7 +46,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesAcero" id="sinLuz2" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
+                <input onclick="colorLedForm('colorLedFormAcero','false');" type="radio" name="opcionesAcero" id="sinLuz2" value="Sin Luz" checked onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc sinIluminar" for="sinLuz2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">SIN ILUMINAR</figcaption>
@@ -55,7 +55,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesAcero" id="retroiluminado2" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
+                <input onclick="colorLedForm('colorLedFormAcero','true');" type="radio" name="opcionesAcero" id="retroiluminado2" value="Retroiluminado" onchange="deshabiltarBotonCart()">  
                 <label class="drinkcard-cc retroiluminadas" for="retroiluminado2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">RETROILUMINADO</figcaption>
@@ -64,7 +64,7 @@
 
               <figure class="figure">
 
-                <input onclick="" type="radio" name="opcionesAcero" id="iluminacionFrontal2" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
+                <input onclick="colorLedForm('colorLedFormAcero','false');" type="radio" name="opcionesAcero" id="iluminacionFrontal2" value="Iluminación Frontal" onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc iluminacionFrontal" for="iluminacionFrontal2"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">ILUMINACIÓN FRONTAL</figcaption>
@@ -78,7 +78,41 @@
 
       </div>  
 
-      <div class="col-sm-12">
+      <div id="colorLedFormAcero" class="col-sm-4">
+        
+        <div class="card" style="border: 0;">
+          <div class="card-body" style="background-color: #D3D3D3">
+            
+           <label>Color de Led</label>
+            <div class="cc-selector">
+              
+
+              <figure class="figure">
+
+                <input onclick="" type="radio" name="colorLedAcero" id="blancoFrioAcero" value="Blanco Frío" checked onchange="deshabiltarBotonCart()">
+                <label class="drinkcard-cc retroiluminadas" for="blancoFrioAcero"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">BLANCO FRÍO</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input onclick="" type="radio" name="colorLedAcero" id="blancoCalidoAcero" value="Blanco Cálido" onchange="deshabiltarBotonCart()">  
+                <label class="drinkcard-cc retroiluminadas" for="blancoCalidoAcero"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">BLANCO CÁLIDO</figcaption>
+
+              </figure>
+
+            </div>
+
+          </div>
+        </div>              
+
+      </div> 
+
+      <div class="col-sm-8">
 
         <div class="card" style="border: 0;">
           <div class="card-body" style="background-color: #D3D3D3">

@@ -1367,6 +1367,7 @@ function campos_ocultos_letrasCorporeas() {
       
       <!-- Aluminio, Acero y Latón -->
       <input type="hidden" id="acabado" name="acabado" value="" readonly="yes">
+      <input type="hidden" id="colorLed" name="colorLed" value="" readonly="yes">
       <input type="hidden" id="separacion" name="separacion" value="" readonly="yes">   
       <input type="hidden" id="opciones" name="opciones" value="" readonly="yes">
       
@@ -1411,6 +1412,7 @@ function iconic_add_engraving_text_to_cart_item_LetrasCorporeas( $cart_item_data
   $tipoletraCorporea    = filter_input( INPUT_POST, 'tipoletraCorporea' );
   $tipoGrosor           = filter_input( INPUT_POST, 'tipoGrosor' );
   $acabado              = filter_input( INPUT_POST, 'acabado' );  
+  $colorLed             = filter_input( INPUT_POST, 'colorLed' );  
   $separacion           = filter_input( INPUT_POST, 'separacion'  ); 
   $opciones             = filter_input( INPUT_POST, 'opciones'  );
   $sujecion             = filter_input( INPUT_POST, 'sujecion'  ); 
@@ -1456,6 +1458,7 @@ function iconic_add_engraving_text_to_cart_item_LetrasCorporeas( $cart_item_data
   $cart_item_data['tipoletraCorporea']    = $tipoletraCorporea;
   $cart_item_data['tipoGrosor']           = $tipoGrosor;
   $cart_item_data['acabado']              = $acabado;  
+  $cart_item_data['colorLed']             = $colorLed;  
   $cart_item_data['separacion']           = $separacion;
   $cart_item_data['opciones']             = $opciones;  
   $cart_item_data['sujecion']             = $sujecion;
@@ -1500,10 +1503,11 @@ function iconic_display_engraving_text_cart_LetrasCorporeas( $item_data, $cart_i
         'display' => '<b>Texto:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
                      '<b>Fuente:</b><br/>'.wc_clean( $cart_item['fuenteLetrasText']).'<br/>'.
                      '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
-                     //'<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
+                     '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
                      '<b>Letra Corpórea de:</b><br/>'.wc_clean( $cart_item['tipoletraCorporea']).'<br/>'.
                      '<b>Profundidad:</b><br/>'.wc_clean( $cart_item['tipoGrosor']).'<br/>'.
                      '<b>Acabado:</b><br/>'.wc_clean( $cart_item['acabado']).'<br/>'.
+                     '<b>Color Led:</b><br/>'.wc_clean( $cart_item['colorLed']).'<br/>'.
                      '<b>Separación:</b><br/>'.wc_clean( $cart_item['separacion']).'<br/>'.                     
                      '<b>Opciones:</b><br/>'.wc_clean( $cart_item['opciones']).'<br/>'.
                      '<b>Sujeción:</b><br/>'.wc_clean( $cart_item['sujecion']).'<br/>'. 
@@ -1582,6 +1586,12 @@ function plugin_republic_checkout_create_order_line_item_LetrasCorporeas( $item,
  $item->add_meta_data(
   __( 'Acabado', 'iconic' ),
   $values['acabado'],
+  true
+ );
+
+  $item->add_meta_data(
+  __( 'Color Led', 'iconic' ),
+  $values['colorLed'],
   true
  );
 
