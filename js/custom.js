@@ -128,11 +128,38 @@ function jQueryDoSomethingAJAX() {
             var d = Number(document.getElementById("precio_aluminio_corte_cnc").value);
             var e = Number(document.getElementById("cn_precio_doblado_aluminio_sin_iluminar").value);
 
+            var x = document.getElementById("grosorAluminio").selectedIndex;
+            var y = document.getElementById("grosorAluminio").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAluminioText = y[x].text;
+            var grosorAluminio = y[x].value;
+
+            if(grosorAluminio == "30 mm"){
+
+                var f = Number(document.getElementById("profundidad_30mm_aluminio_sin_iluminar").value);
+            }
+
+            if(grosorAluminio == "50 mm"){
+
+                var f = Number(document.getElementById("profundidad_50mm_aluminio_sin_iluminar").value);
+            }
+
+            if(grosorAluminio == "80 mm"){
+
+                var f = Number(document.getElementById("profundidad_80mm_aluminio_sin_iluminar").value);
+            }
+
+            if(grosorAluminio == "100 mm"){
+
+                var f = Number(document.getElementById("profundidad_100mm_aluminio_sin_iluminar").value);
+            }            
+
             var totalAluminio   = Number(a * areaM2);
             var totalPintura    = Number(c * areaM2);
             var totalCorte      = Number(d * anchoSVGM);
             var soldadura       = Number(b);
             var doblado         = Number(e);
+            var profundidad     = Number(f * anchoSVGM);
             
             //console.log("Area metros: "+ areaM.toFixed(2));
             console.log("Area metros2: "+ areaM2);
@@ -144,10 +171,11 @@ function jQueryDoSomethingAJAX() {
             console.log("Total Doblado: " + doblado);            
             console.log("Tiempos de entrega: " + tiemposEntrega);
             console.log("Previsualización: " + previsualizacion);
+            console.log("Profundidad sin iluminar: " + profundidad);
 
             //var subTotalprecio  =  Number(Number(Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) * 4) + Number(tiemposEntrega) + Number(previsualizacion));            
             
-            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado);
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(totalCorte) + Number(doblado) + Number(profundidad);
 
             var parte2 = Number(parte1) * 4;
 
@@ -211,6 +239,32 @@ function jQueryDoSomethingAJAX() {
             var h = Number(document.getElementById('cn_precio_doblado_aluminio_retroiluminado').value);
             var i = Number(document.getElementById('cn_precio_separadores_aluminio_retroiluminado').value);
 
+            var x = document.getElementById("grosorAluminio").selectedIndex;
+            var y = document.getElementById("grosorAluminio").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAluminioText = y[x].text;
+            var grosorAluminio = y[x].value;
+
+            if(grosorAluminio == "30 mm"){
+
+                var j = Number(document.getElementById("profundidad_30mm_aluminio_retroiluminado").value);
+            }
+
+            if(grosorAluminio == "50 mm"){
+
+                var j = Number(document.getElementById("profundidad_50mm_aluminio_retroiluminado").value);
+            }
+
+            if(grosorAluminio == "80 mm"){
+
+                var j = Number(document.getElementById("profundidad_80mm_aluminio_retroiluminado").value);
+            }
+
+            if(grosorAluminio == "100 mm"){
+
+                var j = Number(document.getElementById("profundidad_100mm_aluminio_retroiluminado").value);
+            }  
+
             var totalAluminio   = Number(a * areaM2);
             var totalPintura    = Number(c * areaM2);
             var totalCorte      = Number(g * anchoSVGM);
@@ -220,6 +274,7 @@ function jQueryDoSomethingAJAX() {
             var transformador   = Number(f); 
             var separadores     = Number(i);
             var led             = Number(e * anchoSVGM);
+            var profundidad     = Number(j * anchoSVGM);
 
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);            
@@ -234,8 +289,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Doblado: " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualización: " + previsualizacion);
+            console.log("Profundidad Retroiluminado: " + profundidad);
 
-            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -286,6 +342,32 @@ function jQueryDoSomethingAJAX() {
             var h = Number(document.getElementById('precio_aluminio_iluminado_frontal_corte_cnc').value);
             var i = Number(document.getElementById('cn_precio_doblado_aluminio_iluminado_frontal').value);
 
+            var x = document.getElementById("grosorAluminio").selectedIndex;
+            var y = document.getElementById("grosorAluminio").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAluminioText = y[x].text;
+            var grosorAluminio = y[x].value;
+
+            if(grosorAluminio == "30 mm"){
+
+                var j = Number(document.getElementById("profundidad_30mm_aluminio_iluminado_frontal").value);
+            }
+
+            if(grosorAluminio == "50 mm"){
+
+                var j = Number(document.getElementById("profundidad_50mm_aluminio_iluminado_frontal").value);
+            }
+
+            if(grosorAluminio == "80 mm"){
+
+                var j = Number(document.getElementById("profundidad_80mm_aluminio_iluminado_frontal").value);
+            }
+
+            if(grosorAluminio == "100 mm"){
+
+                var j = Number(document.getElementById("profundidad_100mm_aluminio_iluminado_frontal").value);
+            } 
+
             var totalAluminio   = Number(a * areaM2);
             var totalPintura    = Number(c * areaM2);
             var totalCorte      = Number(h * anchoSVGM);
@@ -295,6 +377,7 @@ function jQueryDoSomethingAJAX() {
             var transformador   = Number(g); 
             var junquillo       = Number(e * anchoSVGM);
             var led             = Number(f * anchoSVGM);
+            var profundidad     = Number(j * anchoSVGM);
             
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);            
@@ -309,8 +392,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion: " + previsualizacion);
+            console.log("Profundidad: " + profundidad);
 
-            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            var parte1 = Number(totalAluminio) + Number(soldadura) + Number(totalPintura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -410,10 +494,37 @@ function jQueryDoSomethingAJAX() {
             var c = Number(document.getElementById('precio_acero_corte_cnc').value);
             var d = Number(document.getElementById('cn_precio_doblado_acero_sin_iluminar').value);
 
+            var x = document.getElementById("grosorAcero").selectedIndex;
+            var y = document.getElementById("grosorAcero").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAceroText = y[x].text;
+            var grosorAcero = y[x].value;
+
+            if(grosorAcero == "30 mm"){
+
+                var e = Number(document.getElementById("profundidad_30mm_acero_sin_iluminar").value);
+            }
+
+            if(grosorAcero == "50 mm"){
+
+                var e = Number(document.getElementById("profundidad_50mm_acero_sin_iluminar").value);
+            }
+
+            if(grosorAcero == "80 mm"){
+
+                var e = Number(document.getElementById("profundidad_80mm_acero_sin_iluminar").value);
+            }
+
+            if(grosorAcero == "100 mm"){
+
+                var e = Number(document.getElementById("profundidad_100mm_acero_sin_iluminar").value);
+            }             
+
             var totalAcero   = Number(a * areaM2);
             var totalCorte   = Number(c * anchoSVGM);
             var soldadura    = Number(b);
             var doblado      = Number(d);
+            var profundidad  = Number(e * anchoSVGM);
             
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);
@@ -422,9 +533,10 @@ function jQueryDoSomethingAJAX() {
             console.log("Total Corte " + totalCorte);
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
-            console.log("Previsualizacion " + previsualizacion);                  
+            console.log("Previsualizacion " + previsualizacion);
+            console.log("Profundidad " + profundidad);                  
             
-            var parte1 = Number(totalAcero) + Number(soldadura) + Number(totalCorte) + Number(doblado);
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(totalCorte) + Number(doblado) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -468,6 +580,32 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('precio_acero_retroiluminado_transformador').value);
             var h = Number(document.getElementById('precio_acero_retroiluminado_separadores').value);
 
+            var x = document.getElementById("grosorAcero").selectedIndex;
+            var y = document.getElementById("grosorAcero").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAceroText = y[x].text;
+            var grosorAcero = y[x].value;
+
+            if(grosorAcero == "30 mm"){
+
+                var i = Number(document.getElementById("profundidad_30mm_acero_retroiluminado").value);
+            }
+
+            if(grosorAcero == "50 mm"){
+
+                var i = Number(document.getElementById("profundidad_50mm_acero_retroiluminado").value);
+            }
+
+            if(grosorAcero == "80 mm"){
+
+                var i = Number(document.getElementById("profundidad_80mm_acero_retroiluminado").value);
+            }
+
+            if(grosorAcero == "100 mm"){
+
+                var i = Number(document.getElementById("profundidad_100mm_acero_retroiluminado").value);
+            }              
+
             var totalAcero    = Number(a * areaM2);
             var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
@@ -476,6 +614,7 @@ function jQueryDoSomethingAJAX() {
             var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var separadores   = Number(h);
+            var profundidad   = Number(i * anchoSVGM);
             
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);
@@ -488,9 +627,10 @@ function jQueryDoSomethingAJAX() {
             console.log("Separadores: " + separadores);
             console.log("Total Doblado: " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
-            console.log("Previsualizacion " + previsualizacion);          
+            console.log("Previsualizacion " + previsualizacion);    
+            console.log("Profundidad " + profundidad);          
 
-            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -522,6 +662,32 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('cn_precio_acero_transformador_iluminacion_frontal').value);
             var h = Number(document.getElementById('cn_precio_acero_junquillo_iluminacion_frontal').value);
 
+            var x = document.getElementById("grosorAcero").selectedIndex;
+            var y = document.getElementById("grosorAcero").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorAceroText = y[x].text;
+            var grosorAcero = y[x].value;
+
+            if(grosorAcero == "30 mm"){
+
+                var i = Number(document.getElementById("profundidad_30mm_acero_iluminacion_frontal").value);
+            }
+
+            if(grosorAcero == "50 mm"){
+
+                var i = Number(document.getElementById("profundidad_50mm_acero_iluminacion_frontal").value);
+            }
+
+            if(grosorAcero == "80 mm"){
+
+                var i = Number(document.getElementById("profundidad_80mm_acero_iluminacion_frontal").value);
+            }
+
+            if(grosorAcero == "100 mm"){
+
+                var i = Number(document.getElementById("profundidad_100mm_acero_iluminacion_frontal").value);
+            }
+
             var totalAcero    = Number(a * areaM2);
             var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
@@ -530,6 +696,7 @@ function jQueryDoSomethingAJAX() {
             var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var junquillo     = Number(h * anchoSVGM);
+            var profundidad   = Number(i * anchoSVGM);
             
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
@@ -543,8 +710,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+            console.log("Profundidad " + profundidad);
 
-            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            var parte1 = Number(totalAcero) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -623,11 +791,38 @@ function jQueryDoSomethingAJAX() {
             var b = Number(document.getElementById('cn_precio_soldadura_laton_sin_iluminar').value);
             var c = Number(document.getElementById('cn_precio_corte_cnc_laton_sin_iluminar').value);
             var d = Number(document.getElementById('cn_precio_doblado_laton_sin_iluminar').value);
-            
+
+            var x = document.getElementById("grosorLaton").selectedIndex;
+            var y = document.getElementById("grosorLaton").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorLatonText = y[x].text;
+            var grosorLaton = y[x].value;
+
+            if(grosorLaton == "30 mm"){
+
+                var e = Number(document.getElementById("profundidad_30mm_laton_sin_iluminar").value);
+            }
+
+            if(grosorLaton == "50 mm"){
+
+                var e = Number(document.getElementById("profundidad_50mm_laton_sin_iluminar").value);
+            }
+
+            if(grosorLaton == "80 mm"){
+
+                var e = Number(document.getElementById("profundidad_80mm_laton_sin_iluminar").value);
+            }
+
+            if(grosorLaton == "100 mm"){
+
+                var e = Number(document.getElementById("profundidad_100mm_laton_sin_iluminar").value);
+            }
+
             var totalLaton    = Number(a * areaM2);
             var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
             var doblado       = Number(d);
+            var profundidad   = Number(e * anchoSVGM);
 
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);
@@ -637,8 +832,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+            console.log("Profundidad: " + profundidad);
 
-            var parte1 = Number(totalLaton) + Number(soldadura) + Number(totalCorte) + Number(doblado);
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(totalCorte) + Number(doblado) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -683,6 +879,32 @@ function jQueryDoSomethingAJAX() {
             var g = Number(document.getElementById('cn_precio_laton_transformador_retroiluminadas').value);
             var h = Number(document.getElementById('cn_precio_laton_separadores_retroiluminadas').value);
             
+            var x = document.getElementById("grosorLaton").selectedIndex;
+            var y = document.getElementById("grosorLaton").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorLatonText = y[x].text;
+            var grosorLaton = y[x].value;
+
+            if(grosorLaton == "30 mm"){
+
+                var i = Number(document.getElementById("profundidad_30mm_laton_retroiluminadas").value);
+            }
+
+            if(grosorLaton == "50 mm"){
+
+                var i = Number(document.getElementById("profundidad_50mm_laton_retroiluminadas").value);
+            }
+
+            if(grosorLaton == "80 mm"){
+
+                var i = Number(document.getElementById("profundidad_80mm_laton_retroiluminadas").value);
+            }
+
+            if(grosorLaton == "100 mm"){
+
+                var i = Number(document.getElementById("profundidad_100mm_laton_retroiluminadas").value);
+            }
+
             var totalLaton    = Number(a * areaM2);
             var totalCorte    = Number(c * anchoSVGM);
             var soldadura     = Number(b);
@@ -691,6 +913,7 @@ function jQueryDoSomethingAJAX() {
             var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var separadores   = Number(h);
+            var profundidad   = Number(i * anchoSVGM);
 
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM.toFixed(2));
@@ -704,8 +927,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Total Doblado " + doblado);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+            console.log("Profundidad " + profundidad);
 
-            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado);
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(separadores) + Number(doblado) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -736,6 +960,32 @@ function jQueryDoSomethingAJAX() {
             var f = Number(document.getElementById('cn_precio_laton_led_iluminacion_frontal').value);
             var g = Number(document.getElementById('cn_precio_laton_transformador_iluminacion_frontal').value);
             var h = Number(document.getElementById('cn_precio_laton_junquillo_iluminacion_frontal').value);
+
+            var x = document.getElementById("grosorLaton").selectedIndex;
+            var y = document.getElementById("grosorLaton").options;
+            //alert("Index: " + y[x].index + " is " + y[x].text);
+            var grosorLatonText = y[x].text;
+            var grosorLaton = y[x].value;
+
+            if(grosorLaton == "30 mm"){
+
+                var i = Number(document.getElementById("profundidad_30mm_laton_iluminacion_frontal").value);
+            }
+
+            if(grosorLaton == "50 mm"){
+
+                var i = Number(document.getElementById("profundidad_50mm_laton_iluminacion_frontal").value);
+            }
+
+            if(grosorLaton == "80 mm"){
+
+                var i = Number(document.getElementById("profundidad_80mm_laton_iluminacion_frontal").value);
+            }
+
+            if(grosorLaton == "100 mm"){
+
+                var i = Number(document.getElementById("profundidad_100mm_laton_iluminacion_frontal").value);
+            }            
             
             var totalLaton    = Number(a * areaM2);
             var totalCorte    = Number(c * anchoSVGM);
@@ -745,6 +995,7 @@ function jQueryDoSomethingAJAX() {
             var led           = Number(f * anchoSVGM);
             var transformador = Number(g);
             var junquillo     = Number(h * anchoSVGM);
+            var profundidad   = Number(i * anchoSVGM);
 
             console.log("Area metros2: "+ areaM2);
             console.log("Metros lineales (longitud): "+ anchoSVGM);
@@ -758,8 +1009,9 @@ function jQueryDoSomethingAJAX() {
             console.log("Junquillo: " + junquillo);
             console.log("Tiempos de entrega " + tiemposEntrega);
             console.log("Previsualizacion " + previsualizacion);
+            console.log("Profundidad " + profundidad);
 
-            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo);
+            var parte1 = Number(totalLaton) + Number(soldadura) + Number(metacrilato) + Number(led) + Number(transformador) + Number(totalCorte) + Number(doblado) + Number(junquillo) + Number(profundidad);
             
             var parte2 = Number(parte1) * 4;
 
@@ -1496,141 +1748,3 @@ function paleta(tipo, color){
     document.getElementById('colorSumario').value = tipo +': '+ color.substr(-8, 400);
     
 }
-
-//Estos son los eventos para el formulario de PVC (hubo muchos cambios a última hora durante todo el desarrollo)
-window.addEventListener('load', function () {
-
-    //En el formulario PVC:
-    var grosorPVC           = document.querySelector('#grosorPVC');
-    var sinSujecion2        = document.querySelector('#sinSujecion2');
-    var letraAdhesiva2      = document.querySelector('#letraAdhesiva2');
-    var sinLuz4             = document.querySelector('#sinLuz4');
-    var retroiluminado4     = document.querySelector('#retroiluminado4');
-    var iluminacionFrontal4 = document.querySelector('#iluminacionFrontal4');
-    var letraCorporea       = document.querySelector('#letraCorporea');
-   
-
-    var alturaMinima = 15;
-    letraCorporea.onchange = function () {
-
-        letraCorporeaForm(this.value);
-        deshabiltarBotonCart();
-
-        switch (this.value) {
-
-            case "aluminioForm":
-            case "aceroForm":
-            case "latonForm":
-            case "metacrilatoForm":
-
-              var alturaMinima = 15;
-
-            break;
-
-            case "pvcForm":
-
-                if( ((grosorPVC.value == "5 mm") || (grosorPVC.value == "10 mm") || (grosorPVC.value == "19 mm")) && (sinLuz4.checked == true)){
-
-                    var alturaMinima = 6;
-
-                }else if( (grosorPVC.value == "19 mm") && (retroiluminado4.checked == true)){
-
-                    var alturaMinima = 15;
-                }
-
-            break;
-
-        }
-
-        //Campo oculto: lo uso en obtenerSVG()
-        document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
-    }
-
-    //Muestra las opciones de separación:
-    grosorPVC.onchange = function () {
-
-        deshabiltarBotonCart();
-
-        if(this.value == "19 mm"){
-            separacionForm('opcionesFormPVC','true');
-        }else{
-            separacionForm('opcionesFormPVC','false');
-        }
-
-        if((this.value == "19 mm") && (retroiluminado4.checked == true)){
-
-            separacionForm('separacionFormPVC','true');
-            document.getElementById('tornilleriaPVC').style.visibility = "visible";
-
-        }else{
-            separacionForm('separacionFormPVC','false');
-            document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-            colorLedForm('colorLedFormPvc','false');
-        }
-
-        if( ((this.value == "5 mm") || (this.value == "10 mm") || (this.value == "19 mm")) && (sinLuz4.checked == true)){
-
-            var alturaMinima = 6;
-        
-            //Campo oculto: lo uso en obtenerSVG()
-            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
-        }
-
-    };
-
-    retroiluminado4.onclick = function () {
-
-        if((grosorPVC.value == "19 mm") && (retroiluminado4.checked == true)){
-            separacionForm('separacionFormPVC','true');
-            document.getElementById('tornilleriaPVC').style.visibility = "visible";
-
-            var alturaMinima = 15;
-     
-            //Campo oculto: lo uso en obtenerSVG()
-            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
-           
-        }
-
-        colorLedForm('colorLedFormPvc','true');
-        
-    };
-
-    //No muestra las opciones de separación:
-    sinSujecion2.onclick = function () {
-        separacionForm('separacionFormPVC','false');
-        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-    }
-
-    letraAdhesiva2.onclick = function () {
-        separacionForm('separacionFormPVC','false');
-        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-    } 
-
-    sinLuz4.onclick = function () {
-        separacionForm('separacionFormPVC','false');
-        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-        colorLedForm('colorLedFormPvc','false');
-
-        if( ((grosorPVC.value == "5 mm") || (grosorPVC.value == "10 mm") || (grosorPVC.value == "19 mm")) && (sinLuz4.checked == true)){
-
-            var alturaMinima = 6;
-        
-            //Campo oculto: lo uso en obtenerSVG()
-            document.getElementById('minimaAltura').value = alturaMinima;//este campo está en opciones.php
-        }
-    }
-
-    /*
-    iluminacionFrontal4.onclick = function () {
-        separacionForm('separacionFormPVC','false');
-        document.getElementById('tornilleriaPVC').style.visibility = "hidden";
-    } 
-    */
-
-
-
-
-
-
-
-});

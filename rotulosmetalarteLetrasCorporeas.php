@@ -91,6 +91,22 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'cn_precio_doblado_aluminio_sin_iluminar', '20.00' );
     }    
 
+    if ( get_option( 'profundidad_30mm_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_30mm_aluminio_sin_iluminar', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_50mm_aluminio_sin_iluminar', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_80mm_aluminio_sin_iluminar', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_aluminio_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_100mm_aluminio_sin_iluminar', '02.10' );
+    }  
+
     //Aluminio retroiluminadas:
     if ( get_option( 'precio_aluminio_retroiluminado' ) === false ) {
         add_option( 'precio_aluminio_retroiluminado', '25' );
@@ -134,6 +150,22 @@ function cn_set_default_options_LetrasCorporeas() {
 
     if ( get_option( 'cn_precio_separadores_aluminio_retroiluminado' ) === false ) {
         add_option( 'cn_precio_separadores_aluminio_retroiluminado', '10.00' );
+    }
+
+    if ( get_option( 'profundidad_30mm_aluminio_retroiluminado' ) === false ) {
+        add_option( 'profundidad_30mm_aluminio_retroiluminado', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_aluminio_retroiluminado' ) === false ) {
+        add_option( 'profundidad_50mm_aluminio_retroiluminado', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_aluminio_retroiluminado' ) === false ) {
+        add_option( 'profundidad_80mm_aluminio_retroiluminado', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_aluminio_retroiluminado' ) === false ) {
+        add_option( 'profundidad_100mm_aluminio_retroiluminado', '02.10' );
     }
 
     //Aluminio iluminadas frontalmente:
@@ -181,6 +213,22 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal', '20.00' );
     }
 
+    if ( get_option( 'profundidad_30mm_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'profundidad_30mm_aluminio_iluminado_frontal', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'profundidad_50mm_aluminio_iluminado_frontal', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'profundidad_80mm_aluminio_iluminado_frontal', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_aluminio_iluminado_frontal' ) === false ) {
+        add_option( 'profundidad_100mm_aluminio_iluminado_frontal', '02.10' );
+    }      
+
     //Acero sin iluminar:
     if ( get_option( 'precio_acero' ) === false ) {
         add_option( 'precio_acero', '50' );
@@ -204,7 +252,23 @@ function cn_set_default_options_LetrasCorporeas() {
 
     if ( get_option( 'cn_precio_doblado_acero_sin_iluminar' ) === false ) {
         add_option( 'cn_precio_doblado_acero_sin_iluminar', '20.00' );
+    }
+
+    if ( get_option( 'profundidad_30mm_acero_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_30mm_acero_sin_iluminar', '00.63' );
     }   
+
+    if ( get_option( 'profundidad_50mm_acero_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_50mm_acero_sin_iluminar', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_acero_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_80mm_acero_sin_iluminar', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_acero_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_100mm_acero_sin_iluminar', '02.10' );
+    }        
 
     //Acero retroiluminadas:
     if ( get_option( 'cn_precio_acero_retroiluminado' ) === false ) {
@@ -247,6 +311,22 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado', '20.00' );
     } 
 
+    if ( get_option( 'profundidad_30mm_acero_retroiluminado' ) === false ) {
+        add_option( 'profundidad_30mm_acero_retroiluminado', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_acero_retroiluminado' ) === false ) {
+        add_option( 'profundidad_50mm_acero_retroiluminado', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_acero_retroiluminado' ) === false ) {
+        add_option( 'profundidad_80mm_acero_retroiluminado', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_acero_retroiluminado' ) === false ) {
+        add_option( 'profundidad_100mm_acero_retroiluminado', '02.10' );
+    }  
+
     //Acero iluminadas frontalmennte:
     if ( get_option( 'cn_precio_acero_iluminacion_frontal' ) === false ) {
         add_option( 'cn_precio_acero_iluminacion_frontal', '50.00' );
@@ -286,7 +366,23 @@ function cn_set_default_options_LetrasCorporeas() {
 
     if ( get_option( 'cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal' ) === false ) {
         add_option( 'cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal', '20.00' );
-    } 
+    }
+
+    if ( get_option( 'profundidad_30mm_acero_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_30mm_acero_iluminacion_frontal', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_acero_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_50mm_acero_iluminacion_frontal', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_acero_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_80mm_acero_iluminacion_frontal', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_acero_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_100mm_acero_iluminacion_frontal', '02.10' );
+    }
 
     //Latón sin iluminar:
     if ( get_option( 'cn_precio_laton_sin_iluminar' ) === false ) {
@@ -311,6 +407,22 @@ function cn_set_default_options_LetrasCorporeas() {
 
     if ( get_option( 'cn_precio_quince_dias_laton_sin_iluminar' ) === false ) {
         add_option( 'cn_precio_quince_dias_laton_sin_iluminar', '20.00' );
+    } 
+
+    if ( get_option( 'profundidad_30mm_laton_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_30mm_laton_sin_iluminar', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_laton_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_50mm_laton_sin_iluminar', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_laton_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_80mm_laton_sin_iluminar', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_laton_sin_iluminar' ) === false ) {
+        add_option( 'profundidad_100mm_laton_sin_iluminar', '02.10' );
     } 
 
     //Latón retroiluminadas:
@@ -354,6 +466,22 @@ function cn_set_default_options_LetrasCorporeas() {
         add_option( 'cn_precio_quince_dias_laton_retroiluminadas', '20.00' );
     }
 
+    if ( get_option( 'profundidad_30mm_laton_retroiluminadas' ) === false ) {
+        add_option( 'profundidad_30mm_laton_retroiluminadas', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_laton_retroiluminadas' ) === false ) {
+        add_option( 'profundidad_50mm_laton_retroiluminadas', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_laton_retroiluminadas' ) === false ) {
+        add_option( 'profundidad_80mm_laton_retroiluminadas', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_laton_retroiluminadas' ) === false ) {
+        add_option( 'profundidad_100mm_laton_retroiluminadas', '02.10' );
+    }  
+
     //Latón iluminadas frontalmente:
     if ( get_option( 'cn_precio_laton_iluminacion_frontal' ) === false ) {
         add_option( 'cn_precio_laton_iluminacion_frontal', '170.00' );
@@ -394,6 +522,22 @@ function cn_set_default_options_LetrasCorporeas() {
     if ( get_option( 'cn_precio_quince_dias_laton_iluminacion_frontal' ) === false ) {
         add_option( 'cn_precio_quince_dias_laton_iluminacion_frontal', '20.00' );
     }
+
+    if ( get_option( 'profundidad_30mm_laton_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_30mm_laton_iluminacion_frontal', '00.63' );
+    }   
+
+    if ( get_option( 'profundidad_50mm_laton_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_50mm_laton_iluminacion_frontal', '01.05' );
+    }   
+
+    if ( get_option( 'profundidad_80mm_laton_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_80mm_laton_iluminacion_frontal', '01.68' );
+    }  
+
+    if ( get_option( 'profundidad_100mm_laton_iluminacion_frontal' ) === false ) {
+        add_option( 'profundidad_100mm_laton_iluminacion_frontal', '02.10' );
+    }    
 
     //Metacrilato con luz:
     if ( get_option( 'cn_precio_metacrilato3mm_blancoOpal_sin_luz' ) === false ) {
@@ -596,6 +740,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar   = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar' ) ;
   $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar' ) ;
   $cn_precio_doblado_aluminio_sin_iluminar                   = get_option( 'cn_precio_doblado_aluminio_sin_iluminar' ) ;  
+  $profundidad_30mm_aluminio_sin_iluminar  = get_option( 'profundidad_30mm_aluminio_sin_iluminar' ) ;
+  $profundidad_50mm_aluminio_sin_iluminar  = get_option( 'profundidad_50mm_aluminio_sin_iluminar' ) ;
+  $profundidad_80mm_aluminio_sin_iluminar  = get_option( 'profundidad_80mm_aluminio_sin_iluminar' ) ;
+  $profundidad_100mm_aluminio_sin_iluminar = get_option( 'profundidad_100mm_aluminio_sin_iluminar' ) ;
 
   //Aluminio retroiluminadas:
   $precio_aluminio_retroiluminado                              = get_option( 'precio_aluminio_retroiluminado' ); 
@@ -609,6 +757,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado' );
   $cn_precio_doblado_aluminio_retroiluminado                   = get_option( 'cn_precio_doblado_aluminio_retroiluminado' );
   $cn_precio_separadores_aluminio_retroiluminado               = get_option( 'cn_precio_separadores_aluminio_retroiluminado' );
+  $profundidad_30mm_aluminio_retroiluminado  = get_option( 'profundidad_30mm_aluminio_retroiluminado' ) ;
+  $profundidad_50mm_aluminio_retroiluminado  = get_option( 'profundidad_50mm_aluminio_retroiluminado' ) ;
+  $profundidad_80mm_aluminio_retroiluminado  = get_option( 'profundidad_80mm_aluminio_retroiluminado' ) ;
+  $profundidad_100mm_aluminio_retroiluminado = get_option( 'profundidad_100mm_aluminio_retroiluminado' ) ;
 
   //Aluminio Iluminadas frontalmente:
   $precio_aluminio_iluminado_frontal                    = get_option( 'precio_aluminio_iluminado_frontal' );
@@ -622,6 +774,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_doblado_aluminio_iluminado_frontal         = get_option( 'cn_precio_doblado_aluminio_iluminado_frontal' ); 
   $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal     = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal' ); 
   $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal   = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal' ); 
+  $profundidad_30mm_aluminio_iluminado_frontal  = get_option( 'profundidad_30mm_aluminio_iluminado_frontal' ) ;
+  $profundidad_50mm_aluminio_iluminado_frontal  = get_option( 'profundidad_50mm_aluminio_iluminado_frontal' ) ;
+  $profundidad_80mm_aluminio_iluminado_frontal  = get_option( 'profundidad_80mm_aluminio_iluminado_frontal' ) ;
+  $profundidad_100mm_aluminio_iluminado_frontal = get_option( 'profundidad_100mm_aluminio_iluminado_frontal' ) ;
 
   //Acero sin iluminar: 
   $precio_acero                                           = get_option( 'precio_acero' );
@@ -630,6 +786,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar' );
   $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar = get_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar' );
   $cn_precio_doblado_acero_sin_iluminar                   = get_option( 'cn_precio_doblado_acero_sin_iluminar' );
+  $profundidad_30mm_acero_sin_iluminar  = get_option( 'profundidad_30mm_acero_sin_iluminar' ) ;
+  $profundidad_50mm_acero_sin_iluminar  = get_option( 'profundidad_50mm_acero_sin_iluminar' ) ;
+  $profundidad_80mm_acero_sin_iluminar  = get_option( 'profundidad_80mm_acero_sin_iluminar' ) ;
+  $profundidad_100mm_acero_sin_iluminar = get_option( 'profundidad_100mm_acero_sin_iluminar' ) ;  
 
   //Acero retroiluminado:
   $cn_precio_acero_retroiluminado                           = get_option( 'cn_precio_acero_retroiluminado' );
@@ -642,6 +802,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $precio_acero_retroiluminado_doblado                      = get_option( 'precio_acero_retroiluminado_doblado' );
   $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado' );
   $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado' );
+  $profundidad_30mm_acero_retroiluminado  = get_option( 'profundidad_30mm_acero_retroiluminado' ) ;
+  $profundidad_50mm_acero_retroiluminado  = get_option( 'profundidad_50mm_acero_retroiluminado' ) ;
+  $profundidad_80mm_acero_retroiluminado  = get_option( 'profundidad_80mm_acero_retroiluminado' ) ;
+  $profundidad_100mm_acero_retroiluminado = get_option( 'profundidad_100mm_acero_retroiluminado' ) ;  
 
   //Acero Iluminadas frontalmente:
   $cn_precio_acero_iluminacion_frontal                            = get_option( 'cn_precio_acero_iluminacion_frontal' );
@@ -654,6 +818,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_acero_junquillo_iluminacion_frontal                  = get_option( 'cn_precio_acero_junquillo_iluminacion_frontal' );
   $cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal    = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal' );
   $cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal  = get_option( 'cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal' );
+  $profundidad_30mm_acero_iluminacion_frontal  = get_option( 'profundidad_30mm_acero_iluminacion_frontal' ) ;
+  $profundidad_50mm_acero_iluminacion_frontal  = get_option( 'profundidad_50mm_acero_iluminacion_frontal' ) ;
+  $profundidad_80mm_acero_iluminacion_frontal  = get_option( 'profundidad_80mm_acero_iluminacion_frontal' ) ;
+  $profundidad_100mm_acero_iluminacion_frontal = get_option( 'profundidad_100mm_acero_iluminacion_frontal' ) ;
 
   //Latón sin iluminar:
   $cn_precio_laton_sin_iluminar             = get_option( 'cn_precio_laton_sin_iluminar' );
@@ -662,6 +830,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_doblado_laton_sin_iluminar     = get_option( 'cn_precio_doblado_laton_sin_iluminar' );
   $cn_precio_diez_dias_laton_sin_iluminar   = get_option( 'cn_precio_diez_dias_laton_sin_iluminar' );
   $cn_precio_quince_dias_laton_sin_iluminar = get_option( 'cn_precio_quince_dias_laton_sin_iluminar' );
+  $profundidad_30mm_laton_sin_iluminar  = get_option( 'profundidad_30mm_laton_sin_iluminar' ) ;
+  $profundidad_50mm_laton_sin_iluminar  = get_option( 'profundidad_50mm_laton_sin_iluminar' ) ;
+  $profundidad_80mm_laton_sin_iluminar  = get_option( 'profundidad_80mm_laton_sin_iluminar' ) ;
+  $profundidad_100mm_laton_sin_iluminar = get_option( 'profundidad_100mm_laton_sin_iluminar' ) ;
 
   //Latón retroiluminadas:
   $cn_precio_laton_retroiluminadas                 = get_option( 'cn_precio_laton_retroiluminadas' );
@@ -674,6 +846,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_laton_doblado_retroiluminadas         = get_option( 'cn_precio_laton_doblado_retroiluminadas' );
   $cn_precio_diez_dias_laton_retroiluminadas       = get_option( 'cn_precio_diez_dias_laton_retroiluminadas' );
   $cn_precio_quince_dias_laton_retroiluminadas     = get_option( 'cn_precio_quince_dias_laton_retroiluminadas' );
+  $profundidad_30mm_laton_retroiluminadas  = get_option( 'profundidad_30mm_laton_retroiluminadas' ) ;
+  $profundidad_50mm_laton_retroiluminadas  = get_option( 'profundidad_50mm_laton_retroiluminadas' ) ;
+  $profundidad_80mm_laton_retroiluminadas  = get_option( 'profundidad_80mm_laton_retroiluminadas' ) ;
+  $profundidad_100mm_laton_retroiluminadas = get_option( 'profundidad_100mm_laton_retroiluminadas' ) ;
 
  //Latón iluminación frontal:
   $cn_precio_laton_iluminacion_frontal                = get_option( 'cn_precio_laton_iluminacion_frontal' );
@@ -686,6 +862,10 @@ function cn_genera_pagina_letrasCorporeas() {
   $cn_precio_laton_doblado_iluminacion_frontal        = get_option( 'cn_precio_laton_doblado_iluminacion_frontal' );
   $cn_precio_diez_dias_laton_iluminacion_frontal      = get_option( 'cn_precio_diez_dias_laton_iluminacion_frontal' );
   $cn_precio_quince_dias_laton_iluminacion_frontal    = get_option( 'cn_precio_quince_dias_laton_iluminacion_frontal' );
+  $profundidad_30mm_laton_iluminacion_frontal  = get_option( 'profundidad_30mm_laton_iluminacion_frontal' ) ;
+  $profundidad_50mm_laton_iluminacion_frontal  = get_option( 'profundidad_50mm_laton_iluminacion_frontal' ) ;
+  $profundidad_80mm_laton_iluminacion_frontal  = get_option( 'profundidad_80mm_laton_iluminacion_frontal' ) ;
+  $profundidad_100mm_laton_iluminacion_frontal = get_option( 'profundidad_100mm_laton_iluminacion_frontal' ) ;
 
   //Metacrilato con luz:
   $cn_precio_metacrilato3mm_blancoOpal_sin_luz        = get_option( 'cn_precio_metacrilato3mm_blancoOpal_sin_luz' );
@@ -766,6 +946,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar   = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar'] );
     $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar'] );
     $cn_precio_doblado_aluminio_sin_iluminar              = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_sin_iluminar'] );
+    $profundidad_30mm_aluminio_sin_iluminar       = sanitize_text_field( $_POST['profundidad_30mm_aluminio_sin_iluminar'] );
+    $profundidad_50mm_aluminio_sin_iluminar       = sanitize_text_field( $_POST['profundidad_50mm_aluminio_sin_iluminar'] );
+    $profundidad_80mm_aluminio_sin_iluminar       = sanitize_text_field( $_POST['profundidad_80mm_aluminio_sin_iluminar'] );
+    $profundidad_100mm_aluminio_sin_iluminar      = sanitize_text_field( $_POST['profundidad_100mm_aluminio_sin_iluminar'] );    
 
     //Aluminio retroiluminadas:
     $precio_aluminio_retroiluminado                       = sanitize_text_field( $_POST['precio_aluminio_retroiluminado'] );
@@ -779,6 +963,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado'] );
     $cn_precio_doblado_aluminio_retroiluminado                    = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_retroiluminado'] );
     $cn_precio_separadores_aluminio_retroiluminado                = sanitize_text_field( $_POST['cn_precio_separadores_aluminio_retroiluminado'] );
+    $profundidad_30mm_aluminio_retroiluminado       = sanitize_text_field( $_POST['profundidad_30mm_aluminio_retroiluminado'] );
+    $profundidad_50mm_aluminio_retroiluminado       = sanitize_text_field( $_POST['profundidad_50mm_aluminio_retroiluminado'] );
+    $profundidad_80mm_aluminio_retroiluminado       = sanitize_text_field( $_POST['profundidad_80mm_aluminio_retroiluminado'] );
+    $profundidad_100mm_aluminio_retroiluminado      = sanitize_text_field( $_POST['profundidad_100mm_aluminio_retroiluminado'] );
 
     //Aluminio Iluminadas frontalmente:
     $precio_aluminio_iluminado_frontal                    = sanitize_text_field( $_POST['precio_aluminio_iluminado_frontal'] );
@@ -792,6 +980,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_doblado_aluminio_iluminado_frontal         = sanitize_text_field( $_POST['cn_precio_doblado_aluminio_iluminado_frontal'] );
     $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal'] );
     $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal'] );
+    $profundidad_30mm_aluminio_iluminado_frontal       = sanitize_text_field( $_POST['profundidad_30mm_aluminio_iluminado_frontal'] );
+    $profundidad_50mm_aluminio_iluminado_frontal       = sanitize_text_field( $_POST['profundidad_50mm_aluminio_iluminado_frontal'] );
+    $profundidad_80mm_aluminio_iluminado_frontal       = sanitize_text_field( $_POST['profundidad_80mm_aluminio_iluminado_frontal'] );
+    $profundidad_100mm_aluminio_iluminado_frontal      = sanitize_text_field( $_POST['profundidad_100mm_aluminio_iluminado_frontal'] );
 
     //Acero sin iluminar:
     $precio_acero                                            = sanitize_text_field( $_POST['precio_acero'] );
@@ -800,6 +992,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar    = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar'] );
     $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar  = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_acero_sin_iluminar'] );
     $cn_precio_doblado_acero_sin_iluminar                    = sanitize_text_field( $_POST['cn_precio_doblado_acero_sin_iluminar'] );
+    $profundidad_30mm_acero_sin_iluminar       = sanitize_text_field( $_POST['profundidad_30mm_acero_sin_iluminar'] );
+    $profundidad_50mm_acero_sin_iluminar       = sanitize_text_field( $_POST['profundidad_50mm_acero_sin_iluminar'] );
+    $profundidad_80mm_acero_sin_iluminar       = sanitize_text_field( $_POST['profundidad_80mm_acero_sin_iluminar'] );
+    $profundidad_100mm_acero_sin_iluminar      = sanitize_text_field( $_POST['profundidad_100mm_acero_sin_iluminar'] );
 
     //Acero retroiluminado:
     $cn_precio_acero_retroiluminado                           = sanitize_text_field( $_POST['cn_precio_acero_retroiluminado'] );
@@ -812,6 +1008,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $precio_acero_retroiluminado_doblado                      = sanitize_text_field( $_POST['precio_acero_retroiluminado_doblado'] );
     $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_acero_retroiluminado'] );
     $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_acero_retroiluminado'] );
+    $profundidad_30mm_acero_retroiluminado       = sanitize_text_field( $_POST['profundidad_30mm_acero_retroiluminado'] );
+    $profundidad_50mm_acero_retroiluminado       = sanitize_text_field( $_POST['profundidad_50mm_acero_retroiluminado'] );
+    $profundidad_80mm_acero_retroiluminado       = sanitize_text_field( $_POST['profundidad_80mm_acero_retroiluminado'] );
+    $profundidad_100mm_acero_retroiluminado      = sanitize_text_field( $_POST['profundidad_100mm_acero_retroiluminado'] );
 
     //Acero Iluminadas frontalmente:
     $cn_precio_acero_iluminacion_frontal                         = sanitize_text_field( $_POST['cn_precio_acero_iluminacion_frontal'] );
@@ -824,6 +1024,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_acero_junquillo_iluminacion_frontal               = sanitize_text_field( $_POST['cn_precio_acero_junquillo_iluminacion_frontal'] );
     $cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal = sanitize_text_field( $_POST['cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal'] );
     $cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal = sanitize_text_field( $_POST['cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal'] );
+    $profundidad_30mm_acero_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_30mm_acero_iluminacion_frontal'] );
+    $profundidad_50mm_acero_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_50mm_acero_iluminacion_frontal'] );
+    $profundidad_80mm_acero_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_80mm_acero_iluminacion_frontal'] );
+    $profundidad_100mm_acero_iluminacion_frontal      = sanitize_text_field( $_POST['profundidad_100mm_acero_iluminacion_frontal'] );
 
     //latón sin iluminar:
     $cn_precio_laton_sin_iluminar             = sanitize_text_field( $_POST['cn_precio_laton_sin_iluminar'] );
@@ -832,6 +1036,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_doblado_laton_sin_iluminar     = sanitize_text_field( $_POST['cn_precio_doblado_laton_sin_iluminar'] );
     $cn_precio_diez_dias_laton_sin_iluminar   = sanitize_text_field( $_POST['cn_precio_diez_dias_laton_sin_iluminar'] );
     $cn_precio_quince_dias_laton_sin_iluminar = sanitize_text_field( $_POST['cn_precio_quince_dias_laton_sin_iluminar'] );
+    $profundidad_30mm_laton_sin_iluminar       = sanitize_text_field( $_POST['profundidad_30mm_laton_sin_iluminar'] );
+    $profundidad_50mm_laton_sin_iluminar       = sanitize_text_field( $_POST['profundidad_50mm_laton_sin_iluminar'] );
+    $profundidad_80mm_laton_sin_iluminar       = sanitize_text_field( $_POST['profundidad_80mm_laton_sin_iluminar'] );
+    $profundidad_100mm_laton_sin_iluminar      = sanitize_text_field( $_POST['profundidad_100mm_laton_sin_iluminar'] );
 
     //Latón retroiluminado:
     $cn_precio_laton_retroiluminadas                 = sanitize_text_field( $_POST['cn_precio_laton_retroiluminadas'] );
@@ -844,6 +1052,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_laton_doblado_retroiluminadas         = sanitize_text_field( $_POST['cn_precio_laton_doblado_retroiluminadas'] );
     $cn_precio_diez_dias_laton_retroiluminadas       = sanitize_text_field( $_POST['cn_precio_diez_dias_laton_retroiluminadas'] );
     $cn_precio_quince_dias_laton_retroiluminadas     = sanitize_text_field( $_POST['cn_precio_quince_dias_laton_retroiluminadas'] );
+    $profundidad_30mm_laton_retroiluminadas       = sanitize_text_field( $_POST['profundidad_30mm_laton_retroiluminadas'] );
+    $profundidad_50mm_laton_retroiluminadas       = sanitize_text_field( $_POST['profundidad_50mm_laton_retroiluminadas'] );
+    $profundidad_80mm_laton_retroiluminadas       = sanitize_text_field( $_POST['profundidad_80mm_laton_retroiluminadas'] );
+    $profundidad_100mm_laton_retroiluminadas      = sanitize_text_field( $_POST['profundidad_100mm_laton_retroiluminadas'] );
 
     //Latón iluminacion frontal:
     $cn_precio_laton_iluminacion_frontal                = sanitize_text_field( $_POST['cn_precio_laton_iluminacion_frontal'] );
@@ -856,6 +1068,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     $cn_precio_laton_doblado_iluminacion_frontal        = sanitize_text_field( $_POST['cn_precio_laton_doblado_iluminacion_frontal'] );
     $cn_precio_diez_dias_laton_iluminacion_frontal      = sanitize_text_field( $_POST['cn_precio_diez_dias_laton_iluminacion_frontal'] );
     $cn_precio_quince_dias_laton_iluminacion_frontal    = sanitize_text_field( $_POST['cn_precio_quince_dias_laton_iluminacion_frontal'] );
+    $profundidad_30mm_laton_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_30mm_laton_iluminacion_frontal'] );
+    $profundidad_50mm_laton_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_50mm_laton_iluminacion_frontal'] );
+    $profundidad_80mm_laton_iluminacion_frontal       = sanitize_text_field( $_POST['profundidad_80mm_laton_iluminacion_frontal'] );
+    $profundidad_100mm_laton_iluminacion_frontal      = sanitize_text_field( $_POST['profundidad_100mm_laton_iluminacion_frontal'] );
 
     //Metacrilato con luz:
     $cn_precio_metacrilato3mm_blancoOpal_sin_luz       = sanitize_text_field( $_POST['cn_precio_metacrilato3mm_blancoOpal_sin_luz'] );
@@ -922,6 +1138,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar', $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar );
     update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar', $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar );    
     update_option( 'cn_precio_doblado_aluminio_sin_iluminar', $cn_precio_doblado_aluminio_sin_iluminar );   
+    update_option( 'profundidad_30mm_aluminio_sin_iluminar', $profundidad_30mm_aluminio_sin_iluminar );
+    update_option( 'profundidad_50mm_aluminio_sin_iluminar', $profundidad_50mm_aluminio_sin_iluminar );
+    update_option( 'profundidad_80mm_aluminio_sin_iluminar', $profundidad_80mm_aluminio_sin_iluminar );
+    update_option( 'profundidad_100mm_aluminio_sin_iluminar', $profundidad_100mm_aluminio_sin_iluminar );
 
     //Aluminio retroiluminadas:    
     update_option( 'precio_aluminio_retroiluminado', $precio_aluminio_retroiluminado );
@@ -935,6 +1155,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado', $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado );
     update_option( 'cn_precio_doblado_aluminio_retroiluminado', $cn_precio_doblado_aluminio_retroiluminado );
     update_option( 'cn_precio_separadores_aluminio_retroiluminado', $cn_precio_separadores_aluminio_retroiluminado );
+    update_option( 'profundidad_30mm_aluminio_retroiluminado', $profundidad_30mm_aluminio_retroiluminado );
+    update_option( 'profundidad_50mm_aluminio_retroiluminado', $profundidad_50mm_aluminio_retroiluminado );
+    update_option( 'profundidad_80mm_aluminio_retroiluminado', $profundidad_80mm_aluminio_retroiluminado );
+    update_option( 'profundidad_100mm_aluminio_retroiluminado', $profundidad_100mm_aluminio_retroiluminado );
 
     //Aluminio iluminadas frontalmente:    
     update_option( 'precio_aluminio_iluminado_frontal', $precio_aluminio_iluminado_frontal );
@@ -948,6 +1172,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_doblado_aluminio_iluminado_frontal', $cn_precio_doblado_aluminio_iluminado_frontal );
     update_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal', $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal );
     update_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal', $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal );
+    update_option( 'profundidad_30mm_aluminio_iluminado_frontal', $profundidad_30mm_aluminio_iluminado_frontal );
+    update_option( 'profundidad_50mm_aluminio_iluminado_frontal', $profundidad_50mm_aluminio_iluminado_frontal );
+    update_option( 'profundidad_80mm_aluminio_iluminado_frontal', $profundidad_80mm_aluminio_iluminado_frontal );
+    update_option( 'profundidad_100mm_aluminio_iluminado_frontal', $profundidad_100mm_aluminio_iluminado_frontal );
 
     //Acero sin iluminar:
     update_option( 'precio_acero', $precio_acero );
@@ -956,6 +1184,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar', $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar );
     update_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar', $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar );
     update_option( 'cn_precio_doblado_acero_sin_iluminar', $cn_precio_doblado_acero_sin_iluminar );
+    update_option( 'profundidad_30mm_acero_sin_iluminar', $profundidad_30mm_acero_sin_iluminar );
+    update_option( 'profundidad_50mm_acero_sin_iluminar', $profundidad_50mm_acero_sin_iluminar );
+    update_option( 'profundidad_80mm_acero_sin_iluminar', $profundidad_80mm_acero_sin_iluminar );
+    update_option( 'profundidad_100mm_acero_sin_iluminar', $profundidad_100mm_acero_sin_iluminar );
 
     //Acero retroiluminado:
     update_option( 'cn_precio_acero_retroiluminado', $cn_precio_acero_retroiluminado );
@@ -968,6 +1200,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'precio_acero_retroiluminado_doblado', $precio_acero_retroiluminado_doblado );
     update_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado', $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado );
     update_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado', $cn_precio_quincediaslaboralesLetras_acero_retroiluminado );
+    update_option( 'profundidad_30mm_acero_retroiluminado', $profundidad_30mm_acero_retroiluminado );
+    update_option( 'profundidad_50mm_acero_retroiluminado', $profundidad_50mm_acero_retroiluminado );
+    update_option( 'profundidad_80mm_acero_retroiluminado', $profundidad_80mm_acero_retroiluminado );
+    update_option( 'profundidad_100mm_acero_retroiluminado', $profundidad_100mm_acero_retroiluminado );    
 
     //Acero iluminadas frontalmente:    
     update_option( 'cn_precio_acero_iluminacion_frontal', $cn_precio_acero_iluminacion_frontal );
@@ -980,6 +1216,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_acero_junquillo_iluminacion_frontal', $cn_precio_acero_junquillo_iluminacion_frontal );
     update_option( 'cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal', $cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal );
     update_option( 'cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal', $cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal );
+    update_option( 'profundidad_30mm_acero_iluminacion_frontal', $profundidad_30mm_acero_iluminacion_frontal );
+    update_option( 'profundidad_50mm_acero_iluminacion_frontal', $profundidad_50mm_acero_iluminacion_frontal );
+    update_option( 'profundidad_80mm_acero_iluminacion_frontal', $profundidad_80mm_acero_iluminacion_frontal );
+    update_option( 'profundidad_100mm_acero_iluminacion_frontal', $profundidad_100mm_acero_iluminacion_frontal );
 
     //Latón sin iluminar:
     update_option( 'cn_precio_laton_sin_iluminar', $cn_precio_laton_sin_iluminar );
@@ -988,6 +1228,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_doblado_laton_sin_iluminar', $cn_precio_doblado_laton_sin_iluminar );
     update_option( 'cn_precio_diez_dias_laton_sin_iluminar', $cn_precio_diez_dias_laton_sin_iluminar );
     update_option( 'cn_precio_quince_dias_laton_sin_iluminar', $cn_precio_quince_dias_laton_sin_iluminar );
+    update_option( 'profundidad_30mm_laton_sin_iluminar', $profundidad_30mm_laton_sin_iluminar );
+    update_option( 'profundidad_50mm_laton_sin_iluminar', $profundidad_50mm_laton_sin_iluminar );
+    update_option( 'profundidad_80mm_laton_sin_iluminar', $profundidad_80mm_laton_sin_iluminar );
+    update_option( 'profundidad_100mm_laton_sin_iluminar', $profundidad_100mm_laton_sin_iluminar );
 
     //Latón retroiluminadas:
     update_option( 'cn_precio_laton_retroiluminadas', $cn_precio_laton_retroiluminadas );
@@ -1000,6 +1244,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_laton_doblado_retroiluminadas', $cn_precio_laton_doblado_retroiluminadas );
     update_option( 'cn_precio_diez_dias_laton_retroiluminadas', $cn_precio_diez_dias_laton_retroiluminadas );
     update_option( 'cn_precio_quince_dias_laton_retroiluminadas', $cn_precio_quince_dias_laton_retroiluminadas );
+    update_option( 'profundidad_30mm_laton_retroiluminadas', $profundidad_30mm_laton_retroiluminadas );
+    update_option( 'profundidad_50mm_laton_retroiluminadas', $profundidad_50mm_laton_retroiluminadas );
+    update_option( 'profundidad_80mm_laton_retroiluminadas', $profundidad_80mm_laton_retroiluminadas );
+    update_option( 'profundidad_100mm_laton_retroiluminadas', $profundidad_100mm_laton_retroiluminadas );    
 
     //Latón iluminación frontal:
     update_option( 'cn_precio_laton_iluminacion_frontal', $cn_precio_laton_iluminacion_frontal );
@@ -1012,6 +1260,10 @@ function cn_guardar_ga_LetrasCorporeas() {
     update_option( 'cn_precio_laton_doblado_iluminacion_frontal', $cn_precio_laton_doblado_iluminacion_frontal );
     update_option( 'cn_precio_diez_dias_laton_iluminacion_frontal', $cn_precio_diez_dias_laton_iluminacion_frontal );
     update_option( 'cn_precio_quince_dias_laton_iluminacion_frontal', $cn_precio_quince_dias_laton_iluminacion_frontal );
+    update_option( 'profundidad_30mm_laton_iluminacion_frontal', $profundidad_30mm_laton_iluminacion_frontal );
+    update_option( 'profundidad_50mm_laton_iluminacion_frontal', $profundidad_50mm_laton_iluminacion_frontal );
+    update_option( 'profundidad_80mm_laton_iluminacion_frontal', $profundidad_80mm_laton_iluminacion_frontal );
+    update_option( 'profundidad_100mm_laton_iluminacion_frontal', $profundidad_100mm_laton_iluminacion_frontal );
 
     //Metacrilato con luz:
     update_option( 'cn_precio_metacrilato3mm_blancoOpal_sin_luz', $cn_precio_metacrilato3mm_blancoOpal_sin_luz );
@@ -1163,6 +1415,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar    = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar' ) ;
         $cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar  = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar' ) ;
         $cn_precio_doblado_aluminio_sin_iluminar              = get_option( 'cn_precio_doblado_aluminio_sin_iluminar' ) ;
+        $profundidad_30mm_aluminio_sin_iluminar   = get_option( 'profundidad_30mm_aluminio_sin_iluminar' ) ;
+        $profundidad_50mm_aluminio_sin_iluminar   = get_option( 'profundidad_50mm_aluminio_sin_iluminar' ) ;
+        $profundidad_80mm_aluminio_sin_iluminar   = get_option( 'profundidad_80mm_aluminio_sin_iluminar' ) ;
+        $profundidad_100mm_aluminio_sin_iluminar  = get_option( 'profundidad_100mm_aluminio_sin_iluminar' ) ;
 
         //Aluminio retroiluminadas:
         $precio_aluminio_retroiluminado                       = get_option( 'precio_aluminio_retroiluminado' ) ;
@@ -1176,6 +1432,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado' ) ;
         $cn_precio_doblado_aluminio_retroiluminado                   = get_option( 'cn_precio_doblado_aluminio_retroiluminado' ) ;
         $cn_precio_separadores_aluminio_retroiluminado               = get_option( 'cn_precio_separadores_aluminio_retroiluminado' ) ;
+        $profundidad_30mm_aluminio_retroiluminado   = get_option( 'profundidad_30mm_aluminio_retroiluminado' ) ;
+        $profundidad_50mm_aluminio_retroiluminado   = get_option( 'profundidad_50mm_aluminio_retroiluminado' ) ;
+        $profundidad_80mm_aluminio_retroiluminado   = get_option( 'profundidad_80mm_aluminio_retroiluminado' ) ;
+        $profundidad_100mm_aluminio_retroiluminado  = get_option( 'profundidad_100mm_aluminio_retroiluminado' ) ;
 
         //Aluminio iluminadas frontalmente:
         $precio_aluminio_iluminado_frontal                    = get_option( 'precio_aluminio_iluminado_frontal' ) ;
@@ -1189,6 +1449,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_doblado_aluminio_iluminado_frontal         = get_option( 'cn_precio_doblado_aluminio_iluminado_frontal' ) ;
         $cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal   = get_option( 'cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal' ) ;
         $cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal = get_option( 'cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal' ) ;
+        $profundidad_30mm_aluminio_iluminado_frontal   = get_option( 'profundidad_30mm_aluminio_iluminado_frontal' ) ;
+        $profundidad_50mm_aluminio_iluminado_frontal   = get_option( 'profundidad_50mm_aluminio_iluminado_frontal' ) ;
+        $profundidad_80mm_aluminio_iluminado_frontal   = get_option( 'profundidad_80mm_aluminio_iluminado_frontal' ) ;
+        $profundidad_100mm_aluminio_iluminado_frontal  = get_option( 'profundidad_100mm_aluminio_iluminado_frontal' ) ;
 
         //Acero sin iluminar:
         $precio_acero                                            = get_option( 'precio_acero' ) ;
@@ -1197,6 +1461,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar    = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_sin_iluminar' ) ;
         $cn_precio_quincediaslaboralesLetras_acero_sin_iluminar  = get_option( 'cn_precio_quincediaslaboralesLetras_acero_sin_iluminar' ) ;
         $cn_precio_doblado_acero_sin_iluminar                    = get_option( 'cn_precio_doblado_acero_sin_iluminar' ) ;
+        $profundidad_30mm_acero_sin_iluminar   = get_option( 'profundidad_30mm_acero_sin_iluminar' ) ;
+        $profundidad_50mm_acero_sin_iluminar   = get_option( 'profundidad_50mm_acero_sin_iluminar' ) ;
+        $profundidad_80mm_acero_sin_iluminar   = get_option( 'profundidad_80mm_acero_sin_iluminar' ) ;
+        $profundidad_100mm_acero_sin_iluminar  = get_option( 'profundidad_100mm_acero_sin_iluminar' ) ;
 
         //Acero retroiluminado:
         $cn_precio_acero_retroiluminado                           = get_option( 'cn_precio_acero_retroiluminado' ) ;
@@ -1209,6 +1477,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $precio_acero_retroiluminado_doblado                      = get_option( 'precio_acero_retroiluminado_doblado' ) ;
         $cn_precio_diezdiaslaboralesLetras_acero_retroiluminado   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_retroiluminado' ) ;
         $cn_precio_quincediaslaboralesLetras_acero_retroiluminado = get_option( 'cn_precio_quincediaslaboralesLetras_acero_retroiluminado' ) ;
+        $profundidad_30mm_acero_retroiluminado   = get_option( 'profundidad_30mm_acero_retroiluminado' ) ;
+        $profundidad_50mm_acero_retroiluminado   = get_option( 'profundidad_50mm_acero_retroiluminado' ) ;
+        $profundidad_80mm_acero_retroiluminado   = get_option( 'profundidad_80mm_acero_retroiluminado' ) ;
+        $profundidad_100mm_acero_retroiluminado  = get_option( 'profundidad_100mm_acero_retroiluminado' ) ;
 
         //Acero iluminadas frontalmente:
         $cn_precio_acero_iluminacion_frontal                           = get_option( 'cn_precio_acero_iluminacion_frontal' ) ;
@@ -1221,6 +1493,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_acero_junquillo_iluminacion_frontal                 = get_option( 'cn_precio_acero_junquillo_iluminacion_frontal' ) ;
         $cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal   = get_option( 'cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal' ) ;
         $cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal = get_option( 'cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal' ) ;
+        $profundidad_30mm_acero_iluminacion_frontal   = get_option( 'profundidad_30mm_acero_iluminacion_frontal' ) ;
+        $profundidad_50mm_acero_iluminacion_frontal   = get_option( 'profundidad_50mm_acero_iluminacion_frontal' ) ;
+        $profundidad_80mm_acero_iluminacion_frontal   = get_option( 'profundidad_80mm_acero_iluminacion_frontal' ) ;
+        $profundidad_100mm_acero_iluminacion_frontal  = get_option( 'profundidad_100mm_acero_iluminacion_frontal' ) ;
 
         //Latón sin iluminar:
         $cn_precio_laton_sin_iluminar             = get_option( 'cn_precio_laton_sin_iluminar' ) ;
@@ -1229,6 +1505,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_doblado_laton_sin_iluminar     = get_option( 'cn_precio_doblado_laton_sin_iluminar' ) ;
         $cn_precio_diez_dias_laton_sin_iluminar   = get_option( 'cn_precio_diez_dias_laton_sin_iluminar' ) ;
         $cn_precio_quince_dias_laton_sin_iluminar = get_option( 'cn_precio_quince_dias_laton_sin_iluminar' ) ;
+        $profundidad_30mm_laton_sin_iluminar   = get_option( 'profundidad_30mm_laton_sin_iluminar' ) ;
+        $profundidad_50mm_laton_sin_iluminar   = get_option( 'profundidad_50mm_laton_sin_iluminar' ) ;
+        $profundidad_80mm_laton_sin_iluminar   = get_option( 'profundidad_80mm_laton_sin_iluminar' ) ;
+        $profundidad_100mm_laton_sin_iluminar  = get_option( 'profundidad_100mm_laton_sin_iluminar' ) ;
 
         //Latón retroiluminadas:
         $cn_precio_laton_retroiluminadas                 = get_option( 'cn_precio_laton_retroiluminadas' ) ;
@@ -1241,6 +1521,10 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_laton_doblado_retroiluminadas         = get_option( 'cn_precio_laton_doblado_retroiluminadas' ) ;
         $cn_precio_diez_dias_laton_retroiluminadas       = get_option( 'cn_precio_diez_dias_laton_retroiluminadas' ) ;
         $cn_precio_quince_dias_laton_retroiluminadas     = get_option( 'cn_precio_quince_dias_laton_retroiluminadas' ) ;
+        $profundidad_30mm_laton_retroiluminadas   = get_option( 'profundidad_30mm_laton_retroiluminadas' ) ;
+        $profundidad_50mm_laton_retroiluminadas   = get_option( 'profundidad_50mm_laton_retroiluminadas' ) ;
+        $profundidad_80mm_laton_retroiluminadas   = get_option( 'profundidad_80mm_laton_retroiluminadas' ) ;
+        $profundidad_100mm_laton_retroiluminadas  = get_option( 'profundidad_100mm_laton_retroiluminadas' ) ;
 
         //Latón iluminación frontal:
         $cn_precio_laton_iluminacion_frontal                = get_option( 'cn_precio_laton_iluminacion_frontal' ) ;
@@ -1253,7 +1537,11 @@ function iconic_output_engraving_field_LetrasCorporeas() {
         $cn_precio_laton_doblado_iluminacion_frontal        = get_option( 'cn_precio_laton_doblado_iluminacion_frontal' ) ;
         $cn_precio_diez_dias_laton_iluminacion_frontal      = get_option( 'cn_precio_diez_dias_laton_iluminacion_frontal' ) ;
         $cn_precio_quince_dias_laton_iluminacion_frontal    = get_option( 'cn_precio_quince_dias_laton_iluminacion_frontal' ) ;
-
+        $profundidad_30mm_laton_iluminacion_frontal   = get_option( 'profundidad_30mm_laton_iluminacion_frontal' ) ;
+        $profundidad_50mm_laton_iluminacion_frontal   = get_option( 'profundidad_50mm_laton_iluminacion_frontal' ) ;
+        $profundidad_80mm_laton_iluminacion_frontal   = get_option( 'profundidad_80mm_laton_iluminacion_frontal' ) ;
+        $profundidad_100mm_laton_iluminacion_frontal  = get_option( 'profundidad_100mm_laton_iluminacion_frontal' ) ;
+        
         //Metacrilato con luz:
         $cn_precio_metacrilato3mm_blancoOpal_sin_luz       = get_option( 'cn_precio_metacrilato3mm_blancoOpal_sin_luz' ) ;
         $cn_precio_metacrilato3mm_color360_sin_luz         = get_option( 'cn_precio_metacrilato3mm_color360_sin_luz' ) ;

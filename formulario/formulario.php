@@ -17,10 +17,9 @@
   </div>
 </div>
 
-    <input id="font-url-input" type="hidden" readonly="yes" value="<?php echo plugin_dir_url( __FILE__ ). '../css/Fonts/bookman-old-style/BKMNOS.woff'; ?>" style="width: 900px;" />
+
   
-    <div id="medida"> </div>
-    <div id="result"> </div>
+
     
       <div id="response">
         
@@ -86,6 +85,12 @@
         </div>        
 
       </div>
+
+    <input id="font-url-input" type="hidden" readonly="yes" value="<?php echo plugin_dir_url( __FILE__ ). '../css/Fonts/bookman-old-style/BKMNOS.woff'; ?>" style="width: 900px;" readonly/>
+
+    <div id="result"> </div>
+    <div id="medida"> </div>
+
       
       <input type="hidden" class="form-control" id="iva_letras" value="<?php echo esc_html($iva_letras);?>" readonly="yes">
       <input type="hidden" class="form-control" id="previsualizacion" value="<?php echo esc_html($previsualizacion);?>" readonly="yes">
@@ -98,6 +103,10 @@
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_doblado_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_aluminio_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_aluminio_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_aluminio_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_aluminio_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_aluminio_sin_iluminar);?>" readonly="yes">
 
       <!-- Aluminio Retroiluminadas -->
       <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado" value="<?php echo esc_html($precio_aluminio_retroiluminado);?>" readonly="yes">
@@ -107,14 +116,14 @@
       <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_led" value="<?php echo esc_html($precio_aluminio_retroiluminado_led);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_transformador" value="<?php echo esc_html($precio_aluminio_retroiluminado_transformador);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_aluminio_retroiluminado_corte_cnc" value="<?php echo esc_html($precio_aluminio_retroiluminado_corte_cnc);?>" readonly="yes">
-
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_retroiluminado);?>" readonly="yes">
-
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_retroiluminado);?>" readonly="yes">
-
       <input type="hidden" class="form-control" id="cn_precio_doblado_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_doblado_aluminio_retroiluminado);?>" readonly="yes">
-
       <input type="hidden" class="form-control" id="cn_precio_separadores_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_separadores_aluminio_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_30mm_aluminio_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_50mm_aluminio_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_80mm_aluminio_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_100mm_aluminio_retroiluminado);?>" readonly="yes">
 
       <!-- Aluminio iluminadas frontalmente -->
       <input type="hidden" class="form-control" id="precio_aluminio_iluminado_frontal" value="<?php echo esc_html($precio_aluminio_iluminado_frontal);?>" readonly="yes">
@@ -128,6 +137,10 @@
       <input type="hidden" class="form-control" id="cn_precio_doblado_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_doblado_aluminio_iluminado_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_iluminado_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_30mm_aluminio_iluminado_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_50mm_aluminio_iluminado_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_80mm_aluminio_iluminado_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_100mm_aluminio_iluminado_frontal);?>" readonly="yes">
 
       <!-- Acero sin iluminar -->
       <input type="hidden" class="form-control" id="precio_acero" value="<?php echo esc_html($precio_acero);?>" readonly="yes">
@@ -136,6 +149,10 @@
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_sin_iluminar);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_doblado_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_acero_sin_iluminar);?>" readonly="yes">
       <input type="hidden" class="form-control" id="precio_acero_corte_cnc" value="<?php echo esc_html($precio_acero_corte_cnc);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_acero_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_acero_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_acero_sin_iluminar);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_acero_sin_iluminar);?>" readonly="yes">
 
       <!-- Acero retroiluminadas -->
       <input type="hidden" class="form-control" id="cn_precio_acero_retroiluminado" value="<?php echo esc_html($cn_precio_acero_retroiluminado);?>" readonly="yes">
@@ -148,6 +165,10 @@
       <input type="hidden" class="form-control" id="precio_acero_retroiluminado_doblado" value="<?php echo esc_html($precio_acero_retroiluminado_doblado);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_retroiluminado);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_30mm_acero_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_50mm_acero_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_80mm_acero_retroiluminado);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_100mm_acero_retroiluminado);?>" readonly="yes">
 
       <!-- Acero iluminadas frontalmente -->
       <input type="hidden" class="form-control" id="cn_precio_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_iluminacion_frontal);?>" readonly="yes">
@@ -160,6 +181,10 @@
       <input type="hidden" class="form-control" id="cn_precio_acero_junquillo_iluminacion_frontal" value="<?php echo esc_html($cn_precio_acero_junquillo_iluminacion_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_acero_iluminacion_frontal);?>" readonly="yes">
       <input type="hidden" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_30mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_30mm_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_50mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_50mm_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_80mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_80mm_acero_iluminacion_frontal);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="profundidad_100mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_100mm_acero_iluminacion_frontal);?>" readonly="yes">
 
       <!-- Latón Sin Iluminar -->
      <input type="hidden" class="form-control" id="cn_precio_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_laton_sin_iluminar);?>" readonly="yes">
@@ -168,6 +193,10 @@
      <input type="hidden" class="form-control" id="cn_precio_doblado_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_laton_sin_iluminar);?>" readonly="yes">
      <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_diez_dias_laton_sin_iluminar);?>" readonly="yes">
      <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_quince_dias_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="profundidad_30mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="profundidad_50mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="profundidad_80mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_laton_sin_iluminar);?>" readonly="yes">
+     <input type="hidden" class="form-control" id="profundidad_100mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_laton_sin_iluminar);?>" readonly="yes">
 
      <!-- Latón retroiluminadas -->
     <input type="hidden" class="form-control" id="cn_precio_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_retroiluminadas);?>" readonly="yes">
@@ -180,6 +209,10 @@
     <input type="hidden" class="form-control" id="cn_precio_laton_doblado_retroiluminadas" value="<?php echo esc_html($cn_precio_laton_doblado_retroiluminadas);?>" readonly="yes">
     <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_diez_dias_laton_retroiluminadas);?>" readonly="yes">
     <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_quince_dias_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="profundidad_30mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_30mm_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="profundidad_50mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_50mm_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="profundidad_80mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_80mm_laton_retroiluminadas);?>" readonly="yes">
+    <input type="hidden" class="form-control" id="profundidad_100mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_100mm_laton_retroiluminadas);?>" readonly="yes">
 
     <!-- Latón iluminadas frontalmente -->
     <input type="hidden" class="form-control" id="cn_precio_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_iluminacion_frontal);?>" readonly="yes">
@@ -192,6 +225,10 @@
     <input type="hidden" class="form-control" id="cn_precio_laton_doblado_iluminacion_frontal" value="<?php echo esc_html($cn_precio_laton_doblado_iluminacion_frontal);?>" readonly="yes">
     <input type="hidden" class="form-control" id="cn_precio_diez_dias_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_diez_dias_laton_iluminacion_frontal);?>" readonly="yes">
     <input type="hidden" class="form-control" id="cn_precio_quince_dias_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quince_dias_laton_iluminacion_frontal);?>" readonly="yes">
+   <input type="hidden" class="form-control" id="profundidad_30mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_30mm_laton_iluminacion_frontal);?>" readonly="yes">
+   <input type="hidden" class="form-control" id="profundidad_50mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_50mm_laton_iluminacion_frontal);?>" readonly="yes">
+   <input type="hidden" class="form-control" id="profundidad_80mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_80mm_laton_iluminacion_frontal);?>" readonly="yes">
+   <input type="hidden" class="form-control" id="profundidad_100mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_100mm_laton_iluminacion_frontal);?>" readonly="yes">
 
     <!-- Letras corpóreas PVC -->
     <input type="hidden" class="form-control" id="precio_pvc_5mm" value="<?php echo esc_html($precio_pvc_5mm);?>" readonly="yes">

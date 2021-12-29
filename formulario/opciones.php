@@ -64,10 +64,10 @@
   <div class="col-sm-4">
 
     <label for="altoAncho">Tamaño de la letra: <i class="fas fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Valor de referencia para calcular el alto y el ancho"></i></label>
-    <input type="number" step=".001" class="" id="altoAncho"  value="8.519" style="height: 50px;padding: 3% 0;
+    <input type="number" step=".001" class="" id="altoAncho"  value="12.779" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">  
-    <input type="hidden" class="form-range" id="alto" value="8.519" readonly="yes"> 
+    <input type="hidden" class="form-range" id="alto" value="12.779" readonly="yes"> 
 
   <input type="hidden" class="" id="minimaAltura" value="15" readonly="yes">
 
@@ -96,8 +96,8 @@
 
   <div class="col-sm-4">
     
-    <label for="altura">Alto: </label> <span style="font-size: 10px; color: red;">(mín. 10 cm máx. 130 cm)</span>
-    <input type="text" class="" id="altura" placeholder="Alto total texto cm" value="10.000" readonly="yes" style="height: 50px;padding: 3% 0;
+    <label for="altura">Alto: </label> <span style="font-size: 10px; color: red;">(máx. 130 cm)</span>
+    <input type="text" class="" id="altura" placeholder="Alto total texto cm" value="15.000" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;width: 200px;">    
     
@@ -173,7 +173,7 @@
   <div class="col-sm-4">
    
     <label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 130 cm)</span>
-    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="73.772" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="110.662" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;width: 200px;">
   
@@ -187,7 +187,7 @@
     
   </div>  
 -->
-    <input type="hidden" class="" id="anchoSVG" placeholder="Longitud total texto cm" value="408.822" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="hidden" class="" id="anchoSVG" placeholder="Longitud total texto cm" value="613.282" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid;width: 200px;">  
 

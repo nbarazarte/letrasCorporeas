@@ -107,41 +107,60 @@
 
             <div class="row">
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_aluminio" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio" name="precio_aluminio" value="<?php echo esc_html($precio_aluminio);?>" required/>
               </div>
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_aluminio_mano_de_obra" class="form-label">Soldadura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_mano_de_obra" name="precio_aluminio_mano_de_obra" value="<?php echo esc_html($precio_aluminio_mano_de_obra);?>" required/>
               </div>
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_aluminio_pintura" class="form-label">Pintura:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_pintura" name="precio_aluminio_pintura" value="<?php echo esc_html($precio_aluminio_pintura);?>" required/>
               </div>
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_aluminio_corte_cnc" class="form-label">Corte CNC:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_corte_cnc" name="precio_aluminio_corte_cnc" value="<?php echo esc_html($precio_aluminio_corte_cnc);?>" required/>
               </div>    
 
-
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="cn_precio_doblado_aluminio_sin_iluminar" class="form-label">Doblado:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_doblado_aluminio_sin_iluminar" name="cn_precio_doblado_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_doblado_aluminio_sin_iluminar);?>" required/>                
               </div>
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" class="form-label">10 días laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" name="cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_diezdiaslaboralesLetras_aluminio_sin_iluminar);?>" required/>               
               </div>  
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" class="form-label">15 días laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" name="cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_sin_iluminar);?>" required/>               
-              </div>  
+              </div> 
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_aluminio_sin_iluminar" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_aluminio_sin_iluminar" name="profundidad_30mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_aluminio_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_aluminio_sin_iluminar" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_aluminio_sin_iluminar" name="profundidad_50mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_aluminio_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_aluminio_sin_iluminar" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_aluminio_sin_iluminar" name="profundidad_80mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_aluminio_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_aluminio_sin_iluminar" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_aluminio_sin_iluminar" name="profundidad_100mm_aluminio_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_aluminio_sin_iluminar);?>" required/>
+              </div>              
 
             </div>
 
@@ -217,6 +236,26 @@
                 <input type="number" step=".01" class="form-control" id="cn_precio_separadores_aluminio_retroiluminado" name="cn_precio_separadores_aluminio_retroiluminado" value="<?php echo esc_html($cn_precio_separadores_aluminio_retroiluminado);?>" required/>
               </div> 
 
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_aluminio_retroiluminado" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_aluminio_retroiluminado" name="profundidad_30mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_30mm_aluminio_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_aluminio_retroiluminado" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_aluminio_retroiluminado" name="profundidad_50mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_50mm_aluminio_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_aluminio_retroiluminado" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_aluminio_retroiluminado" name="profundidad_80mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_80mm_aluminio_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_aluminio_retroiluminado" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_aluminio_retroiluminado" name="profundidad_100mm_aluminio_retroiluminado" value="<?php echo esc_html($profundidad_100mm_aluminio_retroiluminado);?>" required/>
+              </div>
+
             </div>
 
           </div>
@@ -236,7 +275,7 @@
 
             <div class="row">
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_aluminio_iluminado_frontal" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_aluminio_iluminado_frontal" name="precio_aluminio_iluminado_frontal" value="<?php echo esc_html($precio_aluminio_iluminado_frontal);?>" required/>
               </div>
@@ -289,7 +328,27 @@
               <div class="col-sm-2">
                 <label for="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" class="form-label">15 días laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" name="cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_aluminio_iluminado_frontal);?>" required/>
-              </div> 
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_aluminio_iluminado_frontal" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_aluminio_iluminado_frontal" name="profundidad_30mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_30mm_aluminio_iluminado_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_aluminio_iluminado_frontal" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_aluminio_iluminado_frontal" name="profundidad_50mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_50mm_aluminio_iluminado_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_aluminio_iluminado_frontal" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_aluminio_iluminado_frontal" name="profundidad_80mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_80mm_aluminio_iluminado_frontal);?>" required/>
+              </div>              
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_aluminio_iluminado_frontal" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_aluminio_iluminado_frontal" name="profundidad_100mm_aluminio_iluminado_frontal" value="<?php echo esc_html($profundidad_100mm_aluminio_iluminado_frontal);?>" required/>
+              </div>  
 
             </div>
 
@@ -310,7 +369,7 @@
 
             <div class="row">
 
-              <div class="col">
+              <div class="col-sm-2">
                 <label for="precio_acero" class="form-label">Precio:</label>
                 <input type="number" step=".01" class="form-control" id="precio_acero" name="precio_acero" value="<?php echo esc_html($precio_acero);?>" required/>
               </div>
@@ -339,6 +398,26 @@
                 <label for="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" class="form-label">15 días laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" name="cn_precio_quincediaslaboralesLetras_acero_sin_iluminar" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_sin_iluminar);?>" required/>
               </div> 
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_acero_sin_iluminar" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_acero_sin_iluminar" name="profundidad_30mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_acero_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_acero_sin_iluminar" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_acero_sin_iluminar" name="profundidad_50mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_acero_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_acero_sin_iluminar" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_acero_sin_iluminar" name="profundidad_80mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_acero_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_acero_sin_iluminar" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_acero_sin_iluminar" name="profundidad_100mm_acero_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_acero_sin_iluminar);?>" required/>
+              </div>
 
             </div>
 
@@ -407,7 +486,27 @@
               <div class="col-sm-2">
                 <label for="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" class="form-label">15 días Laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" name="cn_precio_quincediaslaboralesLetras_acero_retroiluminado" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_retroiluminado);?>" required/>
-              </div>  
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_acero_retroiluminado" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_acero_retroiluminado" name="profundidad_30mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_30mm_acero_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_acero_retroiluminado" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_acero_retroiluminado" name="profundidad_50mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_50mm_acero_retroiluminado);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_acero_retroiluminado" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_acero_retroiluminado" name="profundidad_80mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_80mm_acero_retroiluminado);?>" required/>
+              </div>
+
+               <div class="col-sm-2">
+                <label for="profundidad_100mm_acero_retroiluminado" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_acero_retroiluminado" name="profundidad_100mm_acero_retroiluminado" value="<?php echo esc_html($profundidad_100mm_acero_retroiluminado);?>" required/>
+              </div>             
 
             </div>
 
@@ -476,7 +575,27 @@
               <div class="col-sm-2">
                 <label for="cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal" class="form-label">15 días Laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal" name="cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quincediaslaboralesLetras_acero_iluminacion_frontal);?>" required/>
-              </div> 
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_acero_iluminacion_frontal" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_acero_iluminacion_frontal" name="profundidad_30mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_30mm_acero_iluminacion_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_acero_iluminacion_frontal" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_acero_iluminacion_frontal" name="profundidad_50mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_50mm_acero_iluminacion_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_acero_iluminacion_frontal" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_acero_iluminacion_frontal" name="profundidad_80mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_80mm_acero_iluminacion_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_acero_iluminacion_frontal" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_acero_iluminacion_frontal" name="profundidad_100mm_acero_iluminacion_frontal" value="<?php echo esc_html($profundidad_100mm_acero_iluminacion_frontal);?>" required/>
+              </div>
 
             </div>
 
@@ -525,6 +644,26 @@
               <div class="col-sm-2">
                 <label for="cn_precio_quince_dias_laton_sin_iluminar" class="form-label">15 días Laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quince_dias_laton_sin_iluminar" name="cn_precio_quince_dias_laton_sin_iluminar" value="<?php echo esc_html($cn_precio_quince_dias_laton_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_laton_sin_iluminar" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_laton_sin_iluminar" name="profundidad_30mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_30mm_laton_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_laton_sin_iluminar" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_laton_sin_iluminar" name="profundidad_50mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_50mm_laton_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_laton_sin_iluminar" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_laton_sin_iluminar" name="profundidad_80mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_80mm_laton_sin_iluminar);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_laton_sin_iluminar" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_laton_sin_iluminar" name="profundidad_100mm_laton_sin_iluminar" value="<?php echo esc_html($profundidad_100mm_laton_sin_iluminar);?>" required/>
               </div>
 
             </div>
@@ -596,6 +735,26 @@
                 <input type="number" step=".01" class="form-control" id="cn_precio_quince_dias_laton_retroiluminadas" name="cn_precio_quince_dias_laton_retroiluminadas" value="<?php echo esc_html($cn_precio_quince_dias_laton_retroiluminadas);?>" required/>
               </div>
 
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_laton_retroiluminadas" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_laton_retroiluminadas" name="profundidad_30mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_30mm_laton_retroiluminadas);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_laton_retroiluminadas" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_laton_retroiluminadas" name="profundidad_50mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_50mm_laton_retroiluminadas);?>" required/>
+              </div>     
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_laton_retroiluminadas" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_laton_retroiluminadas" name="profundidad_80mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_80mm_laton_retroiluminadas);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_laton_retroiluminadas" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_laton_retroiluminadas" name="profundidad_100mm_laton_retroiluminadas" value="<?php echo esc_html($profundidad_100mm_laton_retroiluminadas);?>" required/>
+              </div>                                                    
+
             </div>
 
           </div>
@@ -664,6 +823,26 @@
                 <label for="cn_precio_quince_dias_laton_iluminacion_frontal" class="form-label">15 días Laborales:</label>
                 <input type="number" step=".01" class="form-control" id="cn_precio_quince_dias_laton_iluminacion_frontal" name="cn_precio_quince_dias_laton_iluminacion_frontal" value="<?php echo esc_html($cn_precio_quince_dias_laton_iluminacion_frontal);?>" required/>
               </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_30mm_laton_iluminacion_frontal" class="form-label">30mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_30mm_laton_iluminacion_frontal" name="profundidad_30mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_30mm_laton_iluminacion_frontal);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="profundidad_50mm_laton_iluminacion_frontal" class="form-label">50mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_50mm_laton_iluminacion_frontal" name="profundidad_50mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_50mm_laton_iluminacion_frontal);?>" required/>
+              </div>  
+
+              <div class="col-sm-2">
+                <label for="profundidad_80mm_laton_iluminacion_frontal" class="form-label">80mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_80mm_laton_iluminacion_frontal" name="profundidad_80mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_80mm_laton_iluminacion_frontal);?>" required/>
+              </div>
+
+              <div class="col-sm-2">
+                <label for="profundidad_100mm_laton_iluminacion_frontal" class="form-label">100mm:</label>
+                <input type="number" step=".01" class="form-control" id="profundidad_100mm_laton_iluminacion_frontal" name="profundidad_100mm_laton_iluminacion_frontal" value="<?php echo esc_html($profundidad_100mm_laton_iluminacion_frontal);?>" required/>
+              </div>                                                          
 
             </div>
 
